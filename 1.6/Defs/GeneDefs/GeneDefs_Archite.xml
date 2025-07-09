@@ -93,7 +93,6 @@
 		<biostatMet>0</biostatMet>
 		<statOffsets>
 			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
-			
 		</statOffsets>
 		<statFactors>
 			<VEF_VerbCooldownFactor>0.75</VEF_VerbCooldownFactor>
@@ -114,6 +113,91 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<statFactors>
+			<ShootingAccuracyFactor_Long>1.25</ShootingAccuracyFactor_Long>
+			<ShootingAccuracyFactor_Medium>1.15</ShootingAccuracyFactor_Medium>
+			<VEF_VerbRangeFactor>1.5</VEF_VerbRangeFactor>
+		</statFactors>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>VQEA_PlasteelSkin</defName>
+		<label>plasteel skin</label>
+		<exclusionTags>
+			<li>AG_Armour</li>
+			<li>Armour</li>
+			<li>Armor</li>
+		</exclusionTags>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_PlasteelSkin</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<customEffectDescriptions>
+			<li>+35% blunt natural armour.</li>
+			<li>+50% sharp natural armour.</li>
+			<li>+160% heat natural armour.</li>
+		</customEffectDescriptions>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_PlasteelSkin</hediffToWholeBody>
+			</li>
+		</modExtensions>
 		
+	</GeneDef>
+	
+	<GeneDef ParentName="GeneHandsBase">
+		<defName>VQEA_PlasteelClaws</defName>
+		<label>plasteel claws</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_PlasteelClaws</iconPath>
+		<biostatCpx>2</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VQEA_PlasteelClaws</hediff>
+						<bodyparts>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>VQEA_Genius</defName>
+		<label>genius</label>
+		<description>todo.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Genius</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>Learning</li>
+		</exclusionTags>
+		<biostatCpx>4</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<statOffsets>
+			<GlobalLearningFactor>2</GlobalLearningFactor>
+			<HackingSpeed>10</HackingSpeed>
+		</statOffsets>
+		
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				
+				<globalSkillLossMultiplier>0</globalSkillLossMultiplier>
+			</li>
+		</modExtensions>
 	</GeneDef>
 </Defs>
