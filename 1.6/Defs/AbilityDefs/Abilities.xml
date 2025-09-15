@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AbilityDef>
+		<defName>VQEA_Levitation</defName>
+		<label>levitation</label>
+		<description>Use a delicate psychic field to levitate to the target location.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Levitation</iconPath>
+		<cooldownTicksRange>600</cooldownTicksRange>
+		<hostile>false</hostile>
+		<verbProperties>
+			<verbClass>VanillaQuestsExpandedAncients.Verb_CastAbilityLevitation</verbClass>
+			<label>levitation</label>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<requireLineOfSight>false</requireLineOfSight>
+			<soundCast>Longjump_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			  <flightEffecterDef>VQEA_Levitate</flightEffecterDef>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>true</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+	</AbilityDef>
+</Defs>

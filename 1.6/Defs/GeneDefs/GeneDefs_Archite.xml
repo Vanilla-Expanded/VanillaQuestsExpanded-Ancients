@@ -3,7 +3,7 @@
 	<GeneDef>
 		<defName>VQEA_Herculean</defName>
 		<label>herculean</label>
-		<description>todo.</description>
+		<description>Carriers of this gene possess immense superhuman strength, enabling them to strike with devastating force and carry vast loads with ease. Their blows can shatter bones, and they are never staggered by impact.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Herculean</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -23,7 +23,7 @@
 	<GeneDef>
 		<defName>VQEA_Prowess</defName>
 		<label>prowess</label>
-		<description>todo.</description>
+		<description>Carriers of this gene are masterful close-quarters combatants. Their accuracy and reflexes make them nearly impossible to hit in melee, while their strikes land with flawless precision.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Prowess</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -38,7 +38,7 @@
 	<GeneDef>
 		<defName>VQEA_BlurRunner</defName>
 		<label>blur runner</label>
-		<description>todo.</description>
+		<description>Carriers of this gene move at blinding speed, making them difficult to target with ranged attacks. Their enhanced reflexes and kinetic control allow them to traverse the battlefield in a blur.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_BlurRunner</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -59,7 +59,7 @@
 	<GeneDef>
 		<defName>VQEA_Woundless</defName>
 		<label>woundless</label>
-		<description>todo.</description>
+		<description>Carriers of this gene rapidly heal from bleeding wounds. Their flesh seals itself moments after injury, preventing blood loss entirely and allowing them to fight through trauma that would kill others.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Woundless</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -81,7 +81,7 @@
 	<GeneDef>
 		<defName>VQEA_Marksman</defName>
 		<label>marksman</label>
-		<description>todo.</description>
+		<description>Carriers of this gene exhibit superhuman ranged precision. Their shots are faster, more accurate, and more lethal, giving them a distinct advantage in any firefight.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Marksman</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -102,7 +102,7 @@
 	<GeneDef>
 		<defName>VQEA_PerfectVision</defName>
 		<label>perfect vision</label>
-		<description>todo.</description>
+		<description>Carriers of this gene see with supernatural clarity at all distances and in total darkness. They are unaffected by low light or long range, and their perception dramatically improves ranged combat effectiveness.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_PerfectVision</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -119,7 +119,6 @@
 			<VEF_VerbRangeFactor>1.5</VEF_VerbRangeFactor>
 		</statFactors>
 	</GeneDef>
-	
 	<GeneDef>
 		<defName>VQEA_PlasteelSkin</defName>
 		<label>plasteel skin</label>
@@ -128,7 +127,7 @@
 			<li>Armour</li>
 			<li>Armor</li>
 		</exclusionTags>
-		<description>todo.</description>
+		<description>Carriers of this gene possess dense, reinforced dermal armor. Their skin resists bullets, absorbs blunt force, and disperses heat, turning their entire body into a living shield.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_PlasteelSkin</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -145,23 +144,19 @@
 				<hediffToWholeBody>VQEA_PlasteelSkin</hediffToWholeBody>
 			</li>
 		</modExtensions>
-		
 	</GeneDef>
-	
 	<GeneDef ParentName="GeneHandsBase">
 		<defName>VQEA_PlasteelClaws</defName>
 		<label>plasteel claws</label>
-		<description>todo.</description>
+		<description>Carriers of this gene grow synthetic alloy claws capable of slicing through armor and flesh. These natural weapons are always equipped and strike with brutal efficiency.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_PlasteelClaws</iconPath>
 		<biostatCpx>2</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
-		
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">
-				
 				<hediffsToBodyParts>
 					<li>
 						<hediff>VQEA_PlasteelClaws</hediff>
@@ -174,11 +169,10 @@
 			</li>
 		</modExtensions>
 	</GeneDef>
-	
 	<GeneDef>
 		<defName>VQEA_Genius</defName>
 		<label>genius</label>
-		<description>todo.</description>
+		<description>Carriers of this gene learn at phenomenal speed and retain all knowledge. They do not suffer skill decay and can interface with technology at unmatched speeds, completing hacking tasks instantly.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Genius</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -192,12 +186,149 @@
 			<GlobalLearningFactor>2</GlobalLearningFactor>
 			<HackingSpeed>10</HackingSpeed>
 		</statOffsets>
-		
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">
-				
 				<globalSkillLossMultiplier>0</globalSkillLossMultiplier>
 			</li>
 		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_Levitation</defName>
+		<label>levitation</label>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Levitation</iconPath>
+		<description>Carriers have special archite-powered muscle fibers in their legs which allow them to jump extremely great distances, causing blunt trauma to anyone unfortunate enough to be in the landing zone.</description>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<abilities>
+			<li>VQEA_Levitation</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VQEA_Levitation</AbilityDef>
+		</descriptionHyperlinks>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_Serene</defName>
+		<label>serene</label>
+		<description>Carriers of this gene have archites embedded in their neural pathways that suppress fear, anger, and stress responses. As a result, they are utterly unshakable, incapable of mental breaks, social fights, or resisting arrest.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Serene</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>Aggression</li>
+		</exclusionTags>
+		<biostatCpx>4</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<socialFightChanceFactor>0</socialFightChanceFactor>
+		<aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+		<prisonBreakMTBFactor>-1</prisonBreakMTBFactor>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_PassiveMeditation</defName>
+		<label>passive meditation</label>
+		<description>Carriers of this gene possess archites that passively channel ambient psychic energy, replenishing psyfocus without meditation. These ever-attuned minds remain sharp, composed, and ready to cast at all times.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_PassiveMeditation</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_PassiveMeditation</hediffToWholeBody>
+			</li>
+		</modExtensions>
+		<customEffectDescriptions>
+			<li>Passively regenerates 0.5% psyfocus per hour.</li>
+		</customEffectDescriptions>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_Bulwark</defName>
+		<label>bulwark</label>
+		<description>Archites within the carrier’s tissues reinforce cellular structures, reducing incoming damage by half. Pain receptors are dampened in favor of combat awareness, and the body itself resists trauma that would cripple an ordinary human.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Bulwark</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>Toughness</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<statFactors>
+			<IncomingDamageFactor>0.5</IncomingDamageFactor>
+		</statFactors>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_Bulwark</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_Enormous</defName>
+		<label>enormous</label>
+		<description>Carriers of this gene are saturated with growth-regulating archites that massively increase body size and muscle mass. Their immense frame allows for feats of brute strength, at the cost of speed and appetite.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Enormous</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>InsectorSize</li>
+		</exclusionTags>
+		<biostatCpx>4</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<statOffsets>
+			<VEF_BodySize_Offset>1</VEF_BodySize_Offset>
+			<MoveSpeed>-1.5</MoveSpeed>
+		</statOffsets>
+		<statFactors>
+			<StaggerDurationFactor>0.2</StaggerDurationFactor>
+			<MeatAmount>3</MeatAmount>
+			<LeatherAmount>3</LeatherAmount>
+			<VEF_FoodCapacityMultiplier>3</VEF_FoodCapacityMultiplier>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+		</statFactors>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_Enormous</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_SubstanceImpervious</defName>
+		<label>substance impervious</label>
+		<description>Specialized detoxifying archites patrol the bloodstream of carriers, instantly neutralizing addictive compounds and preventing overdose. No drug, however potent, can compromise their system.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_SubstanceImpervious</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulAnimals</defName>
+		<label>masterful animals</label>
+		<description>The carrier's aptitude in Animals is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Animals. Specialized archites embedded in the limbic system and motor cortex enable this enhanced empathy and coordination, creating a unique form of joy called animal relaxation while tending to animals.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Animals</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Animals>16</Animals>
+						
+		</aptitudes>
+		<passionMod>
+			<skill>Animals</skill>
+			<modType>DropAll</modType>
+		</passionMod>
 	</GeneDef>
 </Defs>
