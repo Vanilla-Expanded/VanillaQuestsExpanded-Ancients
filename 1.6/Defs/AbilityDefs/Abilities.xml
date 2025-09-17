@@ -17,7 +17,7 @@
 			<requireLineOfSight>false</requireLineOfSight>
 			<soundCast>Longjump_Jump</soundCast>
 			<soundLanding>Longjump_Land</soundLanding>
-			  <flightEffecterDef>VQEA_Levitate</flightEffecterDef>
+			<flightEffecterDef>VQEA_Levitate</flightEffecterDef>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 				<canTargetPawns>true</canTargetPawns>
@@ -26,4 +26,90 @@
 		</verbProperties>
 		<jobDef>CastJump</jobDef>
 	</AbilityDef>
+	<AbilityDef>
+		<defName>VQEA_InfernoSpew</defName>
+		<label>inferno spew</label>
+		<description>Expel a dense jet of sticky, flammable bile from the mouth. Upon contact, it can ignite targets and leave behind burning puddles on the ground. The bile is produced and stored in a specialized gland in the neck, paired with a separate chamber containing a hypergolic compound used for ignition.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_InfernoSpew</iconPath>
+		<cooldownTicksRange>5000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<ai_IsIncendiary>true</ai_IsIncendiary>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<warmupStartSound>FireSpew_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>13.9</range>
+			<warmupTime>1</warmupTime>
+			<soundCast>FireSpew_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityFireSpew">
+				<range>13.9</range>
+				<lineWidthEnd>5</lineWidthEnd>
+				<filthDef>Filth_FlammableBile</filthDef>
+				<effecterDef>Fire_Spew</effecterDef>
+				<canHitFilledCells>true</canHitFilledCells>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VQEA_HellsphereBlast</defName>
+		<label>hellsphere blast</label>
+		<description>Unleash a concentrated beam of destructive energy from the eyes, identical to the blast fired by a hellsphere cannon. After a short duration, the microscoping skipgates in the eyes release a searing pulse of power capable of melting concrete and incinerating anything within the blast zone.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_HellsphereBlast</iconPath>
+		<cooldownTicksRange>3000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>18.9</range>
+			<warmupTime>1.5</warmupTime>
+			<soundCast>Shot_HellsphereCannonGun</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+			<ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+			<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+			<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+			<ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+			<aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+			<aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+			<aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+			<aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+			<burstShotCount>1</burstShotCount>
+			<beamTargetsGround>true</beamTargetsGround>
+			<soundAiming>HellsphereCannon_Aiming</soundAiming>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>VQEA_Bullet_HellsphereCannonGun</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>VQEA_Bullet_HellsphereCannonGun</defName>
+		<label>hellsphere cannon shot</label>
+		<thingClass>Projectile_HellsphereCannon</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/HellsphereCannon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>(1.5, 3)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Vaporize</damageDef>
+			<speed>90</speed>
+			<explosionRadius>2.9</explosionRadius>
+			<screenShakeFactor>1.5</screenShakeFactor>
+			<filth>Filth_BlastMark</filth>
+			<filthCount>1</filthCount>
+			<explosionSpawnsSingleFilth>true</explosionSpawnsSingleFilth>
+		</projectile>
+	</ThingDef>
 </Defs>

@@ -322,9 +322,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Animals>16</Animals>
-						
+			<Animals>16</Animals>
 		</aptitudes>
 		<passionMod>
 			<skill>Animals</skill>
@@ -345,9 +343,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Artistic>16</Artistic>
-						
+			<Artistic>16</Artistic>
 		</aptitudes>
 		<passionMod>
 			<skill>Artistic</skill>
@@ -368,9 +364,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Construction>16</Construction>
-						
+			<Construction>16</Construction>
 		</aptitudes>
 		<passionMod>
 			<skill>Construction</skill>
@@ -391,9 +385,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Cooking>16</Cooking>
-						
+			<Cooking>16</Cooking>
 		</aptitudes>
 		<statFactors>
 			<CookSpeed>2</CookSpeed>
@@ -417,11 +409,8 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Crafting>16</Crafting>
-						
+			<Crafting>16</Crafting>
 		</aptitudes>
-		
 		<passionMod>
 			<skill>Crafting</skill>
 			<modType>DropAll</modType>
@@ -441,11 +430,8 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Medicine>16</Medicine>
-						
+			<Medicine>16</Medicine>
 		</aptitudes>
-		
 		<passionMod>
 			<skill>Medicine</skill>
 			<modType>DropAll</modType>
@@ -465,11 +451,8 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Melee>16</Melee>
-						
+			<Melee>16</Melee>
 		</aptitudes>
-		
 		<passionMod>
 			<skill>Melee</skill>
 			<modType>DropAll</modType>
@@ -489,9 +472,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Mining>16</Mining>
-						
+			<Mining>16</Mining>
 		</aptitudes>
 		<statOffsets>
 			<MiningYield>0.25</MiningYield>
@@ -515,9 +496,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Plants>16</Plants>
-						
+			<Plants>16</Plants>
 		</aptitudes>
 		<statOffsets>
 			<PlantHarvestYield>0.3</PlantHarvestYield>
@@ -541,11 +520,8 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Intellectual>16</Intellectual>
-						
+			<Intellectual>16</Intellectual>
 		</aptitudes>
-		
 		<passionMod>
 			<skill>Intellectual</skill>
 			<modType>DropAll</modType>
@@ -570,16 +546,12 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Shooting>16</Shooting>
-						
+			<Shooting>16</Shooting>
 		</aptitudes>
-		
 		<passionMod>
 			<skill>Shooting</skill>
 			<modType>DropAll</modType>
 		</passionMod>
-		
 	</GeneDef>
 	<GeneDef>
 		<defName>VQEA_MasterfulSocial</defName>
@@ -595,9 +567,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<aptitudes>
-			
-				<Social>16</Social>
-						
+			<Social>16</Social>
 		</aptitudes>
 		<statOffsets>
 			<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1</ConversionPower>
@@ -606,6 +576,39 @@
 			<skill>Social</skill>
 			<modType>DropAll</modType>
 		</passionMod>
-		
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_InfernoSpew</defName>
+		<label>inferno spew</label>
+		<description>Carriers of this gene can unleash a superheated stream of igniting bile, covering enemies and terrain in burning liquid. This ability turns any battlefield into a fiery trap.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_InfernoSpew</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<abilities>
+			<li>VQEA_InfernoSpew</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VQEA_InfernoSpew</AbilityDef>
+		</descriptionHyperlinks>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_HellsphereBlast</defName>
+		<label>hellsphere blast</label>
+		<description>Carriers of this gene can emit a devastating beam of energy from their eyes, vaporizing everything in its path. It mimics the firepower of a hellsphere cannon, condensed into a humanoid frame.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_HellsphereBlast</iconPath>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>4</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<abilities>
+			<li>VQEA_HellsphereBlast</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VQEA_HellsphereBlast</AbilityDef>
+		</descriptionHyperlinks>
 	</GeneDef>
 </Defs>
