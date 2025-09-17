@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-	
+	<VQEA_TextMote_ExceededExpectations>Exceeded expectations</VQEA_TextMote_ExceededExpectations>
+	<VQEA_TextMote_MedicinePreserved>Medicine preserved</VQEA_TextMote_MedicinePreserved>
+	<VQEA_PawnRecruitable>{0} is no longer unwaveringly loyal due to {1}'s {2} gene.</VQEA_PawnRecruitable>
 </LanguageData>

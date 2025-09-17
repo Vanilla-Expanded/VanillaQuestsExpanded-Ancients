@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <JoyKindDef>
+    <defName>VQEA_AnimalRelaxation</defName>
+    <label>animal relaxation</label>
+    <needsThing>false</needsThing>
+  </JoyKindDef>
+  
+
+</Defs>

@@ -111,4 +111,20 @@
 			</li>
 		</stages>
 	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_MasterfulIntellectual</defName>
+		<label>masterful intellectual</label>
+		<description>The carrier's aptitude in Intellectual is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Intellectual. They conduct research subconsciously, constantly generating scientific progress even while performing other tasks or resting. Archites woven into their neural network accelerate retention, synthesis, and intuition, allowing discoveries to emerge without active study.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_PassiveResearch">
+				<tickInterval>6000</tickInterval>
+				<researchPoints>50</researchPoints>
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>

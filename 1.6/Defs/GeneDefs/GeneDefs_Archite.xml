@@ -313,7 +313,7 @@
 		<label>masterful animals</label>
 		<description>The carrier's aptitude in Animals is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Animals. Specialized archites embedded in the limbic system and motor cortex enable this enhanced empathy and coordination, creating a unique form of joy called animal relaxation while tending to animals.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Animals</iconPath>
-		<displayCategory>Archite</displayCategory>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
 			<li>MasterfulSkills</li>
@@ -330,5 +330,282 @@
 			<skill>Animals</skill>
 			<modType>DropAll</modType>
 		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulArtistic</defName>
+		<label>masterful artistic</label>
+		<description>The carrier's aptitude in Artistic is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Artistic. They work with intense passion, and when they create a masterpiece, a portion of the resources used is miraculously reclaimed. This is made possible by archites that optimize muscle memory and visual-spatial reasoning, recycling material with remarkable efficiency.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Artistic</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Artistic>16</Artistic>
+						
+		</aptitudes>
+		<passionMod>
+			<skill>Artistic</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulConstruction</defName>
+		<label>masterful construction</label>
+		<description>The carrier's aptitude in Construction is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Construction. Occasionally, they exceed expectations, returning some of the materials used during construction as a result of their efficiency.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Construction</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Construction>16</Construction>
+						
+		</aptitudes>
+		<passionMod>
+			<skill>Construction</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulCooking</defName>
+		<label>masterful cooking</label>
+		<description>The carrier's aptitude in Cooking is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Cooking. Nanoscopic archites in the sensory cortex fine-tune taste and motor control, doubling the cooking speed.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Cooking</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Cooking>16</Cooking>
+						
+		</aptitudes>
+		<statFactors>
+			<CookSpeed>2</CookSpeed>
+		</statFactors>
+		<passionMod>
+			<skill>Cooking</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulCrafting</defName>
+		<label>masterful crafting</label>
+		<description>The carrier's aptitude in Crafting is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Crafting. Archites guide the carrier’s fine motor skills and decision-making, ensuring peak performance in crafting.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Crafting</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Crafting>16</Crafting>
+						
+		</aptitudes>
+		
+		<passionMod>
+			<skill>Crafting</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulMedical</defName>
+		<label>masterful medical</label>
+		<description>The carrier's aptitude in Medical is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Medical. Archites enhance decision-making and precision during operations, and provide a 50% chance to preserve medicine during treatment.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Medical</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Medicine>16</Medicine>
+						
+		</aptitudes>
+		
+		<passionMod>
+			<skill>Medicine</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulMelee</defName>
+		<label>masterful melee</label>
+		<description>The carrier's aptitude in Melee is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Melee. They instinctively strike for the heart or brain, dispatching enemies with terrifying efficiency. Archites synchronize muscle memory and visual targeting systems to prioritize lethal organs in combat.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Melee</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Melee>16</Melee>
+						
+		</aptitudes>
+		
+		<passionMod>
+			<skill>Melee</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulMining</defName>
+		<label>masterful mining</label>
+		<description>The carrier's aptitude in Mining is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Mining. Archites augment perception of mineral seams and tool control, granting increased yield and removing any usual mining yield caps.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Mining</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Mining>16</Mining>
+						
+		</aptitudes>
+		<statOffsets>
+			<MiningYield>0.25</MiningYield>
+		</statOffsets>
+		<passionMod>
+			<skill>Mining</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulPlants</defName>
+		<label>masterful plants</label>
+		<description>The carrier's aptitude in Plants is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Plants. Their expertise removes standard yield limits, allowing for extraordinary agricultural output.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Plants</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Plants>16</Plants>
+						
+		</aptitudes>
+		<statOffsets>
+			<PlantHarvestYield>0.3</PlantHarvestYield>
+		</statOffsets>
+		<passionMod>
+			<skill>Plants</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulIntellectual</defName>
+		<label>masterful intellectual</label>
+		<description>The carrier's aptitude in Intellectual is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Intellectual. They conduct research subconsciously, constantly generating scientific progress even while performing other tasks or resting. Archites woven into their neural network accelerate retention, synthesis, and intuition, allowing discoveries to emerge without active study.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Intellectual</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Intellectual>16</Intellectual>
+						
+		</aptitudes>
+		
+		<passionMod>
+			<skill>Intellectual</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_MasterfulIntellectual</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulShooting</defName>
+		<label>masterful shooting</label>
+		<description>The carrier's aptitude in Shooting is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Shooting. Every shot is precisely placed: if a head is present, it will be hit. Archites modify visual tracking and ballistic prediction, locking onto cranial targets with terrifying consistency.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Shooting</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Shooting>16</Shooting>
+						
+		</aptitudes>
+		
+		<passionMod>
+			<skill>Shooting</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+		
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MasterfulSocial</defName>
+		<label>masterful social</label>
+		<description>The carrier's aptitude in Social is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Social. They can recruit even the most unwavering pawns and exert immense ideological influence.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Social</iconPath>
+		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<exclusionTags>
+			<li>MasterfulSkills</li>
+		</exclusionTags>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<aptitudes>
+			
+				<Social>16</Social>
+						
+		</aptitudes>
+		<statOffsets>
+			<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1</ConversionPower>
+		</statOffsets>
+		<passionMod>
+			<skill>Social</skill>
+			<modType>DropAll</modType>
+		</passionMod>
+		
 	</GeneDef>
 </Defs>
