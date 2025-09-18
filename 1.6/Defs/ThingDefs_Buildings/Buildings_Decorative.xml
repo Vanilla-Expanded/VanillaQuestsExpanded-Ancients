@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<ThingDef Name="VQEA_AncientsBuildingBase" Abstract="true" ParentName="BuildingBase">
-		<thingClass>Building</thingClass>
-		<altitudeLayer>Building</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<selectable>true</selectable>
-		<fillPercent>0.6</fillPercent>
-		<rotatable>false</rotatable>
-		<pathCost>20</pathCost>
-		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-		<building>
-			<paintable>false</paintable>
-			<claimable>false</claimable>
-			<neverBuildable>true</neverBuildable>
-			<deconstructible>false</deconstructible>
-		</building>
-	</ThingDef>
+	
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedArchogenInjector</defName>
 		<label>ruined archogen injector</label>

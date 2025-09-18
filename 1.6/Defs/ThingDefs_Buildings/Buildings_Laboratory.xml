@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_ArchogenInjector</defName>
+		<label>archogen injector</label>
+		<description>todo</description>
+		<size>(3,2)</size>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<MarketValue>1450</MarketValue>
+			<Mass>75</Mass>
+			<Flammability>0.5</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/ArchogenInjector</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>400</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VQEA_NeurostabilizerArray</li>
+					<li>VQEA_CognitiveRecoveryArray</li>
+					<li>VQEA_RapidInfusionPump</li>
+					<li>VQEA_ArchiteRecycler</li>
+					<li>VQEA_GenomicAttenuator</li>
+					<li>VQEA_RejectionBufferCoil</li>
+					<li>VQEA_SpliceframeUplink</li>
+					<li>VQEA_MutagenInhibitorCore</li>
+					<li>VQEA_TraitSelectionPrism</li>
+					<li>VQEA_AberrationRedirector</li>
+					<li>VQEA_ComplexityHarmonizer</li>
+					<li>VQEA_ArchitePathingArray</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_NeurostabilizerArray</defName>
+		<label>neurostabilizer array</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>345</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>10</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/NeurostabilizerArray</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>50</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>10</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_CognitiveRecoveryArray</defName>
+		<label>cognitive recovery array</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>320</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>10</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/CognitiveRecoveryArray</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>20</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>6</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_RapidInfusionPump</defName>
+		<label>rapid infusion pump</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>380</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>10</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/RapidInfusionPump</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>35</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>9</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_ArchiteRecycler</defName>
+		<label>archite recycler</label>
+		<description>todo</description>
+		<size>(2,1)</size>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>450</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>25</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/ArchiteRecycler</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>100</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_GenomicAttenuator</defName>
+		<label>genomic attenuator</label>
+		<description>todo</description>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>550</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>30</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/GenomicAttenuator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>120</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>4</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_RejectionBufferCoil</defName>
+		<label>rejection buffer coil</label>
+		<description>todo</description>
+		<size>(1,2)</size>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>400</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>20</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/RejectionBufferCoil</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>60</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>5</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_SpliceframeUplink</defName>
+		<label>spliceframe uplink</label>
+		<description>todo</description>
+		<size>(2,2)</size>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>600</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>30</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/SpliceframeUplink</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_MutagenInhibitorCore</defName>
+		<label>mutagen inhibitor core</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>1000</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>50</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/MutagenInhibitorCore</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>400</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_TraitSelectionPrism</defName>
+		<label>trait selection prism</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>630</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>1250</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>55</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/TraitSelectionPrism</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_AberrationRedirector</defName>
+		<label>aberration redirector</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>1000</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>50</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/AberrationRedirector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_ComplexityHarmonizer</defName>
+		<label>complexity harmonizer</label>
+		<description>todo</description>
+		<size>(3,2)</size>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>360</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>1250</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>50</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/ComplexityHarmonizer</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>220</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
+		<defName>VQEA_ArchitePathingArray</defName>
+		<label>archite pathing array</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>800</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>1565</MarketValue>
+			<Beauty>0</Beauty>
+			<Mass>65</Mass>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/LabEquipment/ArchitePathingArray</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>400</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Facility">
+				<maxDistance>16</maxDistance>
+				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
