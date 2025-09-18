@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Recycling Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="VQEA_RubbishPile"]</xpath>
+			<value>
+				<costList>
+					<VRecyclingE_Trash>10</VRecyclingE_Trash>
+				</costList>
+			</value>
+		</match>
+	</Operation>
+</Patch>
+

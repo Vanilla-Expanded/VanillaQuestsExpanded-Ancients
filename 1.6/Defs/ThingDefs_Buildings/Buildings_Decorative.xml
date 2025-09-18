@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef Name="VQEA_AncientsBuildingBase" Abstract="true" ParentName="BuildingBase">
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.6</fillPercent>
+		<rotatable>false</rotatable>
+		<pathCost>20</pathCost>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+			<deconstructible>false</deconstructible>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedArchogenInjector</defName>
+		<label>ruined archogen injector</label>
+		<description>todo</description>
+		<size>(2,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedArchogenInjector</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedNeurostabilizerArray</defName>
+		<label>ruined neurostabilizer array</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedNeurostabilizerArray</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedCognitiveRecoveryArray</defName>
+		<label>ruined cognitive recovery array</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedCognitiveRecoveryArray</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedRapidInfusionPump</defName>
+		<label>ruined rapid infusion pump</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedRapidInfusionPump</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedArchiteRecycler</defName>
+		<label>ruined archite recycler</label>
+		<description>todo</description>
+		<size>(1,2)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedArchiteRecycler</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedGenomicAttenuator</defName>
+		<label>ruined genomic attenuator</label>
+		<description>todo</description>
+		<size>(2,2)</size>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedGenomicAttenuator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedRejectionBufferCoil</defName>
+		<label>ruined rejection buffer coil</label>
+		<description>todo</description>
+		<size>(1,2)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedRejectionBufferCoil</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedSpliceframeUplink</defName>
+		<label>ruined spliceframe uplink</label>
+		<description>todo</description>
+		<size>(2,2)</size>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedSpliceframeUplink</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedMutagenInhibitorCore</defName>
+		<label>ruined mutagen inhibitor core</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedMutagenInhibitorCore</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedTraitSelectionPrism</defName>
+		<label>ruined trait selection prism</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedTraitSelectionPrism</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedAberrationRedirector</defName>
+		<label>ruined aberration redirector</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedAberrationRedirector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedComplexityHarmonizer</defName>
+		<label>ruined complexity harmonizer</label>
+		<description>todo</description>
+		<size>(2,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedComplexityHarmonizer</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RuinedArchitePathingArray</defName>
+		<label>ruined archite pathing array</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/RuinedArchitePathingArray</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientFauxPlant</defName>
+		<label>ancient faux plant</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.3</fillPercent>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Furniture/AncientFauxPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientHospitalArmchair</defName>
+		<label>ancient hospital armchair</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<costList>
+			<Steel>10</Steel>
+			<Synthread>40</Synthread>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<Mass>18</Mass>
+			<Comfort>0.75</Comfort>
+			<Beauty>2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/AncientHospitalArmchair</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientHospitalBench</defName>
+		<label>ancient hospital armchair</label>
+		<description>todo</description>
+		<size>(1,2)</size>
+		<fillPercent>0.4</fillPercent>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<costList>
+			<Steel>10</Steel>
+			<Synthread>20</Synthread>
+		</costList>
+		<rotatable>true</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<Mass>18</Mass>
+			<Comfort>0.7</Comfort>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/AncientHospitalBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientHospitalCrib</defName>
+		<label>ancient hospital crib</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<costList>
+			<Steel>10</Steel>
+			<Synthread>20</Synthread>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Mass>15</Mass>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/RuinedLabEquipment/AncientHospitalCrib</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientIncubator</defName>
+		<label>ancient incubator</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientIncubator</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientIVStand</defName>
+		<label>ancient IV stand</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientIVStand</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientKitchenette</defName>
+		<label>ancient kitchenette</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientKitchenette</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientSink</defName>
+		<label>ancient kitchenette</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientKSink</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientMedicalPartition</defName>
+		<label>ancient medical partition</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.8</fillPercent>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<Synthread>10</Synthread>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientMedicalPartition</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientOfficeDesk</defName>
+		<label>ancient office desk</label>
+		<description>todo</description>
+		<size>(1,3)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientOfficeDesk</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientRepairBench</defName>
+		<label>ancient repair desk</label>
+		<description>todo</description>
+		<size>(1,3)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientRepairBench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientResearchCountertop</defName>
+		<label>ancient research countertop</label>
+		<description>todo</description>
+		<size>(1,3)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientResearchCountertop</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_BustedControlPanel</defName>
+		<label>busted control panel</label>
+		<description>todo</description>
+		<size>(1,3)</size>
+		<fillPercent>0.4</fillPercent>
+		<costList>
+			<ChunkSlagSteel>4</ChunkSlagSteel>
+		</costList>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/BustedControlPanel</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientOfficePrinter</defName>
+		<label>ancient office printer</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientOfficePrinter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientTripWarning</defName>
+		<label>trip warning sign</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.2</fillPercent>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientTripWarning</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientStorageHeater</defName>
+		<label>ancient storage heater</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Temperature/AncientStorageHeater</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>21</heatPerSecond>
+				<heatPushMaxTemperature>24</heatPushMaxTemperature>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientSunLamp</defName>
+		<label>ancient sun lamp</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Light/AncientSunLamp</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<overlightRadius>7.0</overlightRadius>
+				<glowRadius>14</glowRadius>
+				<glowColor>(370,370,370,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>1800</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Schedule">
+				<!-- Match plant growing times -->
+				<startTime>0.25</startTime>
+				<endTime>0.8</endTime>
+				<offMessage>Off for plant resting period</offMessage>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3</heatPerSecond>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientToyBox</defName>
+		<label>ancient toy box</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.3</fillPercent>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+			<Mass>15</Mass>
+			<BabyPlayGainFactor>1.25</BabyPlayGainFactor>
+			<JoyGainFactor>1.25</JoyGainFactor>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/ChildToys/AncientToyBox</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientVitalsMonitor</defName>
+		<label>ancient vitals monitor</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientVitalsMonitor</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientWaterCooler</defName>
+		<label>ancient water cooler</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/AncientWaterCooler</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_CreepyBabyToy</defName>
+		<label>creepy baby toy</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0</fillPercent>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-3</Beauty>
+			<Mass>5</Mass>
+			 <BabyPlayGainFactor>1.1</BabyPlayGainFactor>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/ChildToys/CreepyBabyToy</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_LargeWoodenMilitaryCrate</defName>
+		<label>rotten military crate</label>
+		<description>todo</description>
+		<size>(2,2)</size>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/LargeWoodenMilitaryCrate</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_WoodenMilitaryCrate</defName>
+		<label>rotten military box</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/WoodenMilitaryCrate</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RubbishPile</defName>
+		<label>trash bags</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<pathCost>80</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<Beauty>-15</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/RubbishPile</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_RustedWheeledTray</defName>
+		<label>rusted wheeled tray</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		
+		<fillPercent>0.3</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/RustedWheeledTray</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_VaultTerminal</defName>
+		<label>vault terminal</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/VaultTerminal</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_VaultTerminalBank</defName>
+		<label>vault terminal bank</label>
+		<description>todo</description>
+		<size>(1,3)</size>
+		<fillPercent>0.4</fillPercent>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>6</ChunkSlagSteel>
+		</costList>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/VaultTerminalBank</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_WarpedMopBucket</defName>
+		<label>warped mop bucket</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		
+		<fillPercent>0.3</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-3</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Props/WarpedMopBucket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="VQE_CryptoForgeBuildingBase">
+		<defName>VQEA_RustedHospitalBed</defName>
+		<label>rusted hospital bed</label>
+		<description>todo.</description>
+		<thingClass>Building_Bed</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<uiOrder>2020</uiOrder>
+		<graphicData>
+			<texPath>Things/Building/Beds/RustedHospitalBed</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<castEdgeShadows>True</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<WorkToBuild>2800</WorkToBuild>
+			<Mass>30</Mass>
+			<Flammability>1</Flammability>
+			<BedRestEffectiveness>1</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+			<BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">1.5</BirthRitualQualityOffset>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VitalsMonitor</li>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+		</comps>
+		<size>(1,2)</size>
+		<building>
+			<bed_showSleeperBody>false</bed_showSleeperBody>
+			<bed_healPerDay>10</bed_healPerDay>
+			<buildingSizeCategory>Small</buildingSizeCategory>
+			<paintable>true</paintable>
+			<buildingTags>
+				<li>Bed</li>
+			</buildingTags>
+			<neverBuildable>true</neverBuildable>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<costList>
+			<Steel>60</Steel>
+			<Synthread>40</Synthread>
+		</costList>
+		<staticSunShadowHeight>0.17</staticSunShadowHeight>
+		<techLevel>Medieval</techLevel>
+		<uiIconScale>0.90</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+	</ThingDef>
+	<ThingDef ParentName="VQE_CryptoForgeBuildingBase">
+		<defName>VQEA_WheeledBed</defName>
+		<label>wheeled bed</label>
+		<description>todo.</description>
+		<thingClass>Building_Bed</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<passability>PassThroughOnly</passability>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<uiOrder>2020</uiOrder>
+		<graphicData>
+			<texPath>Things/Building/Beds/WheeledBed</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<castEdgeShadows>True</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<WorkToBuild>2800</WorkToBuild>
+			<Mass>30</Mass>
+			<Flammability>1</Flammability>
+			<BedRestEffectiveness>0.65</BedRestEffectiveness>
+			<Comfort>0.65</Comfort>
+			<ImmunityGainSpeedFactor>1</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+			<BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">1.1</BirthRitualQualityOffset>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>VitalsMonitor</li>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_AssignableToPawn">
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
+		</comps>
+		<size>(1,2)</size>
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>10</bed_healPerDay>
+			<buildingSizeCategory>Small</buildingSizeCategory>
+			<paintable>true</paintable>
+			<buildingTags>
+				<li>Bed</li>
+			</buildingTags>
+			<neverBuildable>true</neverBuildable>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>42</pathCost>
+		<costList>
+			<Steel>60</Steel>
+			
+		</costList>
+		<staticSunShadowHeight>0.17</staticSunShadowHeight>
+		<techLevel>Medieval</techLevel>
+		<uiIconScale>0.90</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>
