@@ -20,7 +20,7 @@
 		<defName>VQEA_RuinedArchogenInjector</defName>
 		<label>ruined archogen injector</label>
 		<description>todo</description>
-		<size>(2,3)</size>
+		<size>(3,2)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
 		</costList>
@@ -33,7 +33,7 @@
 		<graphicData>
 			<texPath>Things/Building/RuinedLabEquipment/RuinedArchogenInjector</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,3)</drawSize>
+			<drawSize>(4,3)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
@@ -97,7 +97,7 @@
 		<defName>VQEA_RuinedArchiteRecycler</defName>
 		<label>ruined archite recycler</label>
 		<description>todo</description>
-		<size>(1,2)</size>
+		<size>(2,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
@@ -110,7 +110,7 @@
 		<graphicData>
 			<texPath>Things/Building/RuinedLabEquipment/RuinedArchiteRecycler</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(1,2)</drawSize>
+			<drawSize>(2,1)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
@@ -232,7 +232,7 @@
 		<defName>VQEA_RuinedComplexityHarmonizer</defName>
 		<label>ruined complexity harmonizer</label>
 		<description>todo</description>
-		<size>(2,3)</size>
+		<size>(3,2)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
 		</costList>
@@ -245,7 +245,7 @@
 		<graphicData>
 			<texPath>Things/Building/RuinedLabEquipment/RuinedComplexityHarmonizer</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,3)</drawSize>
+			<drawSize>(3,2)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
@@ -306,16 +306,16 @@
 			<Beauty>2</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/RuinedLabEquipment/AncientHospitalArmchair</texPath>
+			<texPath>Things/Building/Furniture/AncientHospitalArmchair</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3,3)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientHospitalBench</defName>
-		<label>ancient hospital armchair</label>
+		<label>ancient hospital bench</label>
 		<description>todo</description>
-		<size>(1,2)</size>
+		<size>(2,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
@@ -334,9 +334,9 @@
 			<Beauty>-1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/RuinedLabEquipment/AncientHospitalBench</texPath>
+			<texPath>Things/Building/Furniture/AncientHospitalBench</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(1,2)</drawSize>
+			<drawSize>(2,1)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
@@ -362,7 +362,7 @@
 			<Beauty>-1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/RuinedLabEquipment/AncientHospitalCrib</texPath>
+			<texPath>Things/Building/Furniture/AncientHospitalCrib</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
@@ -395,6 +395,7 @@
 		<description>todo</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
+		<uiIconScale>0.5</uiIconScale>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
@@ -481,7 +482,8 @@
 		<defName>VQEA_AncientOfficeDesk</defName>
 		<label>ancient office desk</label>
 		<description>todo</description>
-		<size>(1,3)</size>
+		<size>(3,1)</size>
+	
 		<fillPercent>0.4</fillPercent>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -503,8 +505,9 @@
 		<defName>VQEA_AncientRepairBench</defName>
 		<label>ancient repair desk</label>
 		<description>todo</description>
-		<size>(1,3)</size>
+		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
+	
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
 		</costList>
@@ -525,7 +528,8 @@
 		<defName>VQEA_AncientResearchCountertop</defName>
 		<label>ancient research countertop</label>
 		<description>todo</description>
-		<size>(1,3)</size>
+		<size>(3,1)</size>
+	
 		<fillPercent>0.4</fillPercent>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -547,7 +551,8 @@
 		<defName>VQEA_BustedControlPanel</defName>
 		<label>busted control panel</label>
 		<description>todo</description>
-		<size>(1,3)</size>
+	
+		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -731,6 +736,7 @@
 		<defName>VQEA_AncientWaterCooler</defName>
 		<label>ancient water cooler</label>
 		<description>todo</description>
+		<uiIconScale>0.75</uiIconScale>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<rotatable>true</rotatable>
@@ -746,7 +752,7 @@
 		<graphicData>
 			<texPath>Things/Building/Props/AncientWaterCooler</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(2.5,2.5)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
@@ -814,6 +820,7 @@
 		<defName>VQEA_RubbishPile</defName>
 		<label>trash bags</label>
 		<description>todo</description>
+		<uiIconScale>0.75</uiIconScale>
 		<size>(1,1)</size>
 		<pathCost>80</pathCost>
 		<fillPercent>0.4</fillPercent>
@@ -826,7 +833,7 @@
 		<graphicData>
 			<texPath>Things/Building/Props/RubbishPile</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
-			<drawSize>(2,2)</drawSize>
+			<drawSize>(1.5,1.5)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
@@ -874,7 +881,7 @@
 		<defName>VQEA_VaultTerminalBank</defName>
 		<label>vault terminal bank</label>
 		<description>todo</description>
-		<size>(1,3)</size>
+		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<rotatable>true</rotatable>
 		<costList>
@@ -889,7 +896,7 @@
 		<graphicData>
 			<texPath>Things/Building/Props/VaultTerminalBank</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(1,3)</drawSize>
+			<drawSize>(3,1)</drawSize>
 		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
