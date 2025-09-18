@@ -912,7 +912,7 @@
 		</graphicData>
 	</ThingDef>
 	
-	<ThingDef ParentName="VQE_CryptoForgeBuildingBase">
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RustedHospitalBed</defName>
 		<label>rusted hospital bed</label>
 		<description>todo.</description>
@@ -984,7 +984,7 @@
 			<li>BuildingsFurniture</li>
 		</thingCategories>
 	</ThingDef>
-	<ThingDef ParentName="VQE_CryptoForgeBuildingBase">
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_WheeledBed</defName>
 		<label>wheeled bed</label>
 		<description>todo.</description>
