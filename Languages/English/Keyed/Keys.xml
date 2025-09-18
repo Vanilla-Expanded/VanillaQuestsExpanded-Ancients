@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+	<!-- Genes -->
 	<VQEA_TextMote_ExceededExpectations>Exceeded expectations</VQEA_TextMote_ExceededExpectations>
 	<VQEA_TextMote_MedicinePreserved>Medicine preserved</VQEA_TextMote_MedicinePreserved>
 	<VQEA_PawnRecruitable>{0} is no longer unwaveringly loyal due to {1}'s {2} gene.</VQEA_PawnRecruitable>
+	
+	<!-- Buildings -->
+	<VQEA_Override>Override</VQEA_Override>
+	<VQEA_OverrideDesc>Select a colonist to override the ancient pipeline junction, siphoning a large amount of chemfuel from it. The pipeline junction will need time before it can be hacked again.</VQEA_OverrideDesc>
+	<VQEA_CancelOverride>Cancel override</VQEA_CancelOverride>
+	<VQEA_CancelOverrideDesc>Cancel overriding the ancient pipeline junction.</VQEA_CancelOverrideDesc>
 </LanguageData>

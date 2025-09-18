@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientPipelineJunction_Off</defName>
+		<label>ancient pipeline junction</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>12</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<thingClass>VanillaQuestsExpandedAncients.AncientPipelineOff</thingClass>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientPipelineJunction_Off</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientPipelineJunction_On</defName>
+		<label>ancient pipeline junction</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>12</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientPipelineJunction_On</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<modExtensions>
+		<li Class="VEF.Buildings.LootableBuildingDetails">
+		<contents>
+			<li>
+				<thing>Chemfuel</thing>
+				<randomCount>75~125</randomCount>
+			</li>
+		</contents>
+		<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
+		<gizmoText>VQEA_Override</gizmoText>
+		<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+		<gizmoDesc>VQEA_OverrideDesc</gizmoDesc>
+		<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
+		<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
+		<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
+		<buildingLeft>VQEA_AncientPipelineJunction_Off</buildingLeft>
+	</li>
+</modExtensions>
+	</ThingDef>
+	
+</Defs>

@@ -16,7 +16,9 @@ namespace VanillaQuestsExpandedAncients
 		}
 
 		public static ThingDef VQEA_PawnLevitator;
-		public static GeneDef VQEA_Serene;
+        public static ThingDef VQEA_AncientPipelineJunction_Off,VQEA_AncientPipelineJunction_On;
+
+        public static GeneDef VQEA_Serene;
         public static GeneDef VQEA_SubstanceImpervious;
         public static GeneDef VQEA_MasterfulAnimals;
         public static GeneDef VQEA_MasterfulArtistic;
@@ -27,9 +29,11 @@ namespace VanillaQuestsExpandedAncients
         public static GeneDef VQEA_MasterfulPlants;
         public static GeneDef VQEA_MasterfulShooting;
         public static GeneDef VQEA_MasterfulSocial;
+
         public static JoyKindDef VQEA_AnimalRelaxation;
 
-		public static BodyPartDef Brain;
+
+        public static BodyPartDef Brain;
 
     }
 }
