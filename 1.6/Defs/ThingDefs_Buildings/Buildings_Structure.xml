@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--========================= Walls =============================-->
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientVaultWall</defName>
+		<label>ancient vault wall</label>
+		<description>An impassable, indestructible vault wall. Capable of holding up a roof.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Linked/AncientVaultWall_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<uiIconPath>Things/Building/Linked/AncientVaultWall_MenuIcon</uiIconPath>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<WorkToBuild>500</WorkToBuild>
+			<Flammability>0</Flammability>
+			<MeditationFocusStrength>0.22</MeditationFocusStrength>
+		</statBases>
+		
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<coversFloor>true</coversFloor>
+		 <drawStyleCategory>Conduits</drawStyleCategory>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<fertility>0</fertility>
+		<building>
+			<supportsWallAttachments>true</supportsWallAttachments>
+			<isInert>true</isInert>
+			<isPlaceOverableWall>true</isPlaceOverableWall>
+			<ai_chillDestination>false</ai_chillDestination>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+			<deconstructible>false</deconstructible>
+		</building>
+		<designationHotKey>Misc3</designationHotKey>
+	</ThingDef>
+	
+	<!--========================= Doors =============================-->
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase" Name="VQEA_AncientsBuildingBaseDoor" Abstract="True">
+		<thingClass>Building_Door</thingClass>
+		<altitudeLayer>DoorMoveable</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<useHitPoints>false</useHitPoints>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<uiOrder>0</uiOrder>
+		<holdsRoof>true</holdsRoof>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<blockLight>true</blockLight>
+		<drawerType>RealtimeOnly</drawerType>
+		<building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>false</canPlaceOverWall>
+			<soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+			<soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+			<soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+			<soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+			<blueprintClass>Blueprint_Door</blueprintClass>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Door/Door_Blueprint</texPath>
+			</blueprintGraphicData>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<comps>
+			<li Class="CompProperties_Forbiddable">
+				<allowNonPlayer>true</allowNonPlayer>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+		<stealable>false</stealable>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBaseDoor">
+		<defName>VQEA_AncientVaultDoor</defName>
+		<label>ancient vault door</label>
+		<thingClass>Building_MultiTileDoor</thingClass>
+		<description>A heavily fortified, indestructible door. The door requires walls on either side to function.</description>
+		<clearBuildingArea>true</clearBuildingArea>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+			<DoorOpenSpeed>0.5</DoorOpenSpeed>
+			<Beauty>0</Beauty>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Doors/AncientVaultDoorLarge_Mover</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Doors/AncientVaultDoorSmall_MenuIcon_south</uiIconPath>
+		<size>(1, 1)</size>
+		<rotatable>true</rotatable>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+			<roamerCanOpen>false</roamerCanOpen>
+			<blueprintClass>Blueprint_Build</blueprintClass>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Doors/AncientVaultDoorSmall_MenuIcon</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<shaderType>EdgeDetect</shaderType>
+				<drawSize>2</drawSize>
+			</blueprintGraphicData>
+			<doorTopGraphic>
+				<texPath>Things/Building/Doors/AncientVaultDoorSmall_Top</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(2.2, 2.2)</drawSize>
+			</doorTopGraphic>
+		</building>
+		<designationHotKey>Misc3</designationHotKey>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<label>locked ancient vault door</label>
+		<defName>VQEA_LockedAncientVaultDoor</defName>
+		<description>A heavily fortified, indestructible door. It needs to be hacked in order to open it. The door requires walls on either side to function.</description>
+		<clearBuildingArea>true</clearBuildingArea>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Impassable</passability>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		<graphicData>
+			<texPath>Things/Building/Doors/AncientVaultDoorSmall_Locked</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2.2</drawSize>
+		</graphicData>
+		<uiIconScale>0.5</uiIconScale>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+		<comps>
+			<li Class="VEF.Buildings.CompProperties_JammedAirlock">
+				<!-- Interactable -->
+				<doorToConvertTo>VQEA_AncientVaultDoor</doorToConvertTo>
+				<activeTicks>1</activeTicks>
+				<ticksToActivate>900</ticksToActivate>
+				<activateTexPath>UI/Gizmo/OverrideGizmo</activateTexPath>
+				<activateLabelString>Override</activateLabelString>
+				<activateDescString>Select a colonist to override the security on this</activateDescString>
+				<guiLabelString>Choose who should do this</guiLabelString>
+				<jobString>Force this locked ancient vault door open</jobString>
+				<activatingStringPending>forcing locked ancient vault door open</activatingStringPending>
+				<activatingString>forcing locked ancient vault door open: {1}s</activatingString>
+				<messageCompletedString>{PAWN_nameDef} has successfully forced the locked ancient vault door open.</messageCompletedString>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+				<stringExtra>VQEA_LockedAncientVaultDoor</stringExtra>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBaseDoor">
+		<defName>VQEA_AncientVaultDoor_Large</defName>
+		<label>ancient large vault door</label>
+		<thingClass>Building_MultiTileDoor</thingClass>
+		<description>A large, heavily fortified, indestructible door. The door requires walls on either side to function.</description>
+		<clearBuildingArea>true</clearBuildingArea>
+		<statBases>
+			<WorkToBuild>5000</WorkToBuild>
+			<DoorOpenSpeed>0.5</DoorOpenSpeed>
+			<Beauty>0</Beauty>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Doors/AncientVaultDoorLarge_Mover</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<enabled>false</enabled>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Doors/AncientVaultDoorLarge_MenuIcon_south</uiIconPath>
+		 <size>(2, 1)</size>
+		<rotatable>true</rotatable>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+			<roamerCanOpen>false</roamerCanOpen>
+			<blueprintClass>Blueprint_Build</blueprintClass>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Doors/AncientVaultDoorLarge_MenuIcon</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<shaderType>EdgeDetect</shaderType>
+				 <drawSize>(2.6, 3.1)</drawSize>
+			</blueprintGraphicData>
+			<doorTopGraphic>
+				<texPath>Things/Building/Doors/AncientVaultDoorLarge_Top</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				 <drawSize>(3,2.4)</drawSize>
+			</doorTopGraphic>
+		</building>
+		<designationHotKey>Misc3</designationHotKey>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<label>locked ancient large vault door</label>
+		<defName>VQEA_LockedAncientVaultDoor_Large</defName>
+		<description>A heavily fortified, indestructible door. It needs to be hacked in order to open it. The door requires walls on either side to function.</description>
+		<clearBuildingArea>true</clearBuildingArea>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Impassable</passability>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>1</fillPercent>
+		 <size>(2, 1)</size>
+		<graphicData>
+			<texPath>Things/Building/Doors/AncientVaultDoorLarge_Locked</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			 <drawSize>(3,2.4)</drawSize>
+		</graphicData>
+		<uiIconScale>0.5</uiIconScale>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<paintable>false</paintable>
+			<deconstructible>false</deconstructible>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+		<comps>
+			<li Class="VEF.Buildings.CompProperties_JammedAirlock">
+				<!-- Interactable -->
+				<doorToConvertTo>VQEA_AncientVaultDoor_Large</doorToConvertTo>
+				<activeTicks>1</activeTicks>
+				<ticksToActivate>1800</ticksToActivate>
+				<activateTexPath>UI/Gizmo/OverrideGizmo</activateTexPath>
+				<activateLabelString>Override</activateLabelString>
+				<activateDescString>Select a colonist to override the security on this</activateDescString>
+				<guiLabelString>Choose who should do this</guiLabelString>
+				<jobString>Force this locked ancient vault door open</jobString>
+				<activatingStringPending>forcing locked ancient vault door open</activatingStringPending>
+				<activatingString>forcing locked ancient vault door open: {1}s</activatingString>
+				<messageCompletedString>{PAWN_nameDef} has successfully forced the locked ancient vault door open.</messageCompletedString>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+				<stringExtra>VQEA_LockedAncientVaultDoor</stringExtra>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

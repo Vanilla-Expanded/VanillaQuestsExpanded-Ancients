@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_LockedVaultDoor</defName>
+		<label>locked vault door</label>
+		<description>A sealed vault entrance leading to an underground laboratory. Still structurally sound, but heavily pressurized. Can be forced open to allow access.</description>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Impassable</passability>
+		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+		<selectable>true</selectable>
+		<fillPercent>0.2</fillPercent>
+		<size>(7,5)</size>
+		<tickerType>Normal</tickerType>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Doors/VaultRampEntrance_Closed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7,5)</drawSize>
+		</graphicData>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<neverBuildable>true</neverBuildable>
+			<isTargetable>false</isTargetable>
+		</building>
+		<comps>
+			<li Class="VEF.Buildings.CompProperties_JammedAirlock">
+				<!-- Interactable -->
+				<doorToConvertTo>VQEA_VaultRamp</doorToConvertTo>
+				<activeTicks>1</activeTicks>
+				<ticksToActivate>3600</ticksToActivate>
+				<activateTexPath>UI/Gizmo/UnsealVault</activateTexPath>
+				<activateLabelString>Unseal vault door</activateLabelString>
+				<activateDescString>Choose someone to unseal the vault door, allowing access to the underground vault.</activateDescString>
+				<guiLabelString>Choose who should do this</guiLabelString>
+				<jobString>Force this door open</jobString>
+				<activatingStringPending>forcing door open</activatingStringPending>
+				<activatingString>forcing door open: {1}s</activatingString>
+				<messageCompletedString>{PAWN_nameDef} has successfully forced the door open.</messageCompletedString>
+				<targetingParameters>
+					<canTargetBuildings>false</canTargetBuildings>
+					<canTargetAnimals>false</canTargetAnimals>
+					<canTargetMechs>false</canTargetMechs>
+					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+				</targetingParameters>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_VaultRamp</defName>
+		<label>vault ramp</label>
+		<description>A heavily reinforced vehicle ramp with personnel access stairway going down the middle. Leads deeper underground, into a sealed ancient vault.</description>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Impassable</passability>
+		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+		<selectable>true</selectable>
+		<fillPercent>0.2</fillPercent>
+		<size>(7,5)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Doors/VaultRampEntrance_Opened</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7,5)</drawSize>
+		</graphicData>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<neverBuildable>true</neverBuildable>
+			<isTargetable>false</isTargetable>
+		</building>
+		<!--<thingClass>VanillaQuestsExpandedDeadlife.CustomPortalEntry</thingClass>-->
+		<tickerType>Normal</tickerType>
+		<comps>
+			<!--<li Class="VanillaQuestsExpandedDeadlife.CompProperties_CustomPortal">
+				<mapSize>(100,1,100)</mapSize>
+				<exitDef>VQED_SiloExitStaircase</exitDef>
+				<mapGeneratorDef>VQE_AncientSilo</mapGeneratorDef>
+				<enterTexPath>Things/Misc/SiloStaircase_Open</enterTexPath>
+				<viewDestinationTexPath>UI/ViewSilo</viewDestinationTexPath>
+				<enterCommandKey>VQE_EnterSilo</enterCommandKey>
+				<viewDestinationCommandKey>VQE_ViewSilo</viewDestinationCommandKey>
+				<viewDestinationDescKey>VQE_ViewSiloDesc</viewDestinationDescKey>
+				<traverseSound>TraversePitGate</traverseSound>
+			</li>-->
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_VaultExitRamp</defName>
+		<label>vault exit ramp</label>
+		<description>A heavily reinforced vehicle ramp with personnel access stairway going up, allowing ascending back to the surface.</description>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Impassable</passability>
+		<disableImpassableShotOverConfigError>true</disableImpassableShotOverConfigError>
+		<selectable>true</selectable>
+		<fillPercent>1</fillPercent>
+		<size>(7,5)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Doors/VaultRampEntrance_Exit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(7,5)</drawSize>
+		</graphicData>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<neverBuildable>true</neverBuildable>
+			<isTargetable>false</isTargetable>
+		</building>
+		<!--<thingClass>VanillaQuestsExpandedDeadlife.CustomPortalExit</thingClass>-->
+		<tickerType>Normal</tickerType>
+		<comps>
+			<!--<li Class="VanillaQuestsExpandedDeadlife.CompProperties_CustomPortal">
+				<mapSize>(100,1,100)</mapSize>
+				<exitDef>VQED_SiloStaircase</exitDef>
+				<mapGeneratorDef>VQE_AncientSilo</mapGeneratorDef>
+				<enterTexPath>Things/Misc/SiloStaircase_Exit</enterTexPath>
+				<viewDestinationTexPath>UI/ViewSilo</viewDestinationTexPath>
+				<enterCommandKey>VQE_ExitSilo</enterCommandKey>
+				<viewDestinationCommandKey>ViewSurface</viewDestinationCommandKey>
+				<viewDestinationDescKey>ViewSurfaceDesc</viewDestinationDescKey>
+				<traverseSound>TraversePitGate</traverseSound>
+			</li>-->
+		</comps>
+	</ThingDef>
+
+</Defs>
