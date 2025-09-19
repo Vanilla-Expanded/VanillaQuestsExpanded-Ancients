@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientPipelineJunction_Off</defName>
+		<label>ancient pipeline junction</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>12</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<thingClass>VanillaQuestsExpandedAncients.AncientPipelineOff</thingClass>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientPipelineJunction_Off</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientPipelineJunction_On</defName>
+		<label>ancient pipeline junction</label>
+		<description>todo</description>
+		<size>(3,3)</size>
+		<costList>
+			<ChunkSlagSteel>12</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-8</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientPipelineJunction_On</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>Chemfuel</thing>
+						<randomCount>75~125</randomCount>
+					</li>
+				</contents>
+				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
+				<gizmoText>VQEA_Override</gizmoText>
+				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoDesc>VQEA_OverrideDesc</gizmoDesc>
+				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
+				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
+				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
+				<buildingLeft>VQEA_AncientPipelineJunction_Off</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_ArchiteCapsuleContainment_Empty</defName>
+		<label>archite capsule containment</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/ArchiteCapsuleContainment_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_ArchiteCapsuleContainment</defName>
+		<label>archite capsule containment</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/ArchiteCapsuleContainment_Full</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>ArchiteCapsule</thing>
+						<count>1</count>
+					</li>
+				</contents>
+				<buildingLeft>VQEA_ArchiteCapsuleContainment_Empty</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientGenepackCrate_Empty</defName>
+		<label>ancient genepack crate</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/Loot_GenepackCrate_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientGenepackCrate</defName>
+		<label>ancient genepack crate</label>
+		<description>todo</description>
+		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
+		<size>(1,1)</size>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/Loot_GenepackCrate_Full</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>Genepack</thing>
+						<randomCount>1~3</randomCount>
+					</li>
+				</contents>
+				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
+				<gizmoText>VQEA_Override</gizmoText>
+				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoDesc>VQEA_OverrideDesc_Generic</gizmoDesc>
+				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
+				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
+				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
+				<buildingLeft>VQEA_AncientGenepackCrate_Empty</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

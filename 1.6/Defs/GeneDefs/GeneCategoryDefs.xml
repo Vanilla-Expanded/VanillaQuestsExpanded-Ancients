@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>VQEA_ArchiteAptitudes</defName>
+    <label>archite aptitudes</label>
+    <displayPriorityInXenotype>999</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+
+
+</Defs>

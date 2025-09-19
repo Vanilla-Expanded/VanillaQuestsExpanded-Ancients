@@ -3,7 +3,7 @@
 	<HediffDef>
 		<defName>VQEA_Woundless</defName>
 		<label>woundless</label>
-		<description>todo.</description>
+		<description>Carriers of this gene rapidly heal from bleeding wounds. Their flesh seals itself moments after injury, preventing blood loss entirely and allowing them to fight through trauma that would kill others.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
@@ -20,7 +20,7 @@
 	<HediffDef>
 		<defName>VQEA_PlasteelSkin</defName>
 		<label>plasteel skin</label>
-		<description>todo.</description>
+		<description>Carriers of this gene possess dense, reinforced dermal armor. Their skin resists bullets, absorbs blunt force, and disperses heat, turning their entire body into a living shield.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<scenarioCanAdd>false</scenarioCanAdd>
@@ -40,7 +40,7 @@
 	<HediffDef>
 		<defName>VQEA_PlasteelClaws</defName>
 		<label>plasteel claw</label>
-		<description>todo.</description>
+		<description>Carriers of this gene grow synthetic alloy claws capable of slicing through armor and flesh. These natural weapons are always equipped and strike with brutal efficiency.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<scenarioCanAdd>false</scenarioCanAdd>
@@ -64,5 +64,67 @@
 		<addedPartProps>
 			<betterThanNatural>true</betterThanNatural>
 		</addedPartProps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_PassiveMeditation</defName>
+		<label>passive meditation</label>
+		<description>Carriers of this gene possess archites that passively channel ambient psychic energy, replenishing psyfocus without meditation. These ever-attuned minds remain sharp, composed, and ready to cast at all times.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_PsyfocusRegeneration">
+				<rateInTicks>6000</rateInTicks>
+				<regenAmount>0.005</regenAmount>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_Bulwark</defName>
+		<label>bulwark</label>
+		<description>Archites within the carrier’s tissues reinforce cellular structures, reducing incoming damage by half. Pain receptors are dampened in favor of combat awareness, and the body itself resists trauma that would cripple an ordinary human.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.1</painFactor>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_Enormous</defName>
+		<label>enormous</label>
+		<description>Carriers of this gene are saturated with growth-regulating archites that massively increase body size and muscle mass. Their immense frame allows for feats of brute strength, at the cost of speed and appetite.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<hungerRateFactor>2</hungerRateFactor>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_MasterfulIntellectual</defName>
+		<label>masterful intellectual</label>
+		<description>The carrier's aptitude in Intellectual is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Intellectual. They conduct research subconsciously, constantly generating scientific progress even while performing other tasks or resting. Archites woven into their neural network accelerate retention, synthesis, and intuition, allowing discoveries to emerge without active study.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_PassiveResearch">
+				<tickInterval>6000</tickInterval>
+				<researchPoints>50</researchPoints>
+			</li>
+		</comps>
 	</HediffDef>
 </Defs>

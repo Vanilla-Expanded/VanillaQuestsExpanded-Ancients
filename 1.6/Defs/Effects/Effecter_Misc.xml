@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <EffecterDef>
+    <defName>VQEA_Levitate</defName>
+    <maintainTicks>3000</maintainTicks>
+    <children>
+     
+      <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>ShockwaveFast</fleckDef>
+        <burstCount>1</burstCount>
+        <spawnLocType>OnSource</spawnLocType>
+        <positionRadius>0</positionRadius>
+        <scale>.01</scale>
+        <rotation>0</rotation>
+        <rotationRate>0</rotationRate>
+        <absoluteAngle>True</absoluteAngle>
+        <positionOffset>(0, 0, 0)</positionOffset>
+        <angle>0</angle>
+        <fleckUsesAngleForVelocity>false</fleckUsesAngleForVelocity>
+        <speed>0</speed>
+      </li>
+     
+    </children>
+  </EffecterDef>
+
+
+ 
+
+</Defs>

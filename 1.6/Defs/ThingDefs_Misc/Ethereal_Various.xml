@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <ThingDef ParentName="PawnFlyerBase">
+    <defName>VQEA_PawnLevitator</defName>
+   
+    <pawnFlyer>
+      <flightDurationMin>0.5</flightDurationMin>
+      <flightSpeed>6</flightSpeed>
+	  <heightFactor>1.2</heightFactor>
+	
+    </pawnFlyer>
+  </ThingDef>
+
+</Defs>
