@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TerrainDef Name="VQEA_AncientsFloorBase" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+		</affordances>
+		<tags>
+			<li>Floor</li>
+		</tags>
+		<fertility>0</fertility>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	<!-- ================= Misc ================= -->
+	<TerrainDef ParentName="VQEA_AncientsFloorBase">
+		<defName>VQED_AncientHospitalFloor</defName>
+		<label>ancient hospital floor</label>
+		<description>An ancient hospital vinyl flooring. Some faded blood can still be seen on it.</description>
+		<texturePath>Terrains/AncientHospitalFloor</texturePath>
+		<edgeType>Hard</edgeType>
+		<renderPrecedence>71</renderPrecedence>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Cleanliness>0.2</Cleanliness>
+			<Flammability>0</Flammability>
+			<CleaningTimeFactor>0.6</CleaningTimeFactor>
+		</statBases>
+	</TerrainDef>
+	<TerrainDef ParentName="VQEA_AncientsFloorBase">
+		<defName>VQED_AncientReinforcedConcrete</defName>
+		<label>ancient reinforced concrete</label>
+		<description>An ancient reinforced concrete floor. It’s old and ugly.</description>
+		<texturePath>Terrains/AncientReinforcedConcrete</texturePath>
+		<edgeType>Hard</edgeType>
+		<renderPrecedence>71</renderPrecedence>
+		<pathCost>14</pathCost>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Flammability>0</Flammability>
+		</statBases>
+	</TerrainDef>
+	<TerrainDef ParentName="VQEA_AncientsFloorBase">
+		<defName>VQED_AncientNurseryCarpet</defName>
+		<label>ancient reinforced concrete</label>
+		<description>An ancient, ripped nursery carpet.</description>
+		<texturePath>Terrains/AncientNurseryCarpet</texturePath>
+		<edgeType>Hard</edgeType>
+		<renderPrecedence>71</renderPrecedence>
+		<burnedDef>BurnedCarpet</burnedDef>
+		<statBases>
+			<Beauty>-1</Beauty>
+			<Flammability>0.32</Flammability>
+		</statBases>
+	</TerrainDef>
+</Defs>
