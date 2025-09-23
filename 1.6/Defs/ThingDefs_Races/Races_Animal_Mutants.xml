@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>VQEA_Spliceling</defName>
+		<label>spliceling</label>
+		<description>A malformed human-sized mutant. Its body is bent and reshaped into unnatural symmetry. Bones twist beneath the skin, forming ridges and spurs, while its face is a patchwork of misplaced features that shift and twitch without purpose.\n\nIts movements are erratic and insectile, driven by sudden bursts of violence. Though fragile compared to its larger kin, its unpredictability makes it a dangerous foe.\n\nIt is unclear whether a broken human consciousness still lingers inside, or if it is nothing more than a hollow puppet of corrupted genes.</description>
+		<statBases>
+			<MoveSpeed>3.25</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>10</MarketValue>
+			<LeatherAmount>10</LeatherAmount>
+			<MeatAmount>35</MeatAmount>
+			<Wildness>0.45</Wildness>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<tools>
+			<li>
+				<label>left mutated fist</label>
+				<labelNoLocation>mutated fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>flesh club</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<alwaysAwake>true</alwaysAwake>
+			<hasGenders>false</hasGenders>
+			<body>Human</body>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<baseBodySize>2</baseBodySize>
+			<baseHealthScale>1.25</baseHealthScale>
+			<lifeExpectancy>25</lifeExpectancy>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
+			<foodType>None</foodType>
+			<intelligence>ToolUser</intelligence>
+			<needsRest>false</needsRest>
+			<trainability>None</trainability>
+			<alwaysViolent>true</alwaysViolent>
+			<useMeatFrom>Human</useMeatFrom>
+			<useLeatherFrom>Human</useLeatherFrom>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>VQEA_Mutant_Wounded</soundWounded>
+					<soundDeath>VQEA_Mutant_Death</soundDeath>
+					<soundCall>VQEA_Mutant_Call</soundCall>
+					<soundAngry>VQEA_Mutant_Call</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>NonContractable</li>
+		</tradeTags>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VQEA_Spliceling</defName>
+		<label>spliceling</label>
+		<race>VQEA_Spliceling</race>
+		<combatPower>75</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/Mutants/Spliceling</texPath>
+					<drawSize>2</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/Mutants/Dessicated_Mutant</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<abilities>
+			<li>AcidSpray</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>VQEA_Splicehulk</defName>
+		<label>splicehulk</label>
+		<description>A swollen bloated frame of a human being that quivers with every labored step. Its skin splits under its own weight, oozing fluid from raw seams, while limbs of mismatched size flail clumsily at anything nearby.\n\nThe creature is slow and ponderous, but its immense bulk crushes obstacles with ease, leaving little hope for anything caught in its path.\n\nThe splicehulk forms when unstable archites force a host’s growth into uncontrolled, cancerous excess.</description>
+		<statBases>
+			<MoveSpeed>2.6</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>10</MarketValue>
+			<LeatherAmount>23</LeatherAmount>
+			<MeatAmount>93</MeatAmount>
+			<Wildness>0.45</Wildness>
+			<FilthRate>3</FilthRate>
+			 <PsychicSensitivity>0</PsychicSensitivity>
+			 <Flammability>0.7</Flammability>
+		</statBases>
+		<tools>
+			<li>
+				<label>left swollen arm</label>
+				<labelNoLocation>swollen arm</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right swollen arm</label>
+				<labelNoLocation>swollen arm</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>body slam</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>3.2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.25</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.CompProperties_Regeneration">
+				<healAll>true</healAll>
+				<onlyTendButNotHeal>true</onlyTendButNotHeal>
+				<tendMin>0.2</tendMin>
+				<tendMax>0.7</tendMax>
+				<rateInTicks>360</rateInTicks>
+			</li>
+		</comps>
+		<race>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<alwaysAwake>true</alwaysAwake>
+			<hasGenders>false</hasGenders>
+			<body>Human</body>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<baseBodySize>3</baseBodySize>
+			<baseHealthScale>3.5</baseHealthScale>
+			<lifeExpectancy>18</lifeExpectancy>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
+			<foodType>None</foodType>
+			<intelligence>ToolUser</intelligence>
+			<needsRest>false</needsRest>
+			<trainability>None</trainability>
+			<alwaysViolent>true</alwaysViolent>
+			<useMeatFrom>Human</useMeatFrom>
+			<useLeatherFrom>Human</useLeatherFrom>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>VQEA_Mutant_Wounded</soundWounded>
+					<soundDeath>VQEA_Mutant_Death</soundDeath>
+					<soundCall>VQEA_Mutant_Call</soundCall>
+					<soundAngry>VQEA_Mutant_Call</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>NonContractable</li>
+		</tradeTags>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VQEA_Splicehulk</defName>
+		<label>splicehulk</label>
+		<race>VQEA_Splicehulk</race>
+		<combatPower>240</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/Mutants/Splicehulk</texPath>
+					<drawSize>2.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/Mutants/Dessicated_Mutant</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		
+	</PawnKindDef>
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>VQEA_Splicefiend</defName>
+		<label>splicefiend</label>
+		<description>A towering mutant sculpted into brutal strength. Its proportions are wildly distorted: arms that nearly scrape the floor, a chest stretched wide with straining cords of flesh, and legs thick enough to shatter stone underfoot.\n\nUnlike its sluggish kin, the splicefiend moves with alarming speed and precision, overwhelming prey with violent charges and rending strikes.\n\nThe splicefiend is born when unstable archites seize complete control of a host’s body, driving it to become a weapon of flesh.</description>
+		<statBases>
+			<MoveSpeed>4.2</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>10</MarketValue>
+			<LeatherAmount>22</LeatherAmount>
+			<MeatAmount>87</MeatAmount>
+			<Wildness>0.45</Wildness>
+			<FilthRate>4</FilthRate>
+			 <PsychicSensitivity>0</PsychicSensitivity>
+			 <Flammability>0.6</Flammability>
+		</statBases>
+		<tools>
+			<li>
+				<label>left massive fist</label>
+				<labelNoLocation>massive fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right massive fist</label>
+				<labelNoLocation>massive fist</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			
+		</tools>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>VQEA_NoPain</hediffname>
+			</li>
+		</comps>
+		<race>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<alwaysAwake>true</alwaysAwake>
+			<hasGenders>false</hasGenders>
+			<body>Human</body>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<baseBodySize>4</baseBodySize>
+			<baseHealthScale>5</baseHealthScale>
+			<lifeExpectancy>12</lifeExpectancy>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
+			<foodType>None</foodType>
+			<intelligence>ToolUser</intelligence>
+			<needsRest>false</needsRest>
+			<trainability>None</trainability>
+			<alwaysViolent>true</alwaysViolent>
+			<useMeatFrom>Human</useMeatFrom>
+			<useLeatherFrom>Human</useLeatherFrom>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>VQEA_Mutant_Wounded</soundWounded>
+					<soundDeath>VQEA_Mutant_Death</soundDeath>
+					<soundCall>VQEA_Mutant_Call</soundCall>
+					<soundAngry>VQEA_Mutant_Call</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>NonContractable</li>
+		</tradeTags>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VQEA_Splicefiend</defName>
+		<label>splicefiend</label>
+		<race>VQEA_Splicefiend</race>
+		<combatPower>420</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/Mutants/Splicefiend</texPath>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/Mutants/Dessicated_Mutant</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		
+	</PawnKindDef>
+</Defs>

@@ -127,4 +127,22 @@
 			</li>
 		</comps>
 	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_NoPain</defName>
+		<description>This creature has a reduced pain sensitivity, and it takes longer to be downed due to pain.</description>
+		<isBad>false</isBad>
+		<label>no pain sensitivity</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+				<statOffsets>
+					<PainShockThreshold>1</PainShockThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>
