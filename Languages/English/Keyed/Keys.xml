@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+    <!-- UI Window -->
+    <VQEA_ArchiteInjectionTitle>Archite Injection</VQEA_ArchiteInjectionTitle>
+    <VQEA_ArchiteInjection_MainDesc>{PAWN} will be injected with volatile archites, causing them to develop a random archite gene. The process is dangerous and can cause development of random unwanted genes, rejection or even a drastic mutation. Obtain more ancient archite lab equipment to improve the process.</VQEA_ArchiteInjection_MainDesc>
+    <VQEA_ExpectedInfusionDuration>Expected infusion duration</VQEA_ExpectedInfusionDuration>
+    <VQEA_InfusionComaDuration>Infusion coma duration</VQEA_InfusionComaDuration>
+    <VQEA_PawnGeneticComplexity>{0}'s genetic complexity</VQEA_PawnGeneticComplexity>
+    <VQEA_ExpectedMetabolismSideEffect>Expected metabolism efficiency of the side effect gene</VQEA_ExpectedMetabolismSideEffect>
+    <VQEA_SuccessChance>Success chance</VQEA_SuccessChance>
+    <VQEA_RejectionChance>Rejection chance</VQEA_RejectionChance>
+    <VQEA_SplicelingChance>Spliceling mutation chance</VQEA_SplicelingChance>
+    <VQEA_SplicehulkChance>Splicehulk mutation chance</VQEA_SplicehulkChance>
+    <VQEA_SplicefiendChance>Splicefiend mutation chance</VQEA_SplicefiendChance>
+    <VQEA_CompleteMoreAncientLabQuests>You can complete more ancient lab quests to find and loot more lab equipment. Each piece of the lab provides unique benefits that will improve the odds of a succesful injection.</VQEA_CompleteMoreAncientLabQuests>
+    <VQEA_LinkedLabEquipment>Linked Lab Equipment</VQEA_LinkedLabEquipment>
+    <VQEA_RequiresArchiteCapsule>The process requires 1 Archite capsule available.</VQEA_RequiresArchiteCapsule>
+    <VQEA_AvailableArchiteCapsules>Available archite capsules in storage: {0}</VQEA_AvailableArchiteCapsules>
+    <VQEA_Inject>Inject</VQEA_Inject>
+    <VQEA_Days>{0} days</VQEA_Days>
+    <VQEA_Metabolism>{0} metabolism</VQEA_Metabolism>
 
-	<!-- Genes -->
-	<VQEA_TextMote_ExceededExpectations>Exceeded expectations</VQEA_TextMote_ExceededExpectations>
-	<VQEA_TextMote_MedicinePreserved>Medicine preserved</VQEA_TextMote_MedicinePreserved>
-	<VQEA_PawnRecruitable>{0} is no longer unwaveringly loyal due to {1}'s {2} gene.</VQEA_PawnRecruitable>
-	
-	<!-- Buildings -->
-	<VQEA_Override>Override</VQEA_Override>
-	<VQEA_OverrideDesc>Select a colonist to override the ancient pipeline junction, siphoning a large amount of chemfuel from it. The pipeline junction will need time before it can be hacked again.</VQEA_OverrideDesc>
-	<VQEA_OverrideDesc_Generic>Select a colonist to override the security on this.</VQEA_OverrideDesc_Generic>
-	<VQEA_CancelOverride>Cancel override</VQEA_CancelOverride>
-	<VQEA_CancelOverrideDesc>Cancel overriding this building.</VQEA_CancelOverrideDesc>
-	<VQEA_LockedAncientVaultDoor>This ancient vault door is locked</VQEA_LockedAncientVaultDoor>
+    <!-- Gizmos -->
+    <VQEA_StartInjection>Start injection process</VQEA_StartInjection>
+    <VQEA_StartInjectionDesc>Initialize the archogen injector, allowing a person to be inserted.</VQEA_StartInjectionDesc>
+    <VQEA_InsertPerson>Insert person</VQEA_InsertPerson>
+    <VQEA_InsertPersonDesc>Insert a person into the archogen injector. Their genetic material will be injected with chaotic archites, which will cause random genetic mutations with a chance to form an archite gene, but also random other xenogenes.\n\nArchite injection is a painful process and will force the subject into a temporary coma while the organism adapts to the new genetic composition.</VQEA_InsertPersonDesc>
+
+    <!-- Letters -->
+    <VQEA_LetterLabel_Success>Archogen injection: success</VQEA_LetterLabel_Success>
+    <VQEA_LetterDesc_Success>The archite injection has been successful.\n\n{PAWN_nameDef} has been injected with volatile archites and has gained a new archite gene: {ARCHITEGENE_label}.\n\nAs a side effect, {PAWN_firstName} has also developed an additional gene: {SIDEEFFECTGENE_label}.\n\nThey will now enter an injection coma while their body adapts to the new genetic composition.</VQEA_LetterDesc_Success>
+    <VQEA_LetterLabel_Rejection>Archogen injection: rejection</VQEA_LetterLabel_Rejection>
+    <VQEA_LetterDesc_Rejection>The archite injection has been rejected.\n\n{PAWN_nameDef} has been injected with volatile archites, but their body rejected the alterations to the genetic composition.\n\nThey will now enter an injection coma while their body recovers.</VQEA_LetterDesc_Rejection>
+    <VQEA_LetterLabel_Mutation>Archogen injection: mutation</VQEA_LetterLabel_Mutation>
+    <VQEA_LetterDesc_Mutation>The archite injection has caused a mutation!
+{PAWN_nameDef} has been injected with volatile archites, but their body reacted badly to the forced evolution, turning them into a mutant.
+They have emerged from the archogen injector and will destroy all the lab equipment they can find in the blind, animalistic rage.
+You can try and stop them, or let them leave.</VQEA_LetterDesc_Mutation>
+
+    <!-- Inspect Pane Strings -->
+    <VQEA_ArchogenInjectorWaitingForCapsule>Waiting for archite capsule.</VQEA_ArchogenInjectorWaitingForCapsule>
+    <VQEA_ArchogenInjectorWaitingForPawn>Waiting for person.</VQEA_ArchogenInjectorWaitingForPawn>
+    <VQEA_ArchogenInjectorInjecting>Injecting. Time remaining: {0}</VQEA_ArchogenInjectorInjecting>
+    <!-- Acceptance Report Reasons -->
+    <VQEA_ArchogenInjectorNotInit>The archogen injector process has not been started.</VQEA_ArchogenInjectorNotInit>
+    <VQEA_ArchogenInjectorOccupied>Archogen Injector is occupied.</VQEA_ArchogenInjectorOccupied>
+    <VQEA_ArchogenInjectorComplete>Injection complete.</VQEA_ArchogenInjectorComplete>
+    <VQEA_NoArchiteCapsules>No archite capsules available.</VQEA_NoArchiteCapsules>
+    <!-- Gene Choice Dialogs -->
+    <VQEA_ChooseArchiteGene>Choose an archite gene</VQEA_ChooseArchiteGene>
+    <VQEA_ChooseSideEffectGene>Choose a side effect gene</VQEA_ChooseSideEffectGene>
+    <VQEA_NoInjectablePawns>No pawns available for injection.</VQEA_NoInjectablePawns>
 </LanguageData>

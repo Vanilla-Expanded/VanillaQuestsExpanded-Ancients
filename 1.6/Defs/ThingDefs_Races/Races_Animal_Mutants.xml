@@ -57,7 +57,6 @@
 			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
 			<foodType>None</foodType>
-			<intelligence>ToolUser</intelligence>
 			<needsRest>false</needsRest>
 			<trainability>None</trainability>
 			<alwaysViolent>true</alwaysViolent>
@@ -105,8 +104,8 @@
 			<li>AcidSpray</li>
 		</abilities>
 	</PawnKindDef>
-	
-	
+
+
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Splicehulk</defName>
 		<label>splicehulk</label>
@@ -119,8 +118,8 @@
 			<MeatAmount>93</MeatAmount>
 			<Wildness>0.45</Wildness>
 			<FilthRate>3</FilthRate>
-			 <PsychicSensitivity>0</PsychicSensitivity>
-			 <Flammability>0.7</Flammability>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<Flammability>0.7</Flammability>
 		</statBases>
 		<tools>
 			<li>
@@ -176,7 +175,6 @@
 			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
 			<foodType>None</foodType>
-			<intelligence>ToolUser</intelligence>
 			<needsRest>false</needsRest>
 			<trainability>None</trainability>
 			<alwaysViolent>true</alwaysViolent>
@@ -220,9 +218,9 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
-		
+
 	</PawnKindDef>
-	
+
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Splicefiend</defName>
 		<label>splicefiend</label>
@@ -235,8 +233,8 @@
 			<MeatAmount>87</MeatAmount>
 			<Wildness>0.45</Wildness>
 			<FilthRate>4</FilthRate>
-			 <PsychicSensitivity>0</PsychicSensitivity>
-			 <Flammability>0.6</Flammability>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<Flammability>0.6</Flammability>
 		</statBases>
 		<tools>
 			<li>
@@ -259,7 +257,7 @@
 				<cooldownTime>2.2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 			</li>
-			
+
 		</tools>
 		<comps>
 			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff">
@@ -278,7 +276,6 @@
 			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
 			<foodType>None</foodType>
-			<intelligence>ToolUser</intelligence>
 			<needsRest>false</needsRest>
 			<trainability>None</trainability>
 			<alwaysViolent>true</alwaysViolent>
@@ -322,6 +319,6 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
-		
+
 	</PawnKindDef>
 </Defs>

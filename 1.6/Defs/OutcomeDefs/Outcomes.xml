@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+        <defName>VQEA_ArchiteInjection_Success</defName>
+        <baseWeight>60</baseWeight>
+        <outcomeType>Success</outcomeType>
+    </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+
+    <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+        <defName>VQEA_ArchiteInjection_Rejection</defName>
+        <baseWeight>25</baseWeight>
+        <outcomeType>Rejection</outcomeType>
+    </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+
+    <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+        <defName>VQEA_ArchiteInjection_Spliceling</defName>
+        <baseWeight>8</baseWeight>
+        <pawnKind>VQEA_Spliceling</pawnKind>
+        <outcomeType>Mutation</outcomeType>
+    </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+
+    <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+        <defName>VQEA_ArchiteInjection_Splicehulk</defName>
+        <baseWeight>5</baseWeight>
+        <pawnKind>VQEA_Splicehulk</pawnKind>
+        <outcomeType>Mutation</outcomeType>
+    </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+
+    <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+        <defName>VQEA_ArchiteInjection_Splicefiend</defName>
+        <baseWeight>2</baseWeight>
+        <pawnKind>VQEA_Splicefiend</pawnKind>
+        <outcomeType>Mutation</outcomeType>
+    </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
+</Defs>

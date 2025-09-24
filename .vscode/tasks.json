@@ -13,7 +13,7 @@
             "command": "dotnet",
             "args": [
                 "build",
-                "${workspaceFolder}/1.5/Source/VanillaQuestsExpandedAncients.csproj"
+                "${workspaceFolder}/1.6/Source/VanillaQuestsExpandedAncients.csproj"
             ],
             "problemMatcher": "$msCompile",
             "group": {

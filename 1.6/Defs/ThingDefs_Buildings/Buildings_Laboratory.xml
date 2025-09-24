@@ -1,11 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchogenInjector</defName>
 		<label>archogen injector</label>
 		<description>todo</description>
+		<thingClass>VanillaQuestsExpandedAncients.Building_ArchogenInjector</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<castEdgeShadows>true</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<tickerType>Normal</tickerType>
 		<size>(3,2)</size>
 		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0, 0, 2)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<buildingTags>
+				<li>Biotech</li>
+			</buildingTags>
+			<workTableRoomRole>Laboratory</workTableRoomRole>
+		</building>
 		<statBases>
 			<MaxHitPoints>350</MaxHitPoints>
 			<MarketValue>1450</MarketValue>
@@ -23,7 +38,9 @@
 				<compClass>CompPowerTrader</compClass>
 				<shortCircuitInRain>true</shortCircuitInRain>
 				<basePowerConsumption>400</basePowerConsumption>
+				<idlePowerDraw>50</idlePowerDraw>
 			</li>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_AffectedByFacilities">
 				<linkableFacilities>
 					<li>VQEA_NeurostabilizerArray</li>
@@ -41,6 +58,13 @@
 				</linkableFacilities>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchogenInjectorExtension">
+				<baseInjectionTicks>300000</baseInjectionTicks>
+				<baseComaTicks>420000</baseComaTicks>
+				<baseSideEffectMetabolism>3</baseSideEffectMetabolism>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_NeurostabilizerArray</defName>
@@ -70,6 +94,11 @@
 				<maxSimultaneous>10</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<successWeightOffset>1</successWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_CognitiveRecoveryArray</defName>
@@ -99,6 +128,11 @@
 				<maxSimultaneous>6</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<comaTicksOffset>-60000</comaTicksOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_RapidInfusionPump</defName>
@@ -128,6 +162,11 @@
 				<maxSimultaneous>9</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<injectionTicksOffset>-30000</injectionTicksOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchiteRecycler</defName>
@@ -187,6 +226,11 @@
 				<maxSimultaneous>4</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<sideEffectMetabolismOffset>-1</sideEffectMetabolismOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_RejectionBufferCoil</defName>
@@ -217,6 +261,11 @@
 				<maxSimultaneous>5</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<rejectionWeightOffset>-5</rejectionWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_SpliceframeUplink</defName>
@@ -246,6 +295,13 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<splicelingWeightOffset>3</splicelingWeightOffset>
+				<splicehulkWeightOffset>2</splicehulkWeightOffset>
+				<splicefiendWeightOffset>1</splicefiendWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_MutagenInhibitorCore</defName>
@@ -275,6 +331,11 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<rejectionWeightOffset>25</rejectionWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_TraitSelectionPrism</defName>
@@ -304,6 +365,11 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<successWeightOffset>0</successWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_AberrationRedirector</defName>
@@ -333,6 +399,11 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<successWeightOffset>0</successWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ComplexityHarmonizer</defName>
@@ -363,6 +434,12 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<successWeightOffset>1</successWeightOffset>
+				<injectionTicksOffset>2500</injectionTicksOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchitePathingArray</defName>
@@ -392,5 +469,11 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
+				<successWeightOffset>0</successWeightOffset>
+				<splicelingWeightOffset>0</splicelingWeightOffset>
+			</li>
+		</modExtensions>
 	</ThingDef>
 </Defs>
