@@ -49,8 +49,8 @@ namespace VanillaQuestsExpandedAncients
             curY += TopPadding + 10f;
 
 
-            float mainDescHeight = Text.CalcHeight("VQEA_ArchiteInjection_MainDesc".Translate(archogenInjector.SelectedPawn.Named("PAWN")), inRect.width - SidePadding * 2f);
-            Widgets.Label(new Rect(SidePadding, curY, inRect.width - SidePadding * 2f, mainDescHeight), "VQEA_ArchiteInjection_MainDesc".Translate(archogenInjector.SelectedPawn.Named("PAWN")));
+            float mainDescHeight = Text.CalcHeight("VQEA_ArchiteInjection_MainDesc".Translate(archogenInjector.Occupant.Named("PAWN")), inRect.width - SidePadding * 2f);
+            Widgets.Label(new Rect(SidePadding, curY, inRect.width - SidePadding * 2f, mainDescHeight), "VQEA_ArchiteInjection_MainDesc".Translate(archogenInjector.Occupant.Named("PAWN")));
             curY += mainDescHeight + SectionSpacing;
 
             float columnHeight = inRect.height - curY - ButtonHeight - BottomPadding - 20f;
@@ -72,7 +72,7 @@ namespace VanillaQuestsExpandedAncients
             listing.Label("VQEA_InfusionComaDuration".Translate() + ": " + "VQEA_Days".Translate(Mathf.RoundToInt(archogenInjector.GetExpectedComaDuration() / (float)GenDate.TicksPerDay)));
             listing.Gap(SectionSpacing);
                 
-            listing.Label("VQEA_PawnGeneticComplexity".Translate(archogenInjector.SelectedPawn.Name.ToStringFull) + ": " + archogenInjector.GetGeneticComplexityForUI());
+            listing.Label("VQEA_PawnGeneticComplexity".Translate(archogenInjector.Occupant.Name.ToStringFull) + ": " + archogenInjector.GetGeneticComplexityForUI());
             int metabolism = archogenInjector.GetTargetMetabolismEfficiency();
             listing.Label("VQEA_ExpectedMetabolismSideEffect".Translate() + ": " + "VQEA_Metabolism".Translate(metabolism.ToStringWithSign()));
             listing.Gap(SectionSpacing);
@@ -184,7 +184,7 @@ namespace VanillaQuestsExpandedAncients
             Rect cancelButtonRect = new Rect(rect.x, rect.y, buttonWidth, rect.height);
             if (Widgets.ButtonText(cancelButtonRect, "Cancel".Translate()))
             {
-                archogenInjector.EjectContents();
+                archogenInjector.CancelProcess();
                 Close();
             }
 
@@ -201,13 +201,14 @@ namespace VanillaQuestsExpandedAncients
             bool noCapsules = Find.CurrentMap.resourceCounter.GetCount(ThingDefOf.ArchiteCapsule) == 0;
             if (noCapsules)
             {
+                TooltipHandler.TipRegion(injectButtonRect, "VQEA_NoArchiteCapsules".Translate());
                 Widgets.ButtonText(injectButtonRect, "VQEA_Inject".Translate(), true);
             }
             else
             {
                 if (Widgets.ButtonText(injectButtonRect, "VQEA_Inject".Translate()))
                 {
-                    archogenInjector.StartInjection();
+                    archogenInjector.ConfirmInjection();
                     Close();
                 }
             }

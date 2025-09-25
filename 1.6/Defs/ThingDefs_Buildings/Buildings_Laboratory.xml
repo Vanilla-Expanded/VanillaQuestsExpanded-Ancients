@@ -434,12 +434,6 @@
 				<maxSimultaneous>1</maxSimultaneous>
 			</li>
 		</comps>
-		<modExtensions>
-			<li Class="VanillaQuestsExpandedAncients.ArchiteLabFacilityExtension">
-				<successWeightOffset>1</successWeightOffset>
-				<injectionTicksOffset>2500</injectionTicksOffset>
-			</li>
-		</modExtensions>
 	</ThingDef>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchitePathingArray</defName>

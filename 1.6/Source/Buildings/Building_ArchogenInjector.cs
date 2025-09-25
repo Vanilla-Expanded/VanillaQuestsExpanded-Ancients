@@ -13,8 +13,9 @@ namespace VanillaQuestsExpandedAncients
     public enum ArchiteInjectorState
     {
         Inactive,
-        WaitingForCapsule,
         WaitingForPawn,
+        PawnInside,
+        WaitingForCapsule,
         Injecting,
         Complete
     }
@@ -22,7 +23,7 @@ namespace VanillaQuestsExpandedAncients
     [StaticConstructorOnStartup]
     public class Building_ArchogenInjector : Building_Enterable, IThingHolder
     {
-        private bool init;
+        private bool processConfirmed = false;
         public int ticksRemaining;
         private int totalInjectionTime;
         private ArchiteInjectionOutcomeDef outcome;
@@ -33,7 +34,8 @@ namespace VanillaQuestsExpandedAncients
         private bool debugDisableNeedForIngredients;
         private GeneDef generatedArchiteGene;
         private GeneDef generatedSideEffectGene;
-
+        private static readonly SoundDef EjectSoundSuccess = SoundDefOf.CryptosleepCasket_Eject;
+        private static readonly SoundDef EjectSoundFail = SoundDefOf.CryptosleepCasket_Eject;
         private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
         public static readonly CachedTexture InsertPersonIcon = new CachedTexture("UI/Icons/InsertPersonSubcoreScanner");
         public CachedTexture InitIcon = new CachedTexture("UI/Gizmos/InsertPawn");
@@ -63,17 +65,21 @@ namespace VanillaQuestsExpandedAncients
         {
             get
             {
-                if (!init || !PowerOn)
+                if (!PowerOn)
                 {
                     return ArchiteInjectorState.Inactive;
-                }
-                if (!AllRequiredIngredientsLoaded)
-                {
-                    return ArchiteInjectorState.WaitingForCapsule;
                 }
                 if (Occupant == null)
                 {
                     return ArchiteInjectorState.WaitingForPawn;
+                }
+                if (!processConfirmed)
+                {
+                    return ArchiteInjectorState.PawnInside;
+                }
+                if (!AllRequiredIngredientsLoaded)
+                {
+                    return ArchiteInjectorState.WaitingForCapsule;
                 }
                 if (ticksRemaining > 0)
                 {
@@ -134,8 +140,6 @@ namespace VanillaQuestsExpandedAncients
             {
                 switch (State)
                 {
-                    case ArchiteInjectorState.Inactive:
-                        return "VQEA_ArchogenInjectorNotInit".Translate();
                     case ArchiteInjectorState.WaitingForCapsule:
                         return "VQEA_ArchogenInjectorWaitingForCapsule".Translate();
                     case ArchiteInjectorState.Injecting:
@@ -161,6 +165,10 @@ namespace VanillaQuestsExpandedAncients
                 {
                     return "InXenogerminationComa".Translate();
                 }
+                if (pawn.health.hediffSet.HasHediff(InternalDefOf.VQEA_InjectionComa))
+                {
+                    return "VQEA_HasInjectionComa".Translate();
+                }
             }
             return true;
         }
@@ -182,6 +190,7 @@ namespace VanillaQuestsExpandedAncients
                 {
                     Find.Selector.Select(pawn, playSound: false, forceDesignatorDeselect: false);
                 }
+                Find.WindowStack.Add(new Window_ArchiteInjection(this));
             }
         }
 
@@ -190,16 +199,29 @@ namespace VanillaQuestsExpandedAncients
             return GetRequiredCountOf(thing.def) > 0;
         }
 
-        public void EjectContents()
+
+        public void CancelProcess()
         {
-            if (Occupant != null)
+            if (this.State == ArchiteInjectorState.Injecting && !HasLinkedFacility(InternalDefOf.VQEA_ArchiteRecycler))
             {
-                FinishInjection();
+                Thing capsule = innerContainer.FirstOrDefault(t => t.def == ThingDefOf.ArchiteCapsule);
+                if (capsule != null)
+                {
+                    capsule.Destroy();
+                }
             }
-            innerContainer.RemoveAll(x => x.def == ThingDefOf.ArchiteCapsule);
-            innerContainer.TryDropAll(InteractionCell, Map, ThingPlaceMode.Near);
+            innerContainer.TryDropAll(this.InteractionCell, this.Map, ThingPlaceMode.Near);
+            Reset();
+        }
+
+        private void Reset()
+        {
             selectedPawn = null;
-            init = false;
+            processConfirmed = false;
+            ticksRemaining = 0;
+            totalInjectionTime = 0;
+            outcome = null;
+            innerContainer.ClearAndDestroyContents();
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -227,14 +249,6 @@ namespace VanillaQuestsExpandedAncients
             }
         }
 
-        public static bool WasLoadingCancelled(Thing thing)
-        {
-            if (thing is Building_ArchogenInjector archogenInjector && !archogenInjector.init)
-            {
-                return true;
-            }
-            return false;
-        }
 
         protected override void Tick()
         {
@@ -249,6 +263,13 @@ namespace VanillaQuestsExpandedAncients
                 else
                 {
                     powerComp.PowerOutput = 0f - powerComp.Props.idlePowerDraw;
+                }
+            }
+            if (processConfirmed && totalInjectionTime == 0)
+            {
+                if (AllRequiredIngredientsLoaded)
+                {
+                    StartInjection();
                 }
             }
 
@@ -267,7 +288,7 @@ namespace VanillaQuestsExpandedAncients
                 }
                 if (ticksRemaining <= 0)
                 {
-                    EjectContents();
+                    FinishInjection();
                 }
 
                 if (progressBarEffecter == null)
@@ -299,7 +320,7 @@ namespace VanillaQuestsExpandedAncients
 
             if (Occupant != null && Occupant.Dead)
             {
-                EjectContents();
+                CancelProcess();
             }
         }
 
@@ -309,20 +330,7 @@ namespace VanillaQuestsExpandedAncients
             {
                 yield return gizmo;
             }
-            if (!init)
-            {
-                Command_Action command_Action = new Command_Action();
-                command_Action.defaultLabel = "VQEA_StartInjection".Translate();
-                command_Action.defaultDesc = "VQEA_StartInjectionDesc".Translate();
-                command_Action.icon = InitIcon.Texture;
-                command_Action.action = delegate
-                {
-                    init = true;
-                };
-                command_Action.activateSound = SoundDefOf.Tick_Tiny;
-                yield return command_Action;
-            }
-            else if (selectedPawn == null)
+            if (selectedPawn == null)
             {
                 Command_Action command_Action2 = new Command_Action();
                 command_Action2.defaultLabel = "VQEA_InsertPerson".Translate() + "...";
@@ -348,7 +356,6 @@ namespace VanillaQuestsExpandedAncients
                             list.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
                             {
                                 SelectPawn(pawn);
-                                Find.WindowStack.Add(new Window_ArchiteInjection(this));
                             }, pawn, Color.white));
                         }
                     }
@@ -362,13 +369,13 @@ namespace VanillaQuestsExpandedAncients
                 {
                     command_Action2.Disable("NoPower".Translate().CapitalizeFirst());
                 }
-                else if (State == ArchiteInjectorState.WaitingForCapsule)
+                else if (State == ArchiteInjectorState.WaitingForCapsule || State == ArchiteInjectorState.PawnInside)
                 {
                     command_Action2.Disable("VQEA_ArchogenInjectorWaitingForCapsule".Translate());
                 }
                 yield return command_Action2;
             }
-            if (init)
+            if (State == ArchiteInjectorState.PawnInside || State == ArchiteInjectorState.Injecting)
             {
                 Command_Action command_Action3 = new Command_Action();
                 command_Action3.defaultLabel = "CommandCancelLoad".Translate();
@@ -376,7 +383,7 @@ namespace VanillaQuestsExpandedAncients
                 command_Action3.icon = CancelIcon;
                 command_Action3.action = delegate
                 {
-                    EjectContents();
+                    CancelProcess();
                 };
                 command_Action3.activateSound = SoundDefOf.Designate_Cancel;
                 yield return command_Action3;
@@ -420,6 +427,10 @@ namespace VanillaQuestsExpandedAncients
                     stringBuilder.AppendLineIfNotEmpty();
                     stringBuilder.Append("VQEA_ArchogenInjectorWaitingForPawn".Translate());
                     break;
+                case ArchiteInjectorState.PawnInside:
+                    stringBuilder.AppendLineIfNotEmpty();
+                    stringBuilder.Append("VQEA_ArchogenInjectorPawnInside".Translate());
+                    break;
                 case ArchiteInjectorState.Injecting:
                     stringBuilder.AppendLineIfNotEmpty();
                     stringBuilder.Append("VQEA_ArchogenInjectorInjecting".Translate(ticksRemaining.ToStringTicksToPeriod()));
@@ -435,7 +446,7 @@ namespace VanillaQuestsExpandedAncients
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref init, "init", defaultValue: false);
+            Scribe_Values.Look(ref processConfirmed, "processConfirmed", defaultValue: false);
             Scribe_Values.Look(ref ticksRemaining, "ticksRemaining", 0);
             Scribe_Values.Look(ref totalInjectionTime, "totalInjectionTime", 0);
             Scribe_Defs.Look(ref outcome, "outcome");
@@ -448,23 +459,30 @@ namespace VanillaQuestsExpandedAncients
             ticksRemaining = totalInjectionTime;
         }
 
+        public void ConfirmInjection()
+        {
+            processConfirmed = true;
+        }
+
         private void FinishInjection()
         {
-            if (Occupant != null)
+            Pawn occupant = Occupant;
+            if (occupant == null) return;
+
+            if (outcome == InternalDefOf.VQEA_ArchiteInjection_Success)
             {
-                SoundDefOf.CryptosleepCasket_Eject.PlayOneShot(new TargetInfo(Position, Map));
-                if (outcome == InternalDefOf.VQEA_ArchiteInjection_Success)
-                {
-                    HandleSuccessOutcome(Occupant);
-                }
-                else if (outcome == InternalDefOf.VQEA_ArchiteInjection_Rejection)
-                {
-                    HandleRejectionOutcome(Occupant);
-                }
-                else
-                {
-                    HandleMutationOutcome(Occupant, outcome.pawnKind);
-                }
+                EjectSoundSuccess.PlayOneShot(new TargetInfo(Position, Map));
+                HandleSuccessOutcome(occupant);
+            }
+            else if (outcome == InternalDefOf.VQEA_ArchiteInjection_Rejection)
+            {
+                EjectSoundFail.PlayOneShot(new TargetInfo(Position, Map));
+                HandleRejectionOutcome(occupant);
+            }
+            else
+            {
+                EjectSoundFail.PlayOneShot(new TargetInfo(Position, Map));
+                HandleMutationOutcome(occupant, outcome.pawnKind);
             }
         }
 
@@ -477,14 +495,8 @@ namespace VanillaQuestsExpandedAncients
                 !pawn.genes.GenesListForReading.Any(existing => existing.def.ConflictsWith(g))
             ).ToList();
         }
-
         private void HandleSuccessOutcome(Pawn pawn)
         {
-            NamedArgument pawnArg = Occupant.Named("PAWN");
-            NamedArgument architeGeneArg = this.generatedArchiteGene.Named("ARCHITEGENE");
-            NamedArgument sideEffectGeneArg = this.generatedSideEffectGene.Named("SIDEEFFECTGENE");
-            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Success".Translate(), "VQEA_LetterDesc_Success".Translate(pawnArg, architeGeneArg, sideEffectGeneArg), LetterDefOf.PositiveEvent, Occupant);
-
             var architeGenes = GetFilteredGenes(pawn, g => g.biostatArc > 0);
             if (architeGenes.Any())
             {
@@ -495,7 +507,19 @@ namespace VanillaQuestsExpandedAncients
                     availableGenes.Remove(gene1);
                     var gene2 = availableGenes.Any() ? availableGenes.RandomElement() : gene1;
 
-                    Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseArchiteGene".Translate(), gene1.LabelCap, () => { pawn.genes.AddGene(gene1, xenogene: true); generatedArchiteGene = gene1; ContinueWithAdditionalGenesAndComa(pawn); }, gene2.LabelCap, () => { pawn.genes.AddGene(gene2, xenogene: true); generatedArchiteGene = gene2; ContinueWithAdditionalGenesAndComa(pawn); }));
+                    Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseArchiteGene".Translate(),
+                        gene1.LabelCap, () =>
+                        {
+                            pawn.genes.AddGene(gene1, xenogene: true);
+                            generatedArchiteGene = gene1;
+                            ContinueWithSecondArchiteGene(pawn);
+                        },
+                        gene2.LabelCap, () =>
+                        {
+                            pawn.genes.AddGene(gene2, xenogene: true);
+                            generatedArchiteGene = gene2;
+                            ContinueWithSecondArchiteGene(pawn);
+                        }));
                     return;
                 }
                 else
@@ -505,16 +529,13 @@ namespace VanillaQuestsExpandedAncients
                     generatedArchiteGene = selectedArchiteGene;
                 }
             }
-            ContinueWithAdditionalGenesAndComa(pawn);
+            ContinueWithSecondArchiteGene(pawn);
         }
-
-        private void ContinueWithAdditionalGenesAndComa(Pawn pawn)
+        private void ContinueWithSecondArchiteGene(Pawn pawn)
         {
-            var architeGenes = GetFilteredGenes(pawn, g => g.biostatArc > 0);
-
             if (HasLinkedFacility(InternalDefOf.VQEA_ArchitePathingArray) && Rand.Chance(0.25f))
             {
-                var remainingArchiteGenes = architeGenes.Where(g => !pawn.genes.HasActiveGene(g)).ToList();
+                var remainingArchiteGenes = GetFilteredGenes(pawn, g => g.biostatArc > 0);
                 if (remainingArchiteGenes.Any())
                 {
                     var secondArchiteGene = remainingArchiteGenes.RandomElement();
@@ -522,60 +543,7 @@ namespace VanillaQuestsExpandedAncients
                 }
             }
             FindAndAddSideEffectGene(pawn);
-            if (HasLinkedFacility(InternalDefOf.VQEA_ArchitePathingArray) && Rand.Chance(0.50f))
-            {
-                FindAndAddSecondNegativeGene(pawn);
-            }
-            ApplyInjectionComa(pawn);
         }
-
-        private void FindAndAddSecondNegativeGene(Pawn pawn)
-        {
-            var negativeGenes = GetFilteredGenes(pawn, g => g.biostatArc <= 0 && g.biostatMet <= 0);
-            if (negativeGenes.Any())
-            {
-                if (HasLinkedFacility(InternalDefOf.VQEA_AberrationRedirector) && negativeGenes.Count >= 2)
-                {
-                    var gene1 = negativeGenes.RandomElement();
-                    var availableGenes = negativeGenes.ToList();
-                    availableGenes.Remove(gene1);
-                    var gene2 = availableGenes.Any() ? availableGenes.RandomElement() : gene1;
-
-                    Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseSideEffectGene".Translate(), gene1.LabelCap, () => { pawn.genes.AddGene(gene1, xenogene: true); }, gene2.LabelCap, () => { pawn.genes.AddGene(gene2, xenogene: true); }));
-                    return;
-                }
-                else
-                {
-                    var selectedNegativeGene = negativeGenes.RandomElement();
-                    pawn.genes.AddGene(selectedNegativeGene, xenogene: true);
-                }
-            }
-        }
-
-        private void HandleRejectionOutcome(Pawn pawn)
-        {
-            if (HasLinkedFacility(InternalDefOf.VQEA_ArchiteRecycler))
-            {
-                Thing capsule = ThingMaker.MakeThing(ThingDefOf.ArchiteCapsule);
-                GenPlace.TryPlaceThing(capsule, InteractionCell, Map, ThingPlaceMode.Near);
-            }
-            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Rejection".Translate(),
-                "VQEA_LetterDesc_Rejection".Translate(pawn.Named("PAWN")),
-                LetterDefOf.NegativeEvent, pawn);
-            ApplyInjectionComa(pawn);
-        }
-
-        private void HandleMutationOutcome(Pawn originalPawn, PawnKindDef mutatedPawnKind)
-        {
-            originalPawn.Destroy();
-            Pawn mutatedPawn = PawnGenerator.GeneratePawn(mutatedPawnKind, Faction.OfPlayer);
-            mutatedPawn.Name = originalPawn.Name;
-            GenSpawn.Spawn(mutatedPawn, InteractionCell, Map, Rot4.North);
-            mutatedPawn.mindState.mentalStateHandler.TryStartMentalState(InternalDefOf.VQEA_MutantBerserk, forceWake: true);
-            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Mutation".Translate(),
-                "VQEA_LetterDesc_Mutation".Translate(originalPawn.Named("PAWN"), mutatedPawnKind.LabelCap), LetterDefOf.ThreatBig, originalPawn);
-        }
-
         private void FindAndAddSideEffectGene(Pawn pawn)
         {
             int targetMetabolism = GetTargetMetabolismEfficiency();
@@ -585,70 +553,94 @@ namespace VanillaQuestsExpandedAncients
 
                 if (genesWithMetabolism.Any())
                 {
-                    GeneDef selectedGene = null;
                     if (HasLinkedFacility(InternalDefOf.VQEA_AberrationRedirector) && genesWithMetabolism.Count >= 2)
                     {
                         var availableGenes = genesWithMetabolism.ToList();
                         var gene1 = availableGenes.RandomElement();
                         availableGenes.Remove(gene1);
                         var gene2 = availableGenes.RandomElement();
-                        Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseSideEffectGene".Translate(), gene1.LabelCap, () => { pawn.genes.AddGene(gene1, xenogene: true); generatedSideEffectGene = gene1; ApplyInjectionComa(pawn); }, gene2.LabelCap, () => { pawn.genes.AddGene(gene2, xenogene: true); generatedSideEffectGene = gene2; ApplyInjectionComa(pawn); }));
+                        Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseSideEffectGene".Translate(),
+                            gene1.LabelCap, () =>
+                            {
+                                pawn.genes.AddGene(gene1, xenogene: true);
+                                generatedSideEffectGene = gene1;
+                                FindAndAddSecondNegativeGene(pawn);
+                            },
+                            gene2.LabelCap, () =>
+                            {
+                                pawn.genes.AddGene(gene2, xenogene: true);
+                                generatedSideEffectGene = gene2;
+                                FindAndAddSecondNegativeGene(pawn);
+                            }));
                         return;
                     }
                     else
                     {
-                        selectedGene = genesWithMetabolism.RandomElement();
+                        var selectedGene = genesWithMetabolism.RandomElement();
+                        pawn.genes.AddGene(selectedGene, xenogene: true);
+                        generatedSideEffectGene = selectedGene;
+                        FindAndAddSecondNegativeGene(pawn);
+                        return;
                     }
-
-                    pawn.genes.AddGene(selectedGene, xenogene: true);
-                    generatedSideEffectGene = selectedGene;
-                    return;
                 }
             }
-            for (int metabolism = targetMetabolism - 1; metabolism >= -5; metabolism--)
+            FindAndAddSecondNegativeGene(pawn);
+        }
+        private void FindAndAddSecondNegativeGene(Pawn pawn)
+        {
+            if (HasLinkedFacility(InternalDefOf.VQEA_ArchitePathingArray) && Rand.Chance(0.5f))
             {
-                var genesWithMetabolism = GetFilteredGenes(pawn, g => g.biostatMet != 0 && g.biostatMet == metabolism);
-
-                if (genesWithMetabolism.Any())
+                var negativeGenes = GetFilteredGenes(pawn, g => g.biostatArc <= 0 && g.biostatMet > 0);
+                if (negativeGenes.Any())
                 {
-                    GeneDef selectedGene = null;
-                    if (HasLinkedFacility(InternalDefOf.VQEA_AberrationRedirector) && genesWithMetabolism.Count >= 2)
-                    {
-                        var availableGenes = genesWithMetabolism.ToList();
-                        var gene1 = availableGenes.RandomElement();
-                        availableGenes.Remove(gene1);
-                        var gene2 = availableGenes.RandomElement();
-                        Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseSideEffectGene".Translate(), gene1.LabelCap, () => { pawn.genes.AddGene(gene1, xenogene: true); generatedSideEffectGene = gene1; ApplyInjectionComa(pawn); }, gene2.LabelCap, () => { pawn.genes.AddGene(gene2, xenogene: true); generatedSideEffectGene = gene2; ApplyInjectionComa(pawn); }));
-                        return;
-                    }
-                    else
-                    {
-                        selectedGene = genesWithMetabolism.RandomElement();
-                    }
-
-                    pawn.genes.AddGene(selectedGene, xenogene: true);
-                    generatedSideEffectGene = selectedGene;
-                    return;
+                    var selectedNegativeGene = negativeGenes.RandomElement();
+                    pawn.genes.AddGene(selectedNegativeGene, xenogene: true);
                 }
             }
+            FinalizeSuccess(pawn);
+        }
+        private void FinalizeSuccess(Pawn pawn)
+        {
+            if (innerContainer.Contains(pawn))
+            {
+                innerContainer.TryDrop(pawn, this.InteractionCell, this.Map, ThingPlaceMode.Near, 1, out Thing _);
+            }
+            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Success".Translate(), "VQEA_LetterDesc_Success".Translate(pawn.Named("PAWN"), generatedArchiteGene?.Named("ARCHITEGENE") ?? "Unknown".Named("ARCHITEGENE"), generatedSideEffectGene?.Named("SIDEEFFECTGENE") ?? "Unknown".Named("SIDEEFFECTGENE")), LetterDefOf.PositiveEvent, pawn);
+            ApplyInjectionComa(pawn);
+            Reset();
         }
 
-        public int GetTargetMetabolismEfficiency()
+        private void HandleRejectionOutcome(Pawn pawn)
         {
-            int baseMetabolism = def.GetModExtension<ArchogenInjectorExtension>().baseSideEffectMetabolism;
-            var compAffectedByFacilities = this.TryGetComp<CompAffectedByFacilities>();
-            if (compAffectedByFacilities != null)
+            if (HasLinkedFacility(InternalDefOf.VQEA_ArchiteRecycler))
             {
-                foreach (var facility in compAffectedByFacilities.LinkedFacilitiesListForReading)
-                {
-                    var facilityExtension = facility.def.GetModExtension<ArchiteLabFacilityExtension>();
-                    if (facilityExtension != null)
-                    {
-                        baseMetabolism += facilityExtension.sideEffectMetabolismOffset;
-                    }
-                }
+                Thing capsule = ThingMaker.MakeThing(ThingDefOf.ArchiteCapsule);
+                GenPlace.TryPlaceThing(capsule, InteractionCell, Map, ThingPlaceMode.Near);
             }
-            return baseMetabolism;
+
+            innerContainer.TryDrop(pawn, this.InteractionCell, this.Map, ThingPlaceMode.Near, 1, out Thing _);
+
+            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Rejection".Translate(),
+                "VQEA_LetterDesc_Rejection".Translate(pawn.Named("PAWN")),
+                LetterDefOf.NegativeEvent, pawn);
+            ApplyInjectionComa(pawn);
+
+            Reset();
+        }
+
+        private void HandleMutationOutcome(Pawn originalPawn, PawnKindDef mutatedPawnKind)
+        {
+            Name name = originalPawn.Name;
+            originalPawn.Destroy();
+
+            Pawn mutatedPawn = PawnGenerator.GeneratePawn(mutatedPawnKind, Faction.OfPlayer);
+            mutatedPawn.Name = name;
+            GenSpawn.Spawn(mutatedPawn, InteractionCell, Map, Rot4.North);
+            mutatedPawn.mindState.mentalStateHandler.TryStartMentalState(InternalDefOf.VQEA_MutantBerserk, forceWake: true);
+            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Mutation".Translate(),
+                "VQEA_LetterDesc_Mutation".Translate(originalPawn.Named("PAWN"), mutatedPawnKind.LabelCap), LetterDefOf.ThreatBig, mutatedPawn);
+
+            Reset();
         }
 
         private void ApplyInjectionComa(Pawn pawn)
@@ -670,8 +662,8 @@ namespace VanillaQuestsExpandedAncients
                 baseWeights[outcome] = outcome.baseWeight;
             }
             ApplyFacilityModifiers(baseWeights);
-            int totalWeight = baseWeights.Values.Sum();
             outcome = baseWeights.Keys.RandomElementByWeight(w => baseWeights[w]);
+            Log.Message("Got outcome: " + outcome);
         }
 
         private Dictionary<ArchiteInjectionOutcomeDef, float> CalculateOutcomeChances()
@@ -683,6 +675,7 @@ namespace VanillaQuestsExpandedAncients
             }
             ApplyFacilityModifiers(baseWeights);
             float totalWeight = baseWeights.Values.Sum();
+            if (totalWeight == 0) return baseWeights.ToDictionary(kvp => kvp.Key, kvp => 0f);
             var chances = new Dictionary<ArchiteInjectionOutcomeDef, float>();
             foreach (var kvp in baseWeights)
             {
@@ -712,8 +705,7 @@ namespace VanillaQuestsExpandedAncients
             if (selectedPawn != null && !hasComplexityHarmonizer)
             {
                 int geneticComplexity = GetGeneticComplexity(selectedPawn);
-                int complexityPenalty = Mathf.Min(geneticComplexity, weights[successOutcome]);
-                weights[successOutcome] -= complexityPenalty;
+                weights[successOutcome] = Mathf.Max(0, weights[successOutcome] - geneticComplexity);
             }
 
             if (compAffectedByFacilities != null)
@@ -723,10 +715,7 @@ namespace VanillaQuestsExpandedAncients
                     var facilityExtension = facility.def.GetModExtension<ArchiteLabFacilityExtension>();
                     if (facilityExtension != null)
                     {
-                        if (facility.def != InternalDefOf.VQEA_ComplexityHarmonizer)
-                        {
-                            weights[successOutcome] += facilityExtension.successWeightOffset;
-                        }
+                        weights[successOutcome] = Mathf.Max(0, weights[successOutcome] + facilityExtension.successWeightOffset);
 
                         var rejectionOutcome = weights.Keys.FirstOrDefault(o => o.outcomeType == OutcomeType.Rejection);
                         if (rejectionOutcome != null)
@@ -737,19 +726,19 @@ namespace VanillaQuestsExpandedAncients
                         var splicelingOutcome = weights.Keys.FirstOrDefault(o => o.outcomeType == OutcomeType.Mutation && o.pawnKind == InternalDefOf.VQEA_Spliceling);
                         if (splicelingOutcome != null)
                         {
-                            weights[splicelingOutcome] += facilityExtension.splicelingWeightOffset;
+                            weights[splicelingOutcome] = Mathf.Max(0, weights[splicelingOutcome] + facilityExtension.splicelingWeightOffset);
                         }
 
                         var splicehulkOutcome = weights.Keys.FirstOrDefault(o => o.outcomeType == OutcomeType.Mutation && o.pawnKind == InternalDefOf.VQEA_Splicehulk);
                         if (splicehulkOutcome != null)
                         {
-                            weights[splicehulkOutcome] += facilityExtension.splicehulkWeightOffset;
+                            weights[splicehulkOutcome] = Mathf.Max(0, weights[splicehulkOutcome] + facilityExtension.splicehulkWeightOffset);
                         }
 
                         var splicefiendOutcome = weights.Keys.FirstOrDefault(o => o.outcomeType == OutcomeType.Mutation && o.pawnKind == InternalDefOf.VQEA_Splicefiend);
                         if (splicefiendOutcome != null)
                         {
-                            weights[splicefiendOutcome] += facilityExtension.splicefiendWeightOffset;
+                            weights[splicefiendOutcome] = Mathf.Max(0, weights[splicefiendOutcome] + facilityExtension.splicefiendWeightOffset);
                         }
                     }
                 }
@@ -758,14 +747,9 @@ namespace VanillaQuestsExpandedAncients
                 if (hasMutagenInhibitorCore)
                 {
                     var mutationOutcomes = weights.Keys.Where(o => o.outcomeType == OutcomeType.Mutation).ToList();
-                    foreach (var outcome in mutationOutcomes)
+                    foreach (var mOutcome in mutationOutcomes)
                     {
-                        weights[outcome] = 0; // This guarantees mutation chance is zero, overriding all previous modifiers.
-                    }
-                    var rejectionOutcome = weights.Keys.FirstOrDefault(o => o.outcomeType == OutcomeType.Rejection);
-                    if (rejectionOutcome != null)
-                    {
-                        weights[rejectionOutcome] = Mathf.Max(0, weights[rejectionOutcome] + 25);
+                        weights[mOutcome] = 0;
                     }
                 }
             }
@@ -781,6 +765,24 @@ namespace VanillaQuestsExpandedAncients
             return false;
         }
 
+        public int GetTargetMetabolismEfficiency()
+        {
+            int baseMetabolism = def.GetModExtension<ArchogenInjectorExtension>().baseSideEffectMetabolism;
+            var compAffectedByFacilities = this.TryGetComp<CompAffectedByFacilities>();
+            if (compAffectedByFacilities != null)
+            {
+                foreach (var facility in compAffectedByFacilities.LinkedFacilitiesListForReading)
+                {
+                    var facilityExtension = facility.def.GetModExtension<ArchiteLabFacilityExtension>();
+                    if (facilityExtension != null)
+                    {
+                        baseMetabolism += facilityExtension.sideEffectMetabolismOffset;
+                    }
+                }
+            }
+            return baseMetabolism;
+        }
+
         public int GetExpectedInfusionDuration()
         {
             int baseTicks = def.GetModExtension<ArchogenInjectorExtension>().baseInjectionTicks;
@@ -793,11 +795,12 @@ namespace VanillaQuestsExpandedAncients
                     if (facilityExtension != null)
                     {
                         baseTicks += facilityExtension.injectionTicksOffset;
-                        if (facility.def == InternalDefOf.VQEA_ComplexityHarmonizer && selectedPawn != null)
-                        {
-                            int geneticComplexity = GetGeneticComplexity(selectedPawn);
-                            baseTicks += geneticComplexity * 2500;
-                        }
+                    }
+
+                    if (facility.def == InternalDefOf.VQEA_ComplexityHarmonizer && selectedPawn != null)
+                    {
+                        int geneticComplexity = GetGeneticComplexity(selectedPawn);
+                        baseTicks += geneticComplexity * 2500;
                     }
                 }
             }
@@ -824,9 +827,9 @@ namespace VanillaQuestsExpandedAncients
 
         public int GetGeneticComplexityForUI()
         {
-            if (selectedPawn != null && selectedPawn.genes != null)
+            if (Occupant != null && Occupant.genes != null)
             {
-                return selectedPawn.genes.GenesListForReading.Count;
+                return Occupant.genes.GenesListForReading.Count;
             }
             return 0;
         }
@@ -834,7 +837,7 @@ namespace VanillaQuestsExpandedAncients
         public float GetOutcomeChance(ArchiteInjectionOutcomeDef outcomeDef)
         {
             var chances = CalculateOutcomeChances();
-            return chances[outcomeDef];
+            return chances.TryGetValue(outcomeDef, out float chance) ? chance : 0f;
         }
 
         public List<ThingDef> GetLinkedLabEquipment()
