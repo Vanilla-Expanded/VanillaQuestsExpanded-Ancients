@@ -49,6 +49,7 @@
 					<canTargetMechs>false</canTargetMechs>
 					<onlyTargetControlledPawns>true</onlyTargetControlledPawns>
 				</targetingParameters>
+				<interactionEffecter>ConstructMetal</interactionEffecter>
 			</li>
 		</comps>
 	</ThingDef>
