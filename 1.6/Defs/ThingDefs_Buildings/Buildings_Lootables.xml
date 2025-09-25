@@ -114,6 +114,7 @@
 						<count>1</count>
 					</li>
 				</contents>
+				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<buildingLeft>VQEA_ArchiteCapsuleContainment_Empty</buildingLeft>
 			</li>
 		</modExtensions>

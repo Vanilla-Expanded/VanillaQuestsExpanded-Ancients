@@ -29,7 +29,7 @@
 		<defName>VQEA_PneumaticTubes</defName>
 		<label>pneumatic tubes</label>
 		<description>todo</description>
-		<size>(2,3)</size>
+		<size>(2,4)</size>
 		
 		<destroyable>false</destroyable>
 		<useHitPoints>false</useHitPoints>
@@ -46,7 +46,7 @@
 		<graphicData>
 			<texPath>Things/Building/Exotic/PneumaticTubes</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,3)</drawSize>
+			<drawSize>(2,4)</drawSize>
 		</graphicData>
 	</ThingDef>
 	

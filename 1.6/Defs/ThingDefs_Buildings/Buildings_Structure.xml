@@ -158,6 +158,7 @@
 		<useHitPoints>false</useHitPoints>
 		<passability>Impassable</passability>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>true</rotatable>
 		<fillPercent>1</fillPercent>
 		<graphicData>
 			<texPath>Things/Building/Doors/AncientVaultDoorSmall_Locked</texPath>
@@ -250,6 +251,7 @@
 		<destroyable>false</destroyable>
 		<useHitPoints>false</useHitPoints>
 		<passability>Impassable</passability>
+		<rotatable>true</rotatable>
 		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<fillPercent>1</fillPercent>
 		 <size>(2, 1)</size>

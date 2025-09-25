@@ -43,7 +43,7 @@
 	</TerrainDef>
 	<TerrainDef ParentName="VQEA_AncientsFloorBase">
 		<defName>VQED_AncientNurseryCarpet</defName>
-		<label>ancient reinforced concrete</label>
+		<label>ancient nursery carpet</label>
 		<description>An ancient, ripped nursery carpet.</description>
 		<texturePath>Terrains/AncientNurseryCarpet</texturePath>
 		<edgeType>Hard</edgeType>
