@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <JoyGiverDef>
+    <defName>VQEA_Play_AncientFoosballTable</defName>
+     <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>4</baseChance>
+    <requireChair>false</requireChair>
+    <thingDefs>
+      <li>VQEA_AncientFoosballTable</li>
+    </thingDefs>
+    <jobDef>VQEA_Play_AncientFoosballTable</jobDef>
+    <joyKind>Gaming_Cerebral</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+
+</Defs>

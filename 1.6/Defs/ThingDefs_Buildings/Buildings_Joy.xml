@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientFoosballTable</defName>
+		<label>ancient foosball table</label>
+		<description>todo.</description>
+		<graphicData>
+			<texPath>Things/Building/Recreation/AncientFoosballTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+	
+		<altitudeLayer>Building</altitudeLayer>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.40</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<building>
+			<joyKind>Gaming_Cerebral</joyKind>
+		</building>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Mass>20</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>4</Beauty>
+			<JoyGainFactor>1.6</JoyGainFactor>
+		</statBases>
+		<size>(2,1)</size>
+		<costList>
+			<Steel>20</Steel>
+			<Cloth>15</Cloth>
+			<WoodLog>13</WoodLog>
+		</costList>
+		<pathCost>42</pathCost>
+		<passability>PassThroughOnly</passability>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentUnstandable</li>
+		</placeWorkers>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<designationCategory inherit="False"/>
+	</ThingDef>
+</Defs>

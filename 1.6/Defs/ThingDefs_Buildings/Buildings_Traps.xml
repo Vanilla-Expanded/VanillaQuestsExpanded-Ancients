@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="VQEA_TrapIEDBase">
+		<defName>VQEA_SplicelingContainment</defName>
+		<label>spliceling containment</label>
+		<description>todo.</description>
+		<graphicData>
+			<texPath>Things/Building/Traps/MutationSampler_Filled_Spliceling</texPath>
+		</graphicData>
+		<thingClass>VanillaQuestsExpandedAncients.Building_Containment</thingClass>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQEA_Spliceling</containmentSpawn>
+				<buildingLeft>VQEA_EmptyContainment</buildingLeft>
+				<deconstructSound>VQEA_ContainmentBreaking</deconstructSound>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_TrapIEDBase">
+		<defName>VQEA_SplicehulkContainment</defName>
+		<label>splicehulk containment</label>
+		<description>todo.</description>
+		<graphicData>
+			<texPath>Things/Building/Traps/MutationSampler_Filled_Splicehulk</texPath>
+		</graphicData>
+		<thingClass>VanillaQuestsExpandedAncients.Building_Containment</thingClass>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQEA_Splicehulk</containmentSpawn>
+				<buildingLeft>VQEA_EmptyContainment</buildingLeft>
+				<deconstructSound>VQEA_ContainmentBreaking</deconstructSound>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_TrapIEDBase">
+		<defName>VQEA_SplicefiendContainment</defName>
+		<label>splicefiend containment</label>
+		<description>todo.</description>
+		<graphicData>
+			<texPath>Things/Building/Traps/MutationSampler_Filled_Splicefiend</texPath>
+		</graphicData>
+		<thingClass>VanillaQuestsExpandedAncients.Building_Containment</thingClass>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQEA_Splicefiend</containmentSpawn>
+				<buildingLeft>VQEA_EmptyContainment</buildingLeft>
+				<deconstructSound>VQEA_ContainmentBreaking</deconstructSound>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientEmergencyPurifier</defName>
+		<label>ancient emergency purifier</label>
+		<description>todo.</description>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>	
+		<selectable>true</selectable>
+		<fillPercent>0</fillPercent>
+		<size>(3,3)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Traps/EmergencyBurner_On</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<neverBuildable>true</neverBuildable>
+			<isTargetable>false</isTargetable>
+		</building>
+		<thingClass>VEF.Buildings.SwappableBuilding</thingClass>
+		<tickerType>Normal</tickerType>
+		<modExtensions>
+			<li Class="VEF.Buildings.SwappableBuildingDetails">
+				<buildingLeft>VQEA_AncientEmergencyPurifier_Off</buildingLeft>
+				<swappingTimer>5000</swappingTimer>
+				
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusher</compClass>
+				<heatPerSecond>200</heatPerSecond>
+				<heatPushMaxTemperature>1000</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(255,150,100,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientEmergencyPurifier_Off</defName>
+		<label>ancient emergency purifier</label>
+		<description>todo.</description>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>Standable</passability>	
+		<selectable>true</selectable>
+		<fillPercent>0</fillPercent>
+		<size>(3,3)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>-30</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Traps/EmergencyBurner_On</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<deconstructible>false</deconstructible>
+			<neverBuildable>true</neverBuildable>
+			<isTargetable>false</isTargetable>
+		</building>
+		<thingClass>VEF.Buildings.SwappableBuilding</thingClass>
+		<tickerType>Normal</tickerType>
+		<modExtensions>
+			<li Class="VEF.Buildings.SwappableBuildingDetails">
+				<buildingLeft>VQEA_AncientEmergencyPurifier</buildingLeft>
+				<swappingTimer>25000</swappingTimer>
+				
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

@@ -1048,4 +1048,24 @@
 			<li>BuildingsFurniture</li>
 		</thingCategories>
 	</ThingDef>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_EmptyContainment</defName>
+		<label>empty containment</label>
+		<description>todo</description>
+		<size>(2,2)</size>
+		<uiIconScale>0.75</uiIconScale>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0</Flammability>
+			
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Traps/MutationSampler_Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+	</ThingDef>
 </Defs>

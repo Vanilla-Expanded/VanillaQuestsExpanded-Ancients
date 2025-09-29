@@ -95,7 +95,7 @@
 			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
 		</statOffsets>
 		<statFactors>
-			<VEF_VerbCooldownFactor>0.75</VEF_VerbCooldownFactor>
+			<RangedCooldownFactor>0.75</RangedCooldownFactor>
 			<VEF_RangeAttackSpeedFactor>0.75</VEF_RangeAttackSpeedFactor>
 		</statFactors>
 	</GeneDef>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientBroadcastingStation</defName>
+		<label>ancient broadcasting station</label>
+		<description>todo.</description>
+		<thingClass>VanillaQuestsExpandedAncients.Building_BroadcastingStation</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(3,3)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<pathCost>30</pathCost>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientBroadcastingStation_On</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+			<deconstructible>false</deconstructible>
+		</building>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>2.68</glowRadius>
+				<glowColor>(239,133,50)</glowColor>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="VEF.Buildings.StudiableBuildingDetails">
+				<gizmoTexture>UI/Gizmo/InterceptBroadcastGizmo</gizmoTexture>
+				<gizmoText>VQEA_InterceptBroadcast</gizmoText>
+				<gizmoDesc>VQEA_InterceptBroadcastDesc</gizmoDesc>
+				<buildingLeft>VQEA_AncientBroadcastingStation_Off</buildingLeft>
+				<showProgressBar>true</showProgressBar>
+				<showResearchEffecter>false</showResearchEffecter>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientBroadcastingStation_Off</defName>
+		<label>disabled ancient broadcasting station</label>
+		<description>todo.</description>
+		<thingClass>Building</thingClass>
+
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.4</fillPercent>
+		<size>(3,3)</size>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<pathCost>30</pathCost>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientBroadcastingStation_Off</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+	</ThingDef>
+</Defs>

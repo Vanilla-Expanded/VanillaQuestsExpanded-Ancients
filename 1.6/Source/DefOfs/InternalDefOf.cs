@@ -61,5 +61,10 @@ namespace VanillaQuestsExpandedAncients
 
 		public static MentalStateDef VQEA_MutantBerserk;
 
-	}
+		public static SoundDef VQEA_Foosball_Ambience;
+
+		public static EffecterDef CocoonWakingUp;
+
+
+    }
 }

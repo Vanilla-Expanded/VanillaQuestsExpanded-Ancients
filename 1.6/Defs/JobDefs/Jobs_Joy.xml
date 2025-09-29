@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+  <JobDef>
+    <defName>VQEA_Play_AncientFoosballTable</defName>
+    <driverClass>VanillaQuestsExpandedAncients.JobDriver_Foosball</driverClass>
+    <reportString>playing foosball.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <joySkill>Shooting</joySkill>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>Gaming_Cerebral</joyKind>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  
+</Defs>

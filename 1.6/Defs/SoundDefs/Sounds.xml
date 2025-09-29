@@ -114,4 +114,37 @@
 			</li>
 		</subSounds>
 	</SoundDef>
+	<SoundDef>
+		<defName>VQEA_Foosball_Ambience</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Misc/FoosballTable_Sustainer_01a</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40</volumeRange>
+				<distRange>10~38</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>VQEA_ContainmentBreaking</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>ContainmentBreaking</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<distRange>10~70</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
 </Defs>

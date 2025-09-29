@@ -26,4 +26,35 @@
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
 	</ThingDef>
+	
+	<ThingDef Name="VQEA_TrapIEDBase" ParentName="VQEA_AncientsBuildingBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>		
+			<drawSize>3</drawSize>
+		</graphicData>
+		<fillPercent>0.4</fillPercent>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<uiOrder>40</uiOrder>
+		<size>(2,2)</size>
+		<uiIconScale>0.75</uiIconScale>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>0</Flammability>			
+			<TrapSpringChance>1.0</TrapSpringChance>
+		</statBases>
+		<building>
+			<isTrap>true</isTrap>
+			<trapPeacefulWildAnimalsSpringChanceFactor>0</trapPeacefulWildAnimalsSpringChanceFactor>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+			<neverBuildable>true</neverBuildable>
+			<deconstructible>false</deconstructible>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentTrap</li>
+		</placeWorkers>
+	</ThingDef>
 </Defs>
