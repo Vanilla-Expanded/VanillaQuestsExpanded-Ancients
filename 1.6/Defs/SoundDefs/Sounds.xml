@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-
 	<SoundDef>
 		<defName>VQEA_Mutant_Wounded</defName>
 		<context>MapOnly</context>
@@ -84,5 +82,36 @@
 			</li>
 		</subSounds>
 	</SoundDef>
-	
+	<SoundDef>
+		<defName>VQEA_PneumaticArrival</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Misc/PneumaticArrival</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<distRange>10~70</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	<SoundDef>
+		<defName>VQEA_PneumaticLaunch</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Misc/PneumaticLaunch</clipPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<distRange>10~70</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
 </Defs>
