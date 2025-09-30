@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientSunLamp</defName>
+		<label>ancient sun lamp</label>
+		<description>todo</description>
+		<size>(1,1)</size>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Light/AncientSunLamp</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<overlightRadius>7.0</overlightRadius>
+				<glowRadius>14</glowRadius>
+				<glowColor>(370,370,370,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>true</shortCircuitInRain>
+				<basePowerConsumption>1800</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Schedule">
+				<!-- Match plant growing times -->
+				<startTime>0.25</startTime>
+				<endTime>0.8</endTime>
+				<offMessage>Off for plant resting period</offMessage>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>3</heatPerSecond>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientVaultLamp</defName>
+		<label>ancient vault lamp</label>
+		<description>todo.</description>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Light/AncientVaultLamp</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>4.50</glowRadius>
+				<glowColor>(71,43,6,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

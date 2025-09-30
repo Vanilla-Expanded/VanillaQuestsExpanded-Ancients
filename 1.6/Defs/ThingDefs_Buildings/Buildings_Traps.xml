@@ -115,7 +115,7 @@
 			<Beauty>-30</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Building/Traps/EmergencyBurner_On</texPath>
+			<texPath>Things/Building/Traps/EmergencyBurner_Off</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(3,3)</drawSize>
 		</graphicData>

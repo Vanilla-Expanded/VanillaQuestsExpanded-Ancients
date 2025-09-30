@@ -46,7 +46,7 @@
 		<graphicData>
 			<texPath>Things/Building/Exotic/PneumaticTubes</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2,4)</drawSize>
+			<drawSize>(3,4)</drawSize>
 		</graphicData>
 	</ThingDef>
 	
