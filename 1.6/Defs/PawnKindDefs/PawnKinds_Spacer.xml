@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <PawnKindDef ParentName="SpaceRefugeeBase">
+    <defName>VQE_Patient</defName>
+    <label>patient</label>
+    <apparelMoney>0~200</apparelMoney>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>12~19</initialResistanceRange>
+    <apparelTags Inherit="False">
+      <li>VQE_PatientGown</li>
+    </apparelTags>
+  </PawnKindDef>
+
+</Defs>
