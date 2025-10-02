@@ -63,7 +63,7 @@
 			<canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
 			<canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
 			<layers>
-				<li>Skin</li>
+				<li>OnSkin</li>
 			</layers>
 			<developmentalStageFilter>Adult</developmentalStageFilter>
 			<countsAsClothingForNudity>true</countsAsClothingForNudity>
