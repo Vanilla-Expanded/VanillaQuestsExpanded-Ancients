@@ -15,6 +15,7 @@ namespace VanillaQuestsExpandedAncients
         public ThingDef buildingLeft = null;
         public SoundDef deconstructSound = null;
         public PawnKindDef containmentSpawn;
+        public int numToSpawn = 1;
 
     }
 
