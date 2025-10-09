@@ -1,0 +1,8 @@
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/SurgeryOutcomeEffectDef[defName="SurgeryOutcomeBase"]/comps</xpath>
+        <value>
+            <li Class="VanillaQuestsExpandedAncients.SurgeryOutcomeComp_PatientGown"/>
+        </value>
+    </Operation>
+</Patch>

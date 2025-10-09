@@ -30,6 +30,7 @@ namespace VanillaQuestsExpandedAncients
 		public static ThingDef VQEA_AberrationRedirector;
 		public static ThingDef VQEA_ComplexityHarmonizer;
 		public static ThingDef VQEA_ArchitePathingArray;
+		public static ThingDef VQEA_Apparel_PatientGown;
 		public static ThingCategoryDef VQEA_BuildingsLab;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Success;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Rejection;
@@ -65,6 +66,7 @@ namespace VanillaQuestsExpandedAncients
 
 		public static EffecterDef CocoonWakingUp;
 
-
-    }
+		      public static SoundDef VQEA_PneumaticLaunch;
+		      public static SoundDef VQEA_PneumaticArrival;
+		  }
 }

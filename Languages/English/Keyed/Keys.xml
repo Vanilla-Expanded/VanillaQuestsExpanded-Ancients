@@ -6,6 +6,7 @@
     <VQEA_ExpectedInfusionDuration>Expected infusion duration</VQEA_ExpectedInfusionDuration>
     <VQEA_InfusionComaDuration>Infusion coma duration</VQEA_InfusionComaDuration>
     <VQEA_PawnGeneticComplexity>{0}'s genetic complexity</VQEA_PawnGeneticComplexity>
+    <VQEA_PatientGownBonus>Success chance increased due to patient gown.</VQEA_PatientGownBonus>
     <VQEA_ExpectedMetabolismSideEffect>Expected metabolism efficiency of the side effect gene</VQEA_ExpectedMetabolismSideEffect>
     <VQEA_SuccessChance>Success chance</VQEA_SuccessChance>
     <VQEA_RejectionChance>Rejection chance</VQEA_RejectionChance>
@@ -49,19 +50,29 @@
     <VQEA_ChooseArchiteGene>Choose an archite gene</VQEA_ChooseArchiteGene>
     <VQEA_ChooseSideEffectGene>Choose a side effect gene</VQEA_ChooseSideEffectGene>
     <VQEA_NoInjectablePawns>No pawns available for injection.</VQEA_NoInjectablePawns>
-	
-	<!-- Genes -->
-	<VQEA_TextMote_ExceededExpectations>Exceeded expectations</VQEA_TextMote_ExceededExpectations>
-	<VQEA_TextMote_MedicinePreserved>Medicine preserved</VQEA_TextMote_MedicinePreserved>
-	<VQEA_PawnRecruitable>{0} is no longer unwaveringly loyal due to {1}'s {2} gene.</VQEA_PawnRecruitable>
-	
-	<!-- Buildings -->
-	<VQEA_Override>Override</VQEA_Override>
-	<VQEA_OverrideDesc>Select a colonist to override the ancient pipeline junction, siphoning a large amount of chemfuel from it. The pipeline junction will need time before it can be hacked again.</VQEA_OverrideDesc>
-	<VQEA_OverrideDesc_Generic>Select a colonist to override the security on this.</VQEA_OverrideDesc_Generic>
-	<VQEA_CancelOverride>Cancel override</VQEA_CancelOverride>
-	<VQEA_CancelOverrideDesc>Cancel overriding this building.</VQEA_CancelOverrideDesc>
-	<VQEA_LockedAncientVaultDoor>This ancient vault door is locked</VQEA_LockedAncientVaultDoor>
-	<VQEA_InterceptBroadcast>Intercept broadcast</VQEA_InterceptBroadcast>
-	<VQEA_InterceptBroadcastDesc>Intercept the broadcast to find out the location of another lab where the broadcast is directed.</VQEA_InterceptBroadcastDesc> 
+
+    <!-- Genes -->
+    <VQEA_TextMote_ExceededExpectations>Exceeded expectations</VQEA_TextMote_ExceededExpectations>
+    <VQEA_TextMote_MedicinePreserved>Medicine preserved</VQEA_TextMote_MedicinePreserved>
+    <VQEA_PawnRecruitable>{0} is no longer unwaveringly loyal due to {1}'s {2} gene.</VQEA_PawnRecruitable>
+
+    <!-- Buildings -->
+    <VQEA_Override>Override</VQEA_Override>
+    <VQEA_OverrideDesc>Select a colonist to override the ancient pipeline junction, siphoning a large amount of chemfuel from it. The pipeline junction will need time before it can be hacked again.</VQEA_OverrideDesc>
+    <VQEA_OverrideDesc_Generic>Select a colonist to override the security on this.</VQEA_OverrideDesc_Generic>
+    <VQEA_CancelOverride>Cancel override</VQEA_CancelOverride>
+    <VQEA_CancelOverrideDesc>Cancel overriding this building.</VQEA_CancelOverrideDesc>
+    <VQEA_LockedAncientVaultDoor>This ancient vault door is locked</VQEA_LockedAncientVaultDoor>
+    <VQEA_InterceptBroadcast>Intercept broadcast</VQEA_InterceptBroadcast>
+    <VQEA_InterceptBroadcastDesc>Intercept the broadcast to find out the location of another lab where the broadcast is directed.</VQEA_InterceptBroadcastDesc>
+
+    <!-- Pneumatic Tubes -->
+    <VQEA_LoadCargo>Load cargo</VQEA_LoadCargo>
+    <VQEA_LoadCargoDesc>Load cargo into a capsule that will be sent to some other vault far away.</VQEA_LoadCargoDesc>
+    <VQEA_LaunchCapsule>Launch capsule</VQEA_LaunchCapsule>
+    <VQEA_LaunchCapsuleDesc>Launch the capsule with cargo down the pneumatic system. You may receive some goods from another vault in return.</VQEA_LaunchCapsuleDesc>
+    <VQEA_PneumaticCapsuleReady>Pneumatic capsule is fully loaded and ready to be sent.</VQEA_PneumaticCapsuleReady>
+    <VQEA_PneumaticCapsuleArrived>Pneumatic capsule from another vault has arrived.</VQEA_PneumaticCapsuleArrived>
+    <VQEA_PneumaticTubeReturning>A pneumatic capsule is returning.</VQEA_PneumaticTubeReturning>
+    <VQEA_MessageCantLoadMoreIntoPneumaticTube>Your {1} can't finish loading the pneumatic capsule because some items became unavailable ({2_labelShort}).</VQEA_MessageCantLoadMoreIntoPneumaticTube>
 </LanguageData>

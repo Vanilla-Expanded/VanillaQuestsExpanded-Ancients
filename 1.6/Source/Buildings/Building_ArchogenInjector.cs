@@ -663,7 +663,6 @@ namespace VanillaQuestsExpandedAncients
             }
             ApplyFacilityModifiers(baseWeights);
             outcome = baseWeights.Keys.RandomElementByWeight(w => baseWeights[w]);
-            Log.Message("Got outcome: " + outcome);
         }
 
         private Dictionary<ArchiteInjectionOutcomeDef, float> CalculateOutcomeChances()
@@ -696,6 +695,17 @@ namespace VanillaQuestsExpandedAncients
         private void ApplyFacilityModifiers(Dictionary<ArchiteInjectionOutcomeDef, int> weights)
         {
             var successOutcome = InternalDefOf.VQEA_ArchiteInjection_Success;
+            if (selectedPawn?.apparel != null)
+            {
+                foreach (var apparel in selectedPawn.apparel.WornApparel)
+                {
+                    if (apparel.def == InternalDefOf.VQEA_Apparel_PatientGown)
+                    {
+                        weights[successOutcome] += 2;
+                        break;
+                    }
+                }
+            }
             var hasComplexityHarmonizer = false;
             var compAffectedByFacilities = this.TryGetComp<CompAffectedByFacilities>();
             if (compAffectedByFacilities != null)
