@@ -68,6 +68,9 @@
 			<developmentalStageFilter>Adult</developmentalStageFilter>
 			<countsAsClothingForNudity>true</countsAsClothingForNudity>
 			<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		      <tags>
+        		<li>VQE_PatientGown</li>
+      		  </tags>
 		</apparel>
 		
 		<generateAllowChance>0</generateAllowChance>
