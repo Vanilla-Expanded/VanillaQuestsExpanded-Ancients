@@ -38,7 +38,7 @@
 		<defName>VQEA_AncientLaboratoryCasket</defName>
 		<label>ancient laboratory casket</label>
 		<description>todo.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>VanillaQuestsExpandedAncients.Building_ContainmentCasket</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
@@ -67,9 +67,14 @@
 			<claimable>false</claimable>
 			<neverBuildable>true</neverBuildable>
 		</building>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQE_Patient</containmentSpawn>
+			</li>
+		</modExtensions>
 	</ThingDef>
-	
-	
+
+
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_CandidateCryptosleepCasket_Empty</defName>
 		<label>empty candidate cryptosleep casket</label>
@@ -104,12 +109,12 @@
 			<neverBuildable>true</neverBuildable>
 		</building>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_CandidateCryptosleepCasket</defName>
 		<label>candidate cryptosleep casket</label>
 		<description>todo.</description>
-		<thingClass>Building</thingClass>
+		<thingClass>VanillaQuestsExpandedAncients.Building_CandidateCryptosleepCasket</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
@@ -138,6 +143,11 @@
 			<claimable>false</claimable>
 			<neverBuildable>true</neverBuildable>
 		</building>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQE_Experiment</containmentSpawn>
+			</li>
+		</modExtensions>
 	</ThingDef>
-	
+
 </Defs>

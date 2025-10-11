@@ -4,7 +4,7 @@
 
   <!-- Experiment -->
 
-<BackstoryDef ParentName="Solid">
+  <BackstoryDef ParentName="Solid">
     <defName>VQE_KidnappedChild</defName>
     <title>kidnapped child</title>
     <titleShort>kidnapped</titleShort>
@@ -24,11 +24,11 @@
     <shuffleable>False</shuffleable>
   </BackstoryDef>
 
-<BackstoryDef ParentName="Solid">
+  <BackstoryDef ParentName="Solid">
     <defName>VQE_IdealPatient</defName>
     <title>ideal patient</title>
     <titleShort>patient</titleShort>
-    <description>[PAWN_nameDef] was chosen for countless experimental procedures with archite technology. For reasons unknown, [PAWN_pronoun] never rejected an implant, making [PAWN_objective] the perfect subject for radical genetic experiments. The treatments left [PAWN_objective] frail in body, but adapted to pain and unusually tolerant of hardship.</description>
+    <description>[PAWN_nameDef] was chosen for countless experimental procedures with archite technology. For reasons unknown, [PAWN_pronoun] never rejected an implant, making [PAWN_objective] the perfect subject for radical genetic experiments. The treatments left [PAWN_objective] frail in body, but adapted to pain and unusually tolerant of hardship. Sadly, one of the treatments has resulted in a slowly progressing terminal illness.</description>
     <slot>Adulthood</slot>
     <skillGains>
       <Medicine>5</Medicine>
@@ -36,11 +36,11 @@
       <Construction>-3</Construction>
       <Plants>-3</Plants>
     </skillGains>
-  <spawnCategories>
-        <li>VQE_General</li>
-  </spawnCategories>
+    <spawnCategories>
+      <li>VQE_Experiment</li>
+    </spawnCategories>
     <forcedTraits>
-      <Tough>1</Tough>
+      <VQE_IdealPatient>0</VQE_IdealPatient>
     </forcedTraits>
     <shuffleable>False</shuffleable>
   </BackstoryDef>

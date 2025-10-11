@@ -53,6 +53,7 @@ namespace VanillaQuestsExpandedAncients
 		public static JoyKindDef VQEA_AnimalRelaxation;
 
 		public static HediffDef VQEA_InjectionComa;
+		public static HediffDef VQEA_HemocollapseSyndrome;
 
 		public static BodyPartDef Brain;
 
@@ -66,7 +67,11 @@ namespace VanillaQuestsExpandedAncients
 
 		public static EffecterDef CocoonWakingUp;
 
-		      public static SoundDef VQEA_PneumaticLaunch;
-		      public static SoundDef VQEA_PneumaticArrival;
-		  }
+		public static SoundDef VQEA_PneumaticLaunch;
+		public static SoundDef VQEA_PneumaticArrival;
+		public static TraitDef VQE_IdealPatient;
+		public static RulePackDef VQE_ExperimentMaleNames;
+		public static RulePackDef VQE_ExperimentFemaleNames;
+		public static RulePackDef VQE_ExperimentLastNames;
+	}
 }

@@ -695,26 +695,16 @@ namespace VanillaQuestsExpandedAncients
         private void ApplyFacilityModifiers(Dictionary<ArchiteInjectionOutcomeDef, int> weights)
         {
             var successOutcome = InternalDefOf.VQEA_ArchiteInjection_Success;
-            if (selectedPawn?.apparel != null)
-            {
-                foreach (var apparel in selectedPawn.apparel.WornApparel)
-                {
-                    if (apparel.def == InternalDefOf.VQEA_Apparel_PatientGown)
-                    {
-                        weights[successOutcome] += 2;
-                        break;
-                    }
-                }
-            }
             var hasComplexityHarmonizer = false;
             var compAffectedByFacilities = this.TryGetComp<CompAffectedByFacilities>();
             if (compAffectedByFacilities != null)
             {
                 hasComplexityHarmonizer = compAffectedByFacilities.LinkedFacilitiesListForReading.Any(f => f.def == InternalDefOf.VQEA_ComplexityHarmonizer);
             }
-            if (selectedPawn != null && !hasComplexityHarmonizer)
+            
+            if (!hasComplexityHarmonizer)
             {
-                int geneticComplexity = GetGeneticComplexity(selectedPawn);
+                int geneticComplexity = GetGeneticComplexity(Occupant);
                 weights[successOutcome] = Mathf.Max(0, weights[successOutcome] - geneticComplexity);
             }
 
@@ -763,6 +753,30 @@ namespace VanillaQuestsExpandedAncients
                     }
                 }
             }
+
+            if (Occupant.story.traits.HasTrait(InternalDefOf.VQE_IdealPatient))
+            {
+                var rejectionOutcome = weights.Keys.FirstOrDefault(o => o.outcomeType == OutcomeType.Rejection);
+                if (rejectionOutcome != null)
+                {
+                    weights[rejectionOutcome] = 0;
+                }
+
+                var mutationOutcomes = weights.Keys.Where(o => o.outcomeType == OutcomeType.Mutation).ToList();
+                foreach (var mOutcome in mutationOutcomes)
+                {
+                    weights[mOutcome] = 0;
+                }
+            }
+
+            foreach (var apparel in Occupant.apparel.WornApparel)
+            {
+                if (apparel.def == InternalDefOf.VQEA_Apparel_PatientGown)
+                {
+                    weights[successOutcome] += 2;
+                    break;
+                }
+            }
         }
 
         public bool HasLinkedFacility(ThingDef facilityDef)
@@ -807,9 +821,9 @@ namespace VanillaQuestsExpandedAncients
                         baseTicks += facilityExtension.injectionTicksOffset;
                     }
 
-                    if (facility.def == InternalDefOf.VQEA_ComplexityHarmonizer && selectedPawn != null)
+                    if (facility.def == InternalDefOf.VQEA_ComplexityHarmonizer)
                     {
-                        int geneticComplexity = GetGeneticComplexity(selectedPawn);
+                        int geneticComplexity = GetGeneticComplexity(Occupant);
                         baseTicks += geneticComplexity * 2500;
                     }
                 }

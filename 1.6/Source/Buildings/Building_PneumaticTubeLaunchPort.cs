@@ -17,10 +17,17 @@ namespace VanillaQuestsExpandedAncients
 
         private int ticksUntilDelivery;
 
-        private int wastepacksToReturnCount;
+        private Dictionary<ThingDef, int> thingsToReturn = new Dictionary<ThingDef, int>();
 
         public static readonly Texture2D LaunchCommandTex = ContentFinder<Texture2D>.Get("UI/Gizmo/LaunchPneumaticTube");
         public static readonly Texture2D LoadCommandTex = ContentFinder<Texture2D>.Get("UI/Commands/LoadTransporter");
+
+        private static List<ThingDef> possibleThings;
+
+        static Building_PneumaticTubeLaunchPort()
+        {
+            possibleThings = DefDatabase<ThingDef>.AllDefs.Where(x => x.category == ThingCategory.Item && x.BaseMarketValue > 0.01f && !x.IsCorpse && x.destroyOnDrop is false && x.tradeability != Tradeability.None).ToList();
+        }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
@@ -33,7 +40,11 @@ namespace VanillaQuestsExpandedAncients
             base.ExposeData();
             Scribe_Values.Look(ref ticksUntilDelivery, "ticksUntilDelivery", 0);
             Scribe_Values.Look(ref totalMarketValue, "totalMarketValue", 0f);
-            Scribe_Values.Look(ref wastepacksToReturnCount, "wastepacksToReturnCount", 0);
+            Scribe_Collections.Look(ref thingsToReturn, "thingsToReturn", LookMode.Def, LookMode.Value);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                thingsToReturn ??= new Dictionary<ThingDef, int>();
+            }
         }
 
         protected override void Tick()
@@ -102,15 +113,26 @@ namespace VanillaQuestsExpandedAncients
             Map map = Map;
             InternalDefOf.VQEA_PneumaticLaunch.PlayOneShot(new TargetInfo(Position, map));
 
-            totalMarketValue = transporter.innerContainer.Where(x => x.def != ThingDefOf.Wastepack).Sum(x => x.MarketValue * x.stackCount);
-            var sentWastepacks = transporter.innerContainer.Where(x => x.def == ThingDefOf.Wastepack).ToList();
-            if (sentWastepacks.Any())
+            thingsToReturn ??= new Dictionary<ThingDef, int>();
+            thingsToReturn.Clear();
+            totalMarketValue = 0f;
+            foreach (var item in transporter.innerContainer)
             {
-                wastepacksToReturnCount = sentWastepacks.Sum(t => t.stackCount);
-            }
-            else
-            {
-                wastepacksToReturnCount = 0;
+                if (item.MarketValue == 0f || item.def.HasComp(typeof(CompDissolutionEffect_Goodwill)))
+                {
+                    if (thingsToReturn.ContainsKey(item.def))
+                    {
+                        thingsToReturn[item.def] += item.stackCount;
+                    }
+                    else
+                    {
+                        thingsToReturn[item.def] = item.stackCount;
+                    }
+                }
+                else
+                {
+                    totalMarketValue += item.MarketValue * item.stackCount;
+                }
             }
 
             transporter.innerContainer.ClearAndDestroyContents();
@@ -129,17 +151,19 @@ namespace VanillaQuestsExpandedAncients
             Messages.Message("VQEA_PneumaticCapsuleArrived".Translate(), this, MessageTypeDefOf.PositiveEvent);
 
             List<Thing> things = new List<Thing>();
-            if (wastepacksToReturnCount > 0)
+            if (thingsToReturn != null && thingsToReturn.Any())
             {
-                var thing = ThingMaker.MakeThing(ThingDefOf.Wastepack);
-                thing.stackCount = wastepacksToReturnCount;
-                things.Add(thing);
-                wastepacksToReturnCount = 0;
+                foreach (var keyValuePair in thingsToReturn)
+                {
+                    var thing = ThingMaker.MakeThing(keyValuePair.Key);
+                    thing.stackCount = keyValuePair.Value;
+                    things.Add(thing);
+                }
+                thingsToReturn.Clear();
             }
             if (totalMarketValue > 0)
             {
                 float currentValue = 0;
-                var possibleThings = DefDatabase<ThingDef>.AllDefs.Where(x => x.category == ThingCategory.Item && x.BaseMarketValue > 0.01f && !x.IsCorpse).ToList();
                 while ((totalMarketValue - currentValue) > 0f)
                 {
                     float remainingValue = totalMarketValue - currentValue;

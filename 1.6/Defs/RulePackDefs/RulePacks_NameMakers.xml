@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>VQE_ExperimentNameUtility</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>ExperimentNameFirstMale->Names/Experiment_First_Male</li>
+        <li>ExperimentNameFirstFemale->Names/Experiment_First_Female</li>
+        <li>ExperimentNameLast->Names/Experiment_Last</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>VQE_ExperimentMaleNames</defName>
+    <include>
+      <li>VQE_ExperimentNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_first_name->[ExperimentNameFirstMale]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>VQE_ExperimentFemaleNames</defName>
+    <include>
+      <li>VQE_ExperimentNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_first_name->[ExperimentNameFirstFemale]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>VQE_ExperimentLastNames</defName>
+    <include>
+      <li>VQE_ExperimentNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_last_name->[ExperimentNameLast]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

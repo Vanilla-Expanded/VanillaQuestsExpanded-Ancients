@@ -35,6 +35,9 @@
     <VQEA_LetterLabel_Mutation>Archogen injection: mutation</VQEA_LetterLabel_Mutation>
     <VQEA_LetterDesc_Mutation>The archite injection has caused a mutation!\n\n{PAWN_nameDef} has been injected with volatile archites, but {PAWN_possessive} body reacted badly to the forced evolution, turning {PAWN_objective} into a mutant.\n\n{PAWN_pronoun} have emerged from the archogen injector and will destroy all the lab equipment {PAWN_pronoun} can find in the blind, animalistic rage.\n\nYou can try and stop {PAWN_objective}, or let {PAWN_objective} leave.</VQEA_LetterDesc_Mutation>
 
+    <VQEA_ExperimentJoinsLetterLabel>Experiment joins: {PAWN_nameDef}</VQEA_ExperimentJoinsLetterLabel>
+    <VQEA_ExperimentJoinsLetterDescription>The {PAWN_title} known as {PAWN_nameDef} has emerged from a rusty cryptosleep casket, wearing nothing but a thin patient gown. They immediately join your colony.\n\n{PAWN_nameFull} is known as an ideal patient. Their body accepts every archite injection without risk of rejection, as though their cells were made to adapt to genetic change. This makes them uniquely suited for experiments with advanced archite technology - in fact, they have already undergone a few experiments before, as they carry several archite genes.\n\n{PAWN_labelShort} also suffers from a rare illness called Hemocollapse Syndrome. Their blood slowly fails over time, leaving them weaker as the days pass. Care and treatment can slow the disease, but it cannot be cured, and in the end, it will take their life.</VQEA_ExperimentJoinsLetterDescription>
+
     <!-- Inspect Pane Strings -->
     <VQEA_ArchogenInjectorWaitingForCapsule>Waiting for archite capsule.</VQEA_ArchogenInjectorWaitingForCapsule>
     <VQEA_ArchogenInjectorWaitingForPawn>Waiting for person.</VQEA_ArchogenInjectorWaitingForPawn>
