@@ -80,7 +80,7 @@ namespace VanillaQuestsExpandedAncients
 		public static SitePartDef VQEA_InhibitorResearchLabSite;
 		public static SitePartDef VQEA_ArchiteArraySite;
 		public static ThingDef VQEA_LockedVaultDoor;
-
+		public static ThingDef VQEA_AncientBroadcastingStation;
 		public static GameConditionDef VQEA_AncientComplex;
 	}
 }

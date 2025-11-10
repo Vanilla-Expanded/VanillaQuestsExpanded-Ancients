@@ -24,7 +24,8 @@ namespace VanillaQuestsExpandedAncients
                     {
                         mapParent = site,
                         inSignalSuccess = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_BroadcastingStationIntercepted"),
-                        inSignalFail = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_BroadcastingStationDestroyed")
+                        inSignalFail = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_BroadcastingStationDestroyed"),
+                        questBuilding = InternalDefOf.VQEA_AncientBroadcastingStation,
                     };
                     QuestGen.quest.AddPart(questPart);
                 }
