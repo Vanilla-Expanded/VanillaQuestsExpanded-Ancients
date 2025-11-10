@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <QuestScriptDef>
+    <defName>VQE_InhibitorResearchLab</defName>
+    <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_InhibitorResearchLab" />
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Inhibitor research lab</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription(askerIsNull==True)->The signal has revealed the location of an Inhibitor Research Lab. Records suggest this site contains a mutagen inhibitor core, a prototype device built to suppress unstable genetic mutations. It is likely that other valuable equipment remains here as well. Our objective is to locate the core and uninstall it for recovery. \n\nOn the surface, a small installation conceals a sealed vault door. Containment tanks seem to be present with their restraints already broken\n\nBelow lies a medium vault with a chamber housing the mutagen inhibitor core. Uninstalling it for safe transport will complete the mission.\n\nThe facility is not abandoned. Ancient patients, recently awakened from cryptosleep, stalk its corridors in a rabid state. They have already undergone unstable archite injections, and who knows what powers they may carry. Any intact lab equipment should also be looted before departure.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <modExtensions>
+      <li Class="VEF.Storyteller.QuestChainExtension">
+        <questChainDef>VQE_TheAncientLab</questChainDef>
+        <conditionSucceedQuests>
+          <li>VQE_ArchiteControlVault</li>
+        </conditionSucceedQuests>
+        <ticksSinceSucceed>12000~12000</ticksSinceSucceed>
+        <isRepeatable>false</isRepeatable>
+        <grantAgainOnFailure>false</grantAgainOnFailure>
+      </li>
+    </modExtensions>
+  </QuestScriptDef>
+</Defs>

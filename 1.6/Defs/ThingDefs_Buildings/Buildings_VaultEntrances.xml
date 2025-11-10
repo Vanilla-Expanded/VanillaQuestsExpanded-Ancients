@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_LockedVaultDoor</defName>
@@ -53,7 +53,7 @@
 			</li>
 		</comps>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_VaultRamp</defName>
 		<label>vault ramp</label>
@@ -82,23 +82,25 @@
 			<neverBuildable>true</neverBuildable>
 			<isTargetable>false</isTargetable>
 		</building>
-		<!--<thingClass>VanillaQuestsExpandedDeadlife.CustomPortalEntry</thingClass>-->
+		<thingClass>VanillaQuestsExpandedAncients.CustomPortalEntry</thingClass>
 		<tickerType>Normal</tickerType>
+		<portal>
+			<pocketMapGenerator>VQEA_AncientComplex</pocketMapGenerator>
+			<exitDef>VQEA_VaultExitRamp</exitDef>
+			<pocketMapSize>150</pocketMapSize>
+			<traverseSound>TraversePitGate</traverseSound>
+		</portal>
 		<comps>
-			<!--<li Class="VanillaQuestsExpandedDeadlife.CompProperties_CustomPortal">
-				<mapSize>(100,1,100)</mapSize>
-				<exitDef>VQED_SiloExitStaircase</exitDef>
-				<mapGeneratorDef>VQE_AncientSilo</mapGeneratorDef>
-				<enterTexPath>Things/Misc/SiloStaircase_Open</enterTexPath>
-				<viewDestinationTexPath>UI/ViewSilo</viewDestinationTexPath>
-				<enterCommandKey>VQE_EnterSilo</enterCommandKey>
-				<viewDestinationCommandKey>VQE_ViewSilo</viewDestinationCommandKey>
-				<viewDestinationDescKey>VQE_ViewSiloDesc</viewDestinationDescKey>
-				<traverseSound>TraversePitGate</traverseSound>
-			</li>-->
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_CustomPortal">
+				<enterTexPath>Things/Misc/VaultStaircase_Open</enterTexPath>
+				<viewDestinationTexPath>UI/ViewVault</viewDestinationTexPath>
+				<enterCommandKey>VQE_EnterVault</enterCommandKey>
+				<viewDestinationCommandKey>VQE_ViewVault</viewDestinationCommandKey>
+				<viewDestinationDescKey>VQE_ViewVaultDesc</viewDestinationDescKey>
+			</li>
 		</comps>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_VaultExitRamp</defName>
 		<label>vault exit ramp</label>
@@ -127,20 +129,20 @@
 			<neverBuildable>true</neverBuildable>
 			<isTargetable>false</isTargetable>
 		</building>
-		<!--<thingClass>VanillaQuestsExpandedDeadlife.CustomPortalExit</thingClass>-->
+		<thingClass>VanillaQuestsExpandedAncients.CustomPortalExit</thingClass>
 		<tickerType>Normal</tickerType>
+		<portal>
+			<exitDef>VQEA_VaultRamp</exitDef>
+			<traverseSound>TraversePitGate</traverseSound>
+		</portal>
 		<comps>
-			<!--<li Class="VanillaQuestsExpandedDeadlife.CompProperties_CustomPortal">
-				<mapSize>(100,1,100)</mapSize>
-				<exitDef>VQED_SiloStaircase</exitDef>
-				<mapGeneratorDef>VQE_AncientSilo</mapGeneratorDef>
-				<enterTexPath>Things/Misc/SiloStaircase_Exit</enterTexPath>
-				<viewDestinationTexPath>UI/ViewSilo</viewDestinationTexPath>
-				<enterCommandKey>VQE_ExitSilo</enterCommandKey>
-				<viewDestinationCommandKey>ViewSurface</viewDestinationCommandKey>
-				<viewDestinationDescKey>ViewSurfaceDesc</viewDestinationDescKey>
-				<traverseSound>TraversePitGate</traverseSound>
-			</li>-->
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_CustomPortal">
+				<enterTexPath>Things/Misc/VaultStaircase_Exit</enterTexPath>
+				<viewDestinationTexPath>UI/ViewVault</viewDestinationTexPath>
+				<enterCommandKey>VQE_ExitVault</enterCommandKey>
+				<viewDestinationCommandKey>CommandViewSurface</viewDestinationCommandKey>
+				<viewDestinationDescKey>CommandViewSurfaceDesc</viewDestinationDescKey>
+			</li>
 		</comps>
 	</ThingDef>
 

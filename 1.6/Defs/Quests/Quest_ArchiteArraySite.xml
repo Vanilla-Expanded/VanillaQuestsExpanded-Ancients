@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <QuestScriptDef>
+    <defName>VQE_ArchiteArraySite</defName>
+    <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_ArchiteArraySite" />
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Archite array site</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription(askerIsNull==True)->The intercepted transmission has revealed another hidden site housing an Archite Pathing Array. This rare system was designed to manipulate the unpredictable flow of archite integration, and is considered one of the most valuable pieces of equipment ever produced by the ancient military. Our objective is to reach the vault, uninstall the array, and recover it. \n\nOn the surface, a small installation conceals the sealed vault door. Containment tanks here have already ruptured and their failed creations seem to have gotten out. \n\nBeneath lies a vast complex with a large chamber where the archite pathing array awaits. Uninstalling it will complete the mission. \n\nThe vault is swarming with mutants - multiple splicelings, splicehulks, and even splicefiends. The array must be secured, along with any other lab equipment that can be salvaged.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <modExtensions>
+      <li Class="VEF.Storyteller.QuestChainExtension">
+        <questChainDef>VQE_TheAncientLab</questChainDef>
+        <conditionSucceedQuests>
+          <li>VQE_ArchiteControlVault</li>
+        </conditionSucceedQuests>
+        <ticksSinceSucceed>30000~30000</ticksSinceSucceed>
+        <isRepeatable>false</isRepeatable>
+        <grantAgainOnFailure>false</grantAgainOnFailure>
+      </li>
+    </modExtensions>
+  </QuestScriptDef>
+</Defs>

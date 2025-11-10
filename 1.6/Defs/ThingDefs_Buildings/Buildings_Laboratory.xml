@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchogenInjector</defName>
@@ -284,6 +284,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(2,2)</drawSize>
 		</graphicData>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -293,6 +294,10 @@
 			<li Class="CompProperties_Facility">
 				<maxDistance>16</maxDistance>
 				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="VEF.Buildings.CompProperties_BouncingArrow" />
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_SignalOnDestroy">
+				<signal>VQE_UplinkDestroyed</signal>
 			</li>
 		</comps>
 		<modExtensions>
@@ -320,6 +325,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(3,3)</drawSize>
 		</graphicData>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -329,6 +335,10 @@
 			<li Class="CompProperties_Facility">
 				<maxDistance>16</maxDistance>
 				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="VEF.Buildings.CompProperties_BouncingArrow" />
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_SignalOnDestroy">
+				<signal>VQE_CoreDestroyed</signal>
 			</li>
 		</comps>
 		<modExtensions>
@@ -452,6 +462,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(3,3)</drawSize>
 		</graphicData>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -461,6 +472,10 @@
 			<li Class="CompProperties_Facility">
 				<maxDistance>16</maxDistance>
 				<maxSimultaneous>1</maxSimultaneous>
+			</li>
+			<li Class="VEF.Buildings.CompProperties_BouncingArrow" />
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_SignalOnDestroy">
+				<signal>VQE_ArrayDestroyed</signal>
 			</li>
 		</comps>
 		<modExtensions>

@@ -78,4 +78,9 @@
     <VQEA_PneumaticCapsuleArrived>Pneumatic capsule from another vault has arrived.</VQEA_PneumaticCapsuleArrived>
     <VQEA_PneumaticTubeReturning>A pneumatic capsule is returning.</VQEA_PneumaticTubeReturning>
     <VQEA_MessageCantLoadMoreIntoPneumaticTube>Your {1} can't finish loading the pneumatic capsule because some items became unavailable ({2_labelShort}).</VQEA_MessageCantLoadMoreIntoPneumaticTube>
+    <!-- Vault Commands -->
+    <VQE_EnterVault>Enter vault</VQE_EnterVault>
+    <VQE_ExitVault>Exit vault</VQE_ExitVault>
+    <VQE_ViewVault>View vault</VQE_ViewVault>
+    <VQE_ViewVaultDesc>View the destination vault interior</VQE_ViewVaultDesc>
 </LanguageData>

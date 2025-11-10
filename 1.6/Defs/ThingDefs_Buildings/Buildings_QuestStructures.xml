@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	
+
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientBroadcastingStation</defName>
 		<label>ancient broadcasting station</label>
@@ -29,9 +29,13 @@
 			<deconstructible>false</deconstructible>
 		</building>
 		<comps>
+			<li Class="VEF.Buildings.CompProperties_BouncingArrow" />
 			<li Class="CompProperties_Glower">
 				<glowRadius>2.68</glowRadius>
 				<glowColor>(239,133,50)</glowColor>
+			</li>
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_SignalOnDestroy">
+				<signal>VQE_BroadcastingStationDestroyed</signal>
 			</li>
 		</comps>
 		<modExtensions>

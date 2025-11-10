@@ -73,5 +73,14 @@ namespace VanillaQuestsExpandedAncients
 		public static RulePackDef VQE_ExperimentMaleNames;
 		public static RulePackDef VQE_ExperimentFemaleNames;
 		public static RulePackDef VQE_ExperimentLastNames;
+
+		public static SitePartDef VQEA_AncientLabComplexSite;
+		public static SitePartDef VQEA_ArchiteControlVaultSite;
+		public static SitePartDef VQEA_SpliceframeBlacksiteSite;
+		public static SitePartDef VQEA_InhibitorResearchLabSite;
+		public static SitePartDef VQEA_ArchiteArraySite;
+		public static ThingDef VQEA_LockedVaultDoor;
+
+		public static GameConditionDef VQEA_AncientComplex;
 	}
 }

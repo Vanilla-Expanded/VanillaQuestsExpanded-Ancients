@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_AncientLabComplexStructure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_EntranceModules_1</pattern>
+                <offset>(0, 0, 0)</offset>
+            </li>
+            <li>
+                <pattern>VQEA_LabModules_1_.*</pattern>
+                <offset>(0, 0, 1)</offset>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_ArchiteControlVaultStructure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_EntranceModules_2</pattern>
+                <offset>(0, 0, 0)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>1~1</VQEA_Spliceling>
+                    <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_2</pattern>
+                <offset>(0, 0, 1)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>1~1</VQEA_Spliceling>
+                    <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_2</pattern>
+                <offset>(0, 0, 2)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>1~1</VQEA_Spliceling>
+                    <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_2</pattern>
+                <offset>(0, 0, 3)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>1~1</VQEA_Spliceling>
+                    <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_LabModules_2_.*</pattern>
+                <offset>(0, 0, 4)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>1~1</VQEA_Spliceling>
+                    <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
+                </spawnPawns>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_SpliceframeBlacksiteStructure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_EntranceModules_3</pattern>
+                <offset>(0, 0, 0)</offset>
+                <spawnThings>
+                    <Hive>5~5</Hive>
+                </spawnThings>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_3</pattern>
+                <offset>(0, 0, 1)</offset>
+                <spawnThings>
+                    <Hive>5~5</Hive>
+                </spawnThings>
+            </li>
+            <li>
+                <pattern>VQEA_LabModules_3_.*</pattern>
+                <offset>(0, 0, 2)</offset>
+                <spawnThings>
+                    <Hive>5~5</Hive>
+                </spawnThings>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_InhibitorResearchLabStructure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_EntranceModules_4</pattern>
+                <offset>(0, 0, 0)</offset>
+                <spawnPawns>
+                    <VQE_Patient>3~3</VQE_Patient>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_4</pattern>
+                <offset>(0, 0, 1)</offset>
+                <spawnPawns>
+                    <VQE_Patient>3~3</VQE_Patient>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_LabModules_4_.*</pattern>
+                <offset>(0, 0, 2)</offset>
+                <spawnPawns>
+                    <VQE_Patient>3~3</VQE_Patient>
+                </spawnPawns>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_ArchiteArraySiteStructure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_EntranceModules_4</pattern>
+                <offset>(0, 0, 0)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>2~2</VQEA_Spliceling>
+                    <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+                    <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_4</pattern>
+                <offset>(0, 0, 1)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>2~2</VQEA_Spliceling>
+                    <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+                    <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_4</pattern>
+                <offset>(0, 0, 2)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>2~2</VQEA_Spliceling>
+                    <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+                    <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_MiscModules_4</pattern>
+                <offset>(0, 0, 3)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>2~2</VQEA_Spliceling>
+                    <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+                    <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+                </spawnPawns>
+            </li>
+            <li>
+                <pattern>VQEA_LabModules_5_.*</pattern>
+                <offset>(0, 0, 4)</offset>
+                <spawnPawns>
+                    <VQEA_Spliceling>2~2</VQEA_Spliceling>
+                    <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+                    <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+                </spawnPawns>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_OvergroundBunkersTier1Structure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_OvergroundBunkers_1_.*</pattern>
+                <offset>(0, 0, 0)</offset>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_OvergroundBunkersTier2Structure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_OvergroundBunkers_2_.*</pattern>
+                <offset>(0, 0, 0)</offset>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_OvergroundBunkersTier3Structure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_OvergroundBunkers_3_.*</pattern>
+                <offset>(0, 0, 0)</offset>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_OvergroundBunkersTier4Structure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_OvergroundBunkers_4_.*</pattern>
+                <offset>(0, 0, 0)</offset>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+
+    <VanillaQuestsExpandedAncients.StructureSetDef>
+        <defName>VQEA_OvergroundBunkersTier5Structure</defName>
+        <structureLayouts>
+            <li>
+                <pattern>VQEA_OvergroundBunkers_5_.*</pattern>
+                <offset>(0, 0, 0)</offset>
+            </li>
+        </structureLayouts>
+    </VanillaQuestsExpandedAncients.StructureSetDef>
+</Defs>

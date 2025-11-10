@@ -36,6 +36,10 @@
       <HintPath>..\..\..\VanillaExpandedFramework\1.6\Assemblies\VEF.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="KCSG">
+      <HintPath>..\..\..\VanillaExpandedFramework\1.6\Assemblies\KCSG.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4566" />

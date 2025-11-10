@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MapGeneratorDef>
+    <defName>VQEA_AncientComplex</defName>
+    <label>ancient complex</label>
+    <isUnderground>true</isUnderground>
+    <ignoreAreaRevealedLetter>true</ignoreAreaRevealedLetter>
+    <disableCallAid>true</disableCallAid>
+    <pocketMapProperties>
+      <biome>VQEA_AncientComplex</biome>
+      <temperature>15</temperature>
+    </pocketMapProperties>
+    <genSteps>
+      <li>ElevationFertility</li>
+      <li>Terrain</li>
+      <li>VQEA_AncientComplex</li>
+      <li>Fog</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <GenStepDef>
+    <defName>VQEA_AncientComplex</defName>
+    <order>300</order>
+    <genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+      <exitDef>VQEA_VaultExitRamp</exitDef>
+    </genStep>
+  </GenStepDef>
+
+  <WeatherDef>
+    <defName>VQEA_AncientComplex</defName>
+    <label>ancient complex</label>
+    <isBad>true</isBad>
+    <canOccurAsRandomForcedEvent>false</canOccurAsRandomForcedEvent>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>3</perceivePriority>
+    <!-- Same as clear night -->
+    <skyColorsDay>
+      <sky>(0.482, 0.603, 0.682)</sky>
+      <shadow>(0.85, 0.85, 0.85)</shadow>
+      <overlay>(0.6, 0.6, 0.6)</overlay>
+      <saturation>1.25</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.482, 0.603, 0.682)</sky>
+      <shadow>(0.85, 0.85, 0.85)</shadow>
+      <overlay>(0.6, 0.6, 0.6)</overlay>
+      <saturation>1.25</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.482, 0.603, 0.682)</sky>
+      <shadow>(0.85, 0.85, 0.85)</shadow>
+      <overlay>(0.6, 0.6, 0.6)</overlay>
+      <saturation>1.25</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.482, 0.603, 0.682)</sky>
+      <shadow>(0.85, 0.85, 0.85)</shadow>
+      <overlay>(0.6, 0.6, 0.6)</overlay>
+      <saturation>1.25</saturation>
+    </skyColorsNightMid>
+  </WeatherDef>
+
+  <GameConditionDef>
+    <defName>VQEA_AncientComplex</defName>
+    <label>ancient complex</label>
+    <description>It's dark and damp here.</description>
+    <conditionClass>VanillaQuestsExpandedAncients.GameCondition_AncientComplex</conditionClass>
+    <weatherDef>VQEA_AncientComplex</weatherDef>
+    <preventNeutralVisitors>true</preventNeutralVisitors>
+    <preventIncidents>true</preventIncidents>
+    <canBePermanent>true</canBePermanent>
+    <displayOnUI>false</displayOnUI>
+    <natural>false</natural>
+    <allowUnderground>true</allowUnderground>
+  </GameConditionDef>
+
+  <BiomeDef>
+    <defName>VQEA_AncientComplex</defName>
+    <label>ancient complex</label>
+    <description>This ancient complex is filled with the machinery of forgotten experiments.</description>
+    <generatesNaturally>false</generatesNaturally>
+    <animalDensity>0</animalDensity>
+    <plantDensity>0</plantDensity>
+    <wildAnimalsCanWanderInto>false</wildAnimalsCanWanderInto>
+    <baseWeatherCommonalities>
+      <VQEA_AncientComplex>1</VQEA_AncientComplex>
+    </baseWeatherCommonalities>
+    <diseaseMtbDays>80</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+    </diseases>
+  </BiomeDef>
+
+</Defs>
