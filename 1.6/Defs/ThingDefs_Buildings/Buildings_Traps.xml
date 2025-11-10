@@ -49,6 +49,24 @@
 		</modExtensions>
 	</ThingDef>
 	
+	<ThingDef ParentName="VQEA_TrapIEDBase">
+		<defName>VQEA_SplicetootsContainment</defName>
+		<label>splicetoots containment</label>
+		<description>todo.</description>
+		<graphicData>
+			<texPath>Things/Building/Traps/MutationSampler_Filled_Splicetoots</texPath>
+		</graphicData>
+		<thingClass>VanillaQuestsExpandedAncients.Building_Containment</thingClass>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQEA_Splicetoot</containmentSpawn>
+				<buildingLeft>VQEA_EmptyContainment</buildingLeft>
+				<deconstructSound>VQEA_ContainmentBreaking</deconstructSound>
+				<numToSpawn>3</numToSpawn>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientEmergencyPurifier</defName>
 		<label>ancient emergency purifier</label>

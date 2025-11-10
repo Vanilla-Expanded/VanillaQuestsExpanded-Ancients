@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BaseFilth">
+		<defName>VQEA_Filth_DriedBlood</defName>
+		<label>dried-up blood</label>
+		<statBases>
+			<Beauty>-30</Beauty>
+			<Cleanliness>-10</Cleanliness>
+		</statBases>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Filth/DriedUpBlood</texPath>
+		</graphicData>
+		<filth>
+			<disappearsInDays>35~40</disappearsInDays>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+			<cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+		</filth>
+	</ThingDef>
+	<ThingDef ParentName="BaseFilth">
+		<defName>VQEA_Filth_OldDocuments</defName>
+		<label>old documents</label>
+		<statBases>
+			<Beauty>-10</Beauty>
+			<Cleanliness>-5</Cleanliness>
+		</statBases>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Filth/OldDocuments</texPath>
+		</graphicData>
+		<filth>
+			<disappearsInDays>50~75</disappearsInDays>
+			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+			<cleaningSound>Interact_CleanFilth_Scattered</cleaningSound>
+			<rainWashes>false</rainWashes>
+			<canFilthAttach>true</canFilthAttach>
+			<maxThickness>1</maxThickness>
+		</filth>
+	</ThingDef>
+</Defs>

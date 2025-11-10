@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- Experiment -->
+
+  <BackstoryDef ParentName="Solid">
+    <defName>VQE_KidnappedChild</defName>
+    <title>kidnapped child</title>
+    <titleShort>kidnapped</titleShort>
+    <description>[PAWN_nameDef] was abducted at a young age and raised in captivity. Deprived of proper schooling, [PAWN_pronoun] survived by learning to listen, to obey, and to read the moods of [PAWN_possessive] captors. The experience left [PAWN_objective] wary of others and untrained in most practical skills, but unusually sensitive to people’s intentions.</description>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <skillGains>
+      <Social>3</Social>
+      <Crafting>-2</Crafting>
+      <Construction>-2</Construction>
+    </skillGains>
+    <spawnCategories>
+      <li>VQE_Experiment</li>
+    </spawnCategories>
+    <shuffleable>False</shuffleable>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="Solid">
+    <defName>VQE_IdealPatient</defName>
+    <title>ideal patient</title>
+    <titleShort>patient</titleShort>
+    <description>[PAWN_nameDef] was chosen for countless experimental procedures with archite technology. For reasons unknown, [PAWN_pronoun] never rejected an implant, making [PAWN_objective] the perfect subject for radical genetic experiments. The treatments left [PAWN_objective] frail in body, but adapted to pain and unusually tolerant of hardship. Sadly, one of the treatments has resulted in a slowly progressing terminal illness.</description>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Medicine>5</Medicine>
+      <Social>3</Social>
+      <Construction>-3</Construction>
+      <Plants>-3</Plants>
+    </skillGains>
+    <spawnCategories>
+      <li>VQE_Experiment</li>
+    </spawnCategories>
+    <forcedTraits>
+      <VQE_IdealPatient>0</VQE_IdealPatient>
+    </forcedTraits>
+    <shuffleable>False</shuffleable>
+  </BackstoryDef>
+
+</Defs>

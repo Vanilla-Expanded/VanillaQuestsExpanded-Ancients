@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<DamageDef>
+		<defName>VQEA_SuicideAttack</defName>
+		<label>suicide attack</label>
+		<workerClass>VanillaQuestsExpandedAncients.DamageWorker_SuicideAttack</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been bitten to death.</deathMessage>
+		<hediff>Bite</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+	</DamageDef>
+	
+</Defs>

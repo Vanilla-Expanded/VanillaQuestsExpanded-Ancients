@@ -165,4 +165,96 @@
 			</li>
 		</comps>
 	</HediffDef>
+
+	<HediffDef>
+		<defName>VQEA_HemocollapseSyndrome</defName>
+		<label>hemocollapse syndrome</label>
+		<description>A rare and terminal disorder where the bone marrow gradually fails to produce vital hemogen components. The body weakens and the organs strain, eventually leading to death.</description>
+		<hediffClass>VanillaQuestsExpandedAncients.Hediff_HemocollapseSyndrome</hediffClass>
+		<lethalSeverity>1</lethalSeverity>
+		<isBad>true</isBad>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.0083</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>24</baseTendDurationHours>
+				<severityPerDayTended>-0.004135</severityPerDayTended>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>latent</label>
+				<minSeverity>0.0</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.10</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<label>progressive</label>
+				<minSeverity>0.25</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.25</ImmunityGainSpeed>
+				</statOffsets>
+				<painOffset>0.10</painOffset>
+			</li>
+			<li>
+				<label>advanced</label>
+				<minSeverity>0.55</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.50</ImmunityGainSpeed>
+				</statOffsets>
+				<painOffset>0.20</painOffset>
+			</li>
+			<li>
+				<label>terminal</label>
+				<minSeverity>0.90</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.40</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<ImmunityGainSpeed>0</ImmunityGainSpeed>
+				</statFactors>
+				<painOffset>0.40</painOffset>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>

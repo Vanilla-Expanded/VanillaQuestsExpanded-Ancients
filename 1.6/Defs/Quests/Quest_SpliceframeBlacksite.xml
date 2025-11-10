@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <QuestScriptDef>
+    <defName>VQE_SpliceframeBlacksite</defName>
+    <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_SpliceframeBlacksite" />
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Spliceframe blacksite</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription(askerIsNull==True)->The intercepted transmission points to a covert site codenamed *Spliceframe Blacksite*. Extracted information indicates a functioning spliceframe uplink is installed here, and it's likely that other valuable lab equipment remains intact. Our objective is to locate the uplink and uninstall it for transport. \n\nOn the surface, a small installation guards a sealed vault door; opening it grants access below. The area is heavily infested: insectoid hives are present in the facility. \n\nUnderground, the complex spans a medium vault. \n\nExpect a tight quarters encounter with numerous insectoid hives scattered throughout the vault, spawning waves of insectoids. Any surviving lab equipment should be uninstalled and looted alongside the uplink for use back at the colony.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <modExtensions>
+      <li Class="VEF.Storyteller.QuestChainExtension">
+        <questChainDef>VQE_TheAncientLab</questChainDef>
+        <conditionSucceedQuests>
+          <li>VQE_ArchiteControlVault</li>
+        </conditionSucceedQuests>
+        <ticksSinceSucceed>300~300</ticksSinceSucceed>
+        <isRepeatable>false</isRepeatable>
+        <grantAgainOnFailure>false</grantAgainOnFailure>
+      </li>
+    </modExtensions>
+  </QuestScriptDef>
+</Defs>

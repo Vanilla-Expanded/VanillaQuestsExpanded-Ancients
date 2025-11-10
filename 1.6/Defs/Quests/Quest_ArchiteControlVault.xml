@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ <QuestScriptDef>
+    <defName>VQE_ArchiteControlVault</defName>
+    <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_ArchiteControlVault" />
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Archite control vault</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription(askerIsNull==True)->We have traced the signal to an underground installation known as an archite control vault. This site is the relay the previous broadcast was contacting, a massive laboratory complex where ancient military researchers coordinated their supersoldier experiments. \n\nOn the surface sits a small facility with a sealed vault door; opening it will grant access below. The installation houses containment tanks that will rupture as we approach, releasing rabid, manhunting mutants created by failed experiments. \n\nUnderground, the vault sprawls through multiple sectors. Reaching the end will be required as that's where the ancient broadcasting station is located. Intercepting this crucial signal will reveal the locations of the remaining vaults. \n\nWe believe that the lab has been overrun by rabid experiments, and we should venture prepared for combat. The complex contains valuable equipment: surrounding lab gear should be looted and brought back to our colony to improve the way we conduct our experiments.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <modExtensions>
+      <li Class="VEF.Storyteller.QuestChainExtension">
+        <questChainDef>VQE_TheAncientLab</questChainDef>
+        <conditionSucceedQuests>
+          <li>VQE_AncientLabComplex</li>
+        </conditionSucceedQuests>
+        <ticksSinceSucceed>6000~6000</ticksSinceSucceed>
+        <isRepeatable>false</isRepeatable>
+        <grantAgainOnFailure>true</grantAgainOnFailure>
+        <daysUntilGrantAgainOnFailure>15</daysUntilGrantAgainOnFailure>
+      </li>
+    </modExtensions>
+  </QuestScriptDef>
+</Defs>

@@ -30,6 +30,7 @@ namespace VanillaQuestsExpandedAncients
 		public static ThingDef VQEA_AberrationRedirector;
 		public static ThingDef VQEA_ComplexityHarmonizer;
 		public static ThingDef VQEA_ArchitePathingArray;
+		public static ThingDef VQEA_Apparel_PatientGown;
 		public static ThingCategoryDef VQEA_BuildingsLab;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Success;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Rejection;
@@ -52,6 +53,7 @@ namespace VanillaQuestsExpandedAncients
 		public static JoyKindDef VQEA_AnimalRelaxation;
 
 		public static HediffDef VQEA_InjectionComa;
+		public static HediffDef VQEA_HemocollapseSyndrome;
 
 		public static BodyPartDef Brain;
 
@@ -65,6 +67,20 @@ namespace VanillaQuestsExpandedAncients
 
 		public static EffecterDef CocoonWakingUp;
 
+		public static SoundDef VQEA_PneumaticLaunch;
+		public static SoundDef VQEA_PneumaticArrival;
+		public static TraitDef VQE_IdealPatient;
+		public static RulePackDef VQE_ExperimentMaleNames;
+		public static RulePackDef VQE_ExperimentFemaleNames;
+		public static RulePackDef VQE_ExperimentLastNames;
 
-    }
+		public static SitePartDef VQEA_AncientLabComplexSite;
+		public static SitePartDef VQEA_ArchiteControlVaultSite;
+		public static SitePartDef VQEA_SpliceframeBlacksiteSite;
+		public static SitePartDef VQEA_InhibitorResearchLabSite;
+		public static SitePartDef VQEA_ArchiteArraySite;
+		public static ThingDef VQEA_LockedVaultDoor;
+
+		public static GameConditionDef VQEA_AncientComplex;
+	}
 }

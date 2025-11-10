@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>VQE_Patient</defName>
+    <label>patient</label>
+    <race>Human</race>
+    <combatPower>0</combatPower>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>12~19</initialResistanceRange>
+    <fixedInventory>
+      <VQEA_Apparel_PatientGown />
+    </fixedInventory>
+    <apparelIgnoreSeasons>True</apparelIgnoreSeasons>
+    <apparelIgnorePollution>True</apparelIgnorePollution>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <nakedChance>1</nakedChance>
+    <backstoryCategories>
+      <li>VQE_AncientPatient</li>
+    </backstoryCategories>
+    <modExtensions>
+      <li Class="VanillaQuestsExpandedAncients.PawnKindExtension_Experiment">
+        <architeGeneCount>2</architeGeneCount>
+        <metabolismGeneCount>2</metabolismGeneCount>
+        <minMetabolismForGene>2</minMetabolismForGene>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>VQE_Experiment</defName>
+    <race>Human</race>
+    <combatPower>0</combatPower>
+    <fixedInventory>
+      <VQEA_Apparel_PatientGown />
+    </fixedInventory>
+    <apparelIgnoreSeasons>True</apparelIgnoreSeasons>
+    <apparelIgnorePollution>True</apparelIgnorePollution>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <nakedChance>1</nakedChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>12~19</initialResistanceRange>
+    <fixedChildBackstories>
+      <li>VQE_KidnappedChild</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>VQE_IdealPatient</li>
+    </fixedAdultBackstories>
+    <forcedTraits>
+      <li>
+        <def>VQE_IdealPatient</def>
+      </li>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="VanillaQuestsExpandedAncients.PawnKindExtension_Experiment">
+        <architeGeneCount>3</architeGeneCount>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+</Defs>

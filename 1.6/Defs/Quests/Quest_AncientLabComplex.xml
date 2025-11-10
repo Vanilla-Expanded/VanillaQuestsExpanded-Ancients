@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <QuestScriptDef>
+    <defName>VQE_AncientLabComplex</defName>
+    <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_AncientLabComplex" />
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Ancient lab complex</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription(asker_factionLeader==True)->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name], has intercepted a mysterious broadcast. The signal carries encryption markers associated with an ancient military supersoldier program, and appears to have been transmitted from a site not far from our colony. \n\n[asker_nameDef] believes that tracking this signal will reveal the location of a hidden installation. On arrival, scouts reported finding a small, abandoned surface outpost with an open vault entrance leading deep underground.\n\nBeneath lies a sealed laboratory complex. Inside must be some kind of ancient broadcasting station - intercepting the signal from it will allow us to trace its destination. \n\nThe underground vault also contains something invaluable: an intact Archogen Injector. This rare device can be used to begin creating supersoldiers by injecting archites directly into human subjects. The injector, along with any other surviving lab equipment, should be claimed and brought back to the colony. \n\nThe lab itself shows no active defenders, but ancient traps may still be functional and must be navigated with care.</li>
+        <li>questDescription(askerIsNull==True)->We've intercepted a mysterious broadcast. The signal carries encryption markers associated with an ancient military supersoldier program, and appears to have been transmitted from a site not far from our colony. \n\nTracking the signal leads to a small, abandoned surface installation with an open vault door descending into darkness. \n\nBeneath lies a sealed laboratory complex. Inside must be some kind of ancient broadcasting station - intercepting the signal from it will allow us to trace its destination. \n\nThe underground vault also contains something invaluable: an intact Archogene Injector. This rare device can be used to begin creating supersoldiers by injecting archites directly into human subjects. The injector, along with any other surviving lab equipment, should be claimed and brought back to the colony. \n\nThe lab itself shows no active defenders, but ancient traps may still be functional and must be navigated with care.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <modExtensions>
+      <li Class="VEF.Storyteller.QuestChainExtension">
+        <questChainDef>VQE_TheAncientLab</questChainDef>
+        <conditionMinDaysSinceStart>90~120</conditionMinDaysSinceStart>
+        <isRepeatable>false</isRepeatable>
+        <grantAgainOnFailure>true</grantAgainOnFailure>
+        <daysUntilGrantAgainOnFailure>30</daysUntilGrantAgainOnFailure>
+      </li>
+    </modExtensions>
+  </QuestScriptDef>
+</Defs>

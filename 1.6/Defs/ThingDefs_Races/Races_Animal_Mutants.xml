@@ -321,4 +321,94 @@
 		</lifeStages>
 
 	</PawnKindDef>
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>VQEA_Splicetoot</defName>
+		<label>splicetoot</label>
+		<description>A small, bloated mutant that crawls awkwardly on underdeveloped limbs, resembling a grotesque parody of a toddler. Its enlarged belly sloshes with rotstink gas, swelling and trembling with each jerking movement.Upon reaching its victim, the fragile body ruptures in a violent explosion, releasing a choking cloud of dangerous gas. Whether it was once a child or simply shaped to mock one is a cruelty too dreadful to think about.</description>
+		<statBases>
+			<MoveSpeed>4.65</MoveSpeed>
+			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<MarketValue>10</MarketValue>
+			<LeatherAmount>0</LeatherAmount>
+			<Mass>40</Mass>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<MeatAmount>0</MeatAmount>
+			<Wildness>0.45</Wildness>
+			<Flammability>0.7</Flammability>
+		</statBases>
+		<tools>
+			
+			<li>
+				<label>bite</label>
+				<capacities>
+					<li>VQEA_SuicideAttack</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			
+			</li>
+		</tools>
+		<race>
+			<deathAction Class="VanillaQuestsExpandedAncients.DeathActionProperties_VanishToots">
+				
+				<filth>Filth_Blood</filth>
+				<filthCountRange>7~10</filthCountRange>
+				<gasAmount>5</gasAmount>
+				
+			</deathAction>
+			<herdMigrationAllowed>false</herdMigrationAllowed>
+			<alwaysAwake>true</alwaysAwake>
+			<hasGenders>false</hasGenders>
+			<body>Human</body>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<baseBodySize>0.8</baseBodySize>
+			<baseHealthScale>0.65</baseHealthScale>
+			<lifeExpectancy>30</lifeExpectancy>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.05</manhunterOnDamageChance>
+			<foodType>None</foodType>
+			<needsRest>false</needsRest>
+			<trainability>None</trainability>
+			<alwaysViolent>true</alwaysViolent>
+			<useMeatFrom>Human</useMeatFrom>
+			<useLeatherFrom>Human</useLeatherFrom>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>VQEA_Mutant_Wounded</soundWounded>
+					<soundDeath>VQEA_Mutant_Death</soundDeath>
+					<soundCall>VQEA_Mutant_Call</soundCall>
+					<soundAngry>VQEA_Mutant_Call</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>NonContractable</li>
+		</tradeTags>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>VQEA_Splicetoot</defName>
+		<label>splicetoot</label>
+		<race>VQEA_Splicetoot</race>
+		<combatPower>35</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/Mutants/Splicetoot</texPath>
+					<drawSize>2</drawSize>
+				</bodyGraphicData>
+				
+			</li>
+		</lifeStages>
+		
+	</PawnKindDef>
 </Defs>

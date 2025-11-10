@@ -73,6 +73,10 @@ namespace VanillaQuestsExpandedAncients
             listing.Gap(SectionSpacing);
                 
             listing.Label("VQEA_PawnGeneticComplexity".Translate(archogenInjector.Occupant.Name.ToStringFull) + ": " + archogenInjector.GetGeneticComplexityForUI());
+            if (archogenInjector.Occupant.apparel.WornApparel.Any(x => x.def == InternalDefOf.VQEA_Apparel_PatientGown))
+            {
+                listing.Label("VQEA_PatientGownBonus".Translate().Colorize(ColorLibrary.Green));
+            }
             int metabolism = archogenInjector.GetTargetMetabolismEfficiency();
             listing.Label("VQEA_ExpectedMetabolismSideEffect".Translate() + ": " + "VQEA_Metabolism".Translate(metabolism.ToStringWithSign()));
             listing.Gap(SectionSpacing);

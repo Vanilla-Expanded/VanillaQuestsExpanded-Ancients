@@ -44,6 +44,6 @@
 			<li>PlaceWorker_NeverAdjacentUnstandable</li>
 		</placeWorkers>
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-		<designationCategory inherit="False"/>
+		
 	</ThingDef>
 </Defs>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientLaboratoryCasket_Empty</defName>
+		<label>empty ancient laboratory casket</label>
+		<description>todo.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.5</fillPercent>
+		<size>(1,2)</size>
+		<rotatable>true</rotatable>
+		<blockWind>true</blockWind>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<graphicData>
+			<texPath>Things/Building/LaboratoryCaskets/LabCryptosleepCasket/LabCryptosleepCasket_Empty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<Steel>50</Steel>
+			<Uranium>6</Uranium>
+		</costList>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientLaboratoryCasket</defName>
+		<label>ancient laboratory casket</label>
+		<description>todo.</description>
+		<thingClass>VanillaQuestsExpandedAncients.Building_ContainmentCasket</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.5</fillPercent>
+		<size>(1,2)</size>
+		<rotatable>true</rotatable>
+		<blockWind>true</blockWind>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<graphicData>
+			<texPath>Things/Building/LaboratoryCaskets/LabCryptosleepCasket/LabCryptosleepCasket_Full</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<Steel>50</Steel>
+			<Uranium>6</Uranium>
+		</costList>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQE_Patient</containmentSpawn>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_CandidateCryptosleepCasket_Empty</defName>
+		<label>empty candidate cryptosleep casket</label>
+		<description>todo.</description>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.5</fillPercent>
+		<size>(1,2)</size>
+		<rotatable>true</rotatable>
+		<blockWind>true</blockWind>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<graphicData>
+			<texPath>Things/Building/LaboratoryCaskets/CandidateCryptossleepCasket/CandidateCryptosleepCasket_Empty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<Steel>50</Steel>
+			<Uranium>6</Uranium>
+		</costList>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_CandidateCryptosleepCasket</defName>
+		<label>candidate cryptosleep casket</label>
+		<description>todo.</description>
+		<thingClass>VanillaQuestsExpandedAncients.Building_CandidateCryptosleepCasket</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.5</fillPercent>
+		<size>(1,2)</size>
+		<rotatable>true</rotatable>
+		<blockWind>true</blockWind>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>1</Flammability>
+			<WorkToBuild>2000</WorkToBuild>
+		</statBases>
+		<pathCost>42</pathCost>
+		<graphicData>
+			<texPath>Things/Building/LaboratoryCaskets/CandidateCryptossleepCasket/CandidateCryptosleepCasket_Full</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+			<Steel>50</Steel>
+			<Uranium>6</Uranium>
+		</costList>
+		<building>
+			<paintable>false</paintable>
+			<claimable>false</claimable>
+			<neverBuildable>true</neverBuildable>
+		</building>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.ContainmentDetails">
+				<containmentSpawn>VQE_Experiment</containmentSpawn>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

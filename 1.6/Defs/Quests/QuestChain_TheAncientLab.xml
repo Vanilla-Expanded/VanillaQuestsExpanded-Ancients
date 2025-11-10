@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <VEF.Storyteller.QuestChainDef>
+    <defName>VQE_TheAncientLab</defName>
+    <label>The Ancient Lab</label>
+    <description>This quest chain will have you explore several underground lab complexes created by the ancient military to try and create supersoldiers through something called archite injection. You may be able to retrieve valuable lab equipment for yourself, to eventually create your own super soldiers, horrible abominations, or both.</description>
+  </VEF.Storyteller.QuestChainDef>
+</Defs>

@@ -127,10 +127,13 @@ namespace VanillaQuestsExpandedAncients
                 CachedExtension.deconstructSound.PlayOneShot(this);
             }
 
-
-            Pawn pawn = PawnGenerator.GeneratePawn(CachedExtension.containmentSpawn);
-            GenSpawn.Spawn(pawn, CellFinder.RandomClosewalkCellNear(pos, map, 1), map);
-            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+            for(int i=0;i< CachedExtension.numToSpawn; i++)
+            {
+                Pawn pawn = PawnGenerator.GeneratePawn(CachedExtension.containmentSpawn);
+                GenSpawn.Spawn(pawn, CellFinder.RandomClosewalkCellNear(pos, map, 1), map);
+                pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
+            }
+           
 
             
 

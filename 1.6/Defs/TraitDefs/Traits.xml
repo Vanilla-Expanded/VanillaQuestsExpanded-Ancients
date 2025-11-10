@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>VQE_IdealPatient</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>ideal patient</label>
+        <description>{PAWN_nameDef}'s body accepts archite alterations with unnatural ease. {PAWN_pronoun} will never suffer rejections during the injection process.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>
