@@ -25,6 +25,13 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
+		<building>
+			
+			<claimable>true</claimable>
+			
+			<deconstructible>true</deconstructible>
+		
+		</building>
 	</ThingDef>
 	
 	<ThingDef Name="VQEA_TrapIEDBase" ParentName="VQEA_AncientsBuildingBase" Abstract="True">
