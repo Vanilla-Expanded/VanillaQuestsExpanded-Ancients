@@ -22,9 +22,10 @@ namespace VanillaQuestsExpandedAncients
                 {
                     var questPart = new QuestPart_AncientLab
                     {
-                        site = site,
+                        mapParent = site,
                         inSignalSuccess = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_ArrayUninstalled"),
-                        inSignalFail = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_ArrayDestroyed")
+                        inSignalFail = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_ArrayDestroyed"),
+                        questBuilding = InternalDefOf.VQEA_ArchitePathingArray
                     };
                     QuestGen.quest.AddPart(questPart);
                 }

@@ -1,6 +1,5 @@
 using Verse;
 using RimWorld;
-using RimWorld.Planet;
 using KCSG;
 using Verse.AI.Group;
 using System.Collections.Generic;
@@ -10,6 +9,7 @@ using VEF.Buildings;
 
 namespace VanillaQuestsExpandedAncients
 {
+    [HotSwappable]
     public static class StructureSetGenerator
     {
         public static List<CellRect> Generate(Map map, StructureSetDef structureSetDef, Faction faction)
@@ -17,20 +17,32 @@ namespace VanillaQuestsExpandedAncients
             var generatedRects = new List<CellRect>();
             var mapCenter = map.Center;
             var precalculatedLayouts = new List<(StructurePatternOffset layout, KCSG.StructureLayoutDef def)>();
+            var usedDefs = new HashSet<KCSG.StructureLayoutDef>();
 
             foreach (var layout in structureSetDef.structureLayouts)
             {
-                var matchingDefs = DefDatabase<KCSG.StructureLayoutDef>.AllDefsListForReading
-                    .Where(def => Regex.IsMatch(def.defName, "^" + layout.pattern + "$"))
+                var availableDefs = DefDatabase<KCSG.StructureLayoutDef>.AllDefsListForReading
+                    .Where(def => !usedDefs.Contains(def) && Regex.IsMatch(def.defName, "^" + layout.pattern + "$"))
                     .ToList();
 
-                if (!matchingDefs.Any())
+                if (!availableDefs.Any())
                 {
-                    Log.Warning($"[VQE Ancients] No StructureLayoutDefs found matching pattern: {layout.pattern}");
+                    bool anyMatchExisted = DefDatabase<KCSG.StructureLayoutDef>.AllDefsListForReading
+                        .Any(def => Regex.IsMatch(def.defName, "^" + layout.pattern + "$"));
+
+                    if (anyMatchExisted)
+                    {
+                        Log.Warning($"[VQE Ancients] No unused StructureLayoutDefs found for pattern '{layout.pattern}'. All potential matches were already selected.");
+                    }
+                    else
+                    {
+                        Log.Warning($"[VQE Ancients] No StructureLayoutDefs found matching pattern: {layout.pattern}");
+                    }
                     continue;
                 }
+                var selectedDef = availableDefs.RandomElement();
+                usedDefs.Add(selectedDef);
 
-                var selectedDef = matchingDefs.RandomElement();
                 precalculatedLayouts.Add((layout, selectedDef));
             }
 
@@ -38,6 +50,7 @@ namespace VanillaQuestsExpandedAncients
             {
                 return generatedRects;
             }
+
             int minX = int.MaxValue, minZ = int.MaxValue, maxX = int.MinValue, maxZ = int.MinValue;
 
             foreach (var item in precalculatedLayouts)
@@ -58,9 +71,11 @@ namespace VanillaQuestsExpandedAncients
                 if (rect.maxX > maxX) maxX = rect.maxX;
                 if (rect.maxZ > maxZ) maxZ = rect.maxZ;
             }
+
             var complexCenterX = minX + (maxX - minX) / 2;
             var complexCenterZ = minZ + (maxZ - minZ) / 2;
             var totalOffset = new IntVec3(-complexCenterX, 0, -complexCenterZ);
+
             foreach (var item in precalculatedLayouts)
             {
                 var layout = item.layout;
@@ -76,12 +91,19 @@ namespace VanillaQuestsExpandedAncients
                 GenOption.GetAllMineableIn(structureRect, map);
                 var spawnedThings = new List<Thing>();
                 selectedDef.Generate(structureRect, map, spawnedThings, map.ParentFaction);
-                foreach (var thing in spawnedThings)
+                var part = map.Parent.GetAssociatedPart<QuestPart_AncientLab>();
+                if (part?.questBuilding != null)
                 {
-                    var comp = thing.TryGetComp<CompBouncingArrow>();
-                    if (comp != null)
+                    foreach (var thing in spawnedThings)
                     {
-                        comp.doBouncingArrow = true;
+                        if (part.questBuilding == thing.def)
+                        {
+                            var comp = thing.TryGetComp<CompBouncingArrow>();
+                            if (comp != null)
+                            {
+                                comp.doBouncingArrow = true;
+                            }
+                        }
                     }
                 }
                 generatedRects.Add(structureRect);

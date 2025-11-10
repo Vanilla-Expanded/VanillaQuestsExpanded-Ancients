@@ -22,7 +22,7 @@ namespace VanillaQuestsExpandedAncients
                 {
                     var questPart = new QuestPart_AncientLab
                     {
-                        site = site,
+                        mapParent = site,
                         inSignalSuccess = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_BroadcastingStationIntercepted"),
                         inSignalFail = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_BroadcastingStationDestroyed")
                     };

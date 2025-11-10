@@ -25,7 +25,6 @@ namespace VanillaQuestsExpandedAncients
             var map = QuestGen_Get.GetMap(canBeSpace: true);
             if (map is null)
             {
-                Log.Message("Map is null");
                 return false;
             }
             var tiles = Find.WorldGrid.Surface.Tiles.Select(x => x.tile).Where((PlanetTile x) => (predicator == null || predicator(map, x)) && IsValidTile(x, allowedBiomes));
@@ -35,7 +34,6 @@ namespace VanillaQuestsExpandedAncients
             }
             else
             {
-                Log.Message("Tile search failed 1");
                 tiles = Find.WorldGrid.Surface.Tiles.Select(x => x.tile).Where((PlanetTile x) => IsValidTile(x, allowedBiomes));
                 if (tiles.TryRandomElement(out tile))
                 {
@@ -43,13 +41,11 @@ namespace VanillaQuestsExpandedAncients
                 }
                 else
                 {
-                    Log.Message("Tile search failed 2");
                     tile = TileFinder.RandomSettlementTileFor(Find.WorldGrid.Surface, null);
                     if (tile.Valid)
                     {
                         return true;
                     }
-                    Log.Message("Tile search failed 3");
                 }
             }
             tile = PlanetTile.Invalid;

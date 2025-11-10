@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -5,27 +6,36 @@ using Verse;
 namespace VanillaQuestsExpandedAncients
 {
     [HotSwappable]
-    public class QuestPart_AncientLab : QuestPart
+    public class QuestPart_AncientLab : QuestPart_Site
     {
         public string inSignalSuccess;
         public string inSignalFail;
-        public Site site;
+        public ThingDef questBuilding;
+
+        public override IEnumerable<Dialog_InfoCard.Hyperlink> Hyperlinks
+        {
+            get
+            {
+                if (questBuilding != null)
+                {
+                    yield return new Dialog_InfoCard.Hyperlink(questBuilding);
+                }
+            }
+        }
 
         public override void Notify_QuestSignalReceived(Signal signal)
         {
             base.Notify_QuestSignalReceived(signal);
-            Log.Message("Received signal: " + signal.tag);
-            Log.Message("inSignalSuccess: " + inSignalSuccess + " - inSignalFail: " + inSignalFail);
-            if (signal.tag == inSignalSuccess && 
-                signal.args.TryGetArg("SUBJECT", out Site subject) && 
-                subject == site)
+            if (signal.tag == inSignalSuccess &&
+                signal.args.TryGetArg("SUBJECT", out Site subject) &&
+                subject == mapParent)
             {
                 quest.End(QuestEndOutcome.Success, sendLetter: true);
             }
 
-            if (signal.tag == inSignalFail && 
-                signal.args.TryGetArg("SUBJECT", out Site subject2) && 
-                subject2 == site)
+            if (signal.tag == inSignalFail &&
+                signal.args.TryGetArg("SUBJECT", out Site subject2) &&
+                subject2 == mapParent)
             {
                 quest.End(QuestEndOutcome.Fail, sendLetter: true);
             }
@@ -36,7 +46,7 @@ namespace VanillaQuestsExpandedAncients
             base.ExposeData();
             Scribe_Values.Look(ref inSignalSuccess, "inSignalSuccess");
             Scribe_Values.Look(ref inSignalFail, "inSignalFail");
-            Scribe_References.Look(ref site, "site");
+            Scribe_Defs.Look(ref questBuilding, "questBuilding");
         }
     }
 }
