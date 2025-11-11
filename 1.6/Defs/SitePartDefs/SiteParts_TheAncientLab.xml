@@ -5,7 +5,7 @@
     <label>ancient lab complex</label>
     <description>A small underground lab complex.</description>
     <siteTexture>World/WorldObjects/DefaultSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientComplex</expandingIconTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientLabComplex</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
@@ -28,7 +28,7 @@
     <label>archite control vault</label>
     <description>A massive underground laboratory complex.</description>
     <siteTexture>World/WorldObjects/DefaultSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientComplex</expandingIconTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteControlVault</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
@@ -51,7 +51,7 @@
     <label>spliceframe blacksite</label>
     <description>A covert underground site housing a spliceframe uplink.</description>
     <siteTexture>World/WorldObjects/DefaultSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientComplex</expandingIconTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/SpliceframeBlacksite</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
@@ -74,7 +74,7 @@
     <label>inhibitor research lab</label>
     <description>A research facility containing a mutagen inhibitor core.</description>
     <siteTexture>World/WorldObjects/DefaultSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientComplex</expandingIconTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/InhibitorResearchLab</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
@@ -97,7 +97,7 @@
     <label>archite array site</label>
     <description>A vast complex housing an archite pathing array.</description>
     <siteTexture>World/WorldObjects/DefaultSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientComplex</expandingIconTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteArraySite</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
