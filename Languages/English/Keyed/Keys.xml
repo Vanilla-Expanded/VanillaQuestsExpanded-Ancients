@@ -25,7 +25,7 @@
     <VQEA_StartInjection>Start injection process</VQEA_StartInjection>
     <VQEA_StartInjectionDesc>Initialize the archogen injector, allowing a person to be inserted.</VQEA_StartInjectionDesc>
     <VQEA_InsertPerson>Insert person</VQEA_InsertPerson>
-    <VQEA_InsertPersonDesc>Insert a person into the archogen injector. {PAWN_possessive} genetic material will be injected with chaotic archites, which will cause random genetic mutations with a chance to form an archite gene, but also random other xenogenes.\n\nArchite injection is a painful process and will force the subject into a temporary coma while the organism adapts to the new genetic composition.</VQEA_InsertPersonDesc>
+    <VQEA_InsertPersonDesc>Insert a person into the archogen injector. Their genetic material will be injected with chaotic archites, which will cause random genetic mutations with a chance to form an archite gene, but also random other xenogenes.\n\nArchite injection is a painful process and will force the subject into a temporary coma while the organism adapts to the new genetic composition.</VQEA_InsertPersonDesc>
 
     <!-- Letters -->
     <VQEA_LetterLabel_Success>Archogen injection: success</VQEA_LetterLabel_Success>
