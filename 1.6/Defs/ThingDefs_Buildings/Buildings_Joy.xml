@@ -15,13 +15,18 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
-	
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsJoy</li>
+		</thingCategories>
 		<altitudeLayer>Building</altitudeLayer>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<fillPercent>0.40</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<building>
 			<joyKind>Gaming_Cerebral</joyKind>
+			<claimable>true</claimable>
+			<deconstructible>true</deconstructible>
 		</building>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
