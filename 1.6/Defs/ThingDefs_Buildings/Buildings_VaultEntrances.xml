@@ -88,12 +88,12 @@
 			<pocketMapGenerator>VQEA_AncientComplex</pocketMapGenerator>
 			<exitDef>VQEA_VaultExitRamp</exitDef>
 			<pocketMapSize>150</pocketMapSize>
-			<traverseSound>TraversePitGate</traverseSound>
+			<traverseSound>VQEA_TraverseVaultEntrance</traverseSound>
 		</portal>
 		<comps>
 			<li Class="VanillaQuestsExpandedAncients.CompProperties_CustomPortal">
-				<enterTexPath>Things/Misc/VaultStaircase_Open</enterTexPath>
-				<viewDestinationTexPath>UI/ViewVault</viewDestinationTexPath>
+				<enterTexPath>Things/Building/Doors/VaultRampEntrance_Exit</enterTexPath>
+				<viewDestinationTexPath>UI/Gizmo/ViewVault</viewDestinationTexPath>
 				<enterCommandKey>VQE_EnterVault</enterCommandKey>
 				<viewDestinationCommandKey>VQE_ViewVault</viewDestinationCommandKey>
 				<viewDestinationDescKey>VQE_ViewVaultDesc</viewDestinationDescKey>
@@ -133,12 +133,12 @@
 		<tickerType>Normal</tickerType>
 		<portal>
 			<exitDef>VQEA_VaultRamp</exitDef>
-			<traverseSound>TraversePitGate</traverseSound>
+			<traverseSound>VQEA_TraverseVaultEntrance</traverseSound>
 		</portal>
 		<comps>
 			<li Class="VanillaQuestsExpandedAncients.CompProperties_CustomPortal">
-				<enterTexPath>Things/Misc/VaultStaircase_Exit</enterTexPath>
-				<viewDestinationTexPath>UI/ViewVault</viewDestinationTexPath>
+				<enterTexPath>Things/Building/Doors/VaultRampEntrance_Opened</enterTexPath>
+				<viewDestinationTexPath>UI/Gizmo/ViewVault</viewDestinationTexPath>
 				<enterCommandKey>VQE_ExitVault</enterCommandKey>
 				<viewDestinationCommandKey>CommandViewSurface</viewDestinationCommandKey>
 				<viewDestinationDescKey>CommandViewSurfaceDesc</viewDestinationDescKey>

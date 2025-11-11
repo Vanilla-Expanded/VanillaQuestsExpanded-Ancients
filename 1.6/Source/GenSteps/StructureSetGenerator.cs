@@ -142,9 +142,15 @@ namespace VanillaQuestsExpandedAncients
 
                         var spawnCell = CellFinder.RandomSpawnCellForPawnNear(rootCell, map, 5);
                         if (!spawnCell.IsValid) continue;
-                        var pawn = PawnGenerator.GeneratePawn(
-                            spawnOption.kind, faction
-                        );
+                        var pawn = PawnGenerator.GeneratePawn(spawnOption.kind, faction);
+
+                        if (layout.unwaveringlyLoyal)
+                        {
+                            if (pawn.guest != null)
+                            {
+                                pawn.guest.Recruitable = false;
+                            }
+                        }
                         GenSpawn.Spawn(pawn, spawnCell, map);
                         pawns.Add(pawn);
                     }

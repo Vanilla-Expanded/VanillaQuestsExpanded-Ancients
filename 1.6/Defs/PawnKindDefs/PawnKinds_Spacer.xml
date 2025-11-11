@@ -15,9 +15,13 @@
     <apparelIgnorePollution>True</apparelIgnorePollution>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <nakedChance>1</nakedChance>
-    <backstoryCategories>
-      <li>VQE_AncientPatient</li>
-    </backstoryCategories>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesAdulthood>
+          <li>VQE_AncientPatient</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.PawnKindExtension_Experiment">
         <architeGeneCount>2</architeGeneCount>

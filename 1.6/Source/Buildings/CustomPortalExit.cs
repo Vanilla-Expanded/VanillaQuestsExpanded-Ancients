@@ -27,11 +27,14 @@ namespace VanillaQuestsExpandedAncients
             return portalEntry.Position;
         }
 
-
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
             {
+                if (gizmo is Command_Action action && action.Label == "CommandViewSurface".Translate())
+                {
+                    continue;
+                }
                 yield return gizmo;
             }
             yield return new Command_Action

@@ -10,5 +10,6 @@ namespace VanillaQuestsExpandedAncients
         public List<PawnSpawnOption> spawnPawns;
         public List<ThingSpawnOption> spawnThings;
         public bool forceSpawnEnemiesIndoor;
+        public bool unwaveringlyLoyal = false;
     }
 }
