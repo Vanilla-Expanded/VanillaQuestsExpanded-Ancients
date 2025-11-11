@@ -22,6 +22,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<fillPercent>0.40</fillPercent>
+		<rotatable>true</rotatable>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<building>
 			<joyKind>Gaming_Cerebral</joyKind>
