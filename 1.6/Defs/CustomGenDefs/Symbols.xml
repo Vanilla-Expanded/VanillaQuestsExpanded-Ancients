@@ -338,4 +338,21 @@
 		<defName>VQEA_VaultRamp</defName>
 		<thing>VQEA_VaultRamp</thing>
 	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientChemfuelGenerator</defName>
+		<thing>VQEA_AncientChemfuelGenerator</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientPipelineJunction_On</defName>
+		<thing>VQEA_AncientPipelineJunction_On</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_CandidateCryptosleepCasket</defName>
+		<thing>VQEA_CandidateCryptosleepCasket</thing>
+		<rotation>South</rotation>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubeLaunchPort</defName>
+		<thing>VQEA_PneumaticTubeLaunchPort</thing>
+	</KCSG.SymbolDef>
 </Defs>
