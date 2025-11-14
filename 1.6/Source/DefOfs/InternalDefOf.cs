@@ -87,5 +87,6 @@ namespace VanillaQuestsExpandedAncients
 		public static StructureSetDef VQEA_SealedVaultStartStructure;
 		public static PawnKindDef VQE_Experiment;
 		public static MapGeneratorDef VQEA_SealedVault;
-	}
+		public static PawnKindDef VQE_Patient;
+    }
 }
