@@ -20,42 +20,38 @@
           <def>VQEA_SealedVaultPart</def>
           <structureSetDef>VQEA_SealedVaultUndergroundStructure</structureSetDef>
         </li>
-        <li Class="ScenPart_PlayerPawnsArriveMethod">
-          <def>PlayerPawnsArriveMethod</def>
-          <method>Standing</method>
-        </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>Silver</thingDef>
           <count>800</count>
         </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>MealSurvivalPack</thingDef>
           <count>60</count>
         </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>ComponentIndustrial</thingDef>
           <count>30</count>
         </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>MedicineIndustrial</thingDef>
           <count>20</count>
         </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>Steel</thingDef>
           <count>550</count>
         </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>WoodLog</thingDef>
           <count>300</count>
         </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>Gun_ChainShotgun</thingDef>
         </li>
         <li Class="ScenPart_GameStartDialog">
