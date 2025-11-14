@@ -82,5 +82,10 @@ namespace VanillaQuestsExpandedAncients
 		public static ThingDef VQEA_LockedVaultDoor;
 		public static ThingDef VQEA_AncientBroadcastingStation;
 		public static GameConditionDef VQEA_AncientComplex;
+		public static ThingDef VQEA_AncientLaboratoryCasket;
+		public static ThingDef VQEA_CandidateCryptosleepCasket;
+		public static StructureSetDef VQEA_SealedVaultStartStructure;
+		public static PawnKindDef VQE_Experiment;
+		public static MapGeneratorDef VQEA_SealedVault;
 	}
 }

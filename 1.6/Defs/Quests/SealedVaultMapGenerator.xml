@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MapGeneratorDef>
+    <defName>VQEA_SealedVault</defName>
+    <label>sealed vault</label>
+    <isUnderground>true</isUnderground>
+    <ignoreAreaRevealedLetter>true</ignoreAreaRevealedLetter>
+    <disableCallAid>true</disableCallAid>
+    <pocketMapProperties>
+      <biome>VQEA_AncientComplex</biome>
+      <temperature>15</temperature>
+    </pocketMapProperties>
+    <genSteps>
+      <li>ElevationFertility</li>
+      <li>Terrain</li>
+      <li>VQEA_SealedVaultStructure</li>
+      <li>Fog</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <VanillaQuestsExpandedAncients.StructureSetDef>
+    <defName>VQEA_SealedVaultStartStructure</defName>
+    <structureLayouts>
+      <li>
+        <pattern>VQEA_StartingVault_.*</pattern>
+      </li>
+    </structureLayouts>
+  </VanillaQuestsExpandedAncients.StructureSetDef>
+
+  <VanillaQuestsExpandedAncients.StructureSetDef>
+    <defName>VQEA_SealedVaultUndergroundStructure</defName>
+    <structureLayouts>
+      <li>
+        <pattern>VQEA_EntranceModules_.*</pattern>
+        <offset>(0, 0, 0)</offset>
+      </li>
+      <li>
+        <pattern>VQEA_MiscModules_.*</pattern>
+        <offset>(0, 0, 1)</offset>
+      </li>
+      <li>
+        <pattern>VQEA_SidequestLabModules_.*</pattern>
+        <offset>(0, 0, 2)</offset>
+      </li>
+    </structureLayouts>
+  </VanillaQuestsExpandedAncients.StructureSetDef>
+
+  <GenStepDef>
+    <defName>VQEA_SealedVaultStructure</defName>
+    <order>300</order>
+    <genStep Class="VanillaQuestsExpandedAncients.GenStep_SealedVaultStructure">
+      <exitDef>VQEA_VaultExitRamp</exitDef>
+    </genStep>
+  </GenStepDef>
+
+</Defs>

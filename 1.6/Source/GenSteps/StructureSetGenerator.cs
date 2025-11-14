@@ -112,7 +112,10 @@ namespace VanillaQuestsExpandedAncients
                     SpawnPawnsAndThings(map, structureRect, layout, faction);
                 }
             }
-
+            if (map.mapPawns.FreeColonistsSpawned.Any())
+            {
+                FloodFillerFog.DebugRefogMap(map);
+            }
             return generatedRects;
         }
 

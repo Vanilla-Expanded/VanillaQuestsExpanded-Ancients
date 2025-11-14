@@ -61,13 +61,23 @@ namespace VanillaQuestsExpandedAncients
         private void GenerateDestinationMap()
         {
             PocketMapUtility.currentlyGeneratingPortal = this;
-            destinationMap = PocketMapUtility.GeneratePocketMap(new IntVec3(def.portal.pocketMapSize, 1, def.portal.pocketMapSize), def.portal.pocketMapGenerator, null, base.Map);
+
+            var scenpart = Find.Scenario.AllParts.OfType<ScenPart_SealedVault>().FirstOrDefault();
+            if (scenpart != null && scenpart.structureSetDef != null && scenpart.mapParent == Map.Parent)
+            {
+                destinationMap = PocketMapUtility.GeneratePocketMap(new IntVec3(def.portal.pocketMapSize, 1, def.portal.pocketMapSize), InternalDefOf.VQEA_SealedVault, null, Map);
+            }
+            else
+            {
+                destinationMap = PocketMapUtility.GeneratePocketMap(new IntVec3(def.portal.pocketMapSize, 1, def.portal.pocketMapSize), def.portal.pocketMapGenerator, null, Map);
+            }
             destinationExit = destinationMap.listerThings.ThingsOfDef(def.portal.exitDef).First() as MapPortal;
             if (destinationExit != null)
             {
                 ((CustomPortalExit)destinationExit).portalEntry = this;
             }
             PocketMapUtility.currentlyGeneratingPortal = null;
+
         }
     }
 }

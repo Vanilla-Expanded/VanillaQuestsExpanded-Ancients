@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>VQE_NewVault</defName>
+    <label>Sealed vault</label>
+    <description>With each passing day you stare at your fellow companions hibernating in cryptosleep sarcophagi. One day, when your life is nearing its end, you will wake your successor, and his watch will begin. Every day for the last hundreds of years your outpost was awaiting orders from High Command which may no longer exist. Will today be the day you not only wake up, but also open your eyes?</description>
+    <scenario>
+      <summary>A lone soldier guarding his post. A classic VQE - Ancients experience.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>VQE_NewVaultPlayerFaction</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="VanillaQuestsExpandedAncients.ScenPart_SealedVault">
+          <def>VQEA_SealedVaultPart</def>
+          <structureSetDef>VQEA_SealedVaultUndergroundStructure</structureSetDef>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Silver</thingDef>
+          <count>800</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>60</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>ComponentIndustrial</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>MedicineIndustrial</thingDef>
+          <count>20</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Steel</thingDef>
+          <count>550</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>WoodLog</thingDef>
+          <count>300</count>
+        </li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart">
+          <def>ScatterThingsNearPlayerStart</def>
+          <thingDef>Gun_ChainShotgun</thingDef>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>With each passing day you stare at your fellow companions hibernating in cryptosleep sarcophagi. One day, when your life is nearing its end, you will wake your successor, and his watch will begin. Every day for the last hundreds of years your outpost was awaiting orders from High Command which may no longer exist. Will today be the day you not only wake up, but also open your eyes?</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenPartDef>
+    <defName>VQEA_SealedVaultPart</defName>
+    <label>sealed vault part</label>
+    <scenPartClass>VanillaQuestsExpandedAncients.ScenPart_SealedVault</scenPartClass>
+    <category>Misc</category>
+  </ScenPartDef>
+
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>VQE_NewVaultPlayerFaction</defName>
+    <label>New vault</label>
+    <description>A colony of recently-arrived off-worlders.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>VQE_Patient</basicMemberKind>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures>
+      <li>Astropolitan</li>
+    </allowedCultures>
+    <factionIconPath>World/WorldObjects/Expanding/Sites/PlayerVault</factionIconPath>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+  </FactionDef>
+
+</Defs>
