@@ -73,7 +73,7 @@
   <FactionDef ParentName="PlayerFactionBase">
     <defName>VQE_NewVaultPlayerFaction</defName>
     <label>New vault</label>
-    <description>A colony of recently-arrived off-worlders.</description>
+    <description>A secret ancient vault hiding a mysterious past.</description>
     <isPlayer>true</isPlayer>
     <basicMemberKind>VQE_Patient</basicMemberKind>
     <pawnSingular>colonist</pawnSingular>
@@ -101,6 +101,7 @@
       <li>
         <categories>
           <li>Offworld</li>
+          <li>VQE_AncientPatient</li>
         </categories>
       </li>
     </backstoryFilters>
