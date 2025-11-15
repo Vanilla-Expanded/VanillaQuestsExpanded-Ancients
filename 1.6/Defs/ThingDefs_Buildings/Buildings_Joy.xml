@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientFoosballTable</defName>
 		<label>ancient foosball table</label>
-		<description>todo.</description>
+		<description>A relic from better days. Colonists can play table football here to relax and gain recreation.</description>
 		<graphicData>
 			<texPath>Things/Building/Recreation/AncientFoosballTable</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>

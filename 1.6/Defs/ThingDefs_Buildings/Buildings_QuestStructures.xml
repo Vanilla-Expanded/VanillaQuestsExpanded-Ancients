@@ -4,7 +4,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientBroadcastingStation</defName>
 		<label>ancient broadcasting station</label>
-		<description>todo.</description>
+		<description>An old communications console used to transmit encrypted signals between ancient facilities. Can be used to intercept broadcasts and trace their origin.</description>
 		<thingClass>VanillaQuestsExpandedAncients.Building_BroadcastingStation</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -52,7 +52,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientBroadcastingStation_Off</defName>
 		<label>disabled ancient broadcasting station</label>
-		<description>todo.</description>
+		<description>An old communications console used to transmit encrypted signals between ancient facilities. Seems that whatever information it stored is long gone.</description>
 		<thingClass>Building</thingClass>
 
 		<altitudeLayer>Building</altitudeLayer>

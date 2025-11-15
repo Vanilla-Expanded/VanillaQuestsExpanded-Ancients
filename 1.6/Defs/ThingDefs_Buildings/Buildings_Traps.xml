@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_TrapIEDBase">
 		<defName>VQEA_SplicelingContainment</defName>
 		<label>spliceling containment</label>
-		<description>todo.</description>
+		<description>A containment pod filled with murky liquid. It seems a sleeping spliceling lies inside.</description>
 		<graphicData>
 			<texPath>Things/Building/Traps/MutationSampler_Filled_Spliceling</texPath>
 		</graphicData>
@@ -19,7 +19,7 @@
 	<ThingDef ParentName="VQEA_TrapIEDBase">
 		<defName>VQEA_SplicehulkContainment</defName>
 		<label>splicehulk containment</label>
-		<description>todo.</description>
+		<description>A containment pod filled with murky liquid. A large splicehulk fills up almost the entire tube.</description>
 		<graphicData>
 			<texPath>Things/Building/Traps/MutationSampler_Filled_Splicehulk</texPath>
 		</graphicData>
@@ -35,7 +35,7 @@
 	<ThingDef ParentName="VQEA_TrapIEDBase">
 		<defName>VQEA_SplicefiendContainment</defName>
 		<label>splicefiend containment</label>
-		<description>todo.</description>
+		<description>A containment pod filled with murky liquid. The glass bursts at the seams due to the large splicefiend inside.</description>
 		<graphicData>
 			<texPath>Things/Building/Traps/MutationSampler_Filled_Splicefiend</texPath>
 		</graphicData>
@@ -52,7 +52,7 @@
 	<ThingDef ParentName="VQEA_TrapIEDBase">
 		<defName>VQEA_SplicetootsContainment</defName>
 		<label>splicetoots containment</label>
-		<description>todo.</description>
+		<description>A containment pod filled with murky liquid. Several small splicetoots float around in it, restlessly.</description>
 		<graphicData>
 			<texPath>Things/Building/Traps/MutationSampler_Filled_Splicetoots</texPath>
 		</graphicData>
@@ -70,7 +70,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientEmergencyPurifier</defName>
 		<label>ancient emergency purifier</label>
-		<description>todo.</description>
+		<description>An old automatic purifier that releases extreme heat bursts to sterilize contaminated areas. It still activates on a timed cycle.</description>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Standable</passability>	
 		<selectable>true</selectable>
@@ -119,7 +119,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientEmergencyPurifier_Off</defName>
 		<label>ancient emergency purifier</label>
-		<description>todo.</description>
+		<description>An old automatic purifier that releases extreme heat bursts to sterilize contaminated areas. It still activates on a timed cycle.</description>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Standable</passability>	
 		<selectable>true</selectable>

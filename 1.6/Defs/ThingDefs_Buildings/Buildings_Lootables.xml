@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientPipelineJunction_Off</defName>
 		<label>ancient pipeline junction</label>
-		<description>todo</description>
+		<description>A junction of old chemfuel pipes that still leaks faint fumes. It can be tapped to extract a small amount of chemfuel, though no one knows its source.</description>
 		<size>(3,3)</size>
 		<costList>
 			<ChunkSlagSteel>12</ChunkSlagSteel>
@@ -26,7 +26,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientPipelineJunction_On</defName>
 		<label>ancient pipeline junction</label>
-		<description>todo</description>
+		<description>A junction of old chemfuel pipes that still leaks faint fumes. It can be tapped to extract a small amount of chemfuel, though no one knows its source. It can be tapped now.</description>
 		<size>(3,3)</size>
 		<costList>
 			<ChunkSlagSteel>12</ChunkSlagSteel>
@@ -67,7 +67,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_ArchiteCapsuleContainment_Empty</defName>
 		<label>archite capsule containment</label>
-		<description>todo</description>
+		<description>A containment unit built to store and release archite capsules for experimentation. It's empty.</description>
 		<size>(1,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -88,7 +88,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_ArchiteCapsuleContainment</defName>
 		<label>archite capsule containment</label>
-		<description>todo</description>
+		<description>A containment unit built to store and release archite capsules for experimentation. It still hums softly when approached. Can be opened to release an archite capsule.</description>
 		<size>(1,1)</size>
 		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
 		<costList>
@@ -122,7 +122,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientGenepackCrate_Empty</defName>
 		<label>ancient genepack crate</label>
-		<description>todo</description>
+		<description>A secure storage crate used to hold genetic data packs. It's empty now.</description>
 		<size>(1,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -143,7 +143,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientGenepackCrate</defName>
 		<label>ancient genepack crate</label>
-		<description>todo</description>
+		<description>A secure storage crate used to hold genetic data packs. It can be hacked open to recover the genepacks inside.</description>
 		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
 		<size>(1,1)</size>
 		<costList>

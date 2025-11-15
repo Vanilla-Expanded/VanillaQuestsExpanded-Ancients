@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientLaboratoryCasket_Empty</defName>
 		<label>empty ancient laboratory casket</label>
-		<description>todo.</description>
+		<description>An empty research pod once used to contain human test subjects.</description>
 		<thingClass>Building</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -37,7 +37,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientLaboratoryCasket</defName>
 		<label>ancient laboratory casket</label>
-		<description>todo.</description>
+		<description>A sealed research pod once used to contain human test subjects. Opening it may release whoever or whatever was left inside.</description>
 		<thingClass>VanillaQuestsExpandedAncients.Building_ContainmentCasket</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -78,7 +78,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_CandidateCryptosleepCasket_Empty</defName>
 		<label>empty candidate cryptosleep casket</label>
-		<description>todo.</description>
+		<description>A specialized cryptosleep chamber used to preserve potential test subjects for future experiments. It is now empty.</description>
 		<thingClass>Building</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
@@ -113,7 +113,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_CandidateCryptosleepCasket</defName>
 		<label>candidate cryptosleep casket</label>
-		<description>todo.</description>
+		<description>A specialized cryptosleep chamber used to preserve potential test subjects for future experiments. It still hums faintly with power. Can be opened to release a potential ideal patient.</description>
 		<thingClass>VanillaQuestsExpandedAncients.Building_CandidateCryptosleepCasket</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>

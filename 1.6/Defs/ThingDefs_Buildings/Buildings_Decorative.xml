@@ -4,7 +4,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedArchogenInjector</defName>
 		<label>ruined archogen injector</label>
-		<description>todo</description>
+		<description>Once a functioning archite injection pod, its chamber and internal systems are completely destroyed. Nothing remains but twisted scrap metal.</description>
 		<size>(3,2)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -24,7 +24,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedNeurostabilizerArray</defName>
 		<label>ruined neurostabilizer array</label>
-		<description>todo</description>
+		<description>This stabilizer module once calmed volatile archite reactions, but now its coils and casing are shattered. Only warped scraps are left.</description>
 		<size>(1,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -43,7 +43,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedCognitiveRecoveryArray</defName>
 		<label>ruined cognitive recovery array</label>
-		<description>todo</description>
+		<description>Once used to ease recovery after injections, its circuitry is burned out and the frame is collapsing. All that remains is bent metal and debris.</description>
 		<size>(1,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -62,7 +62,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedRapidInfusionPump</defName>
 		<label>ruined rapid infusion pump</label>
-		<description>todo</description>
+		<description>The infusion pump’s conduits are ruptured and its inner mechanisms destroyed. Only twisted scrap can be collected from it.</description>
 		<size>(1,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -81,7 +81,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedArchiteRecycler</defName>
 		<label>ruined archite recycler</label>
-		<description>todo</description>
+		<description>Previously a device for reclaiming unused archite capsules, it is now crushed beyond recognition. Nothing useful remains besides twisted metal.</description>
 		<size>(2,1)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -101,7 +101,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedGenomicAttenuator</defName>
 		<label>ruined genomic attenuator</label>
-		<description>todo</description>
+		<description>The attenuator’s panels are torn open and its internals melted. Only broken, worthless scrap is left behind.</description>
 		<size>(2,2)</size>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -120,7 +120,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedRejectionBufferCoil</defName>
 		<label>ruined rejection buffer coil</label>
-		<description>todo</description>
+		<description>Once a shielding coil, it is now bent, split, and entirely inert. Only scraps of twisted metal remain.</description>
 		<size>(1,2)</size>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -140,7 +140,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedSpliceframeUplink</defName>
 		<label>ruined spliceframe uplink</label>
-		<description>todo</description>
+		<description>This uplink console has collapsed into a pile of crushed arrays and dead wiring. Only jagged scrap can be recovered.</description>
 		<size>(2,2)</size>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -159,7 +159,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedMutagenInhibitorCore</defName>
 		<label>ruined mutagen inhibitor core</label>
-		<description>todo</description>
+		<description>A massive suppression engine reduced to buckled plating and destroyed conduits. Nothing remains but heavy twisted scrap.</description>
 		<size>(3,3)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -178,7 +178,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedTraitSelectionPrism</defName>
 		<label>ruined trait selection prism</label>
-		<description>todo</description>
+		<description>The crystal housing is shattered and the prism array completely destroyed. Only splintered debris and warped scrap remain.</description>
 		<size>(3,3)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -197,7 +197,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedAberrationRedirector</defName>
 		<label>ruined aberration redirector</label>
-		<description>todo</description>
+		<description>Once a mutation-control device, now a heap of caved-in panels and ruined internal channels. Only useless scrap is left.</description>
 		<size>(3,3)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -216,7 +216,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedComplexityHarmonizer</defName>
 		<label>ruined complexity harmonizer</label>
-		<description>todo</description>
+		<description>The harmonizer’s cores have collapsed and its chassis is split wide open. Nothing survives except twisted metal fragments.</description>
 		<size>(3,2)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -236,7 +236,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedArchitePathingArray</defName>
 		<label>ruined archite pathing array</label>
-		<description>todo</description>
+		<description>This routing array is now a crushed frame with its circuitry burned out. Only warped scrap can be taken from it.</description>
 		<size>(3,3)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
@@ -255,7 +255,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientFauxPlant</defName>
 		<label>ancient faux plant</label>
-		<description>todo</description>
+		<description>A fake decorative plant used to brighten sterile rooms. It’s covered in dust but still adds a bit of color.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.3</fillPercent>
 		<statBases>
@@ -272,7 +272,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientHospitalArmchair</defName>
 		<label>ancient hospital armchair</label>
-		<description>todo</description>
+		<description>A comfortable chair used in old hospital waiting rooms. The padding is worn but surprisingly intact.</description>
 		<size>(1,1)</size>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
@@ -299,7 +299,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientHospitalBench</defName>
 		<label>ancient hospital bench</label>
-		<description>todo</description>
+		<description>A simple bench used for patients or visitors. It’s old, sturdy, and oddly comfortable.</description>
 		<size>(2,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -327,7 +327,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientHospitalCrib</defName>
 		<label>ancient hospital crib</label>
-		<description>todo</description>
+		<description>A small metal crib once used in the vault’s nursery ward. The frame is rusted and the bedding long decayed.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -355,7 +355,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientIncubator</defName>
 		<label>ancient incubator</label>
-		<description>todo</description>
+		<description>An ancient incubation unit used for medical research or premature infants. Its systems are dead, but the shell remains mostly intact.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<costList>
@@ -377,7 +377,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientIVStand</defName>
 		<label>ancient IV stand</label>
-		<description>todo</description>
+		<description>A simple stand with long-empty fluid bags still hanging from it. It once delivered medicine or nutrients to patients.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<uiIconScale>0.5</uiIconScale>
@@ -399,7 +399,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientKitchenette</defName>
 		<label>ancient kitchenette</label>
-		<description>todo</description>
+		<description>A compact cooking unit used by lab staff. The surfaces are corroded and the appliances no longer work.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<costList>
@@ -421,7 +421,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientSink</defName>
 		<label>ancient small sink</label>
-		<description>todo</description>
+		<description>A rust-stained sink once used for washing hands or instruments. Water no longer flows through its cracked pipes.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<costList>
@@ -443,7 +443,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientMedicalPartition</defName>
 		<label>ancient medical partition</label>
-		<description>todo</description>
+		<description>A folding partition used to divide patient areas for privacy. Its fabric is torn and coated in dust.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.8</fillPercent>
 		<costList>
@@ -466,7 +466,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientOfficeDesk</defName>
 		<label>ancient office desk</label>
-		<description>todo</description>
+		<description>A sturdy desk once belonging to a researcher or administrator. Old data slates and papers still clutter the surface.</description>
 		<size>(3,1)</size>
 	
 		<fillPercent>0.4</fillPercent>
@@ -489,7 +489,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientRepairBench</defName>
 		<label>ancient repair desk</label>
-		<description>todo</description>
+		<description>A heavy workbench used to maintain laboratory equipment. The tools are gone, but the grease stains remain.</description>
 		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
 	
@@ -512,7 +512,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientResearchCountertop</defName>
 		<label>ancient research countertop</label>
-		<description>todo</description>
+		<description>A long research table covered in scorched metal and broken instruments. It was used for genetic and chemical experiments.</description>
 		<size>(3,1)</size>
 	
 		<fillPercent>0.4</fillPercent>
@@ -535,7 +535,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_BustedControlPanel</defName>
 		<label>busted control panel</label>
-		<description>todo</description>
+		<description>A ruined wall console once connected to the vault’s systems. Sparks still flicker from its shattered screen.</description>
 	
 		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
@@ -558,7 +558,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientOfficePrinter</defName>
 		<label>ancient office printer</label>
-		<description>todo</description>
+		<description>A dusty old office printer. It hums quietly, though it’s unlikely to print anything useful anymore.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -580,7 +580,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientTripWarning</defName>
 		<label>trip warning sign</label>
-		<description>todo</description>
+		<description>A faded caution sign warning of hazards ahead. It serves no real purpose now except decoration.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.2</fillPercent>
 		<rotatable>true</rotatable>
@@ -599,7 +599,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientStorageHeater</defName>
 		<label>ancient storage heater</label>
-		<description>todo</description>
+		<description>A compact electric heater from the ancient labs. It warms the air to a comfortable level when powered.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -628,7 +628,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientToyBox</defName>
 		<label>ancient toy box</label>
-		<description>todo</description>
+		<description>A small toy chest from the nursery wing. It’s filled with broken dolls and faded blocks. Toy boxes can be used to play with babies, satisfying their need for play.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.3</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -656,7 +656,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientVitalsMonitor</defName>
 		<label>ancient vitals monitor</label>
-		<description>todo</description>
+		<description>A bedside monitor used to track patient health. Its display is now cracked and it’s broken beyond repair.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<rotatable>true</rotatable>
@@ -678,7 +678,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientWaterCooler</defName>
 		<label>ancient water cooler</label>
-		<description>todo</description>
+		<description>A dusty water dispenser used by ancient lab staff. It no longer functions but remains as a relic of everyday life.</description>
 		<uiIconScale>0.75</uiIconScale>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
@@ -701,7 +701,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_CreepyBabyToy</defName>
 		<label>creepy baby toy</label>
-		<description>todo</description>
+		<description>A small, broken toy that once comforted children. Something makes it unsettling to look at. Baby decorations increase the rate at which babies fill their play need when an adult plays with them. Place these around your child play areas.</description>
 		<size>(1,1)</size>
 		<fillPercent>0</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -726,7 +726,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_LargeWoodenMilitaryCrate</defName>
 		<label>rotten military crate</label>
-		<description>todo</description>
+		<description>A decaying wooden crate once used for storing military supplies. It’s too rotten to contain anything now.</description>
 		<size>(2,2)</size>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -744,7 +744,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_WoodenMilitaryCrate</defName>
 		<label>rotten military box</label>
-		<description>todo</description>
+		<description>A small, rusted box that once held munitions or rations. Now it’s empty and falling apart.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -762,7 +762,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RubbishPile</defName>
 		<label>trash bags</label>
-		<description>todo</description>
+		<description>Piles of old plastic waste left from the laboratory staff. They smell foul.</description>
 		<uiIconScale>0.75</uiIconScale>
 		<size>(1,1)</size>
 		<pathCost>80</pathCost>
@@ -782,7 +782,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RustedWheeledTray</defName>
 		<label>rusted wheeled tray</label>
-		<description>todo</description>
+		<description>A rusted metal tray once used for medical instruments. It squeaks when moved and is covered in grime.</description>
 		<size>(1,1)</size>
 		
 		<fillPercent>0.3</fillPercent>
@@ -801,7 +801,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_VaultTerminal</defName>
 		<label>vault terminal</label>
-		<description>todo</description>
+		<description>An ancient computer terminal used to control vault systems. It’s inactive, but its screen still flickers faintly.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<rotatable>true</rotatable>
@@ -823,7 +823,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_VaultTerminalBank</defName>
 		<label>vault terminal bank</label>
-		<description>todo</description>
+		<description>A row of old computer terminals used to monitor vault operations. Most are dark, but a few lights still blink faintly.</description>
 		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<rotatable>true</rotatable>
@@ -845,7 +845,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_WarpedMopBucket</defName>
 		<label>warped mop bucket</label>
-		<description>todo</description>
+		<description>A melted mop bucket left behind by cleaning staff. The handle has fused to the rim, making it useless.</description>
 		<size>(1,1)</size>
 		
 		<fillPercent>0.3</fillPercent>
@@ -865,7 +865,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RustedHospitalBed</defName>
 		<label>rusted hospital bed</label>
-		<description>todo.</description>
+		<description>An adjustable medical bed with cracked padding and rusted rails. It was once used for surgeries and recovery.</description>
 		<thingClass>Building_Bed</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<drawGUIOverlay>true</drawGUIOverlay>
@@ -938,7 +938,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_WheeledBed</defName>
 		<label>wheeled bed</label>
-		<description>todo.</description>
+		<description>A simple rolling hospital bed designed to move patients between rooms. The wheels squeal when pushed.</description>
 		<thingClass>Building_Bed</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<drawGUIOverlay>true</drawGUIOverlay>
@@ -1012,7 +1012,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_EmptyContainment</defName>
 		<label>empty containment</label>
-		<description>todo</description>
+		<description>An empty containment pod. Whatever was inside got out long ago.</description>
 		<size>(2,2)</size>
 		<uiIconScale>0.75</uiIconScale>
 		<fillPercent>0.4</fillPercent>

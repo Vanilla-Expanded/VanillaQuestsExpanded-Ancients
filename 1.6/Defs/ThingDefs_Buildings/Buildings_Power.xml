@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientChemfuelGenerator</defName>
 		<label>ancient chemfuel generator</label>
-		<description>todo.</description>
+		<description>A bulky chemfuel-powered generator from a bygone era. It produces large amounts of power but needs to be manually “kicked” back into operation when it stalls.</description>
 		<size>(3,3)</size>
 		<passability>PassThroughOnly</passability>
 		<drawerType>MapMeshAndRealTime</drawerType>

@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchogenInjector</defName>
 		<label>archogen injector</label>
-		<description>todo</description>
+		<description>A sealed biotransmutation pod lined with archite-flow conduits and neuroflux pistons, built to channel volatile nanite spirals into living tissue. Its inner chamber hums with unstable genolectric currents that respond to organic presence, stirring the archites into activation. The machinery is dense with inscrutable bio-relays and polyfused synthcells that pulse faintly when powered.\n\nUsed to inject a colonist with archite capsules, triggering genetic alteration and producing a random archite gene with possible side effects.</description>
 		<thingClass>VanillaQuestsExpandedAncients.Building_ArchogenInjector</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<castEdgeShadows>true</castEdgeShadows>
@@ -69,7 +69,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_NeurostabilizerArray</defName>
 		<label>neurostabilizer array</label>
-		<description>todo</description>
+		<description>A compact neural-phase regulator fitted with microtuned synapse coils and a vented cortex lattice that emits a steady hum of stabilizing neurostatic fields. Its core uses drifting neuroflux anchors to calm archite turbulence during injection cycles.\n\nImproves the success chance of archite injections when linked to an Archogen Injector.\n\nUp to 10 Neurostabilizer Arrays can link to a single Archogen Injector.</description>
 		<size>(1,1)</size>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -103,7 +103,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_CognitiveRecoveryArray</defName>
 		<label>cognitive recovery array</label>
-		<description>todo</description>
+		<description>A slim neuro-cascade module lined with mnemonic pulse coils and echo-field dampers that cycle through soft, rhythmic memory stabilization waves. Its internal neurogel reservoir circulates thought-restorative pulses that soothe post-archite neural disruption.\n\nReduces the duration of the injection coma by 1 day when linked to an Archogen Injector.\n\nUp to 6 Cognitive Recovery Arrays can link to a single Archogen Injector.</description>
 		<size>(1,1)</size>
 		<statBases>
 			<MaxHitPoints>120</MaxHitPoints>
@@ -137,7 +137,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_RapidInfusionPump</defName>
 		<label>rapid infusion pump</label>
-		<description>todo</description>
+		<description>A high-pressure archite-flow pump fitted with tri-phase accelerators and microchannel conduits that push volatile nanites through the injector lattice at extreme speed. Stabilizing fins vibrate as the pump regulates infusion pressure across the gene chamber.\n\nShortens the overall injection time by 12 hours when linked to an Archogen Injector.\n\nUp to 9 Rapid Infusion Pumps can link to a single Archogen Injector.</description>
 		<size>(1,1)</size>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -171,7 +171,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchiteRecycler</defName>
 		<label>archite recycler</label>
-		<description>todo</description>
+		<description>A two-chamber nanite reclamation unit fitted with siphon coils and phase-binding spirals that draw unstable archite residue back into a containment loop. Inside, a dense mesh of microfiltration veins reassembles loose nanite clusters into a usable capsule.\n\nRefunds the archite capsule on a rejected injection when linked to an Archogen Injector.\n\nUp to 1 Archite Recycler can link to a single Archogen Injector.</description>
 		<size>(2,1)</size>
 		<rotatable>true</rotatable>
 		<statBases>
@@ -201,7 +201,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_GenomicAttenuator</defName>
 		<label>genomic attenuator</label>
-		<description>todo</description>
+		<description>A large quad-node stabilizer rig packed with geno-dampening regulators and microphase baffles that mute unstable metabolic signatures. Its internal attenuation plates hum softly as they pare down excessive gene volatility during archite infusion.\n\nReduces the metabolism strength of the random side-effect gene by 1 when linked to an Archogen Injector.\n\nUp to 4 Genomic Attenuators can link to a single Archogen Injector.</description>
 		<size>(2,2)</size>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
@@ -235,7 +235,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_RejectionBufferCoil</defName>
 		<label>rejection buffer coil</label>
-		<description>todo</description>
+		<description>An insulated coil wrapped in ionized synapse wire and anchored with anti-reflux stabilizers that shield the injector chamber from archite backlash. When active, it emits a soft oscillation designed to suppress rejection-triggering impulses in the nanite stream.\n\nDecreases the rejection chance of the injection procedure when linked to an Archogen Injector.\n\nUp to 5 Rejection Buffer Coils can link to a single Archogen Injector.</description>
 		<size>(1,2)</size>
 		<rotatable>true</rotatable>
 		<statBases>
@@ -270,7 +270,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_SpliceframeUplink</defName>
 		<label>spliceframe uplink</label>
-		<description>todo</description>
+		<description>A dense uplink pillar fitted with resonance spire arrays and gene-phase telemetry coils that scrape and decode archite fluctuation patterns. Its chroma-linked neural mesh emits faint pulses as it maps unstable outcomes across an ancient spliceframe network.\n\nReveals all outcome chances in the Archogen Injector and slightly increases the odds of mutation outcomes.\n\nUp to 1 Spliceframe Uplink can link to a single Archogen Injector.</description>
 		<size>(2,2)</size>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
@@ -311,7 +311,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_MutagenInhibitorCore</defName>
 		<label>mutagen inhibitor core</label>
-		<description>todo</description>
+		<description>A massive containment engine built around a tri-core genoquench reactor and layered inhibition plates designed to neutralize runaway mutagenic surges. Thick conduits cycle suppressive counterwaves that smother mutation cascades before they can form.\n\nRemoves all mutation outcome chances entirely when linked to an Archogen Injector, but greatly increases the rejection chance.\n\nUp to 1 Mutagen Inhibitor Core can link to a single Archogen Injector.</description>
 		<size>(3,3)</size>
 		<statBases>
 			<MaxHitPoints>600</MaxHitPoints>
@@ -350,7 +350,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_TraitSelectionPrism</defName>
 		<label>trait selection prism</label>
-		<description>todo</description>
+		<description>A crystalline multi-lens console powered by phased neuro-optic conduits and reflective geno-beam sequencers that split archite outcomes into selectable possibility streams. Its prism array glows with shifting spectral patterns when a stable result is detected.\n\nAllows choosing between two different archite genes on a successful injection.\n\nUp to 1 Trait Selection Prism can link to a single Archogen Injector.</description>
 		<size>(3,3)</size>
 		<statBases>
 			<MaxHitPoints>630</MaxHitPoints>
@@ -384,7 +384,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_AberrationRedirector</defName>
 		<label>aberration redirector</label>
-		<description>todo</description>
+		<description>A heavy redirection module built from stacked mutation siphons and counterphase nodules that reroute unstable gene echoes into controlled outcome channels. The device hums as its internal actuators shift to isolate potential aberrations.\n\nAllows choosing between two different negative side genes on a successful injection.\n\nUp to 1 Aberration Redirector can link to a single Archogen Injector.</description>
 		<size>(3,3)</size>
 		<statBases>
 			<MaxHitPoints>600</MaxHitPoints>
@@ -418,7 +418,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ComplexityHarmonizer</defName>
 		<label>complexity harmonizer</label>
-		<description>todo</description>
+		<description>A tall stabilization unit filled with layered geno-harmonic plates and oscillating phase regulators that smooth out chaotic complexity spikes within the archite stream. Its internal synchronizer cores emit low rhythmic pulses as they bring tangled genetic pathways into orderly alignment.\n\nPrevents genetic complexity from reducing success chance, but each point of complexity will increase the injection procedure duration by 1 hour.\n\nUp to 1 Complexity Harmonizer can link to a single Archogen Injector.</description>
 		<size>(3,2)</size>
 		<rotatable>true</rotatable>
 		<statBases>
@@ -448,7 +448,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchitePathingArray</defName>
 		<label>archite pathing array</label>
-		<description>todo</description>
+		<description>A heavy tri-spire console built with archite-routing conduits and branching nanoflux matrices that split the injection stream into parallel mutagenic pathways. The array’s central node glows with shifting colors as it maps new routes for rogue archite clusters.\n\nProvides a chance to gain a second random archite gene or a second random offset gene after a successful injection.\n\nUp to 1 Archite Pathing Array can link to a single Archogen Injector.</description>
 		<size>(3,3)</size>
 		<statBases>
 			<MaxHitPoints>800</MaxHitPoints>

@@ -4,7 +4,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_PneumaticTubeLaunchPort</defName>
 		<label>pneumatic tube launch port</label>
-		<description>todo</description>
+		<description>A large transfer station for the ancient pneumatic tube network. It was used to send supply capsules between distant vaults, moving food, tools, and research materials through sealed underground tunnels. Cargo can still be loaded and launched, and a return capsule may arrive from another vault after some time.</description>
 		<thingClass>VanillaQuestsExpandedAncients.Building_PneumaticTubeLaunchPort</thingClass>
 		<tickerType>Normal</tickerType>
 		<size>(5,5)</size>
@@ -36,7 +36,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_PneumaticTubes</defName>
 		<label>pneumatic tubes</label>
-		<description>todo</description>
+		<description>A network of ancient tubes used to deliver small and medium items between vaults. Some of the capsules remain stuck inside.</description>
 		<size>(2,4)</size>
 
 		<destroyable>false</destroyable>
