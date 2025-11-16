@@ -257,4 +257,19 @@
 			</li>
 		</stages>
 	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_Levitation</defName>
+		<label>levitation</label>
+		<description>Limited flight that allows this colonist to levitate over terrain. They will ignore terrain movement costs when moving.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Floating">
+
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>

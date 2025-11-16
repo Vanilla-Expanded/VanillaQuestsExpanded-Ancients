@@ -208,6 +208,11 @@
 		<descriptionHyperlinks>
 			<AbilityDef>VQEA_Levitation</AbilityDef>
 		</descriptionHyperlinks>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_Levitation</hediffToWholeBody>
+			</li>
+		</modExtensions>
 	</GeneDef>
 	<GeneDef>
 		<defName>VQEA_Serene</defName>
