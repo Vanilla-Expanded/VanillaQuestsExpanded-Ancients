@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 namespace VanillaQuestsExpandedAncients
 {
@@ -7,9 +7,9 @@ namespace VanillaQuestsExpandedAncients
     {
         public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
-          
-           dinfo.Instigator.Kill();
-          
+
+           dinfo.Instigator?.Kill();
+
             return base.Apply(dinfo,victim);
         }
     }

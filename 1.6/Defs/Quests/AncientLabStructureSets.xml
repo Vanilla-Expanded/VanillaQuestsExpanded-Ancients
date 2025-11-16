@@ -7,10 +7,22 @@
             <li>
                 <pattern>VQEA_EntranceModules_.*</pattern>
                 <offset>(0, 0, 0)</offset>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_LabModules_1_.*</pattern>
                 <offset>(0, 0, 1)</offset>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
         </structureLayouts>
     </VanillaQuestsExpandedAncients.StructureSetDef>
@@ -24,6 +36,12 @@
                     <VQEA_Spliceling>1~1</VQEA_Spliceling>
                     <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -32,6 +50,12 @@
                     <VQEA_Spliceling>1~1</VQEA_Spliceling>
                     <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -40,6 +64,12 @@
                     <VQEA_Spliceling>1~1</VQEA_Spliceling>
                     <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -48,6 +78,12 @@
                     <VQEA_Spliceling>1~1</VQEA_Spliceling>
                     <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_LabModules_2_.*</pattern>
@@ -56,6 +92,12 @@
                     <VQEA_Spliceling>1~1</VQEA_Spliceling>
                     <VQEA_Splicehulk>1~1</VQEA_Splicehulk>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
         </structureLayouts>
     </VanillaQuestsExpandedAncients.StructureSetDef>
@@ -67,6 +109,10 @@
                 <offset>(0, 0, 0)</offset>
                 <spawnThings>
                     <Hive>5~5</Hive>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
                 </spawnThings>
             </li>
             <li>
@@ -74,6 +120,10 @@
                 <offset>(0, 0, 1)</offset>
                 <spawnThings>
                     <Hive>5~5</Hive>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
                 </spawnThings>
             </li>
             <li>
@@ -81,6 +131,10 @@
                 <offset>(0, 0, 2)</offset>
                 <spawnThings>
                     <Hive>5~5</Hive>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
                 </spawnThings>
             </li>
         </structureLayouts>
@@ -95,6 +149,12 @@
                 <spawnPawns>
                     <VQE_Patient>3~3</VQE_Patient>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -103,6 +163,12 @@
                 <spawnPawns>
                     <VQE_Patient>3~3</VQE_Patient>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_LabModules_4_.*</pattern>
@@ -111,6 +177,12 @@
                 <spawnPawns>
                     <VQE_Patient>3~3</VQE_Patient>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
         </structureLayouts>
     </VanillaQuestsExpandedAncients.StructureSetDef>
@@ -125,6 +197,12 @@
                     <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
                     <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -134,6 +212,12 @@
                     <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
                     <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -143,6 +227,12 @@
                     <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
                     <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_MiscModules_.*</pattern>
@@ -152,6 +242,12 @@
                     <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
                     <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
             <li>
                 <pattern>VQEA_LabModules_5_.*</pattern>
@@ -161,6 +257,12 @@
                     <VQEA_Splicehulk>2~2</VQEA_Splicehulk>
                     <VQEA_Splicefiend>1~1</VQEA_Splicefiend>
                 </spawnPawns>
+                <spawnThings>
+                    <MedicineIndustrial>3</MedicineIndustrial>
+                    <MedicineUltratech>1</MedicineUltratech>
+                    <ComponentIndustrial>4</ComponentIndustrial>
+                    <MealSurvivalPack>6</MealSurvivalPack>
+                </spawnThings>
             </li>
         </structureLayouts>
     </VanillaQuestsExpandedAncients.StructureSetDef>

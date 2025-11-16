@@ -40,14 +40,12 @@ namespace VanillaQuestsExpandedAncients
             Text.Font = GameFont.Medium;
             Widgets.Label(new Rect(SidePadding, curY, inRect.width - SidePadding * 2f, TopPadding), "VQEA_ArchiteInjectionTitle".Translate());
 
-            
             Text.Font = GameFont.Small;
             GUI.color = Color.grey;
             var injectorSize = Text.CalcSize(InternalDefOf.VQEA_ArchogenInjector.LabelCap).x;
             Widgets.Label(new Rect(inRect.width - injectorSize, curY, injectorSize, 24), InternalDefOf.VQEA_ArchogenInjector.LabelCap);
             GUI.color = Color.white;
             curY += TopPadding + 10f;
-
 
             float mainDescHeight = Text.CalcHeight("VQEA_ArchiteInjection_MainDesc".Translate(archogenInjector.Occupant.Named("PAWN")), inRect.width - SidePadding * 2f);
             Widgets.Label(new Rect(SidePadding, curY, inRect.width - SidePadding * 2f, mainDescHeight), "VQEA_ArchiteInjection_MainDesc".Translate(archogenInjector.Occupant.Named("PAWN")));
@@ -58,7 +56,7 @@ namespace VanillaQuestsExpandedAncients
             DoLeftColumn(leftColumn);
             Rect rightColumn = new Rect(leftColumn.xMax + ColumnSpacing, curY, RightColumnWidth, columnHeight);
             DoRightColumn(rightColumn);
-            
+
             DoBottomButtons(new Rect(0, inRect.height - ButtonHeight - BottomPadding, inRect.width, ButtonHeight));
         }
 
@@ -71,7 +69,7 @@ namespace VanillaQuestsExpandedAncients
             listing.Label("VQEA_ExpectedInfusionDuration".Translate() + ": " + "VQEA_Days".Translate(Mathf.RoundToInt(archogenInjector.GetExpectedInfusionDuration() / (float)GenDate.TicksPerDay)));
             listing.Label("VQEA_InfusionComaDuration".Translate() + ": " + "VQEA_Days".Translate(Mathf.RoundToInt(archogenInjector.GetExpectedComaDuration() / (float)GenDate.TicksPerDay)));
             listing.Gap(SectionSpacing);
-                
+
             listing.Label("VQEA_PawnGeneticComplexity".Translate(archogenInjector.Occupant.Name.ToStringFull) + ": " + archogenInjector.GetGeneticComplexityForUI());
             if (archogenInjector.Occupant.apparel.WornApparel.Any(x => x.def == InternalDefOf.VQEA_Apparel_PatientGown))
             {
@@ -81,7 +79,7 @@ namespace VanillaQuestsExpandedAncients
             listing.Label("VQEA_ExpectedMetabolismSideEffect".Translate() + ": " + "VQEA_Metabolism".Translate(metabolism.ToStringWithSign()));
             listing.Gap(SectionSpacing);
 
-            if (archogenInjector.HasLinkedFacility(InternalDefOf.VQEA_SpliceframeUplink) || DebugSettings.godMode)
+            if (archogenInjector.HasLinkedFacility(InternalDefOf.VQEA_SpliceframeUplink))
             {
                 listing.Label("VQEA_SuccessChance".Translate() + ": " + archogenInjector.GetOutcomeChance(InternalDefOf.VQEA_ArchiteInjection_Success).ToStringPercent().Colorize(ColorLibrary.Green));
                 listing.Label("VQEA_RejectionChance".Translate() + ": " + archogenInjector.GetOutcomeChance(InternalDefOf.VQEA_ArchiteInjection_Rejection).ToStringPercent().Colorize(ColoredText.SubtleGrayColor));
@@ -102,8 +100,8 @@ namespace VanillaQuestsExpandedAncients
             var compProperties = InternalDefOf.VQEA_ArchogenInjector.GetCompProperties<CompProperties_AffectedByFacilities>();
             var allLabEquipment = compProperties.linkableFacilities.ToList();
             var linkedEquipment = archogenInjector.GetLinkedLabEquipment();
-            bool isEvenRow = false; 
-                
+            bool isEvenRow = false;
+
             foreach (var equipmentDef in allLabEquipment)
             {
                 int count = linkedEquipment.Count(e => e.defName == equipmentDef.defName);
@@ -118,7 +116,7 @@ namespace VanillaQuestsExpandedAncients
             boxRect.height = totalContentHeight;
             boxRect = boxRect.ExpandedBy(9f);
             boxRect.width += 10f;
-            
+
             using (new TextBlock(new Color(0.25f, 0.25f, 0.25f)))
             {
                 Widgets.DrawBox(boxRect, 2);
@@ -133,7 +131,7 @@ namespace VanillaQuestsExpandedAncients
         {
             const float rowHeight = 28f;
             Rect rowContentRect = new Rect(viewRect.x + 5, y, viewRect.width - 10, rowHeight);
-            
+
             if (isEvenRow)
             {
                 Widgets.DrawLightHighlight(rowContentRect);
@@ -153,15 +151,15 @@ namespace VanillaQuestsExpandedAncients
             if (count >= maxCount) GUI.color = ColorLibrary.Green;
             else if (count > 0) GUI.color = ColoredText.SubtleGrayColor;
             else GUI.color = ColorLibrary.RedReadable;
-            
+
             Text.Anchor = TextAnchor.MiddleLeft;
             Widgets.Label(labelRect, equipmentDef.LabelCap);
-            
+
             Text.Anchor = TextAnchor.MiddleRight;
             Widgets.Label(countRect, $"{count} / {maxCount}");
-                    
+
             GUI.color = Color.white;
-            
+
             Text.Anchor = TextAnchor.UpperLeft;
             if (Mouse.IsOver(rowContentRect))
             {
@@ -184,7 +182,7 @@ namespace VanillaQuestsExpandedAncients
         private void DoBottomButtons(Rect rect)
         {
             float buttonWidth = 140f;
-            
+
             Rect cancelButtonRect = new Rect(rect.x, rect.y, buttonWidth, rect.height);
             if (Widgets.ButtonText(cancelButtonRect, "Cancel".Translate()))
             {
@@ -194,7 +192,7 @@ namespace VanillaQuestsExpandedAncients
 
             Rect injectButtonRect = new Rect(rect.xMax - buttonWidth, rect.y, buttonWidth, rect.height);
             Rect textRect = new Rect(cancelButtonRect.xMax, rect.y, injectButtonRect.x - cancelButtonRect.xMax - 20f, rect.height);
-            
+
             Text.Anchor = TextAnchor.MiddleRight;
             GUI.color = Color.grey;
             string capsuleText = "VQEA_RequiresArchiteCapsule".Translate() + "\n" + "VQEA_AvailableArchiteCapsules".Translate(Find.CurrentMap.resourceCounter.GetCount(ThingDefOf.ArchiteCapsule));
