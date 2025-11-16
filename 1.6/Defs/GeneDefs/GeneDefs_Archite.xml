@@ -61,6 +61,7 @@
 		<label>woundless</label>
 		<description>Carriers of this gene rapidly heal from bleeding wounds. Their flesh seals itself moments after injury, preventing blood loss entirely and allowing them to fight through trauma that would kill others.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Woundless</iconPath>
+		<geneClass>Gene_Clotting</geneClass>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
