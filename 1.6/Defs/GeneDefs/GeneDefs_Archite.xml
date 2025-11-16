@@ -294,7 +294,7 @@
 			<StaggerDurationFactor>0.2</StaggerDurationFactor>
 			<MeatAmount>3</MeatAmount>
 			<LeatherAmount>3</LeatherAmount>
-			<VEF_FoodCapacityMultiplier>3</VEF_FoodCapacityMultiplier>
+		
 			<MeleeDodgeChance>0.25</MeleeDodgeChance>
 		</statFactors>
 		<modExtensions>
