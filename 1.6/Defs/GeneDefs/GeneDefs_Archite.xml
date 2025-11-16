@@ -92,7 +92,7 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<statOffsets>
-			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+			<ShootingAccuracyPawn>100</ShootingAccuracyPawn>
 		</statOffsets>
 		<statFactors>
 			<RangedCooldownFactor>0.75</RangedCooldownFactor>
@@ -196,7 +196,7 @@
 		<defName>VQEA_Levitation</defName>
 		<label>levitation</label>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Levitation</iconPath>
-		<description>Carriers have special archite-powered muscle fibers in their legs which allow them to jump extremely great distances, causing blunt trauma to anyone unfortunate enough to be in the landing zone.</description>
+		<description>Carriers of this gene can lift themselves using a controlled psychic field. They float over obstacles and terrain unharmed, immune to damage during transit and unaffected by difficult terrain.</description>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<biostatCpx>3</biostatCpx>
