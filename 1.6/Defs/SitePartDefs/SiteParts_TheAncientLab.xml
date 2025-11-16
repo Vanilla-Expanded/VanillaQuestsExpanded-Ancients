@@ -7,6 +7,7 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientLabComplex</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
         <surfaceGenerator>VQEA_OvergroundBunkersTier1Structure</surfaceGenerator>
@@ -30,6 +31,7 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteControlVault</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
         <surfaceGenerator>VQEA_OvergroundBunkersTier2Structure</surfaceGenerator>
@@ -53,6 +55,7 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/SpliceframeBlacksite</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
         <surfaceGenerator>VQEA_OvergroundBunkersTier3Structure</surfaceGenerator>
@@ -76,6 +79,7 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/InhibitorResearchLab</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
         <surfaceGenerator>VQEA_OvergroundBunkersTier4Structure</surfaceGenerator>
@@ -99,6 +103,7 @@
     <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
     <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteArraySite</expandingIconTexture>
     <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
     <modExtensions>
       <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
         <surfaceGenerator>VQEA_OvergroundBunkersTier5Structure</surfaceGenerator>

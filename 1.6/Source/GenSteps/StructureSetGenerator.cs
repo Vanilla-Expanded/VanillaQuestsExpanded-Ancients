@@ -149,6 +149,17 @@ namespace VanillaQuestsExpandedAncients
                         if (!spawnCell.IsValid) continue;
                         var pawn = PawnGenerator.GeneratePawn(spawnOption.kind, faction);
 
+                        if (pawn.RaceProps.Humanlike && layout.weapons.NullOrEmpty() is false)
+                        {
+                            if (pawn.equipment.Primary != null)
+                            {
+                                pawn.equipment.DestroyAllEquipment();
+                            }
+                            var weaponDef = layout.weapons.RandomElement();
+                            var weapon = ThingMaker.MakeThing(weaponDef, GenStuff.DefaultStuffFor(weaponDef));
+                            pawn.equipment.AddEquipment((ThingWithComps)weapon);
+                        }
+
                         if (layout.unwaveringlyLoyal)
                         {
                             if (pawn.guest != null)

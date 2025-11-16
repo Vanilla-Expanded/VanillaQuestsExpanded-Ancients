@@ -11,5 +11,6 @@ namespace VanillaQuestsExpandedAncients
         public List<ThingSpawnOption> spawnThings;
         public bool forceSpawnEnemiesIndoor;
         public bool unwaveringlyLoyal = false;
+        public List<ThingDef> weapons;
     }
 }

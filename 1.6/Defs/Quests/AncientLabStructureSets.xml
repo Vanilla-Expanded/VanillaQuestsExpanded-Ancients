@@ -149,6 +149,11 @@
                 <spawnPawns>
                     <VQE_Patient>3~3</VQE_Patient>
                 </spawnPawns>
+                <weapons>
+                    <li>MeleeWeapon_Knife</li>
+                    <li>Gun_Autopistol</li>
+                    <li>Gun_Revolver</li>
+                </weapons>
                 <spawnThings>
                     <MedicineIndustrial>3</MedicineIndustrial>
                     <MedicineUltratech>1</MedicineUltratech>
@@ -163,6 +168,11 @@
                 <spawnPawns>
                     <VQE_Patient>3~3</VQE_Patient>
                 </spawnPawns>
+                <weapons>
+                    <li>MeleeWeapon_Knife</li>
+                    <li>Gun_Autopistol</li>
+                    <li>Gun_Revolver</li>
+                </weapons>
                 <spawnThings>
                     <MedicineIndustrial>3</MedicineIndustrial>
                     <MedicineUltratech>1</MedicineUltratech>
@@ -177,6 +187,11 @@
                 <spawnPawns>
                     <VQE_Patient>3~3</VQE_Patient>
                 </spawnPawns>
+                <weapons>
+                    <li>MeleeWeapon_Knife</li>
+                    <li>Gun_Autopistol</li>
+                    <li>Gun_Revolver</li>
+                </weapons>
                 <spawnThings>
                     <MedicineIndustrial>3</MedicineIndustrial>
                     <MedicineUltratech>1</MedicineUltratech>
