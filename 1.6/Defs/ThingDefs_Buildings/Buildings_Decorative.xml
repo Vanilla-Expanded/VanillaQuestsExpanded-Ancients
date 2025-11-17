@@ -278,6 +278,7 @@
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
+		<tradeability>None</tradeability>
 		<costList>
 			<Steel>10</Steel>
 			<Synthread>40</Synthread>
@@ -310,6 +311,7 @@
 			<Steel>10</Steel>
 			<Synthread>20</Synthread>
 		</costList>
+		<tradeability>None</tradeability>
 		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -346,6 +348,7 @@
 			<Mass>15</Mass>
 			<Beauty>-1</Beauty>
 		</statBases>
+		<tradeability>None</tradeability>
 		<graphicData>
 			<texPath>Things/Building/Furniture/AncientHospitalCrib</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -709,7 +712,7 @@
 			<li>BuildingsFurniture</li>
 		</thingCategories>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		
+		<tradeability>None</tradeability>
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
 			<Flammability>0.5</Flammability>

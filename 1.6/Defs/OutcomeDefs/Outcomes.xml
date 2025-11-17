@@ -2,13 +2,13 @@
 <Defs>
     <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
         <defName>VQEA_ArchiteInjection_Success</defName>
-        <baseWeight>60</baseWeight>
+        <baseWeight>50</baseWeight>
         <outcomeType>Success</outcomeType>
     </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
 
     <VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
         <defName>VQEA_ArchiteInjection_Rejection</defName>
-        <baseWeight>25</baseWeight>
+        <baseWeight>35</baseWeight>
         <outcomeType>Rejection</outcomeType>
     </VanillaQuestsExpandedAncients.ArchiteInjectionOutcomeDef>
 

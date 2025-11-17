@@ -61,6 +61,7 @@
 		<label>woundless</label>
 		<description>Carriers of this gene rapidly heal from bleeding wounds. Their flesh seals itself moments after injury, preventing blood loss entirely and allowing them to fight through trauma that would kill others.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_Woundless</iconPath>
+		<geneClass>Gene_Clotting</geneClass>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
@@ -96,7 +97,6 @@
 		</statOffsets>
 		<statFactors>
 			<RangedCooldownFactor>0.75</RangedCooldownFactor>
-			<VEF_RangeAttackSpeedFactor>0.75</VEF_RangeAttackSpeedFactor>
 		</statFactors>
 	</GeneDef>
 	<GeneDef>
@@ -293,7 +293,7 @@
 			<StaggerDurationFactor>0.2</StaggerDurationFactor>
 			<MeatAmount>3</MeatAmount>
 			<LeatherAmount>3</LeatherAmount>
-			<VEF_FoodCapacityMultiplier>3</VEF_FoodCapacityMultiplier>
+
 			<MeleeDodgeChance>0.25</MeleeDodgeChance>
 		</statFactors>
 		<modExtensions>
@@ -424,7 +424,7 @@
 	<GeneDef>
 		<defName>VQEA_MasterfulMedical</defName>
 		<label>masterful medical</label>
-		<description>The carrier's aptitude in Medical is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Medical. Archites enhance decision-making and precision during operations, and provide a 50% chance to preserve medicine during treatment.</description>
+		<description>The carrier's aptitude in Medical is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Medical. Archites enhance decision-making and precision during operations, and preserve medicine during treatment (100% chance).</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Medical</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>

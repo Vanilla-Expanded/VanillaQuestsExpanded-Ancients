@@ -199,7 +199,6 @@ namespace VanillaQuestsExpandedAncients
             return GetRequiredCountOf(thing.def) > 0;
         }
 
-
         public void CancelProcess()
         {
             if (this.State == ArchiteInjectorState.Injecting && !HasLinkedFacility(InternalDefOf.VQEA_ArchiteRecycler))
@@ -248,7 +247,6 @@ namespace VanillaQuestsExpandedAncients
                 yield return new FloatMenuOption("CannotEnterBuilding".Translate(this) + ": " + acceptanceReport.Reason.CapitalizeFirst(), null);
             }
         }
-
 
         protected override void Tick()
         {
@@ -321,6 +319,10 @@ namespace VanillaQuestsExpandedAncients
             if (Occupant != null && Occupant.Dead)
             {
                 CancelProcess();
+            }
+            if (selectedPawn != null && selectedPawn.Dead)
+            {
+                selectedPawn = null;
             }
         }
 
@@ -701,7 +703,7 @@ namespace VanillaQuestsExpandedAncients
             {
                 hasComplexityHarmonizer = compAffectedByFacilities.LinkedFacilitiesListForReading.Any(f => f.def == InternalDefOf.VQEA_ComplexityHarmonizer);
             }
-            
+
             if (!hasComplexityHarmonizer)
             {
                 int geneticComplexity = GetGeneticComplexity(Occupant);

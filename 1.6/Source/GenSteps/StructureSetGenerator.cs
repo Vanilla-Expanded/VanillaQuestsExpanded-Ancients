@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using VEF.Buildings;
+using System;
 
 namespace VanillaQuestsExpandedAncients
 {
@@ -101,6 +102,7 @@ namespace VanillaQuestsExpandedAncients
                             var comp = thing.TryGetComp<CompBouncingArrow>();
                             if (comp != null)
                             {
+                                comp.originalMapParent = map.Parent;
                                 comp.doBouncingArrow = true;
                             }
                         }
@@ -147,6 +149,17 @@ namespace VanillaQuestsExpandedAncients
                         if (!spawnCell.IsValid) continue;
                         var pawn = PawnGenerator.GeneratePawn(spawnOption.kind, faction);
 
+                        if (pawn.RaceProps.Humanlike && layout.weapons.NullOrEmpty() is false)
+                        {
+                            if (pawn.equipment.Primary != null)
+                            {
+                                pawn.equipment.DestroyAllEquipment();
+                            }
+                            var weaponDef = layout.weapons.RandomElement();
+                            var weapon = ThingMaker.MakeThing(weaponDef, GenStuff.DefaultStuffFor(weaponDef));
+                            pawn.equipment.AddEquipment((ThingWithComps)weapon);
+                        }
+
                         if (layout.unwaveringlyLoyal)
                         {
                             if (pawn.guest != null)
@@ -163,14 +176,19 @@ namespace VanillaQuestsExpandedAncients
             {
                 foreach (var spawnOption in layout.spawnThings)
                 {
-                    for (var i = 0; i < spawnOption.count.RandomInRange; i++)
+                    int totalToSpawn = spawnOption.count.RandomInRange;
+                    int stackLimit = spawnOption.thing.stackLimit;
+                    int remaining = totalToSpawn;
+                    while (remaining > 0)
                     {
+                        int stackCount = Math.Min(remaining, stackLimit);
                         var rootCell = walkableCells.RandomElement();
                         if (!rootCell.IsValid) rootCell = structureRect.CenterCell;
 
                         var spawnCell = CellFinder.RandomSpawnCellForPawnNear(rootCell, map, 5);
-                        if (!spawnCell.IsValid) continue;
+                        if (!spawnCell.IsValid) break;
                         var thing = ThingMaker.MakeThing(spawnOption.thing);
+                        thing.stackCount = stackCount;
                         GenSpawn.Spawn(thing, spawnCell, map);
                         if (thing is Hive hive)
                         {
@@ -180,6 +198,8 @@ namespace VanillaQuestsExpandedAncients
                         {
                             thing.SetFaction(faction);
                         }
+                        thing.SetForbidden(true, false);
+                        remaining -= stackCount;
                     }
                 }
             }
