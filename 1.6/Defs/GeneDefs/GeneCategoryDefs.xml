@@ -4,7 +4,7 @@
   <GeneCategoryDef>
     <defName>VQEA_ArchiteAptitudes</defName>
     <label>archite aptitudes</label>
-    <displayPriorityInXenotype>999</displayPriorityInXenotype>
+    <displayPriorityInXenotype>999.1234</displayPriorityInXenotype>
   </GeneCategoryDef>
 
 
