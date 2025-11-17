@@ -2,7 +2,7 @@
 <Defs>
   <ScenarioDef ParentName="ScenarioBase">
     <defName>VQE_NewVault</defName>
-    <label>Sealed vault</label>
+    <label>Sealed Vault</label>
     <description>With each passing day you stare at your fellow companions hibernating in cryptosleep sarcophagi. One day, when your life is nearing its end, you will wake your successor, and his watch will begin. Every day for the last hundreds of years your outpost was awaiting orders from High Command which may no longer exist. Will today be the day you not only wake up, but also open your eyes?</description>
     <scenario>
       <summary>A lone soldier guarding his post. A classic VQE - Ancients experience.</summary>
@@ -78,7 +78,7 @@
     <basicMemberKind>VQE_Patient</basicMemberKind>
     <pawnSingular>colonist</pawnSingular>
     <pawnsPlural>colonists</pawnsPlural>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Spacer</techLevel>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
     <allowedCultures>
