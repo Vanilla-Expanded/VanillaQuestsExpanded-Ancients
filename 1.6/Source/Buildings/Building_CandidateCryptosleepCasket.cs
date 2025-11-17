@@ -9,9 +9,8 @@ namespace VanillaQuestsExpandedAncients
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
+            if (!respawningAfterLoad && ContainedThing is Pawn specialPawn)
             {
-                Pawn specialPawn = (Pawn)this.ContainedThing;
                 GrammarRequest firstNameReq = default;
                 if (specialPawn.gender == Gender.Male)
                 {
@@ -37,13 +36,16 @@ namespace VanillaQuestsExpandedAncients
         public override void EjectContents()
         {
             Pawn pawn = (Pawn)this.ContainedThing;
-            pawn.SetFaction(Faction.OfPlayer);
-            Find.LetterStack.ReceiveLetter(
-                "VQEA_ExperimentJoinsLetterLabel".Translate(pawn.Named("PAWN")),
-                "VQEA_ExperimentJoinsLetterDescription".Translate(pawn.Named("PAWN")),
-                LetterDefOf.PositiveEvent,
-                pawn
-            );
+            if (isStartingScenarioBuidling is false && pawn.Faction != Faction.OfPlayer)
+            {
+                pawn.SetFaction(Faction.OfPlayer);
+                Find.LetterStack.ReceiveLetter(
+                    "VQEA_ExperimentJoinsLetterLabel".Translate(pawn.Named("PAWN")),
+                    "VQEA_ExperimentJoinsLetterDescription".Translate(pawn.Named("PAWN")),
+                    LetterDefOf.PositiveEvent,
+                    pawn
+                );
+            }
             base.EjectContents();
         }
     }

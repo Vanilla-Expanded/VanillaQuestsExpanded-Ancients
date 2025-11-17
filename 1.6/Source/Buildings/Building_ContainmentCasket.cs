@@ -5,8 +5,14 @@ namespace VanillaQuestsExpandedAncients
 {
     public class Building_ContainmentCasket : Building_AncientCryptosleepPod
     {
+        public bool isStartingScenarioBuidling;
         public ContainmentDetails Props => def.GetModExtension<ContainmentDetails>();
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref isStartingScenarioBuidling, "shouldBePlayerFaction");
+        }
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -34,6 +40,15 @@ namespace VanillaQuestsExpandedAncients
 
             Pawn pawn = PawnGenerator.GeneratePawn(request);
             this.GetDirectlyHeldThings().TryAdd(pawn);
+        }
+
+        public override void EjectContents()
+        {
+            if (this.ContainedThing is Pawn pawn && isStartingScenarioBuidling && pawn.Faction != Faction.OfPlayer)
+            {
+                pawn.SetFaction(Faction.OfPlayer);
+            }
+            base.EjectContents();
         }
     }
 }

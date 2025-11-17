@@ -320,7 +320,7 @@ namespace VanillaQuestsExpandedAncients
             {
                 CancelProcess();
             }
-            if (selectedPawn != null && selectedPawn.Dead)
+            if (selectedPawn != null && (selectedPawn.Dead || selectedPawn.MapHeld != Map))
             {
                 selectedPawn = null;
             }
@@ -494,46 +494,98 @@ namespace VanillaQuestsExpandedAncients
                 additionalFilter(g) &&
                 (g.prerequisite == null || pawn.genes.HasActiveGene(g.prerequisite)) &&
                 !pawn.genes.HasActiveGene(g) &&
-                !pawn.genes.GenesListForReading.Any(existing => existing.def.ConflictsWith(g))
+                !pawn.genes.GenesListForReading.Any(existing => existing.def.ConflictsWith(g)) &&
+                g.displayCategory?.defName != "VRE_Morphs"
             ).ToList();
         }
         private void HandleSuccessOutcome(Pawn pawn)
         {
-            var architeGenes = GetFilteredGenes(pawn, g => g.biostatArc > 0);
-            if (architeGenes.Any())
+            List<GeneDef> architeGeneChoices = new List<GeneDef>();
+            var allArchiteGenes = GetFilteredGenes(pawn, g => g.biostatArc > 0);
+            if (allArchiteGenes.Any() && HasLinkedFacility(InternalDefOf.VQEA_TraitSelectionPrism))
             {
-                if (HasLinkedFacility(InternalDefOf.VQEA_TraitSelectionPrism))
+                var gene1 = allArchiteGenes.RandomElement();
+                architeGeneChoices.Add(gene1);
+                var availableForSecond = allArchiteGenes.Where(g => g != gene1).ToList();
+                if (availableForSecond.Any())
                 {
-                    var gene1 = architeGenes.RandomElement();
-                    var availableGenes = architeGenes.ToList();
-                    availableGenes.Remove(gene1);
-                    var gene2 = availableGenes.Any() ? availableGenes.RandomElement() : gene1;
-
-                    Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseArchiteGene".Translate(),
-                        gene1.LabelCap, () =>
-                        {
-                            pawn.genes.AddGene(gene1, xenogene: true);
-                            generatedArchiteGene = gene1;
-                            ContinueWithSecondArchiteGene(pawn);
-                        },
-                        gene2.LabelCap, () =>
-                        {
-                            pawn.genes.AddGene(gene2, xenogene: true);
-                            generatedArchiteGene = gene2;
-                            ContinueWithSecondArchiteGene(pawn);
-                        }));
-                    return;
-                }
-                else
-                {
-                    var selectedArchiteGene = architeGenes.RandomElement();
-                    pawn.genes.AddGene(selectedArchiteGene, xenogene: true);
-                    generatedArchiteGene = selectedArchiteGene;
+                    architeGeneChoices.Add(availableForSecond.RandomElement());
                 }
             }
-            ContinueWithSecondArchiteGene(pawn);
+            List<GeneDef> sideEffectGeneChoices = new List<GeneDef>();
+            int targetMetabolism = GetTargetMetabolismEfficiency();
+            for (int metabolism = targetMetabolism; metabolism <= 10; metabolism++)
+            {
+                var genesWithMetabolism = GetFilteredGenes(pawn, g => g.biostatMet != 0 && g.biostatMet == metabolism && !architeGeneChoices.Any(ag => ag.ConflictsWith(g)));
+                if (genesWithMetabolism.Any() && HasLinkedFacility(InternalDefOf.VQEA_AberrationRedirector) && genesWithMetabolism.Count >= 2)
+                {
+                    var gene1 = genesWithMetabolism.RandomElement();
+                    sideEffectGeneChoices.Add(gene1);
+                    var availableForSecond = genesWithMetabolism.Where(g => g != gene1).ToList();
+                    if (availableForSecond.Any())
+                    {
+                        sideEffectGeneChoices.Add(availableForSecond.RandomElement());
+                    }
+                    break;
+                }
+            }
+            if (architeGeneChoices.Any() || sideEffectGeneChoices.Any())
+            {
+                Find.WindowStack.Add(new Window_GeneChoice(architeGeneChoices, sideEffectGeneChoices, delegate (GeneDef selectedArchite, GeneDef selectedSideEffect)
+                {
+                    if (selectedArchite != null)
+                    {
+                        pawn.genes.AddGene(selectedArchite, xenogene: true);
+                        generatedArchiteGene = selectedArchite;
+                    }
+                    else if (allArchiteGenes.Any())
+                    {
+                        var randomArchite = allArchiteGenes.RandomElement();
+                        pawn.genes.AddGene(randomArchite, xenogene: true);
+                        generatedArchiteGene = randomArchite;
+                    }
+                    if (selectedSideEffect != null)
+                    {
+                        pawn.genes.AddGene(selectedSideEffect, xenogene: true);
+                        generatedSideEffectGene = selectedSideEffect;
+                    }
+                    else
+                    {
+                        AddRandomSideEffectGene(pawn);
+                    }
+                    PostGeneSelectionSuccess(pawn);
+                }));
+            }
+            else
+            {
+                if (allArchiteGenes.Any())
+                {
+                    var randomArchite = allArchiteGenes.RandomElement();
+                    pawn.genes.AddGene(randomArchite, xenogene: true);
+                    generatedArchiteGene = randomArchite;
+                }
+                AddRandomSideEffectGene(pawn);
+                PostGeneSelectionSuccess(pawn);
+            }
         }
-        private void ContinueWithSecondArchiteGene(Pawn pawn)
+
+        private void AddRandomSideEffectGene(Pawn pawn)
+        {
+            int targetMetabolism = GetTargetMetabolismEfficiency();
+            for (int metabolism = targetMetabolism; metabolism <= 10; metabolism++)
+            {
+                var genesWithMetabolism = GetFilteredGenes(pawn, g => g.biostatMet != 0 && g.biostatMet == metabolism);
+                if (genesWithMetabolism.Any())
+                {
+                    var selectedGene = genesWithMetabolism.RandomElement();
+                    pawn.genes.AddGene(selectedGene, xenogene: true);
+                    generatedSideEffectGene = selectedGene;
+                    return;
+                }
+            }
+        }
+
+        private void PostGeneSelectionSuccess(Pawn pawn)
         {
             if (HasLinkedFacility(InternalDefOf.VQEA_ArchitePathingArray) && Rand.Chance(0.25f))
             {
@@ -544,52 +596,6 @@ namespace VanillaQuestsExpandedAncients
                     pawn.genes.AddGene(secondArchiteGene, xenogene: true);
                 }
             }
-            FindAndAddSideEffectGene(pawn);
-        }
-        private void FindAndAddSideEffectGene(Pawn pawn)
-        {
-            int targetMetabolism = GetTargetMetabolismEfficiency();
-            for (int metabolism = targetMetabolism; metabolism <= 10; metabolism++)
-            {
-                var genesWithMetabolism = GetFilteredGenes(pawn, g => g.biostatMet != 0 && g.biostatMet == metabolism);
-
-                if (genesWithMetabolism.Any())
-                {
-                    if (HasLinkedFacility(InternalDefOf.VQEA_AberrationRedirector) && genesWithMetabolism.Count >= 2)
-                    {
-                        var availableGenes = genesWithMetabolism.ToList();
-                        var gene1 = availableGenes.RandomElement();
-                        availableGenes.Remove(gene1);
-                        var gene2 = availableGenes.RandomElement();
-                        Find.WindowStack.Add(new Dialog_MessageBox("VQEA_ChooseSideEffectGene".Translate(),
-                            gene1.LabelCap, () =>
-                            {
-                                pawn.genes.AddGene(gene1, xenogene: true);
-                                generatedSideEffectGene = gene1;
-                                FindAndAddSecondNegativeGene(pawn);
-                            },
-                            gene2.LabelCap, () =>
-                            {
-                                pawn.genes.AddGene(gene2, xenogene: true);
-                                generatedSideEffectGene = gene2;
-                                FindAndAddSecondNegativeGene(pawn);
-                            }));
-                        return;
-                    }
-                    else
-                    {
-                        var selectedGene = genesWithMetabolism.RandomElement();
-                        pawn.genes.AddGene(selectedGene, xenogene: true);
-                        generatedSideEffectGene = selectedGene;
-                        FindAndAddSecondNegativeGene(pawn);
-                        return;
-                    }
-                }
-            }
-            FindAndAddSecondNegativeGene(pawn);
-        }
-        private void FindAndAddSecondNegativeGene(Pawn pawn)
-        {
             if (HasLinkedFacility(InternalDefOf.VQEA_ArchitePathingArray) && Rand.Chance(0.5f))
             {
                 var negativeGenes = GetFilteredGenes(pawn, g => g.biostatArc <= 0 && g.biostatMet > 0);
@@ -607,7 +613,15 @@ namespace VanillaQuestsExpandedAncients
             {
                 innerContainer.TryDrop(pawn, this.InteractionCell, this.Map, ThingPlaceMode.Near, 1, out Thing _);
             }
-            Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Success".Translate(), "VQEA_LetterDesc_Success".Translate(pawn.Named("PAWN"), generatedArchiteGene?.Named("ARCHITEGENE") ?? "Unknown".Named("ARCHITEGENE"), generatedSideEffectGene?.Named("SIDEEFFECTGENE") ?? "Unknown".Named("SIDEEFFECTGENE")), LetterDefOf.PositiveEvent, pawn);
+
+            if (generatedSideEffectGene != null)
+            {
+                Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Success".Translate(), "VQEA_LetterDesc_Success".Translate(pawn.Named("PAWN"), generatedArchiteGene.Named("ARCHITEGENE"), generatedSideEffectGene.Named("SIDEEFFECTGENE")), LetterDefOf.PositiveEvent, pawn);
+            }
+            else
+            {
+                Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Success".Translate(), "VQEA_LetterDesc_SuccessNoSideEffect".Translate(pawn.Named("PAWN"), generatedArchiteGene.Named("ARCHITEGENE")), LetterDefOf.PositiveEvent, pawn);
+            }
             ApplyInjectionComa(pawn);
             Reset();
         }

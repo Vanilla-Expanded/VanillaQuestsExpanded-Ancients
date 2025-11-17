@@ -200,19 +200,10 @@ namespace VanillaQuestsExpandedAncients
             GUI.color = Color.white;
             Text.Anchor = TextAnchor.UpperLeft;
 
-            bool noCapsules = Find.CurrentMap.resourceCounter.GetCount(ThingDefOf.ArchiteCapsule) == 0;
-            if (noCapsules)
+            if (Widgets.ButtonText(injectButtonRect, "VQEA_Inject".Translate()))
             {
-                TooltipHandler.TipRegion(injectButtonRect, "VQEA_NoArchiteCapsules".Translate());
-                Widgets.ButtonText(injectButtonRect, "VQEA_Inject".Translate(), true);
-            }
-            else
-            {
-                if (Widgets.ButtonText(injectButtonRect, "VQEA_Inject".Translate()))
-                {
-                    archogenInjector.ConfirmInjection();
-                    Close();
-                }
+                archogenInjector.ConfirmInjection();
+                Close();
             }
         }
     }

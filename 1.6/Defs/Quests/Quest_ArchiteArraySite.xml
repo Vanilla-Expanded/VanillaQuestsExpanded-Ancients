@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- <QuestScriptDef>
+  <QuestScriptDef>
     <defName>VQE_ArchiteArraySite</defName>
     <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_ArchiteArraySite" />
     <questNameRules>
@@ -17,7 +17,7 @@
       <li Class="VEF.Storyteller.QuestChainExtension">
         <questChainDef>VQE_TheAncientLab</questChainDef>
         <conditionSucceedQuests>
-          <li>VQE_ArchiteControlVault</li>
+          <li>VQE_InhibitorResearchLab</li>
         </conditionSucceedQuests>
         <ticksSinceSucceed>30000~30000</ticksSinceSucceed>
         <isRepeatable>false</isRepeatable>

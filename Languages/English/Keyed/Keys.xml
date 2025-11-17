@@ -30,6 +30,7 @@
     <!-- Letters -->
     <VQEA_LetterLabel_Success>Archogen injection: success</VQEA_LetterLabel_Success>
     <VQEA_LetterDesc_Success>The archite injection has been successful.\n\n{PAWN_nameDef} has been injected with volatile archites and has gained a new archite gene: {ARCHITEGENE_label}.\n\nAs a side effect, {PAWN_nameDef} has also developed an additional gene: {SIDEEFFECTGENE_label}.\n\n{PAWN_pronoun} will now enter an injection coma while {PAWN_possessive} body adapts to the new genetic composition.</VQEA_LetterDesc_Success>
+    <VQEA_LetterDesc_SuccessNoSideEffect>The archite injection has been successful.\n\n{PAWN_nameDef} has been injected with volatile archites and has gained a new archite gene: {ARCHITEGENE_label}.\n\n{PAWN_pronoun} will now enter an injection coma while {PAWN_possessive} body adapts to the new genetic composition.</VQEA_LetterDesc_SuccessNoSideEffect>
     <VQEA_LetterLabel_Rejection>Archogen injection: rejection</VQEA_LetterLabel_Rejection>
     <VQEA_LetterDesc_Rejection>The archite injection has been rejected.\n\n{PAWN_nameDef} has been injected with volatile archites, but {PAWN_possessive} body rejected the alterations to the genetic composition.\n\n{PAWN_pronoun} will now enter an injection coma while {PAWN_possessive} body recovers.</VQEA_LetterDesc_Rejection>
     <VQEA_LetterLabel_Mutation>Archogen injection: mutation</VQEA_LetterLabel_Mutation>
@@ -49,6 +50,15 @@
     <VQEA_ArchogenInjectorComplete>Injection complete.</VQEA_ArchogenInjectorComplete>
     <VQEA_NoArchiteCapsules>No archite capsules available.</VQEA_NoArchiteCapsules>
     <VQEA_HasInjectionComa>In injection coma.</VQEA_HasInjectionComa>
+    <VQEA_ChooseGenesTitle>Choose genes</VQEA_ChooseGenesTitle>
+    <VQEA_MustSelectGenes>You must select a gene from each category.</VQEA_MustSelectGenes>
+    <VQEA_MustSelectArchiteGene>You must select an archite gene.</VQEA_MustSelectArchiteGene>
+    <VQEA_MustSelectSideEffectGene>You must select a side-effect gene.</VQEA_MustSelectSideEffectGene>
+    <VQEA_AddsBurningPassionIn>Adds burning passion in {0_label}.</VQEA_AddsBurningPassionIn>
+    <VQEA_ArchiteGenes>Archite genes</VQEA_ArchiteGenes>
+    <VQEA_NoArchiteGenes>No archite genes available.</VQEA_NoArchiteGenes>
+    <VQEA_SideEffectGenes>Side-effect genes</VQEA_SideEffectGenes>
+    <VQEA_NoSideEffectGenes>No side-effect genes available.</VQEA_NoSideEffectGenes>
     <!-- Gene Choice Dialogs -->
     <VQEA_ChooseArchiteGene>Choose an archite gene</VQEA_ChooseArchiteGene>
     <VQEA_ChooseSideEffectGene>Choose a side effect gene</VQEA_ChooseSideEffectGene>

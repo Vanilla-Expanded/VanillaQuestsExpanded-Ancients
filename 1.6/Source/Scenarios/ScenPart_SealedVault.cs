@@ -60,15 +60,16 @@ namespace VanillaQuestsExpandedAncients
 
         private void ReplaceSarcophagusContents(Map map, ThingDef sarcophagusDef, PawnKindDef pawnKind)
         {
-            var sarcophagi = map.listerThings.ThingsOfDef(sarcophagusDef).Cast<Building_CryptosleepCasket>().ToList();
+            var sarcophagi = map.listerThings.ThingsOfDef(sarcophagusDef).Cast<Building_ContainmentCasket>().ToList();
             foreach (var sarcophagus in sarcophagi)
             {
                 if (sarcophagus.HasAnyContents)
                 {
                     sarcophagus.GetDirectlyHeldThings().ClearAndDestroyContents();
                 }
-                var pawn = PawnGenerator.GeneratePawn(pawnKind, Faction.OfPlayer);
+                var pawn = PawnGenerator.GeneratePawn(pawnKind);
                 sarcophagus.TryAcceptThing(pawn);
+                sarcophagus.isStartingScenarioBuidling = true;
             }
         }
     }
