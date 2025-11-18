@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,5 +47,9 @@ namespace VanillaQuestsExpandedAncients
             return num2;
         }
 
+        public static bool IsValidGeneForInjection(GeneDef geneDef)
+        {
+            return geneDef.displayCategory?.defName != "VRE_Morphs" && ModCompatibility.IsAndroidGene(geneDef) is false;
+        }
     }
 }

@@ -23,9 +23,10 @@ namespace VanillaQuestsExpandedAncients
                         if (added >= extension.architeGeneCount) break;
                         if (!__result.genes.HasActiveGene(geneDef)
                             && !__result.genes.GenesListForReading.Any(g => g.def.ConflictsWith(geneDef))
-                            && (geneDef.prerequisite == null || __result.genes.HasActiveGene(geneDef.prerequisite)))
+                            && (geneDef.prerequisite == null || __result.genes.HasActiveGene(geneDef.prerequisite))
+                            && Utils.IsValidGeneForInjection(geneDef))
                         {
-                            __result.genes.AddGene(geneDef, xenogene: false);
+                            __result.genes.AddGene(geneDef, xenogene: true);
                             added++;
                         }
                     }
@@ -45,9 +46,10 @@ namespace VanillaQuestsExpandedAncients
                         if (added >= extension.metabolismGeneCount) break;
                         if (!__result.genes.HasActiveGene(geneDef)
                             && !__result.genes.GenesListForReading.Any(g => g.def.ConflictsWith(geneDef))
-                            && (geneDef.prerequisite == null || __result.genes.HasActiveGene(geneDef.prerequisite)))
+                            && (geneDef.prerequisite == null || __result.genes.HasActiveGene(geneDef.prerequisite))
+                            && Utils.IsValidGeneForInjection(geneDef))
                         {
-                            __result.genes.AddGene(geneDef, xenogene: false);
+                            __result.genes.AddGene(geneDef, xenogene: true);
                             added++;
                         }
                     }

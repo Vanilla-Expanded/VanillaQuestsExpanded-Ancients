@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -129,7 +129,7 @@ namespace VanillaQuestsExpandedAncients
 
             for(int i=0;i< CachedExtension.numToSpawn; i++)
             {
-                Pawn pawn = PawnGenerator.GeneratePawn(CachedExtension.containmentSpawn);
+                Pawn pawn = PawnGenerator.GeneratePawn(CachedExtension.containmentSpawn, Faction.OfAncientsHostile);
                 GenSpawn.Spawn(pawn, CellFinder.RandomClosewalkCellNear(pos, map, 1), map);
                 pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent);
             }
