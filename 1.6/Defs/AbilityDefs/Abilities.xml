@@ -48,6 +48,7 @@
 		<comps>
 			<li Class="CompProperties_AbilityFireSpew">
 				<range>13.9</range>
+				<damAmount>12</damAmount>
 				<lineWidthEnd>5</lineWidthEnd>
 				<filthDef>Filth_FlammableBile</filthDef>
 				<effecterDef>Fire_Spew</effecterDef>
@@ -60,7 +61,7 @@
 		<label>hellsphere blast</label>
 		<description>Unleash a concentrated beam of destructive energy from the eyes, identical to the blast fired by a hellsphere cannon. After a short duration, the microscoping skipgates in the eyes release a searing pulse of power capable of melting concrete and incinerating anything within the blast zone.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_HellsphereBlast</iconPath>
-		<cooldownTicksRange>3000</cooldownTicksRange>
+		<cooldownTicksRange>30000</cooldownTicksRange>
 		<aiCanUse>true</aiCanUse>
 		<verbProperties>
 			<verbClass>Verb_CastAbility</verbClass>

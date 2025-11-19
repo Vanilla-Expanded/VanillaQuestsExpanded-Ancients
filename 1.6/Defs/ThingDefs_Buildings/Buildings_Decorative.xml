@@ -609,9 +609,14 @@
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsTemperature</li>
+		</thingCategories>
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Flammability>0.5</Flammability>
+			 <Mass>6</Mass>
 			<Beauty>-1</Beauty>
 		</statBases>
 		<graphicData>
@@ -622,8 +627,8 @@
 		<comps>
 			<li Class="CompProperties_HeatPusher">
 				<compClass>CompHeatPusherPowered</compClass>
-				<heatPerSecond>21</heatPerSecond>
-				<heatPushMaxTemperature>24</heatPushMaxTemperature>
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>18</heatPushMaxTemperature>
 			</li>
 		</comps>
 	</ThingDef>

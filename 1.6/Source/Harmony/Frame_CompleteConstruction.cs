@@ -38,7 +38,7 @@ namespace VanillaQuestsExpandedAncients
         [HarmonyPostfix]
         static void HandleCraftModifications(ThingDef def, Thing __result)
         {
-           if(Rand.Chance(0.05f) && VanillaQuestsExpandedAncients_Frame_CompleteConstruction_Patch.crafter?.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulConstruction) == true)
+           if(Rand.Chance(0.5f) && VanillaQuestsExpandedAncients_Frame_CompleteConstruction_Patch.crafter?.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulConstruction) == true)
             {
                 Pawn crafter = VanillaQuestsExpandedAncients_Frame_CompleteConstruction_Patch.crafter;
                 List<ThingDefCountClass> costlist = __result.CostListAdjusted();

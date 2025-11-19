@@ -49,15 +49,21 @@ namespace VanillaQuestsExpandedAncients
 		public static GeneDef VQEA_MasterfulPlants;
 		public static GeneDef VQEA_MasterfulShooting;
 		public static GeneDef VQEA_MasterfulSocial;
+        public static GeneDef VQEA_MasterfulCrafting;
+        public static GeneDef VQEA_MasterfulCooking;
 
-		public static JoyKindDef VQEA_AnimalRelaxation;
+        public static StatDef CookSpeed;
+        public static StatDef ButcheryFleshEfficiency;
+
+        public static JoyKindDef VQEA_AnimalRelaxation;
 
 		public static HediffDef VQEA_InjectionComa;
 		public static HediffDef VQEA_HemocollapseSyndrome;
 
 		public static BodyPartDef Brain;
+        public static BodyPartDef Reactor;
 
-		public static PawnKindDef VQEA_Spliceling;
+        public static PawnKindDef VQEA_Spliceling;
 		public static PawnKindDef VQEA_Splicehulk;
 		public static PawnKindDef VQEA_Splicefiend;
 

@@ -13,7 +13,7 @@
 			<paintable>false</paintable>
 			<claimable>false</claimable>
 			<neverBuildable>true</neverBuildable>
-			<deconstructible>false</deconstructible>
+			<deconstructible>true</deconstructible>
 			<alwaysShowRelatedBuildCommands>false</alwaysShowRelatedBuildCommands>
 		</building>
 	</ThingDef>

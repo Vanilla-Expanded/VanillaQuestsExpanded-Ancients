@@ -54,6 +54,7 @@
 		</statOffsets>
 		<statFactors>
 			<MoveSpeed>1.2</MoveSpeed>
+			<PawnTrapSpringChance>0</PawnTrapSpringChance>
 		</statFactors>
 	</GeneDef>
 	<GeneDef>
@@ -186,6 +187,9 @@
 			<GlobalLearningFactor>2</GlobalLearningFactor>
 			<HackingSpeed>10</HackingSpeed>
 		</statOffsets>
+		<statFactors>
+			<VEF_GrowthPointMultiplier>3</VEF_GrowthPointMultiplier>
+		</statFactors>
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">
 				<globalSkillLossMultiplier>0</globalSkillLossMultiplier>
@@ -247,7 +251,7 @@
 			</li>
 		</modExtensions>
 		<customEffectDescriptions>
-			<li>Passively regenerates 0.5% psyfocus per hour.</li>
+			<li>Passively regenerates 1% psyfocus per hour.</li>
 		</customEffectDescriptions>
 	</GeneDef>
 	<GeneDef>
@@ -293,7 +297,6 @@
 			<StaggerDurationFactor>0.2</StaggerDurationFactor>
 			<MeatAmount>3</MeatAmount>
 			<LeatherAmount>3</LeatherAmount>
-
 			<MeleeDodgeChance>0.25</MeleeDodgeChance>
 		</statFactors>
 		<modExtensions>
@@ -392,6 +395,9 @@
 		<aptitudes>
 			<Cooking>16</Cooking>
 		</aptitudes>
+		<statOffsets>
+			<ButcheryFleshEfficiency>0.25</ButcheryFleshEfficiency>
+		</statOffsets>
 		<statFactors>
 			<CookSpeed>2</CookSpeed>
 		</statFactors>
@@ -416,6 +422,9 @@
 		<aptitudes>
 			<Crafting>16</Crafting>
 		</aptitudes>
+		<statOffsets>
+			<ButcheryMechanoidEfficiency>0.25</ButcheryMechanoidEfficiency>
+		</statOffsets>
 		<passionMod>
 			<skill>Crafting</skill>
 			<modType>DropAll</modType>

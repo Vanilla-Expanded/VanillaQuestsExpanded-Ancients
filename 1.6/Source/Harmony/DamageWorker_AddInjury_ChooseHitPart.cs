@@ -40,7 +40,7 @@ namespace VanillaQuestsExpandedAncients
             }
             if (attacker != null && dinfo.Def.isRanged && attacker.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulShooting) == true)
             {
-                var vitalParts = pawn.health.hediffSet.GetNotMissingParts(dinfo.Height, BodyPartDepth.Inside).Where(part => part.def == BodyPartDefOf.Head ).ToList();
+                var vitalParts = pawn.health.hediffSet.GetNotMissingParts(dinfo.Height, BodyPartDepth.Inside).Where(part => part.def == BodyPartDefOf.Head || part.def == InternalDefOf.Reactor).ToList();
                 if (vitalParts.TryRandomElementByWeight(x => x.coverageAbs * x.def.GetHitChanceFactorFor(dinfo.Def), out __result)) return false;
                 if (vitalParts.TryRandomElementByWeight(x => x.coverageAbs, out __result)) return false;
 

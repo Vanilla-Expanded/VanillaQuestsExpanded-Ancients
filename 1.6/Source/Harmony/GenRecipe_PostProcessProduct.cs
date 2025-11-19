@@ -60,11 +60,28 @@ namespace VanillaQuestsExpandedAncients
 
                         }
                     }
-                    
-                    
-                    
+      
 
                 }
+            }
+            if (worker?.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulCrafting) == true)
+            {
+
+                CompQuality compQuality = product?.TryGetComp<CompQuality>();
+                if (compQuality != null)
+                {
+                    if (recipeDef?.workSkill == null)
+                    {
+                        Log.Error(recipeDef + " needs workSkill because it creates a product with a quality.");
+                    }
+                    if (compQuality.Quality != QualityCategory.Legendary)
+                    {
+                        compQuality.SetQuality(compQuality.Quality + 1, ArtGenerationContext.Colony);
+
+                    }
+
+                }
+
             }
         }
     }

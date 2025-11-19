@@ -15,7 +15,12 @@
 			<MaxHitPoints>40</MaxHitPoints>
 			<Flammability>0.5</Flammability>
 			<Beauty>-1</Beauty>
+			 <Mass>4.5</Mass>
 		</statBases>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
 		<graphicData>
 			<texPath>Things/Building/Light/AncientSunLamp</texPath>
 			<graphicClass>Graphic_Random</graphicClass>

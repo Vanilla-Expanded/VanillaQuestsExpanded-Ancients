@@ -57,6 +57,11 @@ namespace VanillaQuestsExpandedAncients
                 return false;
 
             }
+            if ((stat == InternalDefOf.CookSpeed|| stat == InternalDefOf.ButcheryFleshEfficiency) && req.Thing is Pawn pawn3 && pawn3?.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulCooking) == true)
+            {
+                return false;
+
+            }
             return true;
         }
 

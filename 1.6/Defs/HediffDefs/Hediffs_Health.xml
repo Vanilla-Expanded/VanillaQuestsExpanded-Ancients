@@ -77,7 +77,7 @@
 		<comps>
 			<li Class="VEF.AnimalBehaviours.HediffCompProperties_PsyfocusRegeneration">
 				<rateInTicks>6000</rateInTicks>
-				<regenAmount>0.005</regenAmount>
+				<regenAmount>0.01</regenAmount>
 			</li>
 		</comps>
 	</HediffDef>
