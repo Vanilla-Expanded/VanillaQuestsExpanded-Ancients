@@ -43,7 +43,7 @@
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MeleeDamage</li>
+			<li>MoveSpeed</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -324,7 +324,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Animals</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -345,7 +345,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Artistic</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -366,7 +366,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Construction</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -387,7 +387,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Cooking</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -414,7 +414,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Crafting</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -438,7 +438,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Medicine</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -459,7 +459,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Melee</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -480,7 +480,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Mining</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -504,7 +504,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Plants</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -528,7 +528,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Intellectual</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -554,7 +554,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Shooting</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
@@ -575,7 +575,7 @@
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<exclusionTags>
-			<li>MasterfulSkills</li>
+			<li>Aptitude_Social</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>

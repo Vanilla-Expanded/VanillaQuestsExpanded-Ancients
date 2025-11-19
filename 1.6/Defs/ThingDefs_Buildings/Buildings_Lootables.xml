@@ -90,7 +90,7 @@
 		<label>archite capsule containment</label>
 		<description>A containment unit built to store and release archite capsules for experimentation. It still hums softly when approached. Can be opened to release an archite capsule.</description>
 		<size>(1,1)</size>
-		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
@@ -116,6 +116,13 @@
 				</contents>
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<buildingLeft>VQEA_ArchiteCapsuleContainment_Empty</buildingLeft>
+				<gizmoText>VQEA_Override</gizmoText>
+				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoDesc>VQEA_OverrideDesc_Generic</gizmoDesc>
+				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
+				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
+				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
+				<useHackingSpeed>true</useHackingSpeed>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -177,6 +184,7 @@
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
 				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
 				<buildingLeft>VQEA_AncientGenepackCrate_Empty</buildingLeft>
+				<useHackingSpeed>true</useHackingSpeed>
 			</li>
 		</modExtensions>
 	</ThingDef>
