@@ -73,6 +73,7 @@
     <VQEA_Override>Override</VQEA_Override>
     <VQEA_OverrideDesc>Select a colonist to override the ancient pipeline junction, siphoning a large amount of chemfuel from it. The pipeline junction will need time before it can be hacked again.</VQEA_OverrideDesc>
     <VQEA_OverrideDesc_Generic>Select a colonist to override the security on this.</VQEA_OverrideDesc_Generic>
+	<VQEA_OverrideDesc_Queue>Order this container to be opened by overriding its security.</VQEA_OverrideDesc_Queue>
     <VQEA_CancelOverride>Cancel override</VQEA_CancelOverride>
     <VQEA_CancelOverrideDesc>Cancel overriding this building.</VQEA_CancelOverrideDesc>
     <VQEA_LockedAncientVaultDoor>This ancient vault door is locked</VQEA_LockedAncientVaultDoor>

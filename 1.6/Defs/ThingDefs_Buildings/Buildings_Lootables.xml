@@ -118,7 +118,7 @@
 				<buildingLeft>VQEA_ArchiteCapsuleContainment_Empty</buildingLeft>
 				<gizmoText>VQEA_Override</gizmoText>
 				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
-				<gizmoDesc>VQEA_OverrideDesc_Generic</gizmoDesc>
+				<gizmoDesc>VQEA_OverrideDesc_Queue</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
 				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
@@ -179,7 +179,7 @@
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<gizmoText>VQEA_Override</gizmoText>
 				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
-				<gizmoDesc>VQEA_OverrideDesc_Generic</gizmoDesc>
+				<gizmoDesc>VQEA_OverrideDesc_Queue</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
 				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
@@ -400,7 +400,7 @@
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<gizmoText>VQEA_Override</gizmoText>
 				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
-				<gizmoDesc>VQEA_OverrideDesc_Generic</gizmoDesc>
+				<gizmoDesc>VQEA_OverrideDesc_Queue</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
 				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
