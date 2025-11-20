@@ -78,6 +78,8 @@
     <VQEA_LockedAncientVaultDoor>This ancient vault door is locked</VQEA_LockedAncientVaultDoor>
     <VQEA_InterceptBroadcast>Intercept broadcast</VQEA_InterceptBroadcast>
     <VQEA_InterceptBroadcastDesc>Intercept the broadcast to find out the location of another lab where the broadcast is directed.</VQEA_InterceptBroadcastDesc>
+	<VQEA_CarryToBioBattery>Carry {0} to biobattery</VQEA_CarryToBioBattery>
+	<VQEA_MassLeft>Mass Left: {0} / {1} ({2})</VQEA_MassLeft>
 
     <!-- Pneumatic Tubes -->
     <VQEA_LoadCargo>Load cargo</VQEA_LoadCargo>

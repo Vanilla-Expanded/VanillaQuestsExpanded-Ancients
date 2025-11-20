@@ -188,4 +188,225 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_StorageShelf_Empty</defName>
+		<label>empty storage shelf</label>
+		<description>An empty, wobbly storage shelf. Anything of value is long gone.</description>
+		<size>(2,1)</size>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientIndustrialShelf_Empty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_StorageShelf_Meals</defName>
+		<label>survival meals shelf</label>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<description>A wobbly storage shelf containing packaged survival meals.</description>
+		<size>(2,1)</size>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientIndustrialShelf_Meals</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>MealSurvivalPack</thing>
+						<count>8</count>
+					</li>
+				</contents>
+				<buildingLeft>VQEA_StorageShelf_Empty</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_StorageShelf_Medicine</defName>
+		<label>medicine shelf</label>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<description>A wobbly storage shelf containing medicine.</description>
+		<size>(2,1)</size>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientIndustrialShelf_Medicine</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>MedicineIndustrial</thing>
+						<count>8</count>
+					</li>
+				</contents>
+				<buildingLeft>VQEA_StorageShelf_Empty</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_StorageShelf_Neutroamine</defName>
+		<label>neutroamine shelf</label>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<description>A wobbly storage shelf containing bottles of neutroamine.</description>
+		<size>(2,1)</size>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientIndustrialShelf_Neutroamine</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>Neutroamine</thing>
+						<count>24</count>
+					</li>
+				</contents>
+				<buildingLeft>VQEA_StorageShelf_Empty</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_StorageShelf_Gowns</defName>
+		<label>patient gowns shelf</label>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<description>A wobbly storage shelf with stacks of patient gowns.</description>
+		<size>(2,1)</size>
+		<rotatable>true</rotatable>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientIndustrialShelf_PatientGowns</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>VQEA_Apparel_PatientGown</thing>
+						<count>6</count>
+					</li>
+				</contents>
+				<buildingLeft>VQEA_StorageShelf_Empty</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientOrganBox_Empty</defName>
+		<label>empty ancient organ box</label>
+		<description>An empty storage box with a built-in cooling system, typically used to preserve organs over extended durations.</description>
+		<size>(1,1)</size>
+	
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientOrganBox_Open</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientOrganBox</defName>
+		<label>ancient organ box</label>
+		<description>A secure storage box with a built-in cooling system, typically used to preserve organs over extended durations. Can be hacked open to release whatever remains inside.</description>
+		<size>(1,1)</size>
+	<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
+		<costList>
+			<ChunkSlagSteel>2</ChunkSlagSteel>
+		</costList>
+		<fillPercent>0.4</fillPercent>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Lootables/AncientOrganBox_Sealed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>Chemfuel</thing>
+						<randomCount>75~125</randomCount>
+					</li>
+				</contents>
+				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
+				<gizmoText>VQEA_Override</gizmoText>
+				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoDesc>VQEA_OverrideDesc_Generic</gizmoDesc>
+				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
+				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
+				<cancelLootingGizmoTexture>UI/Designators/Cancel</cancelLootingGizmoTexture>
+				<buildingLeft>VQEA_AncientOrganBox_Empty</buildingLeft>
+				<useHackingSpeed>true</useHackingSpeed>
+			</li>
+		</modExtensions>
+	</ThingDef>
 </Defs>

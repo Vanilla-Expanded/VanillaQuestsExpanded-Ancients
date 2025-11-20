@@ -72,8 +72,11 @@ namespace VanillaQuestsExpandedAncients
 		public static SoundDef VQEA_Foosball_Ambience;
 
 		public static EffecterDef CocoonWakingUp;
+        public static EffecterDef VQEA_Bubbles;
 
-		public static SoundDef VQEA_PneumaticLaunch;
+        public static JobDef VQEA_CarryToBioBattery;
+
+        public static SoundDef VQEA_PneumaticLaunch;
 		public static SoundDef VQEA_PneumaticArrival;
 		public static TraitDef VQE_IdealPatient;
 		public static RulePackDef VQE_ExperimentMaleNames;

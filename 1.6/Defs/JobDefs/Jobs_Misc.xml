@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  
+  <JobDef>
+    <defName>VQEA_CarryToBioBattery</defName>
+    <driverClass>VanillaQuestsExpandedAncients.JobDriver_CarryToBioBattery</driverClass>
+    <reportString>carrying TargetA to biobattery tank.</reportString>
+  	<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>
