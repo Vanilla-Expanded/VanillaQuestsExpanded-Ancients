@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingSetMakerDef>
+		<defName>VQEA_AncientOrganBox</defName>
+		<root Class="ThingSetMaker_Sum">
+			<resolveInOrder>true</resolveInOrder>
+			<options>
+				<li>
+					<thingSetMaker Class="ThingSetMaker_RandomOption">
+						<options>
+							<li>
+								<weight>1</weight>
+								<thingSetMaker Class="ThingSetMaker_MarketValue">
+									<fixedParams>
+										<filter>
+											<categories>
+												<li>BodyParts</li>
+											</categories>
+										</filter>
+									</fixedParams>
+								</thingSetMaker>
+							</li>
+						</options>
+					</thingSetMaker>
+				</li>
+			</options>
+		</root>
+	</ThingSetMakerDef>
+	
+</Defs>
+

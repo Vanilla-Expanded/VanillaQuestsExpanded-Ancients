@@ -391,12 +391,12 @@
 		</graphicData>
 		<modExtensions>
 			<li Class="VEF.Buildings.LootableBuildingDetails">
-				<contents>
-					<li>
-						<thing>Chemfuel</thing>
-						<randomCount>75~125</randomCount>
-					</li>
-				</contents>
+				<useThingSetMakerDef>true</useThingSetMakerDef>
+				<setMakerDetails>
+					<thingSetMakerDef>VQEA_AncientOrganBox</thingSetMakerDef>
+					<totalMarketValueRange>1000~5000</totalMarketValueRange>
+					<countRange>1~3</countRange>
+				</setMakerDetails>
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<gizmoText>VQEA_Override</gizmoText>
 				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
