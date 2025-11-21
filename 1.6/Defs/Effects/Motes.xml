@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThingDef Abstract="True" Name="VQEA_MoteGlowDistortBackground" ParentName="MoteBase">
+		<graphicData>
+			<shaderType>MoteGlowDistortBackground</shaderType>
+			<shaderParameters>
+				<_DistortionTex>/Things/Mote/PsycastDistortionMask</_DistortionTex>
+			</shaderParameters>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_MoteGlowDistortBackground">
+		<defName>VQEA_MatterPhasing</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>MoteLow</altitudeLayer>
+		<mote>
+			<fadeInTime>0.05</fadeInTime>
+			<fadeOutTime>0.05</fadeOutTime>
+			<solidTime>999999</solidTime>
+			<needsMaintenance>true</needsMaintenance>
+		</mote>
+		<graphicData>
+			<texPath>Things/Mote/Black</texPath>
+			<shaderParameters>
+				<_distortionIntensity>0.05</_distortionIntensity>
+				<_brightnessMultiplier>1.1</_brightnessMultiplier>      
+			</shaderParameters>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+	</ThingDef>
+
+</Defs>

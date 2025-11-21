@@ -341,6 +341,10 @@
 				<severityPerSecond>-0.0667</severityPerSecond>
 			</li>
 			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_SpawnMote">
+				<moteDef>VQEA_MatterPhasing</moteDef>
+				<maxScale>1</maxScale>
+			</li>
 		</comps>
 	</HediffDef>
 </Defs>

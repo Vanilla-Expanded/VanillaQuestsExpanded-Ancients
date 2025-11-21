@@ -184,7 +184,7 @@
 		<defName>VQEA_MatterPhasing</defName>
 		<label>matter phasing</label>
 		<description>The colonist briefly shifts into an intangible state, letting them pass through walls before becoming solid again.</description>
-		<iconPath>UI/Icons/Genes/Powers/Gene_Invisibility</iconPath>
+		<iconPath>UI/Icons/Genes/Powers/Gene_MatterPhasing</iconPath>
 		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<cooldownTicksRange>1800</cooldownTicksRange>
 		<hostile>false</hostile>
