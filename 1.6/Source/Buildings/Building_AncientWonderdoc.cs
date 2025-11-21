@@ -99,28 +99,50 @@ namespace VanillaQuestsExpandedAncients
             else
             {
                 comp.Props.cycles[selectedCycleIndex].ApplyOnSuccess(pawn, this);
-                malfunctionChance += Rand.Range(0.1f, 0.5f);
+                malfunctionChance = Mathf.Clamp01(malfunctionChance + Rand.Range(0.1f, 0.5f));
             }
             Reset();
         }
 
-        public override Vector3 PawnDrawOffset => Vector3.zero;
-
-        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+        public override Vector3 PawnDrawOffset
         {
-            base.DrawAt(drawLoc, flip);
-            Vector3 drawPos = DrawPos;
-            Vector3 targetTopGraphicOffset;
-            bool shouldDrawGlow = false;
+            get
+            {
+                if (Rotation == Rot4.North)
+                {
+                    return new Vector3(0f, 0f, 0f);
+                }
+                else if (Rotation == Rot4.East)
+                {
+                    return new Vector3(-0.2f, 0f, 0.2f);
+                }
+                else if (Rotation == Rot4.South)
+                {
+                    return new Vector3(0f, 0f, 0.3f);
+                }
+                else if (Rotation == Rot4.West)
+                {
+                    return new Vector3(0.2f, 0f, 0.2f);
+                }
+                return Vector3.zero;
+            }
+        }
+
+        protected override void Tick()
+        {
+            base.Tick();
+            if (topGraphicOffset == Vector3.zero)
+            {
+                topGraphicOffset = new Vector3(0f, 1f, 0f);
+            }
             if (Occupant != null && selectedCycleIndex >= 0 && PowerOn)
             {
-                shouldDrawGlow = true;
                 var cycle = comp.Props.cycles[selectedCycleIndex];
                 if (GlowGraphic.color != cycle.glowColor)
                 {
                     glowGraphic = GlowGraphic.GetColoredVersion(GlowGraphic.Shader, cycle.glowColor, cycle.glowColor);
                 }
-                animCounter += Time.deltaTime * 5f;
+                animCounter += 0.08f;
                 float amplitude = 0.8f;
                 float offsetValue = Mathf.Sin(animCounter + thingIDNumber) * amplitude;
                 offsetValue += 0.5f;
@@ -132,19 +154,30 @@ namespace VanillaQuestsExpandedAncients
                 else
                 {
                     offsetVector = new Vector3(offsetValue, 1f, 0f);
+                    if (Rotation == Rot4.East)
+                    {
+                        offsetVector.z += 0.4f;
+                        offsetVector.x -= 0.4f;
+                    }
+                    else
+                    {
+                        offsetVector.z += 0.4f;
+                        offsetVector.x -= 0.6f;
+                    }
                 }
-                targetTopGraphicOffset = offsetVector + new Vector3(0f, 1f, 0f);
+                topGraphicOffset = offsetVector + new Vector3(0f, 1f, 0f);
             }
-            else
+        }
+
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+        {
+            base.DrawAt(drawLoc, flip);
+            Vector3 drawPos = DrawPos;
+            bool shouldDrawGlow = false;
+            if (Occupant != null && selectedCycleIndex >= 0 && PowerOn)
             {
-                animCounter = 0f;
-                targetTopGraphicOffset = new Vector3(0f, 1f, 0f);
+                shouldDrawGlow = true;
             }
-            if (topGraphicOffset == Vector3.zero)
-            {
-                topGraphicOffset = targetTopGraphicOffset;
-            }
-            topGraphicOffset = Vector3.Lerp(topGraphicOffset, targetTopGraphicOffset, 10f * Time.deltaTime);
             TopGraphic.Draw(drawPos + topGraphicOffset, Rotation, this, 0f);
             if (shouldDrawGlow)
             {
@@ -198,10 +231,9 @@ namespace VanillaQuestsExpandedAncients
         public override string GetInspectString()
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append(base.GetInspectString());
+            stringBuilder.Append(base.GetInspectString() + "\n");
             if (Occupant != null && selectedCycleIndex >= 0)
             {
-                stringBuilder.AppendLine();
                 stringBuilder.AppendLine("VQEA_WonderdocContains".Translate(Occupant.Name.ToStringFull));
                 stringBuilder.AppendLine("VQEA_WonderdocCycle".Translate(comp.Props.cycles[selectedCycleIndex].label));
                 stringBuilder.AppendLine("VQEA_WonderdocTimeRemaining".Translate(TicksRemaining.ToStringTicksToPeriod()));
@@ -216,6 +248,7 @@ namespace VanillaQuestsExpandedAncients
             Scribe_Values.Look(ref malfunctionChance, "malfunctionChance", 0.1f);
             Scribe_Values.Look(ref selectedCycleIndex, "selectedCycleIndex", -1);
             Scribe_Values.Look(ref topGraphicOffset, "topGraphicOffset", Vector3.zero);
+            Scribe_Values.Look(ref animCounter, "animCounter", 0f);
         }
 
         protected override SoundDef GetOperatingSound()
@@ -236,7 +269,7 @@ namespace VanillaQuestsExpandedAncients
         public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
         {
             base.DynamicDrawPhaseAt(phase, drawLoc, flip);
-            Occupant?.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc, null, neverAimWeapon: true);
+            Occupant?.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc + PawnDrawOffset, null, neverAimWeapon: true);
         }
     }
 }

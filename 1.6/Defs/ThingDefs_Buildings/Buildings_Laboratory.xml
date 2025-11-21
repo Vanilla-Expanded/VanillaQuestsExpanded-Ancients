@@ -496,6 +496,7 @@
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<rotatable>true</rotatable>
 		<graphicData>
 			<texPath>Things/Building/AncientWonderdoc/AncientWonderdoc</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -573,6 +574,7 @@
 			<drawSize>(3,3)</drawSize>
 		</graphicData>
 		<size>(3,3)</size>
+		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<MarketValue>1000</MarketValue>
