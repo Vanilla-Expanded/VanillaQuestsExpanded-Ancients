@@ -96,4 +96,17 @@
     <VQE_ExitVault>Exit vault</VQE_ExitVault>
     <VQE_ViewVault>View vault</VQE_ViewVault>
     <VQE_ViewVaultDesc>View the destination vault interior</VQE_ViewVaultDesc>
+
+    <!-- Ancient Wonderdoc -->
+    <VQEA_WonderdocContains>Contains: {0}</VQEA_WonderdocContains>
+    <VQEA_WonderdocCycle>Cycle: {0}</VQEA_WonderdocCycle>
+    <VQEA_WonderdocTimeRemaining>Time remaining: {0}</VQEA_WonderdocTimeRemaining>
+    <VQEA_WonderdocBioregenerationSuccess>{PAWN_nameDef} successfully completed their wonderdoc bioregeneration wondercycle.</VQEA_WonderdocBioregenerationSuccess>
+    <VQEA_WonderdocInstarehabSuccess>{PAWN_nameDef} successfully completed their wonderdoc instarehab wondercycle.</VQEA_WonderdocInstarehabSuccess>
+    <VQEA_WonderdocTimeReversalSuccess>{PAWN_nameDef} successfully completed their wonderdoc time reversal wondercycle.</VQEA_WonderdocTimeReversalSuccess>
+    <VQEA_WonderdocSkillReformattingSuccess>{PAWN_nameDef} successfully completed their wonderdoc skill reformatting wondercycle.</VQEA_WonderdocSkillReformattingSuccess>
+    <VQEA_WonderdocMalfunction>Ancient wonderdoc suffered a malfunction during the wondercycle on {PAWN_nameDef}.</VQEA_WonderdocMalfunction>
+    <VQEA_ChanceToMalfunction>Chance to malfunction: {0}</VQEA_ChanceToMalfunction>
+    <VQEA_WonderdocOccupied>Wonderdoc is occupied.</VQEA_WonderdocOccupied>
+    <VQEA_NoPawnsAvailableForWonderdoc>No pawns available for wonderdoc.</VQEA_NoPawnsAvailableForWonderdoc>
 </LanguageData>

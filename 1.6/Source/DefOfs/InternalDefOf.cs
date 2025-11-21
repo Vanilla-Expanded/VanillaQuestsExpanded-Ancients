@@ -75,7 +75,18 @@ namespace VanillaQuestsExpandedAncients
         public static EffecterDef VQEA_Bubbles;
 
         public static JobDef VQEA_CarryToBioBattery;
-
+        public static HediffDef BadBack;
+        public static HediffDef Frail;
+        public static HediffDef Cataract;
+        public static HediffDef Alzheimers;
+        public static HediffDef Malaria;
+        public static HediffDef SleepingSickness;
+        public static HediffDef Flu;
+        public static HediffDef Plague;
+        public static HediffDef GutWorms;
+        public static HediffDef MuscleParasites;
+        public static SoundDef SubcoreSoftscanner_Start;
+        public static SoundDef SubcoreSoftscanner_Working;
         public static SoundDef VQEA_PneumaticLaunch;
 		public static SoundDef VQEA_PneumaticArrival;
 		public static TraitDef VQE_IdealPatient;
@@ -90,6 +101,8 @@ namespace VanillaQuestsExpandedAncients
 		public static SitePartDef VQEA_ArchiteArraySite;
 		public static ThingDef VQEA_LockedVaultDoor;
 		public static ThingDef VQEA_AncientBroadcastingStation;
+		public static ThingDef VQEA_AncientWonderdoc;
+		public static ThingDef VQEA_BustedAncientWonderdoc;
 		public static GameConditionDef VQEA_AncientComplex;
 		public static ThingDef VQEA_AncientLaboratoryCasket;
 		public static ThingDef VQEA_CandidateCryptosleepCasket;

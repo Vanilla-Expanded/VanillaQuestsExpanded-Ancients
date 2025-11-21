@@ -485,4 +485,112 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_AncientWonderdoc</defName>
+		<label>ancient wonderdoc</label>
+		<description>A mysterious ancient medical machine capable of performing powerful “wondercycles” that heal, reshape, or alter a patient in dramatic ways. Its long-neglected systems can malfunction, and the risk grows with every successful procedure. The technology is difficult to comprehend.</description>
+		<thingClass>VanillaQuestsExpandedAncients.Building_AncientWonderdoc</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<graphicData>
+			<texPath>Things/Building/AncientWonderdoc/AncientWonderdoc</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<MarketValue>3500</MarketValue>
+			<Flammability>0.75</Flammability>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>250</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_AncientWonderdoc">
+				<cycles>
+					<li Class="VanillaQuestsExpandedAncients.WonderdocCycle_Bioregeneration">
+						<label>Bioregeneration wondercycle</label>
+						<description>Initiate the bioregeneration wondercycle. This cycle will heal all fresh wounds, heal all permanent injuries, and restore all missing body parts, including limbs.\n\nIf a malfunction occurs, the patient will receive random illnesses, which may include carcinoma, as well as severe damage to some of their limbs.</description>
+						<durationTicks>15000</durationTicks>
+						<glowColor>(159, 246, 255)</glowColor>
+						<iconPath>UI/Gizmo/Wonderdoc_Bioregeneration</iconPath>
+					</li>
+					<li Class="VanillaQuestsExpandedAncients.WonderdocCycle_Instarehab">
+						<label>Instarehab wondercycle</label>
+						<description>Initiate the instarehab wondercycle. This cycle will cure all addictions, including a luciferium addiction. If an addiction is caused by a genetic dependency, the responsible gene will also be removed.\n\nIf a malfunction occurs, the patient will receive a random genetic drug dependency.</description>
+						<durationTicks>15000</durationTicks>
+						<glowColor>(200, 100, 66)</glowColor>
+						<iconPath>UI/Gizmo/Wonderdoc_CureAddictions</iconPath>
+					</li>
+					<li Class="VanillaQuestsExpandedAncients.WonderdocCycle_TimeReversal">
+						<label>Time reversal wondercycle</label>
+						<description>Initiate the time reversal wondercycle. This cycle will de-age the patient by 10 years.\n\nIf a malfunction occurs, the patient will either become a toddler again, or will become an elderly.</description>
+						<durationTicks>15000</durationTicks>
+						<glowColor>(222, 182, 66)</glowColor>
+						<iconPath>UI/Gizmo/Wonderdoc_TimeReversal</iconPath>
+					</li>
+					<li Class="VanillaQuestsExpandedAncients.WonderdocCycle_SkillReformatting">
+						<label>Skill reformatting wondercycle</label>
+						<description>Initiate the skill reformatting wondercycle. This cycle will redistribute the current skill levels equally across all skills the patient is capable of.\n\nIf a malfunction occurs, the effect will still occur, but the experience will be distributed randomly.</description>
+						<durationTicks>15000</durationTicks>
+						<glowColor>(172, 234, 172)</glowColor>
+						<iconPath>UI/Gizmo/Wonderdoc_SkillReroll</iconPath>
+					</li>
+				</cycles>
+			</li>
+		</comps>
+		<building>
+			<canPlaceOverWall>false</canPlaceOverWall>
+			<deconstructible>true</deconstructible>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<costList>
+			<Steel>180</Steel>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Plasteel>20</Plasteel>
+		</costList>
+		<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+	</ThingDef>
+
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_BustedAncientWonderdoc</defName>
+		<label>busted ancient wonderdoc</label>
+		<description>Once capable of performing powerful wondercycles, this ancient medical machine has fully broken down after a catastrophic malfunction. Its chambers are cracked, its systems dead, and it can no longer be used. Some valuables may still be salvaged from it.</description>
+		<graphicData>
+			<texPath>Things/Building/AncientWonderdoc/BustedAncientWonderdoc</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<size>(3,3)</size>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<MarketValue>1000</MarketValue>
+			<Flammability>0.75</Flammability>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<fillPercent>0.5</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<building>
+			<canPlaceOverWall>false</canPlaceOverWall>
+			<deconstructible>true</deconstructible>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<costList>
+			<Steel>120</Steel>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+	</ThingDef>
 </Defs>

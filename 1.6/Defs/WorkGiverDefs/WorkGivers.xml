@@ -24,8 +24,8 @@
     <label>carry to archogen injector</label>
     <giverClass>VanillaQuestsExpandedAncients.WorkGiver_CarryToArchogenInjector</giverClass>
     <workType>Hauling</workType>
-    <verb>inject</verb>
-    <gerund>injecting</gerund>
+    <verb>carry</verb>
+    <gerund>carrying</gerund>
     <priorityInType>90</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
@@ -33,4 +33,29 @@
     <canBeDoneByMechs>false</canBeDoneByMechs>
   </WorkGiverDef>
 
+  <WorkGiverDef>
+    <defName>VQEA_EnterAncientWonderdoc</defName>
+    <label>enter ancient wonderdoc</label>
+    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_EnterAncientWonderdoc</giverClass>
+    <verb>enter</verb>
+    <gerund>entering</gerund>
+    <priorityInType>90</priorityInType>
+    <requiredCapacities>
+      <li>Moving</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>VQEA_CarryToAncientWonderdoc</defName>
+    <label>carry to ancient wonderdoc</label>
+    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_CarryToAncientWonderdoc</giverClass>
+    <workType>Hauling</workType>
+    <verb>carry</verb>
+    <gerund>carrying</gerund>
+    <priorityInType>90</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
 </Defs>

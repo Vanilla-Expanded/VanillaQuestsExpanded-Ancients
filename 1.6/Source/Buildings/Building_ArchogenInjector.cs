@@ -21,29 +21,19 @@ namespace VanillaQuestsExpandedAncients
     }
 
     [StaticConstructorOnStartup]
-    public class Building_ArchogenInjector : Building_Enterable, IThingHolder
+    public class Building_ArchogenInjector : Building_PawnProcessor
     {
         private bool processConfirmed = false;
-        public int ticksRemaining;
         private int totalInjectionTime;
         private ArchiteInjectionOutcomeDef outcome;
-        private Effecter effectStart;
-        private Sustainer sustainerWorking;
-        private Effecter progressBarEffecter;
-        private Mote workingMote;
         private bool debugDisableNeedForIngredients;
         private GeneDef generatedArchiteGene;
         private GeneDef generatedSideEffectGene;
         private static readonly SoundDef EjectSoundSuccess = SoundDefOf.CryptosleepCasket_Eject;
         private static readonly SoundDef EjectSoundFail = SoundDefOf.CryptosleepCasket_Eject;
-        private static readonly Texture2D CancelIcon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel");
         public static readonly CachedTexture InsertPersonIcon = new CachedTexture("UI/Icons/InsertPersonSubcoreScanner");
         public CachedTexture InitIcon = new CachedTexture("UI/Gizmos/InsertPawn");
-        public bool PowerOn => this.TryGetComp<CompPowerTrader>().PowerOn;
         public override Vector3 PawnDrawOffset => IntVec3.West.RotatedBy(Rotation).ToVector3() / def.size.x;
-
-        public Pawn Occupant => innerContainer.FirstOrDefault(t => t is Pawn) as Pawn;
-
         new public Pawn SelectedPawn => selectedPawn;
 
         public bool AllRequiredIngredientsLoaded
@@ -81,7 +71,7 @@ namespace VanillaQuestsExpandedAncients
                 {
                     return ArchiteInjectorState.WaitingForCapsule;
                 }
-                if (ticksRemaining > 0)
+                if (processConfirmed && totalInjectionTime > 0 && TicksRemaining > 0)
                 {
                     return ArchiteInjectorState.Injecting;
                 }
@@ -96,17 +86,6 @@ namespace VanillaQuestsExpandedAncients
             {
                 Destroy();
             }
-        }
-
-        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
-        {
-            progressBarEffecter?.Cleanup();
-            progressBarEffecter = null;
-            effectStart?.Cleanup();
-            effectStart = null;
-            workingMote = null;
-            sustainerWorking = null;
-            base.DeSpawn(mode);
         }
 
         public int GetRequiredCountOf(ThingDef thingDef)
@@ -173,25 +152,10 @@ namespace VanillaQuestsExpandedAncients
             return true;
         }
 
-        public override void TryAcceptPawn(Pawn pawn)
+        protected override void OnAccept(Pawn p)
         {
-            if ((bool)CanAcceptPawn(pawn))
-            {
-                bool num = pawn.DeSpawnOrDeselect();
-                if (pawn.holdingOwner != null)
-                {
-                    pawn.holdingOwner.TryTransferToContainer(pawn, innerContainer);
-                }
-                else
-                {
-                    innerContainer.TryAdd(pawn);
-                }
-                if (num)
-                {
-                    Find.Selector.Select(pawn, playSound: false, forceDesignatorDeselect: false);
-                }
-                Find.WindowStack.Add(new Window_ArchiteInjection(this));
-            }
+            base.OnAccept(p);
+            Find.WindowStack.Add(new Window_ArchiteInjection(this));
         }
 
         public bool CanAcceptIngredient(Thing thing)
@@ -199,7 +163,12 @@ namespace VanillaQuestsExpandedAncients
             return GetRequiredCountOf(thing.def) > 0;
         }
 
-        public void CancelProcess()
+        protected override bool CanCancel()
+        {
+            return State == ArchiteInjectorState.PawnInside || State == ArchiteInjectorState.Injecting;
+        }
+        
+        public override void CancelProcess()
         {
             if (this.State == ArchiteInjectorState.Injecting && !HasLinkedFacility(InternalDefOf.VQEA_ArchiteRecycler))
             {
@@ -209,18 +178,15 @@ namespace VanillaQuestsExpandedAncients
                     capsule.Destroy();
                 }
             }
-            innerContainer.TryDropAll(this.InteractionCell, this.Map, ThingPlaceMode.Near);
-            Reset();
+            base.CancelProcess();
         }
 
-        private void Reset()
+        protected override void Reset()
         {
-            selectedPawn = null;
+            base.Reset();
             processConfirmed = false;
-            ticksRemaining = 0;
             totalInjectionTime = 0;
             outcome = null;
-            innerContainer.ClearAndDestroyContents();
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -248,6 +214,13 @@ namespace VanillaQuestsExpandedAncients
             }
         }
 
+        protected override bool ShouldProcessTick()
+        {
+            return base.ShouldProcessTick() && State == ArchiteInjectorState.Injecting;
+        }
+
+        protected override bool ShouldRegress => !PowerOn;
+
         protected override void Tick()
         {
             base.Tick();
@@ -271,59 +244,34 @@ namespace VanillaQuestsExpandedAncients
                 }
             }
 
-            if (State == ArchiteInjectorState.Injecting)
-            {
-                if (PowerOn)
-                {
-                    ticksRemaining--;
-                }
-                else
-                {
-                    if (ticksRemaining < totalInjectionTime)
-                    {
-                        ticksRemaining++;
-                    }
-                }
-                if (ticksRemaining <= 0)
-                {
-                    FinishInjection();
-                }
-
-                if (progressBarEffecter == null)
-                {
-                    progressBarEffecter = EffecterDefOf.ProgressBar.Spawn();
-                }
-                progressBarEffecter.EffectTick(this, TargetInfo.Invalid);
-                MoteProgressBar mote = ((SubEffecter_ProgressBar)progressBarEffecter.children[0]).mote;
-                if (mote != null)
-                {
-                    mote.progress = 1f - (float)ticksRemaining / (float)totalInjectionTime;
-                    mote.offsetZ = -0.8f;
-                }
-                if (sustainerWorking == null || sustainerWorking.Ended)
-                {
-                    sustainerWorking = SoundDefOf.GeneExtractor_Working.TrySpawnSustainer(SoundInfo.InMap(this, MaintenanceType.PerTick));
-                }
-                else
-                {
-                    sustainerWorking.Maintain();
-                }
-            }
-            else
-            {
-                progressBarEffecter?.Cleanup();
-                progressBarEffecter = null;
-                sustainerWorking = null;
-            }
-
             if (Occupant != null && Occupant.Dead)
             {
                 CancelProcess();
             }
-            if (selectedPawn != null && (selectedPawn.Dead || selectedPawn.MapHeld != Map))
+        }
+
+        protected override void FinishProcess()
+        {
+            Pawn occupant = Occupant;
+            if (occupant == null) return;
+
+            if (outcome == InternalDefOf.VQEA_ArchiteInjection_Success)
             {
-                selectedPawn = null;
+                EjectSoundSuccess.PlayOneShot(new TargetInfo(Position, Map));
+                HandleSuccessOutcome(occupant);
             }
+            else if (outcome == InternalDefOf.VQEA_ArchiteInjection_Rejection)
+            {
+                EjectSoundFail.PlayOneShot(new TargetInfo(Position, Map));
+                HandleRejectionOutcome(occupant);
+            }
+            else
+            {
+                EjectSoundFail.PlayOneShot(new TargetInfo(Position, Map));
+                HandleMutationOutcome(occupant, outcome.pawnKind);
+            }
+            EjectPawn();
+            Reset();
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -334,39 +282,7 @@ namespace VanillaQuestsExpandedAncients
             }
             if (selectedPawn == null)
             {
-                Command_Action command_Action2 = new Command_Action();
-                command_Action2.defaultLabel = "VQEA_InsertPerson".Translate() + "...";
-                command_Action2.defaultDesc = "VQEA_InsertPersonDesc".Translate();
-                command_Action2.icon = InsertPersonIcon.Texture;
-                command_Action2.action = delegate
-                {
-                    List<FloatMenuOption> list = new List<FloatMenuOption>();
-                    IReadOnlyList<Pawn> allPawnsSpawned = Map.mapPawns.AllPawnsSpawned;
-                    for (int j = 0; j < allPawnsSpawned.Count; j++)
-                    {
-                        Pawn pawn = allPawnsSpawned[j];
-                        AcceptanceReport acceptanceReport = CanAcceptPawn(pawn);
-                        if (!acceptanceReport.Accepted)
-                        {
-                            if (!acceptanceReport.Reason.NullOrEmpty())
-                            {
-                                list.Add(new FloatMenuOption(pawn.LabelShortCap + ": " + acceptanceReport.Reason, null, pawn, Color.white));
-                            }
-                        }
-                        else
-                        {
-                            list.Add(new FloatMenuOption(pawn.LabelShortCap, delegate
-                            {
-                                SelectPawn(pawn);
-                            }, pawn, Color.white));
-                        }
-                    }
-                    if (!list.Any())
-                    {
-                        list.Add(new FloatMenuOption("VQEA_NoInjectablePawns".Translate(), null));
-                    }
-                    Find.WindowStack.Add(new FloatMenu(list));
-                };
+                Command_Action command_Action2 = CreateInsertPawnGizmo("VQEA_InsertPerson", "VQEA_InsertPersonDesc", InsertPersonIcon.Texture, "VQEA_NoInjectablePawns", disableWhenOccupied: false);
                 if (!PowerOn)
                 {
                     command_Action2.Disable("NoPower".Translate().CapitalizeFirst());
@@ -377,33 +293,14 @@ namespace VanillaQuestsExpandedAncients
                 }
                 yield return command_Action2;
             }
-            if (State == ArchiteInjectorState.PawnInside || State == ArchiteInjectorState.Injecting)
+            
+            foreach (var gizmo in GetPawnProcessorGizmos())
             {
-                Command_Action command_Action3 = new Command_Action();
-                command_Action3.defaultLabel = "CommandCancelLoad".Translate();
-                command_Action3.defaultDesc = "CommandCancelLoadDesc".Translate();
-                command_Action3.icon = CancelIcon;
-                command_Action3.action = delegate
-                {
-                    CancelProcess();
-                };
-                command_Action3.activateSound = SoundDefOf.Designate_Cancel;
-                yield return command_Action3;
+                yield return gizmo;
             }
-
+            
             if (DebugSettings.ShowDevGizmos)
             {
-                if (State == ArchiteInjectorState.Injecting)
-                {
-                    Command_Action command_Action4 = new Command_Action();
-                    command_Action4.defaultLabel = "DEV: Complete";
-                    command_Action4.action = delegate
-                    {
-                        ticksRemaining = 1;
-                    };
-                    yield return command_Action4;
-                }
-
                 Command_Action command_Action5 = new Command_Action();
                 command_Action5.defaultLabel = (debugDisableNeedForIngredients ? "DEV: Enable Ingredients" : "DEV: Disable Ingredients");
                 command_Action5.action = delegate
@@ -435,7 +332,7 @@ namespace VanillaQuestsExpandedAncients
                     break;
                 case ArchiteInjectorState.Injecting:
                     stringBuilder.AppendLineIfNotEmpty();
-                    stringBuilder.Append("VQEA_ArchogenInjectorInjecting".Translate(ticksRemaining.ToStringTicksToPeriod()));
+                    stringBuilder.Append("VQEA_ArchogenInjectorInjecting".Translate(TicksRemaining.ToStringTicksToPeriod()));
                     break;
                 case ArchiteInjectorState.Complete:
                     stringBuilder.AppendLineIfNotEmpty();
@@ -449,7 +346,6 @@ namespace VanillaQuestsExpandedAncients
         {
             base.ExposeData();
             Scribe_Values.Look(ref processConfirmed, "processConfirmed", defaultValue: false);
-            Scribe_Values.Look(ref ticksRemaining, "ticksRemaining", 0);
             Scribe_Values.Look(ref totalInjectionTime, "totalInjectionTime", 0);
             Scribe_Defs.Look(ref outcome, "outcome");
         }
@@ -458,34 +354,12 @@ namespace VanillaQuestsExpandedAncients
         {
             CalculateOutcome();
             totalInjectionTime = GetExpectedInfusionDuration();
-            ticksRemaining = totalInjectionTime;
+            StartProcessing(totalInjectionTime);
         }
 
         public void ConfirmInjection()
         {
             processConfirmed = true;
-        }
-
-        private void FinishInjection()
-        {
-            Pawn occupant = Occupant;
-            if (occupant == null) return;
-
-            if (outcome == InternalDefOf.VQEA_ArchiteInjection_Success)
-            {
-                EjectSoundSuccess.PlayOneShot(new TargetInfo(Position, Map));
-                HandleSuccessOutcome(occupant);
-            }
-            else if (outcome == InternalDefOf.VQEA_ArchiteInjection_Rejection)
-            {
-                EjectSoundFail.PlayOneShot(new TargetInfo(Position, Map));
-                HandleRejectionOutcome(occupant);
-            }
-            else
-            {
-                EjectSoundFail.PlayOneShot(new TargetInfo(Position, Map));
-                HandleMutationOutcome(occupant, outcome.pawnKind);
-            }
         }
 
         private List<GeneDef> GetFilteredGenes(Pawn pawn, Func<GeneDef, bool> additionalFilter)
@@ -623,7 +497,6 @@ namespace VanillaQuestsExpandedAncients
                 Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Success".Translate(), "VQEA_LetterDesc_SuccessNoSideEffect".Translate(pawn.Named("PAWN"), generatedArchiteGene.Named("ARCHITEGENE")), LetterDefOf.PositiveEvent, pawn);
             }
             ApplyInjectionComa(pawn);
-            Reset();
         }
 
         private void HandleRejectionOutcome(Pawn pawn)
@@ -640,8 +513,6 @@ namespace VanillaQuestsExpandedAncients
                 "VQEA_LetterDesc_Rejection".Translate(pawn.Named("PAWN")),
                 LetterDefOf.NegativeEvent, pawn);
             ApplyInjectionComa(pawn);
-
-            Reset();
         }
 
         private void HandleMutationOutcome(Pawn originalPawn, PawnKindDef mutatedPawnKind)
@@ -655,8 +526,6 @@ namespace VanillaQuestsExpandedAncients
             mutatedPawn.mindState.mentalStateHandler.TryStartMentalState(InternalDefOf.VQEA_MutantBerserk, forceWake: true);
             Find.LetterStack.ReceiveLetter("VQEA_LetterLabel_Mutation".Translate(),
                 "VQEA_LetterDesc_Mutation".Translate(originalPawn.Named("PAWN"), mutatedPawnKind.LabelCap), LetterDefOf.ThreatBig, mutatedPawn);
-
-            Reset();
         }
 
         private void ApplyInjectionComa(Pawn pawn)
@@ -888,6 +757,21 @@ namespace VanillaQuestsExpandedAncients
                 return compAffectedByFacilities.LinkedFacilitiesListForReading.Select(f => f.def).ToList();
             }
             return new List<ThingDef>();
+        }
+
+        protected override SoundDef GetOperatingSound()
+        {
+            return SoundDefOf.GeneExtractor_Working;
+        }
+
+        protected override bool ShouldShowProgressBar()
+        {
+            return State == ArchiteInjectorState.Injecting;
+        }
+        
+        protected override SoundDef GetStartSound()
+        {
+            return null;
         }
     }
 }
