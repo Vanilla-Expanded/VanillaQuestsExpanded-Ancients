@@ -195,7 +195,7 @@ namespace VanillaQuestsExpandedAncients
 
             Text.Anchor = TextAnchor.MiddleRight;
             GUI.color = Color.grey;
-            string capsuleText = "VQEA_RequiresArchiteCapsule".Translate() + "\n" + "VQEA_AvailableArchiteCapsules".Translate(Find.CurrentMap.resourceCounter.GetCount(ThingDefOf.ArchiteCapsule));
+            string capsuleText = "VQEA_RequiresArchiteCapsule".Translate() + "\n" + "VQEA_AvailableArchiteCapsules".Translate(archogenInjector.Map.resourceCounter.GetCount(ThingDefOf.ArchiteCapsule));
             Widgets.Label(textRect, capsuleText);
             GUI.color = Color.white;
             Text.Anchor = TextAnchor.UpperLeft;

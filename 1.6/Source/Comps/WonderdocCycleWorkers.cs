@@ -102,6 +102,11 @@ namespace VanillaQuestsExpandedAncients
                     skill.xpSinceLastLevel = 0;
                     skill.Level = 0;
                 }
+                if (pawn.apparel != null)
+                {
+                    pawn.apparel.DropAll(pawn.Position, true);
+                }
+                pawn.Strip();
             }
             else
             {

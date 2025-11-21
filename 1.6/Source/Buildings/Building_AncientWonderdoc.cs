@@ -15,6 +15,8 @@ namespace VanillaQuestsExpandedAncients
     {
         private float malfunctionChance;
         private int selectedCycleIndex = -1;
+        private float animCounter;
+        private Vector3 topGraphicOffset;
         private CompAncientWonderdoc comp;
         public float HeldPawnDrawPos_Y => DrawPos.y + 0.03658537f;
         public float HeldPawnBodyAngle => Rotation.AsAngle;
@@ -39,7 +41,7 @@ namespace VanillaQuestsExpandedAncients
             {
                 if (glowGraphic == null)
                 {
-                    glowGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Building/AncientWonderdoc/Wonderdoc_Glow", ShaderDatabase.Cutout, def.graphicData.drawSize, Color.white);
+                    glowGraphic = GraphicDatabase.Get<Graphic_Multi>("Things/Building/AncientWonderdoc/Wonderdoc_Glow", ShaderDatabase.MoteGlow, def.graphicData.drawSize, Color.white);
                 }
                 return glowGraphic;
             }
@@ -107,32 +109,47 @@ namespace VanillaQuestsExpandedAncients
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             base.DrawAt(drawLoc, flip);
-            if (SelectedPawn != null && selectedCycleIndex >= 0)
+            Vector3 drawPos = DrawPos;
+            Vector3 targetTopGraphicOffset;
+            bool shouldDrawGlow = false;
+            if (Occupant != null && selectedCycleIndex >= 0 && PowerOn)
             {
+                shouldDrawGlow = true;
                 var cycle = comp.Props.cycles[selectedCycleIndex];
-                Vector3 drawPos = DrawPos;
                 if (GlowGraphic.color != cycle.glowColor)
                 {
                     glowGraphic = GlowGraphic.GetColoredVersion(GlowGraphic.Shader, cycle.glowColor, cycle.glowColor);
                 }
-                
-                float speed = 0.05f;
+                animCounter += Time.deltaTime * 5f;
                 float amplitude = 0.8f;
-                float offsetValue = Mathf.Sin((Find.TickManager.TicksGame + thingIDNumber) * speed) * amplitude;
+                float offsetValue = Mathf.Sin(animCounter + thingIDNumber) * amplitude;
                 offsetValue += 0.5f;
                 Vector3 offsetVector;
                 if (Rotation == Rot4.North || Rotation == Rot4.South)
                 {
-                    offsetVector = new Vector3(0, 1, offsetValue);
+                    offsetVector = new Vector3(0f, 1f, offsetValue);
                 }
                 else
                 {
-                    offsetVector = new Vector3(offsetValue, 1, 0);
+                    offsetVector = new Vector3(offsetValue, 1f, 0f);
                 }
-                
-                Vector3 finalPos = drawPos + offsetVector;
-                GlowGraphic.Draw(finalPos, Rotation, this, 0f);
-                TopGraphic.Draw(finalPos + new Vector3(0, 1, 0), Rotation, this, 0f);
+                targetTopGraphicOffset = offsetVector + new Vector3(0f, 1f, 0f);
+            }
+            else
+            {
+                animCounter = 0f;
+                targetTopGraphicOffset = new Vector3(0f, 1f, 0f);
+            }
+            if (topGraphicOffset == Vector3.zero)
+            {
+                topGraphicOffset = targetTopGraphicOffset;
+            }
+            topGraphicOffset = Vector3.Lerp(topGraphicOffset, targetTopGraphicOffset, 10f * Time.deltaTime);
+            TopGraphic.Draw(drawPos + topGraphicOffset, Rotation, this, 0f);
+            if (shouldDrawGlow)
+            {
+                Vector3 glowOffset = topGraphicOffset - new Vector3(0f, 1f, 0f);
+                GlowGraphic.Draw(drawPos + glowOffset, Rotation, this, 0f);
             }
         }
 
@@ -145,7 +162,7 @@ namespace VanillaQuestsExpandedAncients
 
             if (selectedCycleIndex >= 0)
             {
-                yield return CreateInsertPawnGizmo("VQEA_InsertPerson", "VQEA_InsertPersonDesc", ContentFinder<Texture2D>.Get("UI/Icons/InsertPersonSubcoreScanner"), "VQEA_NoPawnsAvailableForWonderdoc");
+                yield return CreateInsertPawnGizmo("VQEA_InsertPerson", "VQEA_InsertPersonDesc", ContentFinder<Texture2D>.Get("UI/Gizmo/Gizmo_InsertPawnIntoWonderdoc"), "VQEA_NoPawnsAvailableForWonderdoc");
             }
             else
             {
@@ -181,15 +198,15 @@ namespace VanillaQuestsExpandedAncients
         public override string GetInspectString()
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append(base.GetInspectString() + "\n");
-            Log.Message("selectedCycleIndex: " + selectedCycleIndex);
+            stringBuilder.Append(base.GetInspectString());
             if (Occupant != null && selectedCycleIndex >= 0)
             {
+                stringBuilder.AppendLine();
                 stringBuilder.AppendLine("VQEA_WonderdocContains".Translate(Occupant.Name.ToStringFull));
                 stringBuilder.AppendLine("VQEA_WonderdocCycle".Translate(comp.Props.cycles[selectedCycleIndex].label));
                 stringBuilder.AppendLine("VQEA_WonderdocTimeRemaining".Translate(TicksRemaining.ToStringTicksToPeriod()));
-                stringBuilder.AppendLine("VQEA_ChanceToMalfunction".Translate(malfunctionChance.ToStringPercent()));
             }
+            stringBuilder.AppendLine("VQEA_ChanceToMalfunction".Translate(malfunctionChance.ToStringPercent()));
             return stringBuilder.ToString().TrimEndNewlines();
         }
 
@@ -198,6 +215,7 @@ namespace VanillaQuestsExpandedAncients
             base.ExposeData();
             Scribe_Values.Look(ref malfunctionChance, "malfunctionChance", 0.1f);
             Scribe_Values.Look(ref selectedCycleIndex, "selectedCycleIndex", -1);
+            Scribe_Values.Look(ref topGraphicOffset, "topGraphicOffset", Vector3.zero);
         }
 
         protected override SoundDef GetOperatingSound()

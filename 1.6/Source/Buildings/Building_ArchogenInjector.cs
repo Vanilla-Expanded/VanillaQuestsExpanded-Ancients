@@ -21,6 +21,7 @@ namespace VanillaQuestsExpandedAncients
     }
 
     [StaticConstructorOnStartup]
+    [HotSwappable]
     public class Building_ArchogenInjector : Building_PawnProcessor
     {
         private bool processConfirmed = false;
@@ -165,7 +166,7 @@ namespace VanillaQuestsExpandedAncients
 
         protected override bool CanCancel()
         {
-            return State == ArchiteInjectorState.PawnInside || State == ArchiteInjectorState.Injecting;
+            return State == ArchiteInjectorState.PawnInside || State == ArchiteInjectorState.Injecting || SelectedPawn != null;
         }
         
         public override void CancelProcess()
