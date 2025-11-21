@@ -51,6 +51,7 @@ namespace VanillaQuestsExpandedAncients
 		public static GeneDef VQEA_MasterfulSocial;
         public static GeneDef VQEA_MasterfulCrafting;
         public static GeneDef VQEA_MasterfulCooking;
+        public static GeneDef VQEA_Electromagnetized;
 
         public static StatDef CookSpeed;
         public static StatDef ButcheryFleshEfficiency;

@@ -7,6 +7,9 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_Levitation</iconPath>
 		<cooldownTicksRange>600</cooldownTicksRange>
 		<hostile>false</hostile>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
 		<verbProperties>
 			<verbClass>VanillaQuestsExpandedAncients.Verb_CastAbilityLevitation</verbClass>
 			<label>levitation</label>
@@ -25,6 +28,42 @@
 			</targetParams>
 		</verbProperties>
 		<jobDef>CastJump</jobDef>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VQEA_Invisibility</defName>
+		<label>invisibility</label>
+		<description>Use psychic suggestion to turn yourself invisible for a short duration.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Invisibility</iconPath>
+		<cooldownTicksRange>1800</cooldownTicksRange>
+		<hostile>false</hostile>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<targetRequired>False</targetRequired>
+		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<hotKey>Misc12</hotKey>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<comps>
+			<li Class="VEF.Abilities.CompProperties_GiveHediff">
+				<hediffDef>VQEA_Invisibility</hediffDef>
+			</li>
+		</comps>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>0.5</warmupTime>
+			<drawAimPie>False</drawAimPie>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
 	</AbilityDef>
 	<AbilityDef>
 		<defName>VQEA_InfernoSpew</defName>
@@ -113,4 +152,68 @@
 			<explosionSpawnsSingleFilth>true</explosionSpawnsSingleFilth>
 		</projectile>
 	</ThingDef>
+	<AbilityDef>
+		<defName>VQEA_EMPPulse</defName>
+		<label>electromagnetic pulse</label>
+		<description>Release a powerful electromagnetic pulse, damaging all electronics in radius. If used outside, lightning strikes may hit the area around the caster.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Electromagnetized</iconPath>
+		<aiCanUse>true</aiCanUse>
+		<targetRequired>False</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<cooldownTicksRange>30000</cooldownTicksRange>
+		<!-- 12 hours -->
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>9.9</range>
+			<drawAimPie>false</drawAimPie>
+			<warmupTime>1</warmupTime>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="VanillaQuestsExpandedAncients.CompAbilityProperties_Explosion_WithLightning">
+				<damageDef>EMP</damageDef>
+				<explosionRadius>9.9</explosionRadius>
+				<lightningAmount>12</lightningAmount>
+			</li>
+		</comps>
+	</AbilityDef>
+	<AbilityDef>
+		<defName>VQEA_MatterPhasing</defName>
+		<label>matter phasing</label>
+		<description>The colonist briefly shifts into an intangible state, letting them pass through walls before becoming solid again.</description>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Invisibility</iconPath>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<cooldownTicksRange>1800</cooldownTicksRange>
+		<hostile>false</hostile>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<targetRequired>False</targetRequired>
+		<canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<hotKey>Misc12</hotKey>
+		<comps>
+			<li Class="VEF.Abilities.CompProperties_GiveHediff">
+				<hediffDef>VQEA_MatterPhasing</hediffDef>
+			</li>
+		</comps>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<warmupTime>1</warmupTime>
+			<drawAimPie>False</drawAimPie>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
 </Defs>

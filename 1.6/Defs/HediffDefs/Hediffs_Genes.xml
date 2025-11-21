@@ -114,7 +114,7 @@
 	<HediffDef>
 		<defName>VQEA_MasterfulIntellectual</defName>
 		<label>masterful intellectual</label>
-		<description>The carrier's aptitude in Intellectual is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Intellectual. They conduct research subconsciously, constantly generating scientific progress even while performing other tasks or resting. Archites woven into their neural network accelerate retention, synthesis, and intuition, allowing discoveries to emerge without active study.</description>
+		<description>This person will conduct research subconsciously, constantly generating scientific progress even while performing other tasks or resting.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
@@ -165,7 +165,6 @@
 			</li>
 		</comps>
 	</HediffDef>
-
 	<HediffDef>
 		<defName>VQEA_HemocollapseSyndrome</defName>
 		<label>hemocollapse syndrome</label>
@@ -270,6 +269,78 @@
 			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Floating">
 
 			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_Invisibility</defName>
+		<label>invisibility</label>
+		<description>This person has used psychic suggestion to turn themselves invisible for a short duration.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>true</visibleToPlayer>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerSecond">
+				<severityPerSecond>-0.0667</severityPerSecond>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_SelfRepairingTissue</defName>
+		<label>self-repairing tissue</label>
+		<description>This person possesses archite-woven regenerative tissue that continuously rebuilds damaged cells and restores lost structure. They are capable of regrowing missing organs and body parts, but the process takes time.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_RegrowLimbs">
+				<regeneratingHediff>VQEA_Regenerating</regeneratingHediff>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
+	<HediffDef ParentName="InjuryBase">
+		<defName>VQEA_Regenerating</defName>
+		<label>regenerating</label>
+		<description>Regenerating wounds, new and old.</description>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<injuryProps>
+			<painPerSeverity>0</painPerSeverity>
+			<canMerge>false</canMerge>
+			<destroyedLabel>Destroyed</destroyedLabel>
+		</injuryProps>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_MatterPhasing</defName>
+		<label>matter phasing</label>
+		<description>This person has shifted into an intangible state, letting them pass through walls before becoming solid again.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties">
+				<compClass>VEF.Hediffs.HediffComp_Phasing</compClass>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerSecond">
+				<severityPerSecond>-0.0667</severityPerSecond>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 		</comps>
 	</HediffDef>
 </Defs>

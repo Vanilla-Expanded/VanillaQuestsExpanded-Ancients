@@ -625,4 +625,83 @@
 			<AbilityDef>VQEA_HellsphereBlast</AbilityDef>
 		</descriptionHyperlinks>
 	</GeneDef>
+	
+	<!-- New genes added after beta feedback -->
+	
+	<GeneDef>
+		<defName>VQEA_Invisibility</defName>
+		<label>invisibility</label>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Invisibility</iconPath>
+		<description>Carriers of this gene can bend light and thermal signatures around their bodies using specialized archite nanites, causing them to vanish from sight. While the effect only lasts a short while, it can be used again almost immediately.</description>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<abilities>
+			<li>VQEA_Invisibility</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VQEA_Invisibility</AbilityDef>
+		</descriptionHyperlinks>
+		
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>VQEA_SelfRepairingTissue</defName>
+		<label>self-repairing tissue</label>
+		<iconPath>UI/Icons/Genes/Powers/Gene_SelfRepairingTissue</iconPath>
+		<description>Carriers of this gene possess archite-woven regenerative tissue that continuously rebuilds damaged cells and restores lost structure. They are capable of regrowing missing organs and body parts, but the process takes time.</description>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<modExtensions>
+			<li Class="VEF.Genes.GeneExtension">
+				<hediffToWholeBody>VQEA_SelfRepairingTissue</hediffToWholeBody>
+			</li>
+		</modExtensions>
+		
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_Electromagnetized</defName>
+		<label>electromagnetized</label>
+		<iconPath>UI/Icons/Genes/Powers/Gene_Electromagnetized</iconPath>
+		<description>Carriers of this gene generate a stable internal electromagnetic field that makes them fully immune to EMP attacks. They can also release this charge in a powerful EMP burst, disabling electronics and mechanoids nearby.</description>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		<makeImmuneTo>
+			<li>BrainShock</li>
+		</makeImmuneTo>
+		<abilities>
+			<li>VQEA_EMPPulse</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VQEA_EMPPulse</AbilityDef>
+		</descriptionHyperlinks>
+		
+	</GeneDef>
+	<GeneDef>
+		<defName>VQEA_MatterPhasing</defName>
+		<label>matter phasing</label>
+		<iconPath>UI/Icons/Genes/Powers/Gene_MatterPhasing</iconPath>
+		<description>Carriers of this gene can temporarily shift their bodies into a semi-intangible state, allowing them to pass through walls and solid obstacles. The effect lasts only briefly before their form solidifies again.</description>
+		<displayCategory>Archite</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<biostatCpx>3</biostatCpx>
+		<biostatArc>1</biostatArc>
+		<biostatMet>0</biostatMet>
+		
+		<abilities>
+			<li>VQEA_MatterPhasing</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>VQEA_MatterPhasing</AbilityDef>
+		</descriptionHyperlinks>
+		
+	</GeneDef>
 </Defs>
