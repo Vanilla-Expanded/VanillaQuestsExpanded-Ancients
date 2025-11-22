@@ -154,19 +154,22 @@ namespace VanillaQuestsExpandedAncients
                 else
                 {
                     offsetVector = new Vector3(offsetValue, 1f, 0f);
-                    if (Rotation == Rot4.East)
-                    {
-                        offsetVector.z += 0.4f;
-                        offsetVector.x -= 0.4f;
-                    }
-                    else
-                    {
-                        offsetVector.z += 0.4f;
-                        offsetVector.x -= 0.6f;
-                    }
                 }
                 topGraphicOffset = offsetVector + new Vector3(0f, 1f, 0f);
             }
+        }
+
+        private Vector2 GetRotationOffset()
+        {
+            if (Rotation == Rot4.East)
+            {
+                return new Vector2(-0.4f, 0.4f);
+            }
+            if (Rotation == Rot4.West)
+            {
+                return new Vector2(-0.6f, 0.4f);
+            }
+            return Vector2.zero;
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
@@ -178,6 +181,9 @@ namespace VanillaQuestsExpandedAncients
             {
                 shouldDrawGlow = true;
             }
+            var rotationOffset = GetRotationOffset();
+            drawPos.x += rotationOffset.x;
+            drawPos.z += rotationOffset.y;
             TopGraphic.Draw(drawPos + topGraphicOffset, Rotation, this, 0f);
             if (shouldDrawGlow)
             {
