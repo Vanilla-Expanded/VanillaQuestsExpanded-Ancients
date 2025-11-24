@@ -355,4 +355,51 @@
 		<defName>VQEA_PneumaticTubeLaunchPort</defName>
 		<thing>VQEA_PneumaticTubeLaunchPort</thing>
 	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_StorageShelf_Empty</defName>
+		<thing>VQEA_StorageShelf_Empty</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_StorageShelf_Meals</defName>
+		<thing>VQEA_StorageShelf_Meals</thing>
+		<rotation>South</rotation>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientOrganBox</defName>
+		<thing>VQEA_AncientOrganBox</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_StorageShelf_Gowns</defName>
+		<thing>VQEA_StorageShelf_Gowns</thing>
+		<rotation>East</rotation>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_StorageShelf_Neutroamine</defName>
+		<thing>VQEA_StorageShelf_Neutroamine</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_StorageShelf_Medicine</defName>
+		<thing>VQEA_StorageShelf_Medicine</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientWorkshop</defName>
+		<thing>VQEA_AncientWorkshop</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientWonderdoc</defName>
+		<thing>VQEA_AncientWonderdoc</thing>
+		<rotation>West</rotation>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VqEA_AncientCookingStation</defName>
+		<thing>VqEA_AncientCookingStation</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientGreenbed</defName>
+		<thing>VQEA_AncientGreenbed</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientEmergencyPurifier_Off</defName>
+		<thing>VQEA_AncientEmergencyPurifier_Off</thing>
+	</KCSG.SymbolDef>
 </Defs>
