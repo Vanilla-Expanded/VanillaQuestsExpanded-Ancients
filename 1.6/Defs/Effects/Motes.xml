@@ -21,10 +21,10 @@
 		<graphicData>
 			<texPath>Things/Mote/Black</texPath>
 			<shaderParameters>
-				<_distortionIntensity>0.05</_distortionIntensity>
+				<_distortionIntensity>0.25</_distortionIntensity>
 				<_brightnessMultiplier>1.1</_brightnessMultiplier>      
 			</shaderParameters>
-			<drawSize>1.3</drawSize>
+			<drawSize>2.3</drawSize>
 		</graphicData>
 	</ThingDef>
 
