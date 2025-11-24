@@ -345,6 +345,10 @@
 				<moteDef>VQEA_MatterPhasing</moteDef>
 				<maxScale>1</maxScale>
 			</li>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_PlaySound">
+			
+				<sustainer>VQEA_Phasing_Sustainer</sustainer>
+			</li>
 		</comps>
 	</HediffDef>
 </Defs>

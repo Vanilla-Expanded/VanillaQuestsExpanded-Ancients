@@ -54,6 +54,7 @@
 			<verbClass>Verb_CastAbility</verbClass>
 			<warmupTime>0.5</warmupTime>
 			<drawAimPie>False</drawAimPie>
+			<soundCast>VQEA_Gene_Ability_Sound</soundCast>
 			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
 				<canTargetSelf>true</canTargetSelf>
@@ -205,6 +206,7 @@
 			<verbClass>Verb_CastAbility</verbClass>
 			<warmupTime>1</warmupTime>
 			<drawAimPie>False</drawAimPie>
+			<soundCast>VQEA_Gene_Ability_Sound</soundCast>
 			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
 				<canTargetSelf>true</canTargetSelf>
