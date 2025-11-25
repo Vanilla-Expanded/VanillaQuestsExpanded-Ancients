@@ -3,7 +3,7 @@
 	<ThingDef ParentName="VQEA_LabAncientsBuildingBase">
 		<defName>VQEA_ArchogenInjector</defName>
 		<label>archogen injector</label>
-		<description>A sealed biotransmutation pod lined with archite-flow conduits and neuroflux pistons, built to channel volatile nanite spirals into living tissue. Its inner chamber hums with unstable genolectric currents that respond to organic presence, stirring the archites into activation. The machinery is dense with inscrutable bio-relays and polyfused synthcells that pulse faintly when powered.\n\nUsed to inject a colonist with archite capsules, triggering genetic alteration and producing a random archite gene with possible side effects.</description>
+		<description>An ancient hermetically sealed pod designed to induce powerful, but chaotic genetic alterations through archovapor immersion. A primary slot seems to feed archite capsules into a destabilization chamber, where it is vaporized and channeled into the host body. Efforts can be made to control the proccess from there, but perhaps trying to harness this power is what left this machine abandoned in the first place.\n\nUsed to inject a colonist with archite capsules, triggering genetic alteration and producing a random archite gene with possible side effects. Success can be improved by linking with additional ancient equipment.</description>
 		<thingClass>VanillaQuestsExpandedAncients.Building_ArchogenInjector</thingClass>
 		<containedPawnsSelectable>true</containedPawnsSelectable>
 		<castEdgeShadows>true</castEdgeShadows>
