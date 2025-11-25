@@ -79,7 +79,7 @@
 				<ticksToActivate>10</ticksToActivate>
 				<activeTicks>1</activeTicks>
 				<guiLabelString>Choose who should do this</guiLabelString>
-				<jobString>Kicking generator</jobString>
+				<jobString>Kick generator</jobString>
 				<activateLabelString>Kick generator</activateLabelString>
 				<activateDescString>Kick the generator to make it work. Kicking it randomizes the amount of power it will produce. After some time, it will need to be kicked again.</activateDescString>
 				<activateTexPath>UI/Gizmo/KickGizmo</activateTexPath>
