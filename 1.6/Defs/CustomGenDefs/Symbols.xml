@@ -402,4 +402,12 @@
 		<defName>VQEA_AncientEmergencyPurifier_Off</defName>
 		<thing>VQEA_AncientEmergencyPurifier_Off</thing>
 	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientBioBattery</defName>
+		<thing>VQEA_AncientBioBattery</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_AncientOrganBox_Empty</defName>
+		<thing>VQEA_AncientOrganBox_Empty</thing>
+	</KCSG.SymbolDef>
 </Defs>
