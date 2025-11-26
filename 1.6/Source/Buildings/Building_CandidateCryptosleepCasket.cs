@@ -1,6 +1,7 @@
 using RimWorld;
 using Verse;
 using Verse.Grammar;
+using Verse.Noise;
 
 namespace VanillaQuestsExpandedAncients
 {
@@ -35,7 +36,9 @@ namespace VanillaQuestsExpandedAncients
 
         public override void EjectContents()
         {
+            var map = Map;
             Pawn pawn = (Pawn)this.ContainedThing;
+            base.EjectContents();
             if (isStartingScenarioBuidling is false && pawn.Faction != Faction.OfPlayer)
             {
                 pawn.SetFaction(Faction.OfPlayer);
@@ -45,8 +48,14 @@ namespace VanillaQuestsExpandedAncients
                     LetterDefOf.PositiveEvent,
                     pawn
                 );
+                allowDestroyNonDestroyable = true;
+                this.Destroy();
+                allowDestroyNonDestroyable = false;
+                var pod = ThingMaker.MakeThing(InternalDefOf.VQEA_CandidateCryptosleepCasket_Empty);
+                GenSpawn.Spawn(pod, Position, map, Rotation);
+
             }
-            base.EjectContents();
+            
         }
     }
 }

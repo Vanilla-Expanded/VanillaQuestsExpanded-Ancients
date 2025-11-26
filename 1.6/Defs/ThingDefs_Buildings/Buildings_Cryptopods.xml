@@ -118,6 +118,7 @@
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<selectable>true</selectable>
+		<drawerType>RealtimeOnly</drawerType>
 		<fillPercent>0.5</fillPercent>
 		<size>(1,2)</size>
 		<rotatable>true</rotatable>
