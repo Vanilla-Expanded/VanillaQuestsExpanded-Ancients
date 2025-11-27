@@ -1,122 +1,113 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <SitePartDef>
-    <defName>VQEA_AncientLabComplexSite</defName>
-    <label>ancient lab complex</label>
-    <description>A small underground lab complex.</description>
-    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientLabComplex</expandingIconTexture>
-    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <gravShipsCanLandOn>true</gravShipsCanLandOn>
-    <modExtensions>
-      <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
-        <surfaceGenerator>VQEA_OvergroundBunkersTier1Structure</surfaceGenerator>
-        <undergroundGenerator>VQEA_AncientLabComplexStructure</undergroundGenerator>
-      </li>
-    </modExtensions>
-  </SitePartDef>
-
-  <GenStepDef>
-    <defName>VQEA_AncientLabComplex</defName>
-    <linkWithSite>VQEA_AncientLabComplexSite</linkWithSite>
-    <order>450</order>
-    <genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+	<SitePartDef>
+		<defName>VQEA_AncientLabComplexSite</defName>
+		<label>ancient lab complex</label>
+		<description>A small underground lab complex.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientLabComplex</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
+				<surfaceGenerator>VQEA_OvergroundBunkersTier1Structure</surfaceGenerator>
+				<undergroundGenerator>VQEA_AncientLabComplexStructure</undergroundGenerator>
+			</li>
+		</modExtensions>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQEA_AncientLabComplex</defName>
+		<linkWithSite>VQEA_AncientLabComplexSite</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
     </genStep>
-  </GenStepDef>
-
-  <SitePartDef>
-    <defName>VQEA_ArchiteControlVaultSite</defName>
-    <label>archite control vault</label>
-    <description>A massive underground laboratory complex.</description>
-    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteControlVault</expandingIconTexture>
-    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <gravShipsCanLandOn>true</gravShipsCanLandOn>
-    <modExtensions>
-      <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
-        <surfaceGenerator>VQEA_OvergroundBunkersTier2Structure</surfaceGenerator>
-        <undergroundGenerator>VQEA_ArchiteControlVaultStructure</undergroundGenerator>
-      </li>
-    </modExtensions>
-  </SitePartDef>
-
-  <GenStepDef>
-    <defName>VQEA_ArchiteControlVault</defName>
-    <linkWithSite>VQEA_ArchiteControlVaultSite</linkWithSite>
-    <order>450</order>
-    <genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+	</GenStepDef>
+	<SitePartDef>
+		<defName>VQEA_ArchiteControlVaultSite</defName>
+		<label>archite control vault</label>
+		<description>A massive underground laboratory complex.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteControlVault</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
+				<surfaceGenerator>VQEA_OvergroundBunkersTier2Structure</surfaceGenerator>
+				<undergroundGenerator>VQEA_ArchiteControlVaultStructure</undergroundGenerator>
+			</li>
+		</modExtensions>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQEA_ArchiteControlVault</defName>
+		<linkWithSite>VQEA_ArchiteControlVaultSite</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
     </genStep>
-  </GenStepDef>
-
-  <SitePartDef>
-    <defName>VQEA_SpliceframeBlacksiteSite</defName>
-    <label>spliceframe blacksite</label>
-    <description>A covert underground site housing a spliceframe uplink.</description>
-    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/SpliceframeBlacksite</expandingIconTexture>
-    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <gravShipsCanLandOn>true</gravShipsCanLandOn>
-    <modExtensions>
-      <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
-        <surfaceGenerator>VQEA_OvergroundBunkersTier3Structure</surfaceGenerator>
-        <undergroundGenerator>VQEA_SpliceframeBlacksiteStructure</undergroundGenerator>
-      </li>
-    </modExtensions>
-  </SitePartDef>
-
-  <GenStepDef>
-    <defName>VQEA_SpliceframeBlacksite</defName>
-    <linkWithSite>VQEA_SpliceframeBlacksiteSite</linkWithSite>
-    <order>450</order>
-    <genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+	</GenStepDef>
+	<SitePartDef>
+		<defName>VQEA_SpliceframeBlacksiteSite</defName>
+		<label>spliceframe blacksite</label>
+		<description>A covert underground site housing a spliceframe uplink.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/SpliceframeBlacksite</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
+				<surfaceGenerator>VQEA_OvergroundBunkersTier3Structure</surfaceGenerator>
+				<undergroundGenerator>VQEA_SpliceframeBlacksiteStructure</undergroundGenerator>
+			</li>
+		</modExtensions>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQEA_SpliceframeBlacksite</defName>
+		<linkWithSite>VQEA_SpliceframeBlacksiteSite</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
     </genStep>
-  </GenStepDef>
-
-  <SitePartDef>
-    <defName>VQEA_InhibitorResearchLabSite</defName>
-    <label>inhibitor research lab</label>
-    <description>A research facility containing a mutagen inhibitor core.</description>
-    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/InhibitorResearchLab</expandingIconTexture>
-    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <gravShipsCanLandOn>true</gravShipsCanLandOn>
-    <modExtensions>
-      <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
-        <surfaceGenerator>VQEA_OvergroundBunkersTier4Structure</surfaceGenerator>
-        <undergroundGenerator>VQEA_InhibitorResearchLabStructure</undergroundGenerator>
-      </li>
-    </modExtensions>
-  </SitePartDef>
-
-  <GenStepDef>
-    <defName>VQEA_InhibitorResearchLab</defName>
-    <linkWithSite>VQEA_InhibitorResearchLabSite</linkWithSite>
-    <order>450</order>
-    <genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+	</GenStepDef>
+	<SitePartDef>
+		<defName>VQEA_InhibitorResearchLabSite</defName>
+		<label>inhibitor research lab</label>
+		<description>A research facility containing a mutagen inhibitor core.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/InhibitorResearchLab</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
+				<surfaceGenerator>VQEA_OvergroundBunkersTier4Structure</surfaceGenerator>
+				<undergroundGenerator>VQEA_InhibitorResearchLabStructure</undergroundGenerator>
+			</li>
+		</modExtensions>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQEA_InhibitorResearchLab</defName>
+		<linkWithSite>VQEA_InhibitorResearchLabSite</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
     </genStep>
-  </GenStepDef>
-
-  <SitePartDef>
-    <defName>VQEA_ArchiteArraySite</defName>
-    <label>archite array site</label>
-    <description>A vast complex housing an archite pathing array.</description>
-    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
-    <expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteArraySite</expandingIconTexture>
-    <applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
-    <gravShipsCanLandOn>true</gravShipsCanLandOn>
-    <modExtensions>
-      <li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
-        <surfaceGenerator>VQEA_OvergroundBunkersTier5Structure</surfaceGenerator>
-        <undergroundGenerator>VQEA_ArchiteArraySiteStructure</undergroundGenerator>
-      </li>
-    </modExtensions>
-  </SitePartDef>
-
-  <GenStepDef>
-    <defName>VQEA_ArchiteArraySite</defName>
-    <linkWithSite>VQEA_ArchiteArraySite</linkWithSite>
-    <order>450</order>
-    <genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+	</GenStepDef>
+	<SitePartDef>
+		<defName>VQEA_ArchiteArraySite</defName>
+		<label>archite array site</label>
+		<description>A vast complex housing an archite pathing array.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteArraySite</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
+				<surfaceGenerator>VQEA_OvergroundBunkersTier5Structure</surfaceGenerator>
+				<undergroundGenerator>VQEA_ArchiteArraySiteStructure</undergroundGenerator>
+			</li>
+		</modExtensions>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQEA_ArchiteArraySite</defName>
+		<linkWithSite>VQEA_ArchiteArraySite</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
     </genStep>
-  </GenStepDef>
+	</GenStepDef>
 </Defs>
