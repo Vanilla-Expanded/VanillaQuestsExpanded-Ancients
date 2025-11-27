@@ -42,51 +42,10 @@
 					<MealSurvivalPack>6</MealSurvivalPack>
 				</spawnThings>
 			</li>
-			<li>
-				<pattern>VQEA_MiscModules_.*</pattern>
-				<offset>(0, 0, 1)</offset>
-				<spawnPawns>
-					<VQEA_Spliceling>1~1</VQEA_Spliceling>
-					<VQEA_Splicehulk>1~1</VQEA_Splicehulk>
-				</spawnPawns>
-				<spawnThings>
-					<MedicineIndustrial>3</MedicineIndustrial>
-					<MedicineUltratech>1</MedicineUltratech>
-					<ComponentIndustrial>4</ComponentIndustrial>
-					<MealSurvivalPack>6</MealSurvivalPack>
-				</spawnThings>
-			</li>
-			<li>
-				<pattern>VQEA_MiscModules_.*</pattern>
-				<offset>(0, 0, 2)</offset>
-				<spawnPawns>
-					<VQEA_Spliceling>1~1</VQEA_Spliceling>
-					<VQEA_Splicehulk>1~1</VQEA_Splicehulk>
-				</spawnPawns>
-				<spawnThings>
-					<MedicineIndustrial>3</MedicineIndustrial>
-					<MedicineUltratech>1</MedicineUltratech>
-					<ComponentIndustrial>4</ComponentIndustrial>
-					<MealSurvivalPack>6</MealSurvivalPack>
-				</spawnThings>
-			</li>
-			<li>
-				<pattern>VQEA_MiscModules_.*</pattern>
-				<offset>(0, 0, 3)</offset>
-				<spawnPawns>
-					<VQEA_Spliceling>1~1</VQEA_Spliceling>
-					<VQEA_Splicehulk>1~1</VQEA_Splicehulk>
-				</spawnPawns>
-				<spawnThings>
-					<MedicineIndustrial>3</MedicineIndustrial>
-					<MedicineUltratech>1</MedicineUltratech>
-					<ComponentIndustrial>4</ComponentIndustrial>
-					<MealSurvivalPack>6</MealSurvivalPack>
-				</spawnThings>
-			</li>
+	
 			<li>
 				<pattern>VQEA_LabModules_2_.*</pattern>
-				<offset>(0, 0, 4)</offset>
+				<offset>(0, 0, 1)</offset>
 				<spawnPawns>
 					<VQEA_Spliceling>1~1</VQEA_Spliceling>
 					<VQEA_Splicehulk>1~1</VQEA_Splicehulk>
@@ -248,24 +207,10 @@
 					<MealSurvivalPack>6</MealSurvivalPack>
 				</spawnThings>
 			</li>
-			<li>
-				<pattern>VQEA_MiscModules_.*</pattern>
-				<offset>(0, 0, 3)</offset>
-				<spawnPawns>
-					<VQEA_Spliceling>2~2</VQEA_Spliceling>
-					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
-					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
-				</spawnPawns>
-				<spawnThings>
-					<MedicineIndustrial>3</MedicineIndustrial>
-					<MedicineUltratech>1</MedicineUltratech>
-					<ComponentIndustrial>4</ComponentIndustrial>
-					<MealSurvivalPack>6</MealSurvivalPack>
-				</spawnThings>
-			</li>
+			
 			<li>
 				<pattern>VQEA_LabModules_5_.*</pattern>
-				<offset>(0, 0, 4)</offset>
+				<offset>(0, 0, 3)</offset>
 				<spawnPawns>
 					<VQEA_Spliceling>2~2</VQEA_Spliceling>
 					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
