@@ -37,7 +37,7 @@
         <capacities>
           <li>VQEA_Scalpel</li>
         </capacities>
-        <power>1</power>
+        <power>5</power>
         <cooldownTime>1.8</cooldownTime>
       </li>
      
