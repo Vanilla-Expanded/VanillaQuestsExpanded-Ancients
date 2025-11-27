@@ -15,4 +15,10 @@
 		<overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
 	</DamageDef>
 	
+	<DamageDef ParentName="CutBase">
+		<defName>VQEA_Scalpel</defName>
+		<label>scalpel slash</label>
+		<workerClass>VanillaQuestsExpandedAncients.DamageWorker_Scalpel</workerClass>
+	</DamageDef>
+	
 </Defs>
