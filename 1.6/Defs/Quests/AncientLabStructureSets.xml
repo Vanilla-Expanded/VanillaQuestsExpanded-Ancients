@@ -111,6 +111,7 @@
 					<li>MeleeWeapon_Knife</li>
 					<li>Gun_Autopistol</li>
 					<li>Gun_Revolver</li>
+					<li>VQEA_MeleeWeapon_Scalpel</li>
 				</weapons>
 				<spawnThings>
 					<MedicineIndustrial>3</MedicineIndustrial>
@@ -274,6 +275,7 @@
 					<li>MeleeWeapon_Knife</li>
 					<li>Gun_Autopistol</li>
 					<li>Gun_Revolver</li>
+					<li>VQEA_MeleeWeapon_Scalpel</li>
 				</weapons>
 			</li>
 		</structureLayouts>
