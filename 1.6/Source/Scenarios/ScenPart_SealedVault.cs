@@ -5,6 +5,7 @@ using RimWorld.Planet;
 using Unity.Collections;
 using UnityEngine;
 using Verse;
+using HarmonyLib;
 
 namespace VanillaQuestsExpandedAncients
 {
@@ -25,6 +26,7 @@ namespace VanillaQuestsExpandedAncients
             base.GenerateIntoMap(map);
             if (Find.GameInitData != null)
             {
+                GenStep_Fog_Generate_Patch.allowGenStep = false;
                 mapParent = map.Parent;
                 var rects = StructureSetGenerator.Generate(map, InternalDefOf.VQEA_SealedVaultStartStructure, Faction.OfPlayer);
                 var center = new IntVec3(rects.Sum(x => x.CenterCell.x) / rects.Count, 0, rects.Sum(x => x.CenterCell.z) / rects.Count);
@@ -53,22 +55,29 @@ namespace VanillaQuestsExpandedAncients
                 }
 
                 MapGenerator.PlayerStartSpot = cell;
-                ReplaceSarcophagusContents(map, InternalDefOf.VQEA_AncientLaboratoryCasket, InternalDefOf.VQE_Patient);
-                ReplaceSarcophagusContents(map, InternalDefOf.VQEA_CandidateCryptosleepCasket, InternalDefOf.VQE_Experiment);
+                MarkSarcophagus(map, InternalDefOf.VQEA_AncientLaboratoryCasket);
+                MarkSarcophagus(map, InternalDefOf.VQEA_CandidateCryptosleepCasket);
             }
         }
 
-        private void ReplaceSarcophagusContents(Map map, ThingDef sarcophagusDef, PawnKindDef pawnKind)
+
+        public override void PostMapGenerate(Map map)
+        {
+            base.PostMapGenerate(map);
+            if (Find.GameInitData != null)
+            {
+                GenStep_Fog_Generate_Patch.allowGenStep = true;
+                new GenStep_Fog().Generate(map, default);
+            }
+        }
+        
+        
+
+        private void MarkSarcophagus(Map map, ThingDef sarcophagusDef)
         {
             var sarcophagi = map.listerThings.ThingsOfDef(sarcophagusDef).Cast<Building_ContainmentCasket>().ToList();
             foreach (var sarcophagus in sarcophagi)
             {
-                if (sarcophagus.HasAnyContents)
-                {
-                    sarcophagus.GetDirectlyHeldThings().ClearAndDestroyContents();
-                }
-                var pawn = PawnGenerator.GeneratePawn(pawnKind);
-                sarcophagus.TryAcceptThing(pawn);
                 sarcophagus.isStartingScenarioBuidling = true;
             }
         }
