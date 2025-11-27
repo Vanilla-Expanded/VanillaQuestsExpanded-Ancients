@@ -41,6 +41,7 @@
 		<thingClass>VanillaQuestsExpandedAncients.Building_ContainmentCasket</thingClass>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
+		<drawerType>RealtimeOnly</drawerType>
 		<selectable>true</selectable>
 		<fillPercent>0.5</fillPercent>
 		<size>(1,2)</size>

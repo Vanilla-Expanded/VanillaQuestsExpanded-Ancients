@@ -44,11 +44,22 @@ namespace VanillaQuestsExpandedAncients
 
         public override void EjectContents()
         {
+            var map = Map;
             if (this.ContainedThing is Pawn pawn && isStartingScenarioBuidling && pawn.Faction != Faction.OfPlayer)
             {
                 pawn.SetFaction(Faction.OfPlayer);
             }
             base.EjectContents();
+            allowDestroyNonDestroyable = true;
+            this.Destroy();
+            allowDestroyNonDestroyable = false;
+            var pod = ThingMaker.MakeThing(InternalDefOf.VQEA_AncientLaboratoryCasket_Empty);
+            GenSpawn.Spawn(pod, Position, map, Rotation);
         }
+
+       
+
+
+
     }
 }

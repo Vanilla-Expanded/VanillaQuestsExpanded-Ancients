@@ -32,6 +32,7 @@ namespace VanillaQuestsExpandedAncients
 		public static ThingDef VQEA_ArchitePathingArray;
 		public static ThingDef VQEA_Apparel_PatientGown;
         public static ThingDef VQEA_CandidateCryptosleepCasket_Empty;
+        public static ThingDef VQEA_AncientLaboratoryCasket_Empty;
         public static ThingCategoryDef VQEA_BuildingsLab;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Success;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Rejection;
