@@ -2,7 +2,7 @@
 <Defs>
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_LockedVaultDoor</defName>
-		<label>locked vault door</label>
+		<label>sealed vault door</label>
 		<description>A sealed vault entrance leading to an underground laboratory. Still structurally sound, but heavily pressurized. Can be forced open to allow access.</description>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<passability>Impassable</passability>

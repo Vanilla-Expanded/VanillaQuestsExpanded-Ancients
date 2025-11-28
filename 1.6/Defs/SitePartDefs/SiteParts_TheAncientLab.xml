@@ -2,7 +2,7 @@
 <Defs>
 	<SitePartDef>
 		<defName>VQEA_AncientLabComplexSite</defName>
-		<label>ancient lab complex</label>
+		<label>abandoned supersoldier lab</label>
 		<description>A small underground lab complex.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientLabComplex</expandingIconTexture>
@@ -24,7 +24,7 @@
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_ArchiteControlVaultSite</defName>
-		<label>archite control vault</label>
+		<label>dangerous supersoldier lab</label>
 		<description>A massive underground laboratory complex.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>World/WorldObjects/Expanding/Sites/ArchiteControlVault</expandingIconTexture>
@@ -46,7 +46,7 @@
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_SpliceframeBlacksiteSite</defName>
-		<label>spliceframe blacksite</label>
+		<label>infested supersoldier lab</label>
 		<description>A covert underground site housing a spliceframe uplink.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>World/WorldObjects/Expanding/Sites/SpliceframeBlacksite</expandingIconTexture>
@@ -68,7 +68,7 @@
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_InhibitorResearchLabSite</defName>
-		<label>inhibitor research lab</label>
+		<label>Reconnaissance request</label>
 		<description>A research facility containing a mutagen inhibitor core.</description>
 		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
 		<expandingIconTexture>World/WorldObjects/Expanding/Sites/InhibitorResearchLab</expandingIconTexture>

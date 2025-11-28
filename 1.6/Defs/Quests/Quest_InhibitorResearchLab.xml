@@ -5,12 +5,12 @@
     <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_InhibitorResearchLab" />
     <questNameRules>
       <rulesStrings>
-        <li>questName->Inhibitor research lab</li>
+        <li>questName->E352 - Reconnaissance request</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription(askerIsNull==True)->The signal has revealed the location of an Inhibitor Research Lab. Records suggest this site contains a mutagen inhibitor core, a prototype device built to suppress unstable genetic mutations. It is likely that other valuable equipment remains here as well. Our objective is to locate the core and uninstall it for recovery. \n\nOn the surface, a small installation conceals a sealed vault door. Containment tanks seem to be present with their restraints already broken\n\nBelow lies a medium vault with a chamber housing the mutagen inhibitor core. Uninstalling it for safe transport will complete the mission.\n\nThe facility is not abandoned. Ancient patients, recently awakened from cryptosleep, stalk its corridors in a rabid state. They have already undergone unstable archite injections, and who knows what powers they may carry. Any intact lab equipment should also be looted before departure.</li>
+        <li>questDescription(askerIsNull==True)->Garbled through the static, it seems some ancient network has mistaken your radio for that of an ancient reconnaissance worker after detecting your travels through an automated satellite.\n\nThe message harshly refers to you as E352, and tasks you with scouting another supersoldier laboratory. Though this broadcast seems to have been running from some time now, it warns of a major uprising event within the lab. Supersoldiers had risen out of containment, and now roam the facility locked inside. The reconnaissance task states that the site was evacuated, yet the uprising was never contained and it is likely some may have escaped.\n\nThe broadcast also contains schematics of the location including your real objective. A device called the mutagen inhibitor core. Though just a prototype prior to its sudden abandonment, it is built to suppress unstable genetic mutations. It is likely that other valuable equipment remains here as well. offering transparent probabilities on genetic experiments. Our objective will be to locate the uplink and uninstall it for use in our own laboratory.</li>
       </rulesStrings>
     </questDescriptionRules>
     <modExtensions>

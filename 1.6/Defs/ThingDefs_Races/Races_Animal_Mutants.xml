@@ -3,7 +3,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Spliceling</defName>
 		<label>spliceling</label>
-		<description>A malformed human-sized mutant. Its body is bent and reshaped into unnatural symmetry. Bones twist beneath the skin, forming ridges and spurs, while its face is a patchwork of misplaced features that shift and twitch without purpose.\n\nIts movements are erratic and insectile, driven by sudden bursts of violence. Though fragile compared to its larger kin, its unpredictability makes it a dangerous foe.\n\nIt is unclear whether a broken human consciousness still lingers inside, or if it is nothing more than a hollow puppet of corrupted genes.</description>
+		<description>A bent and malformed mutant, vaguely resembling what was once a human. Its gaunt face is a patchwork of assorted features shifting onto itself without purpose. It moves erratically, seemingly driven by sudden bursts of sharp pain and an urge for violence. Though its thin stretched skin looks decently fragile, its unpredictability makes it a dangerous foe.\n\nIt is unclear whether a broken human consciousness still lingers inside, or if it is nothing more than a hollow puppet of scrambled genes.</description>
 		<statBases>
 			<MoveSpeed>3.25</MoveSpeed>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
@@ -109,7 +109,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Splicehulk</defName>
 		<label>splicehulk</label>
-		<description>A swollen bloated frame of a human being that quivers with every labored step. Its skin splits under its own weight, oozing fluid from raw seams, while limbs of mismatched size flail clumsily at anything nearby.\n\nThe creature is slow and ponderous, but its immense bulk crushes obstacles with ease, leaving little hope for anything caught in its path.\n\nThe splicehulk forms when unstable archites force a host’s growth into uncontrolled, cancerous excess.</description>
+		<description>A swollen bloated mutant that quivers with every labored step. Its skin splits under its own weight, oozing yellow fluid from raw seams. Vaguely resembling what was once a human, its limbs of mismatched size flail clumsily at anything nearby.\n\nWhile slow and ponderous, its immense bulk crushes obstacles with ease leaving little hope for anything caught in its path.</description>
 		<statBases>
 			<MoveSpeed>2.6</MoveSpeed>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
@@ -224,7 +224,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Splicefiend</defName>
 		<label>splicefiend</label>
-		<description>A towering mutant sculpted into brutal strength. Its proportions are wildly distorted: arms that nearly scrape the floor, a chest stretched wide with straining cords of flesh, and legs thick enough to shatter stone underfoot.\n\nUnlike its sluggish kin, the splicefiend moves with alarming speed and precision, overwhelming prey with violent charges and rending strikes.\n\nThe splicefiend is born when unstable archites seize complete control of a host’s body, driving it to become a weapon of flesh.</description>
+		<description>A towering mutant angered and prodded by its endless agony. Its proportions are wildly distorted, with its arms dragging along the floor. Its bursting chest is stretched open wide with straining cords of flesh, as it walks with legs thick enough to shatter stone underfoot.\n\nUnlike its sluggish kin, the splicefiend moves with alarming speed and precision, overwhelming prey with violent charges and rending strikes.</description>
 		<statBases>
 			<MoveSpeed>4.2</MoveSpeed>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>

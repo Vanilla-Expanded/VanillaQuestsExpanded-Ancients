@@ -5,12 +5,12 @@
     <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_ArchiteArraySite" />
     <questNameRules>
       <rulesStrings>
-        <li>questName->Archite array site</li>
+        <li>questName->E352 - Final Assignment</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription(askerIsNull==True)->The intercepted transmission has revealed another hidden site housing an Archite Pathing Array. This rare system was designed to manipulate the unpredictable flow of archite integration, and is considered one of the most valuable pieces of equipment ever produced by the ancient military. Our objective is to reach the vault, uninstall the array, and recover it. \n\nOn the surface, a small installation conceals the sealed vault door. Containment tanks here have already ruptured and their failed creations seem to have gotten out. \n\nBeneath lies a vast complex with a large chamber where the archite pathing array awaits. Uninstalling it will complete the mission. \n\nThe vault is swarming with mutants - multiple splicelings, splicehulks, and even splicefiends. The array must be secured, along with any other lab equipment that can be salvaged.</li>
+        <li>questDescription(askerIsNull==True)->Your radio lights up with another request for E352. The automated satellite ominously claims that this will be your final assignment. The voice tells you about an important piece of technology. The most legendary component to the supersolider program, a device called the archite pathing array. It is meant to manipulate the unpredictable flow of archovapor, potentially doubling your returns. The voice tells you to reach the vault and recover the technology, not stating a clear reason why.\n\nOur objective is to clear the laboratory, and claim the archite pathing array. It can be inferred that there will be hostile forces swarming the site.</li>
       </rulesStrings>
     </questDescriptionRules>
     <modExtensions>

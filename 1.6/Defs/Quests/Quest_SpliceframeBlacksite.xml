@@ -5,12 +5,12 @@
     <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_SpliceframeBlacksite" />
     <questNameRules>
       <rulesStrings>
-        <li>questName->Spliceframe blacksite</li>
+        <li>questName->Infested supersoldier lab</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription(askerIsNull==True)->The intercepted transmission points to a covert site codenamed *Spliceframe Blacksite*. Extracted information indicates a functioning spliceframe uplink is installed here, and it's likely that other valuable lab equipment remains intact. Our objective is to locate the uplink and uninstall it for transport. \n\nOn the surface, a small installation guards a sealed vault door; opening it grants access below. The area is heavily infested: insectoid hives are present in the facility. \n\nUnderground, the complex spans a medium vault. \n\nExpect a tight quarters encounter with numerous insectoid hives scattered throughout the vault, spawning waves of insectoids. Any surviving lab equipment should be uninstalled and looted alongside the uplink for use back at the colony.</li>
+        <li>questDescription(askerIsNull==True)->The intercepted transmission is an urgent distress call from an additional covert laboratory site codenamed "Spliceframe Blacksite". The broadcast warns that the entire laboratory has been compromised after a disaster, falling to a sudden massive infestation of insectoids drawn toward a chemical leak.\n\nThe broadcast refers to a useful genetic device called a spliceframe uplink capable of offering transparent probabilities on genetic experiments. Our objective is to locate the uplink and uninstall it for use in our own laboratory. We should approach well prepared to deal with a large insectoid threat.</li>
       </rulesStrings>
     </questDescriptionRules>
     <modExtensions>

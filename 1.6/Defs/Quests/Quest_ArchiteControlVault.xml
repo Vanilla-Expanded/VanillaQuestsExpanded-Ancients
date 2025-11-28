@@ -5,12 +5,12 @@
     <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_ArchiteControlVault" />
     <questNameRules>
       <rulesStrings>
-        <li>questName->Archite control vault</li>
+        <li>questName->Intercepted supersoldier vault</li>
       </rulesStrings>
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription(askerIsNull==True)->We have traced the signal to an underground installation known as an archite control vault. This site is the relay the previous broadcast was contacting, a massive laboratory complex where ancient military researchers coordinated their supersoldier experiments. \n\nOn the surface sits a small facility with a sealed vault door; opening it will grant access below. The installation houses containment tanks that will rupture as we approach, releasing rabid, manhunting mutants created by failed experiments. \n\nUnderground, the vault sprawls through multiple sectors. Reaching the end will be required as that's where the ancient broadcasting station is located. Intercepting this crucial signal will reveal the locations of the remaining vaults. \n\nWe believe that the lab has been overrun by rabid experiments, and we should venture prepared for combat. The complex contains valuable equipment: surrounding lab gear should be looted and brought back to our colony to improve the way we conduct our experiments.</li>
+        <li>questDescription(askerIsNull==True)->After intercepting the broadcasting station, we have identified an additional ancient laboratory site communicating with the previous. The lab is transmitting a code red signal, likely signifying an even stronger threat presence. It appears some of the monstrosities might have even escaped underground containment and broken onto the surface.\n\nThe site must contain an additional broadcasting station responsible for the message. It is imperative that we also intercept this broadcast on-site, to track where it is broadcasting to. Functioning technology at the site may prove useful in the improvement of supersoldier production. We should look at each piece of equipment carefully to take back with us if we intend to reliably produce supersoldiers of our own.</li>
       </rulesStrings>
     </questDescriptionRules>
     <modExtensions>
