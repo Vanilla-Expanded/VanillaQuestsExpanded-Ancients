@@ -103,6 +103,7 @@ namespace VanillaQuestsExpandedAncients
 		public static SitePartDef VQEA_SpliceframeBlacksiteSite;
 		public static SitePartDef VQEA_InhibitorResearchLabSite;
 		public static SitePartDef VQEA_ArchiteArraySite;
+		public static SitePartDef VQEA_AncientResearchVaultSite;
 		public static ThingDef VQEA_LockedVaultDoor;
 		public static ThingDef VQEA_AncientBroadcastingStation;
 		public static ThingDef VQEA_AncientWonderdoc;

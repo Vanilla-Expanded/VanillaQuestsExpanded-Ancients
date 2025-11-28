@@ -4,6 +4,7 @@ using RimWorld.QuestGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Collections;
 using Verse;
 
 namespace VanillaQuestsExpandedAncients
@@ -146,16 +147,28 @@ namespace VanillaQuestsExpandedAncients
         out PlanetTile tile)
         {
             var slate = QuestGen.slate;
-            map = QuestGen_Get.GetMap();
-            QuestGenUtility.RunAdjustPointsForDistantFight();
             points = slate.Get("points", 0f);
-            slate.Set("playerFaction", Faction.OfPlayer);
-            slate.Set("map", map);
+            map = QuestGen_Get.GetMap();
             if (!TryFindSiteTile(out tile))
             {
                 return false;
             }
+            slate.Set("playerFaction", Faction.OfPlayer);
+            slate.Set("map", map);
+            Pawn asker = QuestGen.quest.root.questDescriptionRules.Rules.Any(x => x.constantConstraints.Any(y => y.key == "asker_factionLeader" && y.type ==  Verse.Grammar.Rule.ConstantConstraint.Type.Equal)) ? FindAsker() : null;
+            slate.Set("asker", asker);
+            slate.Set("askerIsNull", asker == null);
+            QuestGenUtility.RunAdjustPointsForDistantFight();
             return true;
+        }
+
+        private Pawn FindAsker()
+        {
+            if (Rand.Chance(0.5f) && Find.FactionManager.AllFactionsVisible.Where((Faction f) => f.def.humanlikeFaction && !f.IsPlayer && !f.HostileTo(Faction.OfPlayer) && (int)f.def.techLevel > 2 && f.leader != null && !f.temporary && !f.Hidden && f.leader.Faction == f).TryRandomElement(out var result))
+            {
+                return result.leader;
+            }
+            return null;
         }
     }
 }

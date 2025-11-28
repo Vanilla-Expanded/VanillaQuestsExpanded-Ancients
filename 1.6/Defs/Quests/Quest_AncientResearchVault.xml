@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <QuestScriptDef>
+    <defName>VQE_AncientResearchVault</defName>
+    <root Class="VanillaQuestsExpandedAncients.QuestNode_Root_AncientResearchVault" />
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->ancient research vault</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription(askerIsNull==True)->text.todo</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <modExtensions>
+      <li Class="VEF.Storyteller.QuestChainExtension">
+        <questChainDef>VQE_TheAncientLab</questChainDef>
+        <conditionSucceedQuests>
+          <li>VQE_ArchiteControlVault</li>
+        </conditionSucceedQuests>
+        <ticksSinceSucceed>15000~15000</ticksSinceSucceed>
+        <isRepeatable>true</isRepeatable>
+        <grantAgainOnSuccess>true</grantAgainOnSuccess>
+        <daysUntilGrantAgainOnSuccess>60</daysUntilGrantAgainOnSuccess>
+        <grantAgainOnFailure>true</grantAgainOnFailure>
+        <daysUntilGrantAgainOnFailure>60</daysUntilGrantAgainOnFailure>
+      </li>
+    </modExtensions>
+  </QuestScriptDef>
+</Defs>

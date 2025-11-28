@@ -20,7 +20,7 @@
 		<linkWithSite>VQEA_AncientLabComplexSite</linkWithSite>
 		<order>450</order>
 		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
-    </genStep>
+		</genStep>
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_ArchiteControlVaultSite</defName>
@@ -42,7 +42,7 @@
 		<linkWithSite>VQEA_ArchiteControlVaultSite</linkWithSite>
 		<order>450</order>
 		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
-    </genStep>
+		</genStep>
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_SpliceframeBlacksiteSite</defName>
@@ -64,7 +64,7 @@
 		<linkWithSite>VQEA_SpliceframeBlacksiteSite</linkWithSite>
 		<order>450</order>
 		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
-    </genStep>
+		</genStep>
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_InhibitorResearchLabSite</defName>
@@ -86,7 +86,7 @@
 		<linkWithSite>VQEA_InhibitorResearchLabSite</linkWithSite>
 		<order>450</order>
 		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
-    </genStep>
+		</genStep>
 	</GenStepDef>
 	<SitePartDef>
 		<defName>VQEA_ArchiteArraySite</defName>
@@ -108,6 +108,28 @@
 		<linkWithSite>VQEA_ArchiteArraySite</linkWithSite>
 		<order>450</order>
 		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
-    </genStep>
+		</genStep>
+	</GenStepDef>
+	<SitePartDef>
+		<defName>VQEA_AncientResearchVaultSite</defName>
+		<label>ancient research vault</label>
+		<description>A research vault containing lost ancient technologies.</description>
+		<siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+		<expandingIconTexture>World/WorldObjects/Expanding/Sites/AncientLabVault</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<gravShipsCanLandOn>true</gravShipsCanLandOn>
+		<modExtensions>
+			<li Class="VanillaQuestsExpandedAncients.AncientComplexSiteExtension">
+				<surfaceGenerator>VQEA_AncientResearchVaultStructure_Surface</surfaceGenerator>
+				<undergroundGenerator>VQEA_AncientResearchVaultStructure_Underground</undergroundGenerator>
+			</li>
+		</modExtensions>
+	</SitePartDef>
+	<GenStepDef>
+		<defName>VQEA_AncientResearchVault</defName>
+		<linkWithSite>VQEA_AncientResearchVaultSite</linkWithSite>
+		<order>450</order>
+		<genStep Class="VanillaQuestsExpandedAncients.GenStep_AncientComplex">
+		</genStep>
 	</GenStepDef>
 </Defs>

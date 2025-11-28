@@ -13,11 +13,9 @@ namespace VanillaQuestsExpandedAncients
             => map == null || (Find.WorldGrid.ApproxDistanceInTiles(tile, map.Tile) >= 15 && Find.WorldGrid.ApproxDistanceInTiles(tile, map.Tile) <= 30);
         protected override void RunInt()
         {
-            var slate = QuestGen.slate;
-            slate.Set("askerIsNull", true);
-            if (PrepareQuest(out var map, out var points, out var tile))
+            if (PrepareQuest(out _, out var points, out var tile))
             {
-                var site = GenerateSite(points, tile, Faction.OfAncientsHostile, out var siteMapGeneratedSignal, out _);
+                var site = GenerateSite(points, tile, Faction.OfAncientsHostile, out _, out _);
                 if (site != null)
                 {
                     var questPart = new QuestPart_AncientLab

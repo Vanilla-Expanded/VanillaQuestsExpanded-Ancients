@@ -31,8 +31,7 @@
 			<isTargetable>false</isTargetable>
 		</building>
 		<comps>
-			<li Class="VEF.Buildings.CompProperties_JammedAirlock">
-				<!-- Interactable -->
+			<li Class="VanillaQuestsExpandedAncients.CompProperties_LockedVaultDoor">
 				<doorToConvertTo>VQEA_VaultRamp</doorToConvertTo>
 				<activeTicks>1</activeTicks>
 				<ticksToActivate>3600</ticksToActivate>

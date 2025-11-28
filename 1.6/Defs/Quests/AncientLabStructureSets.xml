@@ -42,7 +42,7 @@
 					<MealSurvivalPack>6</MealSurvivalPack>
 				</spawnThings>
 			</li>
-	
+
 			<li>
 				<pattern>VQEA_LabModules_2_.*</pattern>
 				<offset>(0, 0, 1)</offset>
@@ -208,7 +208,7 @@
 					<MealSurvivalPack>6</MealSurvivalPack>
 				</spawnThings>
 			</li>
-			
+
 			<li>
 				<pattern>VQEA_LabModules_5_.*</pattern>
 				<offset>(0, 0, 3)</offset>
@@ -246,6 +246,7 @@
 					<VQEA_Splicehulk>1~1</VQEA_Splicehulk>
 					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
 				</spawnPawns>
+				<forceSpawnEnemiesIndoor>true</forceSpawnEnemiesIndoor>
 			</li>
 		</structureLayouts>
 	</VanillaQuestsExpandedAncients.StructureSetDef>
@@ -277,6 +278,7 @@
 					<li>Gun_Revolver</li>
 					<li>VQEA_MeleeWeapon_Scalpel</li>
 				</weapons>
+				<forceSpawnEnemiesIndoor>true</forceSpawnEnemiesIndoor>
 			</li>
 		</structureLayouts>
 	</VanillaQuestsExpandedAncients.StructureSetDef>
@@ -288,6 +290,68 @@
 				<offset>(0, 0, 0)</offset>
 				<spawnPawns>
 					<VQEA_Spliceling>3~3</VQEA_Spliceling>
+					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+				</spawnPawns>
+				<forceSpawnEnemiesIndoor>true</forceSpawnEnemiesIndoor>
+			</li>
+		</structureLayouts>
+	</VanillaQuestsExpandedAncients.StructureSetDef>
+	<VanillaQuestsExpandedAncients.StructureSetDef>
+		<defName>VQEA_AncientResearchVaultStructure_Surface</defName>
+		<structureLayouts>
+			<li>
+				<pattern>VQEA_AncientOvergroundComplex_.*</pattern>
+				<offset>(0, 0, 0)</offset>
+				<unwaveringlyLoyal>true</unwaveringlyLoyal>
+				<spawnPawns>
+					<VQE_Patient>3~7</VQE_Patient>
+				</spawnPawns>
+				<weapons>
+					<li>MeleeWeapon_Knife</li>
+					<li>Gun_Autopistol</li>
+					<li>Gun_Revolver</li>
+					<li>VQEA_MeleeWeapon_Scalpel</li>
+				</weapons>
+				<forceSpawnEnemiesIndoor>true</forceSpawnEnemiesIndoor>
+			</li>
+		</structureLayouts>
+	</VanillaQuestsExpandedAncients.StructureSetDef>
+	<VanillaQuestsExpandedAncients.StructureSetDef>
+		<defName>VQEA_AncientResearchVaultStructure_Underground</defName>
+		<structureLayouts>
+			<li>
+				<pattern>VQEA_EntranceModules_.*</pattern>
+				<offset>(0, 0, 0)</offset>
+				<spawnPawns>
+					<VQEA_Spliceling>2~2</VQEA_Spliceling>
+					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+				</spawnPawns>
+			</li>
+			<li>
+				<pattern>VQEA_MiscModules_.*</pattern>
+				<offset>(0, 0, 1)</offset>
+				<spawnPawns>
+					<VQEA_Spliceling>2~2</VQEA_Spliceling>
+					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+				</spawnPawns>
+			</li>
+			<li>
+				<pattern>VQEA_MiscModules_.*</pattern>
+				<offset>(0, 0, 2)</offset>
+				<spawnPawns>
+					<VQEA_Spliceling>2~2</VQEA_Spliceling>
+					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
+					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
+				</spawnPawns>
+			</li>
+			<li>
+				<pattern>VQEA_SidequestLabModules_.*</pattern>
+				<offset>(0, 0, 3)</offset>
+				<spawnPawns>
+					<VQEA_Spliceling>2~2</VQEA_Spliceling>
 					<VQEA_Splicehulk>2~2</VQEA_Splicehulk>
 					<VQEA_Splicefiend>1~1</VQEA_Splicefiend>
 				</spawnPawns>
