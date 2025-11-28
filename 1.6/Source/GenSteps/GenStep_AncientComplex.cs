@@ -4,6 +4,7 @@ using Verse;
 using System.Linq;
 using System.Collections.Generic;
 using RimWorld.Planet;
+using VEF.Buildings;
 
 namespace VanillaQuestsExpandedAncients
 {
@@ -46,12 +47,15 @@ namespace VanillaQuestsExpandedAncients
 
                 var cond = GameConditionMaker.MakeConditionPermanent(InternalDefOf.VQEA_AncientComplex);
                 map.gameConditionManager.RegisterCondition(cond);
-            }
 
-            if (isUnderground)
+                var exit = map.listerThings.ThingsOfDef(exitDef).First();
+                MapGenerator.PlayerStartSpot = exit.Position;
+            }
+            
+            else
             {
-                var thing = map.listerThings.ThingsOfDef(exitDef).First();
-                MapGenerator.PlayerStartSpot = thing.Position;
+                var entrance = map.listerThings.ThingsOfDef(InternalDefOf.VQEA_LockedVaultDoor).First();
+                entrance.TryGetComp<CompBouncingArrow>().doBouncingArrow = true;
             }
         }
     }

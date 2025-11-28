@@ -14,6 +14,7 @@
 		<destroyable>false</destroyable>
 		<useHitPoints>false</useHitPoints>
 		<rotatable>false</rotatable>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<statBases>
 			<Flammability>0</Flammability>
 		</statBases>
@@ -51,6 +52,7 @@
 				</targetingParameters>
 				<interactionEffecter>ConstructMetal</interactionEffecter>
 			</li>
+			<li Class="VEF.Buildings.CompProperties_BouncingArrow" />
 		</comps>
 	</ThingDef>
 
