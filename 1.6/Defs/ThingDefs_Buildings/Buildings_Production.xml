@@ -3,7 +3,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>VQEA_AncientWorkshop</defName>
 		<label>ancient workshop</label>
-		<description>todo.</description>
+		<description>An ancient work station for assembling machinery like guns and ammunition, smithing non-mechanical weapons and tools, or breaking down dead mechanoids.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/AncientWorkshop</texPath>
@@ -82,7 +82,7 @@
 	<ThingDef ParentName="BenchBase">
 		<defName>VqEA_AncientCookingStation</defName>
 		<label>ancient cooking station</label>
-		<description>todo.</description>
+		<description>An electrically-powered stove with an attached countertop for preparing meals. It can also be used for butchering dead creatures into pieces of raw meat.</description>
 		<thingClass>Building_WorkTable_HeatPush</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/AncientCookingStation</texPath>
@@ -161,7 +161,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQEA_AncientGreenbed</defName>
 		<label>ancient greenbed</label>
-		<description>todo.</description>
+		<description>A small but very efficient artificial greenbed for growing plants. The nutrients pumps must work continuously; the plants will die if power is cut.</description>
 		<thingClass>Building_PlantGrower</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Production/AncientGreenbed</texPath>

@@ -1,61 +1,88 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <WorkGiverDef ParentName="HaulToBase">
-    <defName>VQEA_HaulToArchogenInjector</defName>
-    <label>haul resources to archogen injector</label>
-    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_HaulToArchogenInjector</giverClass>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>VQEA_EnterArchogenInjector</defName>
-    <label>enter archogen injector</label>
-    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_EnterArchogenInjector</giverClass>
-    <verb>enter</verb>
-    <gerund>entering</gerund>
-    <priorityInType>90</priorityInType>
-    <requiredCapacities>
-      <li>Moving</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>VQEA_CarryToArchogenInjector</defName>
-    <label>carry to archogen injector</label>
-    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_CarryToArchogenInjector</giverClass>
-    <workType>Hauling</workType>
-    <verb>carry</verb>
-    <gerund>carrying</gerund>
-    <priorityInType>90</priorityInType>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <canBeDoneByMechs>false</canBeDoneByMechs>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>VQEA_EnterAncientWonderdoc</defName>
-    <label>enter ancient wonderdoc</label>
-    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_EnterAncientWonderdoc</giverClass>
-    <verb>enter</verb>
-    <gerund>entering</gerund>
-    <priorityInType>90</priorityInType>
-    <requiredCapacities>
-      <li>Moving</li>
-    </requiredCapacities>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
-    <defName>VQEA_CarryToAncientWonderdoc</defName>
-    <label>carry to ancient wonderdoc</label>
-    <giverClass>VanillaQuestsExpandedAncients.WorkGiver_CarryToAncientWonderdoc</giverClass>
-    <workType>Hauling</workType>
-    <verb>carry</verb>
-    <gerund>carrying</gerund>
-    <priorityInType>90</priorityInType>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <canBeDoneByMechs>false</canBeDoneByMechs>
-  </WorkGiverDef>
+	<WorkGiverDef ParentName="HaulToBase">
+		<defName>VQEA_HaulToArchogenInjector</defName>
+		<label>haul resources to archogen injector</label>
+		<giverClass>VanillaQuestsExpandedAncients.WorkGiver_HaulToArchogenInjector</giverClass>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQEA_EnterArchogenInjector</defName>
+		<label>enter archogen injector</label>
+		<giverClass>VanillaQuestsExpandedAncients.WorkGiver_EnterArchogenInjector</giverClass>
+		<verb>enter</verb>
+		<gerund>entering</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Moving</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQEA_CarryToArchogenInjector</defName>
+		<label>carry to archogen injector</label>
+		<giverClass>VanillaQuestsExpandedAncients.WorkGiver_CarryToArchogenInjector</giverClass>
+		<workType>Hauling</workType>
+		<verb>carry</verb>
+		<gerund>carrying</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>false</canBeDoneByMechs>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQEA_EnterAncientWonderdoc</defName>
+		<label>enter ancient wonderdoc</label>
+		<giverClass>VanillaQuestsExpandedAncients.WorkGiver_EnterAncientWonderdoc</giverClass>
+		<verb>enter</verb>
+		<gerund>entering</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Moving</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQEA_CarryToAncientWonderdoc</defName>
+		<label>carry to ancient wonderdoc</label>
+		<giverClass>VanillaQuestsExpandedAncients.WorkGiver_CarryToAncientWonderdoc</giverClass>
+		<workType>Hauling</workType>
+		<verb>carry</verb>
+		<gerund>carrying</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByMechs>false</canBeDoneByMechs>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQEA_DoBillsAncientWorkshop</defName>
+		<label>work at ancient workshop</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>VQEA_AncientWorkshop</li>
+		</fixedBillGiverDefs>
+		<verb>work</verb>
+		<gerund>working at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	<WorkGiverDef>
+		<defName>VQEA_DoBillsAncientCookingStation</defName>
+		<label>cook meals at ancient cookingStation</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>VqEA_AncientCookingStation</li>
+		</fixedBillGiverDefs>
+		<verb>cook at</verb>
+		<gerund>cooking at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 </Defs>

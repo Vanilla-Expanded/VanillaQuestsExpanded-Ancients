@@ -12,7 +12,7 @@ namespace VanillaQuestsExpandedAncients
         public static void Postfix(Pawn_GeneTracker __instance,Gene gene)
         {
 
-            if (gene.def.exclusionTags?.Contains("MasterfulSkills")==true)
+            if (gene.def.defName?.Contains("VQEA_Masterful") ==true)
             {
                 SkillRecord skill = __instance.pawn.skills.GetSkill(gene.def.passionMod.skill);
                

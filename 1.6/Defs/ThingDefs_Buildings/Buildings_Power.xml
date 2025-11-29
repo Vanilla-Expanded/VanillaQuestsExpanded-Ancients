@@ -97,7 +97,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>VQEA_AncientBioBattery</defName>
 		<label>ancient biobattery</label>
-		<description>todo.</description>
+		<description>An old power vat that dissolves a living creature inside it to generate electricity. The power output varies based on the bodysize of the creature, and the duration depends on the creature’s mass.</description>
 		<thingClass>Building</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<graphicData>

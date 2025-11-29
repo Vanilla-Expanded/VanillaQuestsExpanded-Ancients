@@ -66,6 +66,8 @@ namespace VanillaQuestsExpandedAncients
 
         public static BodyPartDef Brain;
         public static BodyPartDef Reactor;
+        public static BodyPartDef ArtificialBrain;
+        public static BodyPartDef InsectHead;
 
         public static PawnKindDef VQEA_Spliceling;
 		public static PawnKindDef VQEA_Splicehulk;

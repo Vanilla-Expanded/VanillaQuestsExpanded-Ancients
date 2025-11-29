@@ -42,7 +42,7 @@ namespace VanillaQuestsExpandedAncients
             {
                 Pawn crafter = VanillaQuestsExpandedAncients_Frame_CompleteConstruction_Patch.crafter;
                 List<ThingDefCountClass> costlist = __result.CostListAdjusted();
-
+               
                 foreach (ThingDefCountClass ingredientCount in costlist)
                 {
                     ThingDef stuff = ingredientCount.stuff;
@@ -53,9 +53,9 @@ namespace VanillaQuestsExpandedAncients
                         newProduct.stackCount = 1;
                     }
                     GenSpawn.Spawn(newProduct, crafter.Position, crafter.Map);
-                    MoteMaker.ThrowText(crafter.Position.ToVector3(), crafter.Map, "VQEA_TextMote_ExceededExpectations".Translate(), 6f);
+                    
                 }
-
+                MoteMaker.ThrowText(crafter.Position.ToVector3(), crafter.Map, "VQEA_TextMote_ExceededExpectations".Translate(), 6f);
             }
 
         }

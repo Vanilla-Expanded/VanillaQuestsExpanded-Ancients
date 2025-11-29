@@ -33,14 +33,14 @@ namespace VanillaQuestsExpandedAncients
             Pawn attacker = dinfo.Instigator as Pawn;
             if (attacker!=null && !dinfo.Def.isRanged && attacker.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulMelee) == true)
             {
-                var vitalParts = pawn.health.hediffSet.GetNotMissingParts(dinfo.Height, BodyPartDepth.Inside).Where(part => part.def== BodyPartDefOf.Heart || part.def == InternalDefOf.Brain).ToList();
+                var vitalParts = pawn.health.hediffSet.GetNotMissingParts(dinfo.Height, BodyPartDepth.Inside).Where(part => part.def== BodyPartDefOf.Heart || part.def == InternalDefOf.Brain || part.def == InternalDefOf.ArtificialBrain).ToList();
                 if (vitalParts.TryRandomElementByWeight(x => x.coverageAbs * x.def.GetHitChanceFactorFor(dinfo.Def), out __result)) return false;
                 if (vitalParts.TryRandomElementByWeight(x => x.coverageAbs, out __result)) return false;
 
             }
             if (attacker != null && dinfo.Def.isRanged && attacker.genes?.HasActiveGene(InternalDefOf.VQEA_MasterfulShooting) == true)
             {
-                var vitalParts = pawn.health.hediffSet.GetNotMissingParts(dinfo.Height, BodyPartDepth.Inside).Where(part => part.def == BodyPartDefOf.Head || part.def == InternalDefOf.Reactor).ToList();
+                var vitalParts = pawn.health.hediffSet.GetNotMissingParts(dinfo.Height, BodyPartDepth.Inside).Where(part => part.def == BodyPartDefOf.Head || part.def == InternalDefOf.Reactor || part.def == InternalDefOf.InsectHead).ToList();
                 if (vitalParts.TryRandomElementByWeight(x => x.coverageAbs * x.def.GetHitChanceFactorFor(dinfo.Def), out __result)) return false;
                 if (vitalParts.TryRandomElementByWeight(x => x.coverageAbs, out __result)) return false;
 

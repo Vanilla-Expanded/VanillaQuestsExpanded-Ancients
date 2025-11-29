@@ -11,7 +11,7 @@ namespace VanillaQuestsExpandedAncients
     {
         public static void Postfix(GeneDef __instance, ref string __result)
         {
-            if (__instance.exclusionTags?.Contains("MasterfulSkills") == true)
+            if (__instance.defName?.Contains("VQEA_Masterful") == true)
             {
                 var originalPassion = "PassionModDrop".Translate(__instance.passionMod.skill);
                 var newPassion = "VQEA_AddsBurningPassionIn".Translate(__instance.passionMod.skill);

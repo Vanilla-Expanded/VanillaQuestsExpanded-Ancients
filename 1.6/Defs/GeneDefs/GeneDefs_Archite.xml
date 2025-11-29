@@ -204,6 +204,10 @@
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<biostatCpx>3</biostatCpx>
+		<exclusionTags>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<abilities>
@@ -695,7 +699,10 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
-		
+		<exclusionTags>
+			<li>Wing</li>
+			<li>Wings</li>
+		</exclusionTags>
 		<abilities>
 			<li>VQEA_MatterPhasing</li>
 		</abilities>
