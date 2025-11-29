@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VEF.Genes;
 using Verse;
 
 namespace VanillaQuestsExpandedAncients
@@ -14,7 +15,7 @@ namespace VanillaQuestsExpandedAncients
 
         public static float GetMeleeDamage(Pawn pawn)
         {
-           
+
             if (pawn == null)
             {
                 return 0f;
@@ -49,7 +50,37 @@ namespace VanillaQuestsExpandedAncients
 
         public static bool IsValidGeneForInjection(GeneDef geneDef)
         {
-            return geneDef.displayCategory?.defName != "VRE_Morphs" && ModCompatibility.IsAndroidGene(geneDef) is false;
+            if (geneDef.displayCategory?.defName == "VRE_Morphs" || ModCompatibility.IsAndroidGene(geneDef))
+            {
+                return false;
+            }
+
+            var extension = geneDef.GetModExtension<GeneExtension>();
+            if (extension != null && extension.disableGeneExtraction)
+            {
+                return false;
+            }
+
+            foreach (var blacklistDef in DefDatabase<InjectionBlacklistDef>.AllDefs)
+            {
+                if (blacklistDef.blacklistedGenes.Contains(geneDef.defName))
+                {
+                    return false;
+                }
+
+                if (geneDef.exclusionTags != null)
+                {
+                    foreach (var tag in geneDef.exclusionTags)
+                    {
+                        if (blacklistDef.blacklistedExclusionTags.Contains(tag))
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }

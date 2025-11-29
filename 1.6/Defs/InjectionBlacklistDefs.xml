@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <VanillaQuestsExpandedAncients.InjectionBlacklistDef>
+        <defName>VQEA_InjectionBlacklist</defName>
+        <blacklistedGenes>
+        </blacklistedGenes>
+        <blacklistedExclusionTags>
+            <li>SleeveQuality</li>
+        </blacklistedExclusionTags>
+    </VanillaQuestsExpandedAncients.InjectionBlacklistDef>
+
+</Defs>

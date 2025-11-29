@@ -155,32 +155,60 @@ namespace VanillaQuestsExpandedAncients
             {
                 foreach (var keyValuePair in thingsToReturn)
                 {
-                    var thing = ThingMaker.MakeThing(keyValuePair.Key);
-                    thing.stackCount = keyValuePair.Value;
-                    things.Add(thing);
+                    try
+                    {
+                        var thing = ThingMaker.MakeThing(keyValuePair.Key);
+                        thing.stackCount = keyValuePair.Value;
+                        things.Add(thing);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        Log.Error($"[PneumaticTube] Failed to create thing {keyValuePair.Key.defName}: {ex.Message}");
+                    }
                 }
                 thingsToReturn.Clear();
             }
             if (totalMarketValue > 0)
             {
                 float currentValue = 0;
-                while ((totalMarketValue - currentValue) > 0f)
+                int safetyCounter = 0;
+                const int maxIterations = 1000;
+
+                while ((totalMarketValue - currentValue) > 0.01f && safetyCounter < maxIterations)
                 {
+                    safetyCounter++;
+
                     float remainingValue = totalMarketValue - currentValue;
-                    if (!possibleThings.Where(x => Mathf.CeilToInt(remainingValue / x.BaseMarketValue) < 1000).TryRandomElement(out var thingDef))
+                    var eligibleThings = possibleThings.Where(x =>
+                        remainingValue >= x.BaseMarketValue && x.BaseMarketValue >= 0.001f &&
+                        Mathf.CeilToInt(remainingValue / x.BaseMarketValue) < 1000
+                    ).ToList();
+
+
+                    if (!eligibleThings.TryRandomElement(out var thingDef))
                     {
                         break;
                     }
+
                     Thing thing;
-                    if (thingDef.MadeFromStuff)
+                    try
                     {
-                        var stuff = GenStuff.RandomStuffFor(thingDef);
-                        thing = ThingMaker.MakeThing(thingDef, stuff);
+                        if (thingDef.MadeFromStuff)
+                        {
+                            var stuff = GenStuff.RandomStuffFor(thingDef);
+                            thing = ThingMaker.MakeThing(thingDef, stuff);
+                        }
+                        else
+                        {
+                            thing = ThingMaker.MakeThing(thingDef);
+                        }
                     }
-                    else
+                    catch (System.Exception ex)
                     {
-                        thing = ThingMaker.MakeThing(thingDef);
+                        Log.Error($"[PneumaticTube] Failed to create thing {thingDef.defName}: {ex.Message}");
+                        continue;
                     }
+
                     int amount = Mathf.Min(thingDef.stackLimit, Mathf.CeilToInt(remainingValue / thing.MarketValue));
                     if (amount <= 0)
                     {
@@ -190,12 +218,17 @@ namespace VanillaQuestsExpandedAncients
                     things.Add(thing);
                     currentValue += thing.MarketValue * thing.stackCount;
                 }
+
+                if (safetyCounter >= maxIterations)
+                {
+                    Log.Error($"[PneumaticTube] Hit maximum iteration limit during delivery generation. Remaining value: {totalMarketValue - currentValue}");
+                }
             }
             foreach (var thing in things)
             {
                 GenPlace.TryPlaceThing(thing, Position, Map, ThingPlaceMode.Near);
             }
-            
+
             totalMarketValue = 0;
         }
     }

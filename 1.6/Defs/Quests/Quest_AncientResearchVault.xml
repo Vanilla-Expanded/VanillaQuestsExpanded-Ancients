@@ -19,12 +19,13 @@
         <conditionSucceedQuests>
           <li>VQE_ArchiteControlVault</li>
         </conditionSucceedQuests>
-        <ticksSinceSucceed>15000~15000</ticksSinceSucceed>
-        <isRepeatable>true</isRepeatable>
+        <ticksSinceSucceed>15000</ticksSinceSucceed>
         <grantAgainOnSuccess>true</grantAgainOnSuccess>
         <daysUntilGrantAgainOnSuccess>60</daysUntilGrantAgainOnSuccess>
         <grantAgainOnFailure>true</grantAgainOnFailure>
         <daysUntilGrantAgainOnFailure>60</daysUntilGrantAgainOnFailure>
+        <grantAgainOnExpiry>true</grantAgainOnExpiry>
+        <daysUntilGrantAgainOnExpiry>60</daysUntilGrantAgainOnExpiry>
       </li>
     </modExtensions>
   </QuestScriptDef>
