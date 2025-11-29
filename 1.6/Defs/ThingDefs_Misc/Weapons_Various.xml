@@ -1,50 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
- 
-  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-    <defName>VQEA_MeleeWeapon_Scalpel</defName>
-    <label>scalpel</label>
-    <techLevel>Industrial</techLevel>
-    <description>A precision-crafted cutting tool designed for delicate work. Despite its size, the scalpel’s razor‑thin blade allows for incisions far more precise than any knife. The damage it can deal with each stab reflects the medical skill of the user.</description>
-    <graphicData>
-      <texPath>Things/Weapons/Scalpel</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <uiIconScale>1.6</uiIconScale>
-  
-    <weaponClasses>
-      <li>MeleePiercer</li>
-    </weaponClasses>
-    <costStuffCount>45</costStuffCount>
-    <statBases>
-      <WorkToMake>9200</WorkToMake>
-      <Mass>0.5</Mass>
-    </statBases>
-    <equippedAngleOffset>-65</equippedAngleOffset>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <burnableByRecipe>false</burnableByRecipe>
-	 <equippedStatOffsets>
-      <MedicalSurgerySuccessChance>0.10</MedicalSurgerySuccessChance>
-      <MedicalTendQuality>0.05</MedicalTendQuality>
-    </equippedStatOffsets>
-    <tools>
-      
-      <li>
-        <label>blade</label>
-        <capacities>
-          <li>VQEA_Scalpel</li>
-        </capacities>
-        <power>5</power>
-        <cooldownTime>1.8</cooldownTime>
-      </li>
-     
-    </tools>
-    
-  </ThingDef>
-
- 
-
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>VQEA_MeleeWeapon_Scalpel</defName>
+		<label>scalpel</label>
+		<techLevel>Industrial</techLevel>
+		<description>A precision-crafted cutting tool designed for delicate work. Despite its size, the scalpel’s razor‑thin blade allows for incisions far more precise than any knife. The damage it can deal with each stab reflects the medical skill of the user.</description>
+		<graphicData>
+			<texPath>Things/Weapons/Scalpel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<uiIconScale>1.6</uiIconScale>
+		<weaponClasses>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<costStuffCount>45</costStuffCount>
+		<statBases>
+			<WorkToMake>9200</WorkToMake>
+			<Mass>0.5</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<burnableByRecipe>false</burnableByRecipe>
+		<equippedStatOffsets>
+			<MedicalSurgerySuccessChance>0.10</MedicalSurgerySuccessChance>
+			<MedicalTendQuality>0.05</MedicalTendQuality>
+		</equippedStatOffsets>
+		<tools>
+			<li>
+				<chanceFactor>10</chanceFactor>
+				<label>blade</label>
+				<capacities>
+					<li>VQEA_Scalpel</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
 </Defs>
