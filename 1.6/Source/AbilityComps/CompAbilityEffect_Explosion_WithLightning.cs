@@ -35,7 +35,7 @@ namespace VanillaQuestsExpandedAncients
                 {
 
 
-                    RCellFinder.TryFindRandomCellNearWith(Pawn.Position, (IntVec3 pos) => pos.InBounds(Pawn.Map), Pawn.Map, out IntVec3 result,7, 10);
+                    RCellFinder.TryFindRandomCellNearWith(Pawn.Position, (IntVec3 pos) => pos.InBounds(Pawn.Map) && pos.DistanceTo(Pawn.Position)>5, Pawn.Map, out IntVec3 result,7, 10);
                     Pawn.Map.weatherManager.eventHandler.AddEvent(new WeatherEvent_LightningStrike(Pawn.Map, result));
                     
 

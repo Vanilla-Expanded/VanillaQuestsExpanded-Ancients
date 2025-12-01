@@ -111,6 +111,12 @@ namespace VanillaQuestsExpandedAncients
             this.SpringSub(null);
         }
 
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+            this.SpringSub(null);
+            base.Destroy(mode);
+        }
+
 
         protected override void SpringSub(Pawn p)
         {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		
+		<xpath>Defs/StatDef[defName = "CookSpeed"]/postProcessStatFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName = "CookSpeed"]</xpath>
+			<value>
+				<postProcessStatFactors>
+					<li>VQEA_MasterfulCooking</li>
+				</postProcessStatFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName = "CookSpeed"]/postProcessStatFactors</xpath>
+			<value>
+				<li>VQEA_MasterfulCooking</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

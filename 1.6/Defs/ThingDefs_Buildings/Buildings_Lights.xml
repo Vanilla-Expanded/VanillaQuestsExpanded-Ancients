@@ -6,6 +6,7 @@
 		<label>ancient sun lamp</label>
 		<description>An old surgical lamp that shines brightly enough to grow crops when powered.</description>
 		<size>(1,1)</size>
+		 <thingClass>Building_SunLamp</thingClass>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<costList>
@@ -17,6 +18,7 @@
 			<Beauty>-1</Beauty>
 			 <Mass>4.5</Mass>
 		</statBases>
+		 <tickerType>Rare</tickerType>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
 			<li>BuildingsFurniture</li>
@@ -48,6 +50,7 @@
 				<heatPerSecond>3</heatPerSecond>
 			</li>
 		</comps>
+		    <specialDisplayRadius>5.8</specialDisplayRadius>
 	</ThingDef>
 
 

@@ -403,7 +403,7 @@
 			<ButcheryFleshEfficiency>0.25</ButcheryFleshEfficiency>
 		</statOffsets>
 		<statFactors>
-			<CookSpeed>2</CookSpeed>
+			<VQEA_MasterfulCooking>2</VQEA_MasterfulCooking>
 		</statFactors>
 		<passionMod>
 			<skill>Cooking</skill>
