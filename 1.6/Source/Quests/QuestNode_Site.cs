@@ -9,6 +9,7 @@ using Verse;
 
 namespace VanillaQuestsExpandedAncients
 {
+    [HotSwappable]
     public abstract class QuestNode_Site : QuestNode
     {
         public abstract SitePartDef QuestSite { get; }
@@ -155,7 +156,7 @@ namespace VanillaQuestsExpandedAncients
             }
             slate.Set("playerFaction", Faction.OfPlayer);
             slate.Set("map", map);
-            Pawn asker = QuestGen.quest.root.questDescriptionRules.Rules.Any(x => x.constantConstraints.Any(y => y.key == "asker_factionLeader" && y.type ==  Verse.Grammar.Rule.ConstantConstraint.Type.Equal)) ? FindAsker() : null;
+            Pawn asker = QuestGen.quest.root.questDescriptionRules != null ? QuestGen.quest.root.questDescriptionRules.Rules.Any(x => x.constantConstraints != null && x.constantConstraints.Any(y => y.key == "asker_factionLeader" && y.type ==  Verse.Grammar.Rule.ConstantConstraint.Type.Equal)) ? FindAsker() : null : null;
             slate.Set("asker", asker);
             slate.Set("askerIsNull", asker == null);
             QuestGenUtility.RunAdjustPointsForDistantFight();
