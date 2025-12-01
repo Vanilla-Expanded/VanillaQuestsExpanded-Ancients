@@ -352,4 +352,21 @@
 			</li>
 		</comps>
 	</HediffDef>
+	<HediffDef>
+		<defName>VQEA_SuicideHediff</defName>
+		<label>dying</label>
+		<description>This creature is dying.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_DieAfterPeriod">
+				<timeToDieInTicks>1</timeToDieInTicks>
+				
+			
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>

@@ -63,6 +63,7 @@ namespace VanillaQuestsExpandedAncients
 		public static HediffDef VQEA_InjectionComa;
 		public static HediffDef VQEA_HemocollapseSyndrome;
         public static HediffDef VQEA_Regenerating;
+        public static HediffDef VQEA_SuicideHediff;
 
         public static BodyPartDef Brain;
         public static BodyPartDef Reactor;
