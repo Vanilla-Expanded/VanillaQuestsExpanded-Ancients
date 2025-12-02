@@ -34,6 +34,7 @@
 		<fillPercent>0.4</fillPercent>
 		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<tickerType>Normal</tickerType>
 		<statBases>
 			<MaxHitPoints>600</MaxHitPoints>
@@ -55,7 +56,8 @@
 				</contents>
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<gizmoText>VQEA_Override</gizmoText>
-				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoTexture>UI/Overlays/NeedsOverriding</gizmoTexture>
+				<overlayTexture>UI/Overlays/NeedsOverriding</overlayTexture>
 				<gizmoDesc>VQEA_OverrideDesc</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
@@ -90,6 +92,7 @@
 		<label>archite capsule containment</label>
 		<description>A containment unit built to store and release archite capsules for experimentation. It still hums softly when approached. Can be opened to release an archite capsule.</description>
 		<size>(1,1)</size>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
@@ -117,7 +120,8 @@
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<buildingLeft>VQEA_ArchiteCapsuleContainment_Empty</buildingLeft>
 				<gizmoText>VQEA_Override</gizmoText>
-				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoTexture>UI/Overlays/NeedsOverriding</gizmoTexture>
+				<overlayTexture>UI/Overlays/NeedsOverriding</overlayTexture>
 				<gizmoDesc>VQEA_OverrideDesc_Queue</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
@@ -157,6 +161,7 @@
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
 		<fillPercent>0.4</fillPercent>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -178,7 +183,8 @@
 				</contents>
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<gizmoText>VQEA_Override</gizmoText>
-				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoTexture>UI/Overlays/NeedsOverriding</gizmoTexture>
+				<overlayTexture>UI/Overlays/NeedsOverriding</overlayTexture>
 				<gizmoDesc>VQEA_OverrideDesc_Queue</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
@@ -351,7 +357,6 @@
 		<label>empty ancient organ box</label>
 		<description>An empty storage box with a built-in cooling system, typically used to preserve organs over extended durations.</description>
 		<size>(1,1)</size>
-	
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
@@ -373,7 +378,8 @@
 		<label>ancient organ box</label>
 		<description>A secure storage box with a built-in cooling system, typically used to preserve organs over extended durations. Can be hacked open to release whatever remains inside.</description>
 		<size>(1,1)</size>
-	<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<thingClass>VEF.Buildings.LootableBuilding_Custom</thingClass>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
@@ -399,7 +405,8 @@
 				</setMakerDetails>
 				<deconstructSound>CryptosleepCasket_Eject</deconstructSound>
 				<gizmoText>VQEA_Override</gizmoText>
-				<gizmoTexture>UI/Gizmo/OverrideGizmo</gizmoTexture>
+				<gizmoTexture>UI/Overlays/NeedsOverriding</gizmoTexture>
+				<overlayTexture>UI/Overlays/NeedsOverriding</overlayTexture>
 				<gizmoDesc>VQEA_OverrideDesc_Queue</gizmoDesc>
 				<cancelLootinggizmoDesc>VQEA_CancelOverrideDesc</cancelLootinggizmoDesc>
 				<cancelLootinggizmoText>VQEA_CancelOverride</cancelLootinggizmoText>
