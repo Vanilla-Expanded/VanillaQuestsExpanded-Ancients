@@ -27,7 +27,7 @@
       <li Class="VEF.Storyteller.QuestChainExtension">
         <questChainDef>VQE_TheAncientLab</questChainDef>
         <conditionSucceedQuests>
-          <li>VQE_ArchiteControlVault</li>
+          <li>VQE_SpliceframeBlacksite</li>
         </conditionSucceedQuests>
         <ticksSinceSucceed>15000</ticksSinceSucceed>
         <grantAgainOnSuccess>true</grantAgainOnSuccess>
