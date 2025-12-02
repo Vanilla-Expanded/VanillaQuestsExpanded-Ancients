@@ -109,7 +109,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Splicehulk</defName>
 		<label>splicehulk</label>
-		<description>A swollen bloated mutant that quivers with every labored step. Its skin splits under its own weight, oozing yellow fluid from raw seams. Vaguely resembling what was once a human, its limbs of mismatched size flail clumsily at anything nearby.\n\nWhile slow and ponderous, its immense bulk crushes obstacles with ease leaving little hope for anything caught in its path.</description>
+		<description>A swollen bloated mutant that quivers with every labored step. Its skin splits under its own weight, oozing yellow fluid from raw seams. Vaguely resembling what was once a human, its limbs of mismatched size flail clumsily at anything nearby. Somehow, it’s able to regenerate all wounds at an unnatural speed.\n\nWhile slow and ponderous, its immense bulk crushes obstacles with ease leaving little hope for anything caught in its path.</description>
 		<statBases>
 			<MoveSpeed>2.6</MoveSpeed>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>
@@ -325,7 +325,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>VQEA_Splicetoot</defName>
 		<label>splicetoot</label>
-		<description>A small, bloated mutant that crawls awkwardly on underdeveloped limbs, resembling a grotesque parody of a toddler. Its enlarged belly sloshes with rotstink gas, swelling and trembling with each jerking movement.Upon reaching its victim, the fragile body ruptures in a violent explosion, releasing a choking cloud of dangerous gas. Whether it was once a child or simply shaped to mock one is a cruelty too dreadful to think about.</description>
+		<description>A small, bloated mutant that crawls awkwardly on underdeveloped limbs, resembling a grotesque parody of a toddler. Its enlarged belly sloshes with rotstink gas, swelling and trembling with each jerking movement. Upon reaching its victim, the fragile body ruptures in a violent explosion, releasing a choking cloud of dangerous gas. Whether it was once a child or simply shaped to mock one is a cruelty too dreadful to think about.</description>
 		<statBases>
 			<MoveSpeed>4.65</MoveSpeed>
 			<ComfyTemperatureMin>-40</ComfyTemperatureMin>

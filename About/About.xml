@@ -1,6 +1,6 @@
 <ModMetaData>
 	<name>Vanilla Quests Expanded - Ancients</name>
-	<author>Oskar Potocki, Sarg Bjornson, Taranchuk</author>
+	<author>Oskar Potocki, Sarg Bjornson, Taranchuk, Ferny</author>
 	<supportedVersions>
 		<li>1.6</li>
 	</supportedVersions>
@@ -30,5 +30,9 @@
 	</loadAfter>
 
 	<packageId>vanillaquestsexpanded.ancients</packageId>
-	<description>make mutant with cool genes</description>
+	<description>They tried to improve the human body. Instead, they changed it into something unrecognizable. Vanilla Quests Expanded: Ancients sends you into subterranean vaults where abandoned archite machines still twist flesh and fate, reshaping anything that falls into their grasp.
+
+Search the remnants of a civilization obsessed with perfection. Steal their genetic engines, unlock archite mutation chambers, and experiment with power that bends biology itself. Unlock the truth. Escape the corruption.
+
+Vanilla Quests Expanded: Ancients — what will you become?</description>
 </ModMetaData>
