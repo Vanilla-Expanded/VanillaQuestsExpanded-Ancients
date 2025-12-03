@@ -26,7 +26,8 @@ namespace VanillaQuestsExpandedAncients
 
         static Building_PneumaticTubeLaunchPort()
         {
-            possibleThings = DefDatabase<ThingDef>.AllDefs.Where(x => x.category == ThingCategory.Item && x.BaseMarketValue > 0.01f && !x.IsCorpse && x.destroyOnDrop is false && x.tradeability != Tradeability.None).ToList();
+            possibleThings = DefDatabase<ThingDef>.AllDefs.Where(x => x.category == ThingCategory.Item && x.BaseMarketValue >= 0.01f && !x.IsCorpse && x.destroyOnDrop is false && x.tradeability != Tradeability.None && x.genericMarketSellable && x.defName != "Apparel_CerebrexNode").ToList();
+            //Log.Message("All possible things: " + possibleThings.Select(x => x.label).ToStringSafeEnumerable());
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -174,7 +175,7 @@ namespace VanillaQuestsExpandedAncients
                 int safetyCounter = 0;
                 const int maxIterations = 1000;
 
-                while ((totalMarketValue - currentValue) > 0.01f && safetyCounter < maxIterations)
+                while ((totalMarketValue - currentValue) >= 0.01f && safetyCounter < maxIterations)
                 {
                     safetyCounter++;
 
