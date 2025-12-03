@@ -31,8 +31,8 @@
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<statFactors>
-			<MeleeHitChance>3</MeleeHitChance>
-			<MeleeDodgeChance>3</MeleeDodgeChance>
+			<VQEA_Prowess>3</VQEA_Prowess>
+			
 		</statFactors>
 	</GeneDef>
 	<GeneDef>

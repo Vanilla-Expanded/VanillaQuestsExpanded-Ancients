@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <StatDef>
-    <defName>VQEA_MasterfulCooking</defName>
-    <label>masterful cooking</label>
-    <description>A multiplier on cooking speed, associated with the masterful cooking archite gene.</description>
-    <category>PawnWork</category>
-    <hideAtValue>1</hideAtValue>
-    <defaultBaseValue>1</defaultBaseValue>
-    <toStringStyle>PercentZero</toStringStyle>
-    <showOnAnimals>false</showOnAnimals>
-    <showOnMechanoids>false</showOnMechanoids>
- 
-    <displayPriorityInCategory>4541</displayPriorityInCategory>
-  </StatDef>
-  
+	<StatDef>
+		<defName>VQEA_MasterfulCooking</defName>
+		<label>masterful cooking</label>
+		<description>A multiplier on cooking speed, associated with the masterful cooking archite gene.</description>
+		<category>PawnWork</category>
+		<hideAtValue>1</hideAtValue>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<showOnMechanoids>false</showOnMechanoids>
+		<displayPriorityInCategory>4541</displayPriorityInCategory>
+	</StatDef>
+	<StatDef>
+		<defName>VQEA_Prowess</defName>
+		<label>prowess</label>
+		<description>A multiplier on melee hit chance and dodge chance, associated with the prowess archite gene. Bear in mind base game doesn't show Melee hit chance on this infobox.</description>
+		<category>PawnCombat</category>
+		<hideAtValue>1</hideAtValue>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<showOnAnimals>false</showOnAnimals>
+		<showOnMechanoids>false</showOnMechanoids>
+		<displayPriorityInCategory>4100</displayPriorityInCategory>
+	</StatDef>
 </Defs>

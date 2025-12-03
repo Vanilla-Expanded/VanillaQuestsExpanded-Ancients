@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		
+		<xpath>Defs/StatDef[defName = "MeleeHitChance"]/postProcessStatFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName = "MeleeHitChance"]</xpath>
+			<value>
+				<postProcessStatFactors>
+					<li>VQEA_Prowess</li>
+				</postProcessStatFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName = "MeleeHitChance"]/postProcessStatFactors</xpath>
+			<value>
+				<li>VQEA_Prowess</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		
+		<xpath>Defs/StatDef[defName = "MeleeDodgeChance"]/postProcessStatFactors</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName = "MeleeDodgeChance"]</xpath>
+			<value>
+				<postProcessStatFactors>
+					<li>VQEA_Prowess</li>
+				</postProcessStatFactors>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/StatDef[defName = "MeleeDodgeChance"]/postProcessStatFactors</xpath>
+			<value>
+				<li>VQEA_Prowess</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>
