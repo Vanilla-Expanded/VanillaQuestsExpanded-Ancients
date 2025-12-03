@@ -115,7 +115,6 @@ namespace VanillaQuestsExpandedAncients
             InternalDefOf.VQEA_PneumaticLaunch.PlayOneShot(new TargetInfo(Position, map));
 
             thingsToReturn ??= new Dictionary<ThingDef, int>();
-            thingsToReturn.Clear();
             totalMarketValue = 0f;
             foreach (var item in transporter.innerContainer)
             {
