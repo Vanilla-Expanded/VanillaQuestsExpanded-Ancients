@@ -200,6 +200,7 @@
 		<description>An empty, wobbly storage shelf. Anything of value is long gone.</description>
 		<size>(2,1)</size>
 		<rotatable>true</rotatable>
+		<building><isEdifice>false</isEdifice></building>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
