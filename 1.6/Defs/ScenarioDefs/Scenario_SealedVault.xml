@@ -65,7 +65,7 @@
 
   <ScenPartDef>
     <defName>VQEA_SealedVaultPart</defName>
-    <label>sealed vault part</label>
+    <label>start with sealed vault</label>
     <scenPartClass>VanillaQuestsExpandedAncients.ScenPart_SealedVault</scenPartClass>
     <category>Misc</category>
   </ScenPartDef>
