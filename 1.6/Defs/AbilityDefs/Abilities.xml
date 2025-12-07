@@ -17,7 +17,7 @@
 			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
 			<warmupTime>0.5</warmupTime>
 			<range>19.9</range>
-			<requireLineOfSight>false</requireLineOfSight>
+			<requireLineOfSight>true</requireLineOfSight>
 			<soundCast>Longjump_Jump</soundCast>
 			<soundLanding>Longjump_Land</soundLanding>
 			<flightEffecterDef>VQEA_Levitate</flightEffecterDef>

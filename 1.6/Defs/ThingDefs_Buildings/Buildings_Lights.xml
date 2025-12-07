@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientSunLamp</defName>
 		<label>ancient sun lamp</label>
 		<description>An old surgical lamp that shines brightly enough to grow crops when powered.</description>
 		<size>(1,1)</size>
-		 <thingClass>Building_SunLamp</thingClass>
+		<thingClass>Building_SunLamp</thingClass>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<costList>
@@ -16,13 +15,16 @@
 			<MaxHitPoints>40</MaxHitPoints>
 			<Flammability>0.5</Flammability>
 			<Beauty>-1</Beauty>
-			 <Mass>4.5</Mass>
+			<Mass>4.5</Mass>
 		</statBases>
-		 <tickerType>Rare</tickerType>
+		<tickerType>Rare</tickerType>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
+		<building>
+			<claimable>true</claimable>
+		</building>
 		<graphicData>
 			<texPath>Things/Building/Light/AncientSunLamp</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
@@ -50,10 +52,8 @@
 				<heatPerSecond>3</heatPerSecond>
 			</li>
 		</comps>
-		    <specialDisplayRadius>5.8</specialDisplayRadius>
+		<specialDisplayRadius>5.8</specialDisplayRadius>
 	</ThingDef>
-
-
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientVaultLamp</defName>
 		<label>ancient vault lamp</label>
@@ -76,5 +76,4 @@
 			</li>
 		</comps>
 	</ThingDef>
-
 </Defs>

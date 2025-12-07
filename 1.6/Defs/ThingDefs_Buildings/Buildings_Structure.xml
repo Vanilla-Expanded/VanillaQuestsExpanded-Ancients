@@ -131,7 +131,7 @@
 		<building>
 			<paintable>false</paintable>
 			<deconstructible>false</deconstructible>
-			<claimable>false</claimable>
+			<claimable>true</claimable>
 			<neverBuildable>true</neverBuildable>
 			<roamerCanOpen>false</roamerCanOpen>
 			<blueprintClass>Blueprint_Build</blueprintClass>
@@ -227,7 +227,7 @@
 		<building>
 			<paintable>false</paintable>
 			<deconstructible>false</deconstructible>
-			<claimable>false</claimable>
+			<claimable>true</claimable>
 			<neverBuildable>true</neverBuildable>
 			<roamerCanOpen>false</roamerCanOpen>
 			<blueprintClass>Blueprint_Build</blueprintClass>
