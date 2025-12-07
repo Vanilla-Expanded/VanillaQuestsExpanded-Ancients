@@ -10,6 +10,7 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>MeleeDamage</li>
 		</exclusionTags>
@@ -29,6 +30,7 @@
 		<marketValueFactor>1.5</marketValueFactor>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
+		<selectionWeight>0</selectionWeight>
 		<biostatMet>0</biostatMet>
 		<statFactors>
 			<VQEA_Prowess>3</VQEA_Prowess>
@@ -46,6 +48,7 @@
 			<li>MoveSpeed</li>
 		</exclusionTags>
 		<biostatCpx>3</biostatCpx>
+		<selectionWeight>0</selectionWeight>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<statOffsets>
@@ -65,6 +68,7 @@
 		<geneClass>Gene_Clotting</geneClass>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>WoundHealingRate</li>
 		</exclusionTags>
@@ -87,6 +91,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_Marksman</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>ShootingAccuracy</li>
 		</exclusionTags>
@@ -108,6 +113,7 @@
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<ignoreDarkness>true</ignoreDarkness>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>ShootingAccuracy</li>
 		</exclusionTags>
@@ -132,6 +138,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_PlasteelSkin</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<customEffectDescriptions>
 			<li>+35% blunt natural armour.</li>
 			<li>+50% sharp natural armour.</li>
@@ -156,6 +163,7 @@
 		<biostatMet>0</biostatMet>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VEF.Genes.GeneExtension">
 				<hediffsToBodyParts>
@@ -177,6 +185,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_Genius</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Learning</li>
 		</exclusionTags>
@@ -203,6 +212,7 @@
 		<description>Carriers of this gene can lift themselves using a controlled psychic field. They float over obstacles and terrain unharmed, immune to damage during transit and unaffected by difficult terrain.</description>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<exclusionTags>
 			<li>Wing</li>
@@ -229,6 +239,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_Serene</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aggression</li>
 		</exclusionTags>
@@ -246,6 +257,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_PassiveMeditation</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -265,6 +277,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_Bulwark</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Toughness</li>
 		</exclusionTags>
@@ -287,6 +300,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_Enormous</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>InsectorSize</li>
 		</exclusionTags>
@@ -316,6 +330,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_SubstanceImpervious</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -327,6 +342,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Animals</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Animals</li>
 		</exclusionTags>
@@ -348,6 +364,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Artistic</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Artistic</li>
 		</exclusionTags>
@@ -369,6 +386,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Construction</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Construction</li>
 		</exclusionTags>
@@ -390,6 +408,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Cooking</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Cooking</li>
 		</exclusionTags>
@@ -417,6 +436,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Crafting</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Crafting</li>
 		</exclusionTags>
@@ -441,6 +461,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Medical</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Medicine</li>
 		</exclusionTags>
@@ -462,6 +483,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Melee</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Melee</li>
 		</exclusionTags>
@@ -483,6 +505,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Mining</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Mining</li>
 		</exclusionTags>
@@ -507,6 +530,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Plants</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Plants</li>
 		</exclusionTags>
@@ -531,6 +555,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Intellectual</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Intellectual</li>
 		</exclusionTags>
@@ -557,6 +582,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Shooting</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Shooting</li>
 		</exclusionTags>
@@ -578,6 +604,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Social</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<exclusionTags>
 			<li>Aptitude_Social</li>
 		</exclusionTags>
@@ -602,6 +629,7 @@
 		<iconPath>UI/Icons/Genes/Powers/Gene_InfernoSpew</iconPath>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -620,6 +648,7 @@
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
 		<biostatCpx>4</biostatCpx>
+		<selectionWeight>0</selectionWeight>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
 		<abilities>
@@ -639,6 +668,7 @@
 		<description>Carriers of this gene can bend light and thermal signatures around their bodies using specialized archite nanites, causing them to vanish from sight. While the effect only lasts a short while, it can be used again almost immediately.</description>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -658,6 +688,7 @@
 		<description>Carriers of this gene possess archite-woven regenerative tissue that continuously rebuilds damaged cells and restores lost structure. They are capable of regrowing missing organs and body parts, but the process takes time.</description>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -675,6 +706,7 @@
 		<description>Carriers of this gene generate a stable internal electromagnetic field that makes them fully immune to EMP attacks. They can also release this charge in a powerful EMP burst, disabling electronics and mechanoids nearby.</description>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -696,6 +728,7 @@
 		<description>Carriers of this gene can temporarily shift their bodies into a semi-intangible state, allowing them to pass through walls and solid obstacles. The effect lasts only briefly before their form solidifies again.</description>
 		<displayCategory>Archite</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
+		<selectionWeight>0</selectionWeight>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
