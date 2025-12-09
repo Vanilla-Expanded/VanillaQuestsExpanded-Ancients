@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<VEF.AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+		<defName>VQEA_DisabledQuestAnimals</defName>
+		<disabledFromQuestsPawns>
+			<li>VQEA_Spliceling</li>
+			<li>VQEA_Splicehulk</li>
+			<li>VQEA_Splicefiend</li>
+			<li>VQEA_Splicetoot</li>
+			
+		</disabledFromQuestsPawns>
+	</VEF.AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+</Defs>
