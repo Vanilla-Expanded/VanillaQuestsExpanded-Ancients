@@ -76,7 +76,7 @@
 	<VQEA_OverrideDesc_Queue>Order this container to be opened by overriding its security.</VQEA_OverrideDesc_Queue>
     <VQEA_CancelOverride>Cancel override</VQEA_CancelOverride>
     <VQEA_CancelOverrideDesc>Cancel overriding this building.</VQEA_CancelOverrideDesc>
-    <VQEA_LockedAncientVaultDoor>This ancient vault door is locked</VQEA_LockedAncientVaultDoor>
+    <VQEA_LockedAncientVaultDoor>This ancient vault door is locked.</VQEA_LockedAncientVaultDoor>
     <VQEA_InterceptBroadcast>Intercept broadcast</VQEA_InterceptBroadcast>
     <VQEA_InterceptBroadcastDesc>Intercept the broadcast to find out the location of another lab where the broadcast is directed.</VQEA_InterceptBroadcastDesc>
 	<VQEA_CarryToBioBattery>Carry {0} to biobattery</VQEA_CarryToBioBattery>
