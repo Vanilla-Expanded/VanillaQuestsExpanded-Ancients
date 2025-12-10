@@ -57,4 +57,208 @@
 			<drawSize>(3,4)</drawSize>
 		</graphicData>
 	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Long</defName>
+		<label>pneumatic tubes</label>
+		<description>A network of ancient tubes used to deliver small and medium items between vaults. Some of the capsules remain stuck inside.</description>
+		<size>(6,2)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<fillPercent>1</fillPercent>
+		<building>
+			<deconstructible>false</deconstructible>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesLong</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,4)</drawSize>
+			 <drawOffset>(0,0,0.15)</drawOffset>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Triple</defName>
+		<label>pneumatic tubes</label>
+		<description>A network of ancient tubes used to deliver small and medium items between vaults. Some of the capsules remain stuck inside.</description>
+		<size>(5,4)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>		
+		<fillPercent>1</fillPercent>
+		<building>
+			<deconstructible>false</deconstructible>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesTriple</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,4)</drawSize>
+			 <drawOffset>(0,0,0.275)</drawOffset>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Corner</defName>
+		<label>pneumatic tubes</label>
+		<description>A network of ancient tubes used to deliver small and medium items between vaults. Some of the capsules remain stuck inside.</description>
+		<size>(4,4)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>
+		<rotatable>true</rotatable>
+		<fillPercent>1</fillPercent>
+		<building>
+			<deconstructible>false</deconstructible>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesCorner</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<drawOffset>(0,0,0.275)</drawOffset>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Underground</defName>
+		<label>underground pneumatic tubes</label>
+		<description>A network of ancient tubes used to deliver small and medium items between vaults. Some of the capsules remain stuck inside.</description>
+		<size>(4,4)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Standable</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<fillPercent>0</fillPercent>
+		<building>
+			<deconstructible>false</deconstructible>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesUnderground</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Wall</defName>
+		<label>pneumatic tubes</label>
+		<description>A network of ancient tubes used to deliver small and medium items between vaults. Some of the capsules remain stuck inside.</description>
+		<size>(2,2)</size>
+		<destroyable>false</destroyable>
+		<useHitPoints>false</useHitPoints>
+		<passability>Impassable</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>
+		<rotatable>true</rotatable>
+		<fillPercent>1</fillPercent>
+		<building>
+			<deconstructible>false</deconstructible>
+		</building>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesWall</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<drawOffset>(0,0,0.275)</drawOffset>
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Terminus</defName>
+		<label>empty pneumatic tubes terminus</label>
+		<description>The pneumatic tubes network had an exit port here. It is empty.</description>
+		<size>(2,1)</size>
+	
+		<passability>PassThroughOnly</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<fillPercent>0.4</fillPercent>
+		
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+			<MaxHitPoints>100</MaxHitPoints>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesTerminus_Open</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,2)</drawSize>
+			
+		</graphicData>
+	</ThingDef>
+	<ThingDef ParentName="VQEA_AncientsBuildingBase">
+		<defName>VQEA_PneumaticTubes_Terminus_Closed</defName>
+		<label>closed pneumatic tubes terminus</label>
+		<description>The pneumatic tubes network had an exit port here. It can be opened to access its contents.</description>
+		<size>(2,1)</size>
+		<thingClass>VEF.Buildings.LootableBuilding</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		
+		<passability>PassThroughOnly</passability>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<fillPercent>0.4</fillPercent>
+		
+		<statBases>
+			<Flammability>0</Flammability>
+			<Beauty>0</Beauty>
+			<MaxHitPoints>100</MaxHitPoints>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Building/Exotic/VQEA_PneumaticTubesTerminus_Closed</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4,2)</drawSize>
+			
+		</graphicData>
+		<modExtensions>
+			<li Class="VEF.Buildings.LootableBuildingDetails">
+				<contents>
+					<li>
+						<thing>Silver</thing>
+						<count>200</count>
+					</li>
+					<li>
+						<thing>Pemmican</thing>
+						<count>400</count>
+					</li>
+					<li>
+						<thing>MedicineHerbal</thing>
+						<count>20</count>
+					</li>
+					<li>
+						<thing>WoodLog</thing>
+						<count>500</count>
+					</li>
+					
+				</contents>
+				<randomFromContents>true</randomFromContents>
+				<totalRandomLoops>1~1</totalRandomLoops>
+				<buildingLeft>VQEA_PneumaticTubes_Terminus</buildingLeft>
+			</li>
+		</modExtensions>
+	</ThingDef>
 </Defs>

@@ -410,4 +410,50 @@
 		<defName>VQEA_AncientOrganBox_Empty</defName>
 		<thing>VQEA_AncientOrganBox_Empty</thing>
 	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Wall</defName>
+		<thing>VQEA_PneumaticTubes_Wall</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Long</defName>
+		<thing>VQEA_PneumaticTubes_Long</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>Wall_Steel_Fadedgreen</defName>
+		<thing>Wall</thing>
+		<stuff>Steel</stuff>
+		<color>Structure_GreenFaded</color>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>OrnateDoor_Steel_Fadedgreen</defName>
+		<thing>OrnateDoor</thing>
+		<stuff>Steel</stuff>
+		<color>Structure_GreenFaded</color>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Underground</defName>
+		<thing>VQEA_PneumaticTubes_Underground</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>Door_Steel_Fadedgreen</defName>
+		<thing>Door</thing>
+		<stuff>Steel</stuff>
+		<color>Structure_GreenFaded</color>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Terminus_Closed</defName>
+		<thing>VQEA_PneumaticTubes_Terminus_Closed</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Corner</defName>
+		<thing>VQEA_PneumaticTubes_Corner</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Triple</defName>
+		<thing>VQEA_PneumaticTubes_Triple</thing>
+	</KCSG.SymbolDef>
+	<KCSG.SymbolDef>
+		<defName>VQEA_PneumaticTubes_Terminus</defName>
+		<thing>VQEA_PneumaticTubes_Terminus</thing>
+	</KCSG.SymbolDef>
 </Defs>

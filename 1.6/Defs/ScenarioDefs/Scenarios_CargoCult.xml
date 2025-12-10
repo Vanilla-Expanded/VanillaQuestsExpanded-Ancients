@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ScenarioDef ParentName="ScenarioBase">
+		<defName>VQEA_CargoCult</defName>
+		<label>Cargo Cult</label>
+		<description>It was a fortuitous find: The tribe's foragers were out gathering berries when they spotted a strange metal building half-sunken into the earth, its walls threaded with coiling tubes like the veins of some sleeping giant. Was it crafted by ancient hands, or shaped by the gods themselves? We soon learned it must be divine. Offerings placed within the "pneumatic nexus" vanished with a holy whoosh, only to return later as transformed gifts.\n\nNote: You'll start poor and lack technology, but having the pneumatic nexus means this start is easier than a standard tribal one.</description>
+		<scenario>
+			<summary>Five lost tribespeople stumble upon a pneumatic nexus and start revering it. Moderate-High difficulty.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerTribe</factionDef>
+			</playerFaction>
+			<parts>
+				<!-- Config pages -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>5</pawnCount>
+					<pawnChoiceCount>8</pawnChoiceCount>
+				</li>
+				<li Class="KCSG.ScenPart_AddStartingStructure">
+					<def>VFEC_AddStartingStructure</def>
+					<structureLabel>An abandoned pneumatic nexus</structureLabel>
+					<spawnConduits>False</spawnConduits>
+					<nearMapCenter>True</nearMapCenter>
+					<fullClear>false</fullClear>
+					<chooseFrom>
+						<li>VQEA_PneumaticNexus</li>
+					</chooseFrom>
+				</li>
+				<!-- Player starting stuff spawn method-->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+				<!-- Player pawns modifiers -->
+				<li Class="ScenPart_ForcedHediff">
+					<def>ForcedHediff</def>
+					<visible>false</visible>
+					<context>PlayerStarter</context>
+					<chance>0.5</chance>
+					<hediff>Malnutrition</hediff>
+					<severityRange>0.2~0.4</severityRange>
+				</li>
+				<li Class="ScenPart_SetNeedLevel">
+					<def>SetNeedLevel</def>
+					<visible>false</visible>
+					<context>PlayerStarter</context>
+					<chance>1.0</chance>
+					<need>Food</need>
+					<levelRange>0~0.1</levelRange>
+				</li>
+				<!-- Player starting things -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Club</thingDef>
+					<stuff>WoodLog</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Ikwa</thingDef>
+					<stuff>Steel</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Knife</thingDef>
+					<stuff>Jade</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Bow_Short</thingDef>
+					<count>2</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pila</thingDef>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<count>1</count>
+					<bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
+				</li>
+				<!-- Game start dialog -->
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>It was a fortuitous find: The tribe's foragers were out gathering berries when they spotted a strange metal building half-sunken into the earth, its walls threaded with coiling tubes like the veins of some sleeping giant. Was it crafted by ancient hands, or shaped by the gods themselves? We soon learned it must be divine. Offerings placed within the "pneumatic nexus" vanished with a holy whoosh, only to return later as transformed gifts.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+</Defs>
