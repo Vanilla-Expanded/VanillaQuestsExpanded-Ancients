@@ -34,7 +34,6 @@
 		<biostatMet>0</biostatMet>
 		<statFactors>
 			<VQEA_Prowess>3</VQEA_Prowess>
-			
 		</statFactors>
 	</GeneDef>
 	<GeneDef>
@@ -346,6 +345,9 @@
 		<exclusionTags>
 			<li>Aptitude_Animals</li>
 		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Animal tending jobs provide recreation.</li>
+		</customEffectDescriptions>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -368,6 +370,9 @@
 		<exclusionTags>
 			<li>Aptitude_Artistic</li>
 		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Constructing a masterwork work (either recipe-based or construction-based) refunds 20% of resources spent.</li>
+		</customEffectDescriptions>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -393,6 +398,9 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<customEffectDescriptions>
+			<li>50% chance to exceed expectations while constructing, refunding 20% of the materials used.</li>
+		</customEffectDescriptions>
 		<aptitudes>
 			<Construction>16</Construction>
 		</aptitudes>
@@ -418,6 +426,9 @@
 		<aptitudes>
 			<Cooking>16</Cooking>
 		</aptitudes>
+		<customEffectDescriptions>
+			<li>Butchery efficiency cap removed.</li>
+		</customEffectDescriptions>
 		<statOffsets>
 			<ButcheryFleshEfficiency>0.25</ButcheryFleshEfficiency>
 		</statOffsets>
@@ -443,6 +454,9 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<customEffectDescriptions>
+			<li>+1 Quality bonus to anything crafted.</li>
+		</customEffectDescriptions>
 		<aptitudes>
 			<Crafting>16</Crafting>
 		</aptitudes>
@@ -457,7 +471,7 @@
 	<GeneDef>
 		<defName>VQEA_MasterfulMedical</defName>
 		<label>masterful medical</label>
-		<description>The carrier's aptitude in Medical is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Medical. Archites enhance decision-making and precision during operations, and preserve medicine during treatment (100% chance).</description>
+		<description>The carrier's aptitude in Medical is increased by 16. Aptitude acts like an offset on skill level. Additionally, two levels of passion are added to Medical. Archites enhance decision-making and precision during operations, and preserve medicine during treatment.</description>
 		<iconPath>UI/Icons/Genes/Powers/Gene_AptitudeMasterful_Medical</iconPath>
 		<displayCategory>VQEA_ArchiteAptitudes</displayCategory>
 		<marketValueFactor>1.5</marketValueFactor>
@@ -468,6 +482,10 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<customEffectDescriptions>
+			<li>100% chance that medicine will not be spent when tending with medicine.</li>
+			<li>Surgeries never fail.</li>
+		</customEffectDescriptions>
 		<aptitudes>
 			<Medicine>16</Medicine>
 		</aptitudes>
@@ -487,6 +505,9 @@
 		<exclusionTags>
 			<li>Aptitude_Melee</li>
 		</exclusionTags>
+		<customEffectDescriptions>
+			<li>In Melee combat, attacks will first hit Heart or Brain if those are present in the target.</li>
+		</customEffectDescriptions>
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
@@ -512,6 +533,9 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<customEffectDescriptions>
+			<li>Mining yield cap removed.</li>
+		</customEffectDescriptions>
 		<aptitudes>
 			<Mining>16</Mining>
 		</aptitudes>
@@ -537,6 +561,9 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<customEffectDescriptions>
+			<li>Harvest yield cap removed.</li>
+		</customEffectDescriptions>
 		<aptitudes>
 			<Plants>16</Plants>
 		</aptitudes>
@@ -562,6 +589,9 @@
 		<biostatCpx>3</biostatCpx>
 		<biostatArc>1</biostatArc>
 		<biostatMet>0</biostatMet>
+		<customEffectDescriptions>
+			<li>Passively gains 50 research points per hour towards the chosen research project, as long as the gene carrier is under player control.</li>
+		</customEffectDescriptions>
 		<aptitudes>
 			<Intellectual>16</Intellectual>
 		</aptitudes>
@@ -592,6 +622,10 @@
 		<aptitudes>
 			<Shooting>16</Shooting>
 		</aptitudes>
+		<customEffectDescriptions>
+			<li>Shots fired will always hit head body part, if head body part is present on the target.
+</li>
+		</customEffectDescriptions>
 		<passionMod>
 			<skill>Shooting</skill>
 			<modType>DropAll</modType>
@@ -614,6 +648,9 @@
 		<aptitudes>
 			<Social>16</Social>
 		</aptitudes>
+		<customEffectDescriptions>
+			<li>This colonist may remove "unwaveringly loyal" from a prisoner upon any prisoner interaction, with 20% chance.</li>
+		</customEffectDescriptions>
 		<statOffsets>
 			<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">1</ConversionPower>
 		</statOffsets>
@@ -658,9 +695,7 @@
 			<AbilityDef>VQEA_HellsphereBlast</AbilityDef>
 		</descriptionHyperlinks>
 	</GeneDef>
-	
 	<!-- New genes added after beta feedback -->
-	
 	<GeneDef>
 		<defName>VQEA_Invisibility</defName>
 		<label>invisibility</label>
@@ -678,9 +713,7 @@
 		<descriptionHyperlinks>
 			<AbilityDef>VQEA_Invisibility</AbilityDef>
 		</descriptionHyperlinks>
-		
 	</GeneDef>
-	
 	<GeneDef>
 		<defName>VQEA_SelfRepairingTissue</defName>
 		<label>self-repairing tissue</label>
@@ -697,7 +730,6 @@
 				<hediffToWholeBody>VQEA_SelfRepairingTissue</hediffToWholeBody>
 			</li>
 		</modExtensions>
-		
 	</GeneDef>
 	<GeneDef>
 		<defName>VQEA_Electromagnetized</defName>
@@ -719,7 +751,6 @@
 		<descriptionHyperlinks>
 			<AbilityDef>VQEA_EMPPulse</AbilityDef>
 		</descriptionHyperlinks>
-		
 	</GeneDef>
 	<GeneDef>
 		<defName>VQEA_MatterPhasing</defName>
@@ -742,6 +773,5 @@
 		<descriptionHyperlinks>
 			<AbilityDef>VQEA_MatterPhasing</AbilityDef>
 		</descriptionHyperlinks>
-		
 	</GeneDef>
 </Defs>
