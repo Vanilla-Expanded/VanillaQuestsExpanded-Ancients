@@ -256,6 +256,12 @@ namespace VanillaQuestsExpandedAncients
             Pawn occupant = Occupant;
             if (occupant == null) return;
 
+            Thing capsule = innerContainer.FirstOrDefault(t => t.def == ThingDefOf.ArchiteCapsule);
+            if (capsule != null)
+            {
+                capsule.Destroy();
+            }
+
             if (outcome == InternalDefOf.VQEA_ArchiteInjection_Success)
             {
                 EjectSoundSuccess.PlayOneShot(new TargetInfo(Position, Map));
@@ -690,7 +696,7 @@ namespace VanillaQuestsExpandedAncients
                     }
                 }
             }
-            return baseMetabolism;
+            return Mathf.Max(0, baseMetabolism);
         }
 
         public int GetExpectedInfusionDuration()
