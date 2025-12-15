@@ -48,6 +48,7 @@ namespace VanillaQuestsExpandedAncients
         {
             if(gene == InternalDefOf.VQEA_SubstanceImpervious)
             {
+                
                 return 0;
 
             }else return 1;

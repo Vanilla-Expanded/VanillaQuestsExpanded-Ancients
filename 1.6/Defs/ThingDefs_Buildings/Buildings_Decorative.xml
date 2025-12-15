@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RuinedArchogenInjector</defName>
 		<label>ruined archogen injector</label>
@@ -278,6 +277,9 @@
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
+		<building>
+			<claimable>true</claimable>
+		</building>
 		<tradeability>None</tradeability>
 		<costList>
 			<Steel>10</Steel>
@@ -307,6 +309,9 @@
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
+		<building>
+			<claimable>true</claimable>
+		</building>
 		<costList>
 			<Steel>10</Steel>
 			<Synthread>20</Synthread>
@@ -471,7 +476,6 @@
 		<label>ancient office desk</label>
 		<description>A sturdy desk once belonging to a researcher or administrator. Old data slates and papers still clutter the surface.</description>
 		<size>(3,1)</size>
-	
 		<fillPercent>0.4</fillPercent>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -495,7 +499,6 @@
 		<description>A heavy workbench used to maintain laboratory equipment. The tools are gone, but the grease stains remain.</description>
 		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
-	
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
 		</costList>
@@ -517,7 +520,6 @@
 		<label>ancient research countertop</label>
 		<description>A long research table covered in scorched metal and broken instruments. It was used for genetic and chemical experiments.</description>
 		<size>(3,1)</size>
-	
 		<fillPercent>0.4</fillPercent>
 		<costList>
 			<ChunkSlagSteel>4</ChunkSlagSteel>
@@ -539,7 +541,6 @@
 		<defName>VQEA_BustedControlPanel</defName>
 		<label>busted control panel</label>
 		<description>A ruined wall console once connected to the vault’s systems. Sparks still flicker from its shattered screen.</description>
-	
 		<size>(3,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<costList>
@@ -616,9 +617,12 @@
 		<statBases>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			 <Mass>6</Mass>
+			<Mass>6</Mass>
 			<Beauty>-1</Beauty>
 		</statBases>
+		<building>
+			<claimable>true</claimable>
+		</building>
 		<graphicData>
 			<texPath>Things/Building/Temperature/AncientStorageHeater</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -632,7 +636,6 @@
 			</li>
 		</comps>
 	</ThingDef>
-	
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientToyBox</defName>
 		<label>ancient toy box</label>
@@ -647,6 +650,9 @@
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
+		<building>
+			<claimable>true</claimable>
+		</building>
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
 			<Flammability>0.5</Flammability>
@@ -718,12 +724,15 @@
 		</thingCategories>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<tradeability>None</tradeability>
+		<building>
+			<claimable>true</claimable>
+		</building>
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
 			<Flammability>0.5</Flammability>
 			<Beauty>-3</Beauty>
 			<Mass>5</Mass>
-			 <BabyPlayGainFactor>1.1</BabyPlayGainFactor>
+			<BabyPlayGainFactor>1.1</BabyPlayGainFactor>
 		</statBases>
 		<graphicData>
 			<texPath>Things/Building/ChildToys/CreepyBabyToy</texPath>
@@ -792,7 +801,6 @@
 		<label>rusted wheeled tray</label>
 		<description>A rusted metal tray once used for medical instruments. It squeaks when moved and is covered in grime.</description>
 		<size>(1,1)</size>
-		
 		<fillPercent>0.3</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<statBases>
@@ -855,7 +863,6 @@
 		<label>warped mop bucket</label>
 		<description>A melted mop bucket left behind by cleaning staff. The handle has fused to the rim, making it useless.</description>
 		<size>(1,1)</size>
-		
 		<fillPercent>0.3</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<statBases>
@@ -869,7 +876,6 @@
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
 	</ThingDef>
-	
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_RustedHospitalBed</defName>
 		<label>rusted hospital bed</label>
@@ -927,6 +933,7 @@
 				<li>Bed</li>
 			</buildingTags>
 			<neverBuildable>true</neverBuildable>
+			<claimable>true</claimable>
 		</building>
 		<fillPercent>0.4</fillPercent>
 		<pathCost>42</pathCost>
@@ -1000,12 +1007,12 @@
 				<li>Bed</li>
 			</buildingTags>
 			<neverBuildable>true</neverBuildable>
+			<claimable>true</claimable>
 		</building>
 		<fillPercent>0.4</fillPercent>
 		<pathCost>42</pathCost>
 		<costList>
 			<Steel>60</Steel>
-			
 		</costList>
 		<rotatable>true</rotatable>
 		<staticSunShadowHeight>0.17</staticSunShadowHeight>
@@ -1016,7 +1023,6 @@
 			<li>BuildingsFurniture</li>
 		</thingCategories>
 	</ThingDef>
-	
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_EmptyContainment</defName>
 		<label>empty containment</label>
@@ -1028,7 +1034,6 @@
 		<statBases>
 			<MaxHitPoints>300</MaxHitPoints>
 			<Flammability>0</Flammability>
-			
 		</statBases>
 		<graphicData>
 			<texPath>Things/Building/Traps/MutationSampler_Empty</texPath>

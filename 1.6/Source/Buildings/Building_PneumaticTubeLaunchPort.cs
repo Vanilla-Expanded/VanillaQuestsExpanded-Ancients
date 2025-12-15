@@ -26,7 +26,8 @@ namespace VanillaQuestsExpandedAncients
 
         static Building_PneumaticTubeLaunchPort()
         {
-            possibleThings = DefDatabase<ThingDef>.AllDefs.Where(x => x.category == ThingCategory.Item && x.BaseMarketValue >= 0.01f && !x.IsCorpse && x.destroyOnDrop is false && x.tradeability != Tradeability.None && x.genericMarketSellable && x.defName != "Apparel_CerebrexNode").ToList();
+            possibleThings = DefDatabase<ThingDef>.AllDefs.Where(x => x.category == ThingCategory.Item && x.BaseMarketValue >= 0.01f && !x.IsCorpse && x.destroyOnDrop is false && x.tradeability != Tradeability.None && x.genericMarketSellable && 
+            x.defName != "Apparel_CerebrexNode" && x.defName != "VPE_Psyring" && x.thingCategories?.Contains(InternalDefOf.Books)!=true).ToList();
             //Log.Message("All possible things: " + possibleThings.Select(x => x.label).ToStringSafeEnumerable());
         }
 

@@ -55,6 +55,11 @@ namespace VanillaQuestsExpandedAncients
                 return false;
             }
 
+            if (geneDef.defName.Contains("AlphaGenes_Animal"))
+            {
+                return false;
+            }
+
             var extension = geneDef.GetModExtension<GeneExtension>();
             if (extension != null && extension.disableGeneExtraction)
             {
