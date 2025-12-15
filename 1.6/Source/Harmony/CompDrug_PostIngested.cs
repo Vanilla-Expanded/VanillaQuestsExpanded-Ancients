@@ -34,6 +34,7 @@ namespace VanillaQuestsExpandedAncients
                     yield return new CodeInstruction(OpCodes.Ldloc_2);
                     yield return new CodeInstruction(OpCodes.Ldfld, genedef);
                     yield return new CodeInstruction(OpCodes.Call, detectNoOverdoseGene);
+                    yield return new CodeInstruction(OpCodes.Mul);
                     yield return new CodeInstruction(OpCodes.Stloc_0);
 
                 }
