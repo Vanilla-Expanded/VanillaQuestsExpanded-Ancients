@@ -1,6 +1,7 @@
 using RimWorld;
 using VEF.Buildings;
 using Verse;
+using RimWorld.Planet;
 
 namespace VanillaQuestsExpandedAncients
 {
@@ -17,7 +18,10 @@ namespace VanillaQuestsExpandedAncients
         protected override void OnInteracted(Pawn caster)
         {
             base.OnInteracted(caster);
-            Find.SignalManager.SendSignal(new Signal("VQE_SealedVaultDoorUnlocked", parent.Named("SUBJECT")));
+            if (parent.Map?.Parent is Site site)
+            {
+                QuestUtility.SendQuestTargetSignals(site.questTags, "VQE_SealedVaultDoorUnlocked", site.Named("SUBJECT"));
+            }
         }
     }
 }
