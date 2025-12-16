@@ -17,11 +17,11 @@ namespace VanillaQuestsExpandedAncients
     {
         protected override void OnInteracted(Pawn caster)
         {
-            base.OnInteracted(caster);
             if (parent.Map?.Parent is Site site)
             {
                 QuestUtility.SendQuestTargetSignals(site.questTags, "VQE_SealedVaultDoorUnlocked", site.Named("SUBJECT"));
             }
+            base.OnInteracted(caster);
         }
     }
 }

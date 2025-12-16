@@ -21,7 +21,7 @@ namespace VanillaQuestsExpandedAncients
                     var questPart = new QuestPart_AncientLab
                     {
                         mapParent = site,
-                        inSignalSuccess = QuestGenUtility.HardcodedSignalWithQuestID("VQE_SealedVaultDoorUnlocked"),
+                        inSignalSuccess = QuestGenUtility.HardcodedSignalWithQuestID("site.VQE_SealedVaultDoorUnlocked"),
                         inSignalFail = QuestGenUtility.HardcodedSignalWithQuestID("site.MapRemoved"),
                         questBuilding = InternalDefOf.VQEA_LockedVaultDoor,
                     };
