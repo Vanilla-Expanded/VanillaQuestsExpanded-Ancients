@@ -455,7 +455,8 @@ namespace VanillaQuestsExpandedAncients
             int targetMetabolism = GetTargetMetabolismEfficiency();
             for (int metabolism = targetMetabolism; metabolism <= 10; metabolism++)
             {
-                var genesWithMetabolism = GetFilteredGenes(pawn, g => g.biostatMet != 0 && g.biostatMet == metabolism);
+                var genesWithMetabolism = GetFilteredGenes(pawn, g => g.biostatMet >= 0 && g.biostatMet == metabolism);
+
                 if (genesWithMetabolism.Any())
                 {
                     var selectedGene = genesWithMetabolism.RandomElement();

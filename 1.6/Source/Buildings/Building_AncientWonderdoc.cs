@@ -201,7 +201,7 @@ namespace VanillaQuestsExpandedAncients
 
             if (selectedCycleIndex >= 0)
             {
-                yield return CreateInsertPawnGizmo("VQEA_InsertPerson", "VQEA_InsertPersonDesc", ContentFinder<Texture2D>.Get("UI/Gizmo/Gizmo_InsertPawnIntoWonderdoc"), "VQEA_NoPawnsAvailableForWonderdoc");
+                yield return CreateInsertPawnGizmo("VQEA_InsertPerson", "VQEA_InsertPersonIntoWonderdocDesc", ContentFinder<Texture2D>.Get("UI/Gizmo/Gizmo_InsertPawnIntoWonderdoc"), "VQEA_NoPawnsAvailableForWonderdoc");
             }
             else
             {
