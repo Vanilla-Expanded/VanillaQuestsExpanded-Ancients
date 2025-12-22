@@ -11,8 +11,7 @@ namespace VanillaQuestsExpandedAncients
     {
         public static void Postfix(Pawn __result, PawnGenerationRequest request)
         {
-            if (__result is null || __result.DevelopmentalStage == DevelopmentalStage.Newborn) return;
-            
+            if (__result is null || __result.DevelopmentalStage == DevelopmentalStage.Newborn || __result.DevelopmentalStage == DevelopmentalStage.Baby) return;
             var extension = __result?.kindDef?.GetModExtension<PawnKindExtension_Experiment>();
             if (extension != null && __result.genes != null)
             {
