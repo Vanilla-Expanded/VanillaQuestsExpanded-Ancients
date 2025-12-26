@@ -36,6 +36,7 @@
 		</statBases>
 		<size>(3,1)</size>
 		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
 		<passability>PassThroughOnly</passability>
 		<pathCost>50</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -119,6 +120,7 @@
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
+		<tradeability>Sellable</tradeability>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
@@ -204,6 +206,7 @@
 				<li>Production</li>
 			</buildingTags>
 		</building>
+		<tradeability>Sellable</tradeability>
 		<tickerType>Rare</tickerType>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>

@@ -19,6 +19,7 @@
 		<thingCategories>
 			<li>BuildingsJoy</li>
 		</thingCategories>
+		<tradeability>Sellable</tradeability>
 		<altitudeLayer>Building</altitudeLayer>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<fillPercent>0.40</fillPercent>

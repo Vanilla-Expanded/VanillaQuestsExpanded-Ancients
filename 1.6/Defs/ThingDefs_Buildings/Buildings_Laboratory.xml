@@ -16,6 +16,9 @@
 		<hasInteractionCell>true</hasInteractionCell>
 		<interactionCellOffset>(0, 0, 2)</interactionCellOffset>
 		<defaultPlacingRot>South</defaultPlacingRot>
+		<costList>
+			<Steel>60</Steel>
+		</costList>
 		<building>
 			<buildingTags>
 				<li>Biotech</li>
@@ -84,6 +87,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -113,6 +119,9 @@
 			<Beauty>0</Beauty>
 			<Mass>10</Mass>
 		</statBases>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
 		<graphicData>
 			<texPath>Things/Building/LabEquipment/CognitiveRecoveryArray</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -140,6 +149,9 @@
 		<label>rapid infusion pump</label>
 		<description>A high-pressure archite-flow pump fitted with tri-phase accelerators and microchannel conduits that push volatile nanites through the injector lattice at extreme speed. Stabilizing fins vibrate as the pump regulates infusion pressure across the gene chamber.\n\nShortens the overall injection time by 12 hours when linked to an archogen injector.\n\nUp to 9 rapid infusion pumps can link to a single archogen injector.</description>
 		<size>(1,1)</size>
+		<costList>
+			<Steel>10</Steel>
+		</costList>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
 			<Flammability>0.5</Flammability>
@@ -182,6 +194,9 @@
 			<Beauty>0</Beauty>
 			<Mass>25</Mass>
 		</statBases>
+		<costList>
+			<Steel>20</Steel>
+		</costList>
 		<graphicData>
 			<texPath>Things/Building/LabEquipment/ArchiteRecycler</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -211,6 +226,9 @@
 			<Beauty>0</Beauty>
 			<Mass>30</Mass>
 		</statBases>
+		<costList>
+			<Steel>40</Steel>
+		</costList>
 		<graphicData>
 			<texPath>Things/Building/LabEquipment/GenomicAttenuator</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -238,6 +256,9 @@
 		<label>rejection buffer coil</label>
 		<description>An insulated coil wrapped in ionized synapse wire and anchored with anti-reflux stabilizers that shield the injector chamber from archite backlash. When active, it emits a soft oscillation designed to suppress rejection-triggering impulses in the nanite stream.\n\nDecreases the rejection chance of the injection procedure when linked to an archogen injector.\n\nUp to 5 rejection buffer coils can link to a single archogen injector.</description>
 		<size>(1,2)</size>
+		<costList>
+			<Steel>20</Steel>
+		</costList>
 		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -273,6 +294,9 @@
 		<label>spliceframe uplink</label>
 		<description>A dense uplink pillar fitted with resonance spire arrays and gene-phase telemetry coils that scrape and decode archite fluctuation patterns. Its chroma-linked neural mesh emits faint pulses as it maps unstable outcomes across an ancient spliceframe network.\n\nReveals all outcome chances in the archogen injector and slightly increases the odds of mutation outcomes.\n\nUp to 1 spliceframe uplink can link to a single archogen injector.</description>
 		<size>(2,2)</size>
+		<costList>
+			<Steel>40</Steel>
+		</costList>
 		<statBases>
 			<MaxHitPoints>250</MaxHitPoints>
 			<Flammability>0.5</Flammability>
@@ -314,6 +338,9 @@
 		<label>mutagen inhibitor core</label>
 		<description>A massive containment engine built around a tri-core genoquench reactor and layered inhibition plates designed to neutralize runaway mutagenic surges. Thick conduits cycle suppressive counterwaves that smother mutation cascades before they can form.\n\nRemoves all mutation outcome chances entirely when linked to an Archogen Injector, but greatly increases the rejection chance.\n\nUp to 1 mutagen inhibitor core can link to a single archogen injector.</description>
 		<size>(3,3)</size>
+		<costList>
+			<Steel>90</Steel>
+		</costList>
 		<statBases>
 			<MaxHitPoints>600</MaxHitPoints>
 			<Flammability>0.5</Flammability>
@@ -360,6 +387,9 @@
 			<Beauty>0</Beauty>
 			<Mass>55</Mass>
 		</statBases>
+		<costList>
+			<Steel>90</Steel>
+		</costList>
 		<graphicData>
 			<texPath>Things/Building/LabEquipment/TraitSelectionPrism</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -394,6 +424,9 @@
 			<Beauty>0</Beauty>
 			<Mass>50</Mass>
 		</statBases>
+		<costList>
+			<Steel>90</Steel>
+		</costList>
 		<graphicData>
 			<texPath>Things/Building/LabEquipment/AberrationRedirector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -422,6 +455,9 @@
 		<description>A tall stabilization unit filled with layered geno-harmonic plates and oscillating phase regulators that smooth out chaotic complexity spikes within the archite stream. Its internal synchronizer cores emit low rhythmic pulses as they bring tangled genetic pathways into orderly alignment.\n\nPrevents genetic complexity from reducing success chance, but each point of complexity will increase the injection procedure duration by 1 hour.\n\nUp to 1 complexity harmonizer can link to a single archogen injector.</description>
 		<size>(3,2)</size>
 		<rotatable>true</rotatable>
+		<costList>
+			<Steel>60</Steel>
+		</costList>
 		<statBases>
 			<MaxHitPoints>360</MaxHitPoints>
 			<Flammability>0.5</Flammability>
@@ -451,6 +487,9 @@
 		<label>archite pathing array</label>
 		<description>A heavy tri-spire console built with archite-routing conduits and branching nanoflux matrices that split the injection stream into parallel mutagenic pathways. The array’s central node glows with shifting colors as it maps new routes for rogue archite clusters.\n\nProvides a chance to gain a second random archite gene or a second random offset gene after a successful injection.\n\nUp to 1 archite pathing array can link to a single archogen injector.</description>
 		<size>(3,3)</size>
+		<costList>
+			<Steel>90</Steel>
+		</costList>
 		<statBases>
 			<MaxHitPoints>800</MaxHitPoints>
 			<Flammability>0.5</Flammability>

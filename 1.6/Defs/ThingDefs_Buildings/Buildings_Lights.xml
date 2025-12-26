@@ -11,6 +11,7 @@
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
+		<tradeability>Sellable</tradeability>
 		<statBases>
 			<MaxHitPoints>40</MaxHitPoints>
 			<Flammability>0.5</Flammability>

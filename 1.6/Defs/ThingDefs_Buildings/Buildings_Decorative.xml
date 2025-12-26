@@ -277,13 +277,14 @@
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
+		<tradeability>Sellable</tradeability>
 		<building>
 			<claimable>true</claimable>
 		</building>
 		<tradeability>None</tradeability>
 		<costList>
 			<Steel>10</Steel>
-			<Synthread>40</Synthread>
+			<Synthread>8</Synthread>
 		</costList>
 		<rotatable>true</rotatable>
 		<statBases>
@@ -309,12 +310,13 @@
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
+		<tradeability>Sellable</tradeability>
 		<building>
 			<claimable>true</claimable>
 		</building>
 		<costList>
 			<Steel>10</Steel>
-			<Synthread>20</Synthread>
+			<Synthread>4</Synthread>
 		</costList>
 		<tradeability>None</tradeability>
 		<rotatable>true</rotatable>
@@ -338,6 +340,7 @@
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
@@ -607,6 +610,7 @@
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<tradeability>Sellable</tradeability>
 		<costList>
 			<ChunkSlagSteel>2</ChunkSlagSteel>
 		</costList>
@@ -630,7 +634,7 @@
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_HeatPusher">
-				<compClass>CompHeatPusherPowered</compClass>
+				<compClass>CompHeatPusher</compClass>
 				<heatPerSecond>6</heatPerSecond>
 				<heatPushMaxTemperature>18</heatPushMaxTemperature>
 			</li>
@@ -643,6 +647,7 @@
 		<size>(1,1)</size>
 		<fillPercent>0.3</fillPercent>
 		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
 		<thingCategories>
 			<li>BuildingsFurniture</li>
 		</thingCategories>
@@ -939,8 +944,9 @@
 		<pathCost>42</pathCost>
 		<costList>
 			<Steel>60</Steel>
-			<Synthread>40</Synthread>
+			<Synthread>8</Synthread>
 		</costList>
+		<tradeability>Sellable</tradeability>
 		<rotatable>true</rotatable>
 		<staticSunShadowHeight>0.17</staticSunShadowHeight>
 		<techLevel>Medieval</techLevel>
@@ -1017,6 +1023,7 @@
 		<rotatable>true</rotatable>
 		<staticSunShadowHeight>0.17</staticSunShadowHeight>
 		<techLevel>Medieval</techLevel>
+		<tradeability>Sellable</tradeability>
 		<uiIconScale>0.90</uiIconScale>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<thingCategories>
