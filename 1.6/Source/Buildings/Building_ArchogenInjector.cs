@@ -480,7 +480,7 @@ namespace VanillaQuestsExpandedAncients
             }
             if (HasLinkedFacility(InternalDefOf.VQEA_ArchitePathingArray) && Rand.Chance(0.5f))
             {
-                var negativeGenes = GetFilteredGenes(pawn, g => g.biostatArc <= 0 && g.biostatMet > 0);
+                var negativeGenes = GetFilteredGenes(pawn, g => g.biostatArc <= 0 && g.biostatMet > 0 && g.biostatMet <= 10);
                 if (negativeGenes.Any())
                 {
                     var selectedNegativeGene = negativeGenes.RandomElement();
