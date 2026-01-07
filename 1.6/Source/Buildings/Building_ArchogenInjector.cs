@@ -375,7 +375,6 @@ namespace VanillaQuestsExpandedAncients
                 additionalFilter(g) &&
                 (g.prerequisite == null || pawn.genes.HasActiveGene(g.prerequisite)) &&
                 !pawn.genes.HasActiveGene(g) &&
-                !pawn.genes.GenesListForReading.Any(existing => existing.def.ConflictsWith(g)) &&
                 Utils.IsValidGeneForInjection(g)
             ).ToList();
         }
