@@ -281,7 +281,6 @@
 		<building>
 			<claimable>true</claimable>
 		</building>
-		<tradeability>None</tradeability>
 		<costList>
 			<Steel>10</Steel>
 			<Synthread>8</Synthread>
@@ -318,7 +317,6 @@
 			<Steel>10</Steel>
 			<Synthread>4</Synthread>
 		</costList>
-		<tradeability>None</tradeability>
 		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -356,7 +354,6 @@
 			<Mass>15</Mass>
 			<Beauty>-1</Beauty>
 		</statBases>
-		<tradeability>None</tradeability>
 		<graphicData>
 			<texPath>Things/Building/Furniture/AncientHospitalCrib</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
