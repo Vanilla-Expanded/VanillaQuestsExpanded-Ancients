@@ -9,7 +9,7 @@ using Verse;
 namespace VanillaQuestsExpandedAncients
 {
 
-    [HarmonyPatch(typeof(GenRecipe))]
+   /* [HarmonyPatch(typeof(GenRecipe))]
     [HarmonyPatch("MakeRecipeProducts")]
     public static class VanillaQuestsExpandedAncients_GenRecipe_MakeRecipeProducts_Patch
     {
@@ -65,5 +65,5 @@ namespace VanillaQuestsExpandedAncients
                 }
             }
         }
-    }
+    }*/
 }
