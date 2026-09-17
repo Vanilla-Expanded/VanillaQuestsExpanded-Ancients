@@ -43,6 +43,8 @@ namespace VanillaQuestsExpandedAncients
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Splicehulk;
 		public static ArchiteInjectionOutcomeDef VQEA_ArchiteInjection_Splicefiend;
 
+		public static GeneDef VQEA_Marksman;
+		public static GeneDef VQEA_PerfectVision;
 		public static GeneDef VQEA_Serene;
 		public static GeneDef VQEA_SubstanceImpervious;
 		public static GeneDef VQEA_MasterfulAnimals;
