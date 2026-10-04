@@ -7,7 +7,7 @@
 		<size>(3,2)</size>
 		<costList>
 			<ChunkSlagSteel>6</ChunkSlagSteel>
-		</costList>
+		</costList> 
 		<rotatable>true</rotatable>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
