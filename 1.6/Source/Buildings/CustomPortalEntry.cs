@@ -25,6 +25,11 @@ namespace VanillaQuestsExpandedAncients
 
         public override Map GetOtherMap()
         {
+            if (destinationMap != null && destinationExit == null)
+            {
+                PocketMapUtility.DestroyPocketMap(destinationMap);
+                destinationMap = null;
+            }
             if (destinationMap == null)
             {
                 GenerateDestinationMap();
@@ -63,7 +68,7 @@ namespace VanillaQuestsExpandedAncients
             PocketMapUtility.currentlyGeneratingPortal = this;
 
             var scenpart = Find.Scenario.AllParts.OfType<ScenPart_SealedVault>().FirstOrDefault();
-            if (scenpart != null && scenpart.structureSetDef != null && scenpart.mapParent == Map.Parent)
+            if (scenpart != null && scenpart.mapParent == Map.Parent)
             {
                 destinationMap = PocketMapUtility.GeneratePocketMap(new IntVec3(def.portal.pocketMapSize, 1, def.portal.pocketMapSize), InternalDefOf.VQEA_SealedVault, null, Map);
             }

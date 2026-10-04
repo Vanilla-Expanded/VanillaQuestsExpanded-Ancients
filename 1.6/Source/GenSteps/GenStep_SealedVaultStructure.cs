@@ -14,9 +14,9 @@ namespace VanillaQuestsExpandedAncients
         public override void Generate(Map map, GenStepParams parms)
         {
             var scenpart = Find.Scenario.AllParts.OfType<ScenPart_SealedVault>().FirstOrDefault();
-            if (scenpart != null && scenpart.structureSetDef != null && scenpart.mapParent == (map.Parent as PocketMapParent).sourceMap.Parent)
+            if (scenpart != null && scenpart.mapParent == (map.Parent as PocketMapParent).sourceMap.Parent)
             {
-                StructureSetGenerator.Generate(map, scenpart.structureSetDef, map.ParentFaction);
+                StructureSetGenerator.Generate(map, scenpart.structureSetDef ?? InternalDefOf.VQEA_SealedVaultUndergroundStructure, map.ParentFaction);
                 var cond = GameConditionMaker.MakeConditionPermanent(InternalDefOf.VQEA_AncientComplex);
                 map.gameConditionManager.RegisterCondition(cond);
 

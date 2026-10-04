@@ -120,6 +120,7 @@ namespace VanillaQuestsExpandedAncients
 		public static ThingDef VQEA_AncientLaboratoryCasket;
 		public static ThingDef VQEA_CandidateCryptosleepCasket;
 		public static StructureSetDef VQEA_SealedVaultStartStructure;
+		public static StructureSetDef VQEA_SealedVaultUndergroundStructure;
 		public static PawnKindDef VQE_Experiment;
 		public static MapGeneratorDef VQEA_SealedVault;
 		public static PawnKindDef VQE_Patient;
